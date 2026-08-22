@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 620" width="560" height="620" role="img" aria-label="Chân dung tư vấn viên">
+<defs>
+<linearGradient id="b3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FDEEF2"/><stop offset="1" stop-color="#F3CFDA"/></linearGradient>
+<filter id="s3" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#7C0827" flood-opacity="0.15"/></filter>
+</defs>
+<rect width="560" height="620" rx="26" fill="url(#b3)"/>
+<circle cx="280" cy="264" r="176" fill="#fff" opacity=".5"/>
+<circle cx="470" cy="96" r="70" fill="#D31145" opacity=".07"/>
+
+<!-- shoulders -->
+<path d="M150 620 L150 448 a130 130 0 0 1 260 0 L410 620 Z" fill="#D31145"/>
+<!-- collar + neck -->
+<path d="M280 322 l-30 -6 l0 44 l60 0 l0 -44 Z" fill="#EFA692"/>
+<path d="M252 400 L280 466 L308 400 L296 392 L280 424 L264 392 Z" fill="#fff"/>
+<!-- head -->
+<circle cx="280" cy="252" r="78" fill="#F7BBA9"/>
+<!-- hair -->
+<path d="M280 170 q-80 10 -82 76 q-1 40 12 62 q-8 -60 26 -78 q22 12 44 12 q22 0 44 -12 q34 18 26 78 q13 -22 12 -62 q-2 -66 -82 -76 Z" fill="#2B2220"/>
+<!-- smile + eyes -->
+<circle cx="256" cy="250" r="4.4" fill="#3A2C2A"/>
+<circle cx="304" cy="250" r="4.4" fill="#3A2C2A"/>
+<path d="M262 280 q18 15 36 0" stroke="#C98873" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+<!-- badge card -->
+<g filter="url(#s3)" transform="translate(30,442)">
+<rect width="222" height="92" rx="16" fill="#fff"/>
+<circle cx="46" cy="46" r="23" fill="#FDEEF2"/>
+<path d="M37 46 l7 8 l14 -17" stroke="#D31145" stroke-width="4.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="82" y="30" width="116" height="10" rx="5" fill="#E9ECF0"/>
+<rect x="82" y="52" width="74" height="10" rx="5" fill="#F3F5F7"/>
+</g>
+</svg>

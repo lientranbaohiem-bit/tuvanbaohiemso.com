@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Chi phí sinh con">
+<defs><linearGradient id="g25–45tr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D31145"/><stop offset="1" stop-color="#7C0827"/></linearGradient></defs>
+<rect width="640" height="360" fill="url(#g25–45tr)"/>
+<circle cx="560" cy="60" r="110" fill="#fff" opacity=".13"/>
+<circle cx="70" cy="320" r="120" fill="#fff" opacity=".08"/>
+<circle cx="500" cy="300" r="8" fill="#fff" opacity=".35"/>
+<circle cx="120" cy="70" r="5" fill="#fff" opacity=".4"/>
+<text x="46" y="176" font-family="Be Vietnam Pro,Segoe UI,Arial,sans-serif" font-size="86" font-weight="800" fill="#fff">25–45tr</text>
+<text x="46" y="222" font-family="Be Vietnam Pro,Segoe UI,Arial,sans-serif" font-size="21" font-weight="600" fill="#fff" opacity=".92">Chi phí một ca sinh mổ dịch vụ</text>
+<rect x="46" y="248" width="120" height="5" rx="2.5" fill="#fff" opacity=".55"/>
+</svg>
