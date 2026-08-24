@@ -637,3 +637,70 @@ html,body{overflow-x:hidden;max-width:100%}
   border-top:1px solid rgba(255,255,255,.1);padding:20px 0 0;margin-top:8px;
   font-size:.8rem;color:var(--grey-400);line-height:1.6;
 }
+
+/* ============================================================
+   v3 — Header dính, FAB 4 kênh, ảnh nội dung, tinh chỉnh mobile
+   ============================================================ */
+.header{position:sticky;top:0;z-index:100;transition:box-shadow .2s ease}
+.header.scrolled{box-shadow:0 2px 14px rgba(22,24,29,.10)}
+
+/* FAB */
+.fab a.f-tiktok{background:#010101}
+.fab a.f-zalo{background:#0068FF}
+.fab a svg{display:block}
+.fab a.f-zalo svg{width:34px;height:34px}
+@media(max-width:760px){
+  .fab a{width:44px;height:44px}
+  .fab a.f-zalo svg{width:28px;height:28px}
+  .fab{gap:8px;right:10px;bottom:10px}
+}
+
+/* Social footer */
+.soc a svg{display:block}
+
+/* Ảnh nội dung */
+.photo{
+  border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);
+  background:var(--grey-100);
+}
+.photo img{width:100%;height:auto;display:block}
+.photo-cap{
+  font-size:.84rem;color:var(--grey-400);margin-top:10px;line-height:1.5;
+}
+.photo-wide{margin:34px 0}
+.photo-wide img{width:100%;aspect-ratio:16/9;object-fit:cover}
+@media(max-width:760px){
+  .photo-wide img{aspect-ratio:4/3}
+}
+
+/* Hero CTA chính */
+.hero-cta{margin:26px 0 4px}
+.hero-cta .btn{box-shadow:0 10px 26px rgba(211,17,69,.26)}
+
+/* Bảng so sánh dễ đọc trên mobile */
+@media(max-width:760px){
+  table.tbl{min-width:520px;font-size:.88rem}
+  table.tbl th,table.tbl td{padding:11px 12px}
+  .tbl-wrap{border-radius:12px}
+  .journey{margin-top:28px}
+  h1{font-size:1.9rem}
+  h2{font-size:1.42rem}
+  .hero-sub{font-size:1.02rem}
+  .lead{font-size:1rem}
+  .entry{padding:13px 14px}
+  .fy-band{padding:22px 18px}
+  .page-head h1{font-size:1.75rem}
+  .page-head p{font-size:.98rem}
+}
+
+/* Cuộn ngang cho bảng */
+.tbl-wrap{-webkit-overflow-scrolling:touch}
+
+/* ===== v4: giai thich cong thuc trong ket qua may tinh ===== */
+.res-why{margin-top:18px;padding:16px 18px;background:var(--grey-50);border:1px solid var(--grey-200);border-radius:var(--radius);font-size:.9rem;line-height:1.62}
+.res-why>b{display:block;margin-bottom:8px;font-size:.82rem;text-transform:uppercase;letter-spacing:.07em;color:var(--grey-600)}
+.res-why p{margin:0 0 9px}
+.res-why p:last-child{margin-bottom:0}
+.calc select optgroup{font-weight:700;color:var(--grey-600)}
+.photo img{display:block;width:100%;height:auto}
+.article h2{scroll-margin-top:96px}
