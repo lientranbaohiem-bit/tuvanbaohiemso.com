@@ -295,52 +295,6 @@ def footer(P=""):
   <a class="f-mess" href="{FB}" target="_blank" rel="noopener" aria-label="Fanpage Facebook">{I['fb']}</a>
   <a class="f-tiktok" href="{TIKTOK}" target="_blank" rel="noopener" aria-label="Kênh TikTok">{I['tiktok']}</a>
 </div>
-      </div>
-      <div>
-        <h4>Theo nhu cầu</h4>
-        <ul>
-          <li><a href="{P}thai-san.html">Chuẩn bị sinh con</a></li>
-          <li><a href="{P}suc-khoe.html">Sức khoẻ &amp; viện phí</a></li>
-          <li><a href="{P}bao-ve-thu-nhap.html">Bảo vệ thu nhập</a></li>
-          <li><a href="{P}cong-cu/index.html#doc-hop-dong">Kiểm tra hợp đồng đang có</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Công cụ &amp; kiến thức</h4>
-        <ul>
-          <li><a href="{P}cong-cu/chi-phi-sinh-con.html">Tính chi phí sinh con</a></li>
-          <li><a href="{P}cong-cu/thoi-gian-cho-thai-san.html">Đếm ngược thời gian chờ thai sản</a></li>
-          <li><a href="{P}cong-cu/ngan-sach-bao-ve.html">Tính ngân sách bảo vệ</a></li>
-          <li><a href="{P}cong-cu/index.html">Tất cả công cụ</a></li>
-          <li><a href="{P}kien-thuc/index.html">Bài viết kiến thức</a></li>
-          <li><a href="{P}san-pham.html">Danh mục sản phẩm</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Liên hệ</h4>
-        <ul>
-          <li><a href="tel:{PHONE_TEL}">Hotline: {PHONE_FMT}</a></li>
-          <li><a href="{ZALO}" target="_blank" rel="noopener">Zalo: {PHONE_FMT}</a></li>
-          <li><a href="{FB}" target="_blank" rel="noopener">Fanpage Facebook</a></li>
-          <li>Khu vực: TP. Hồ Chí Minh &amp; toàn quốc (tư vấn từ xa)</li>
-          <li>Giờ làm việc: 8:00 &ndash; 21:00</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footnote">
-      {DOMAIN} là dịch vụ tư vấn bảo hiểm độc lập, không phải doanh nghiệp bảo hiểm. Quyền lợi, mức phí và điều khoản loại trừ áp dụng theo Quy tắc &amp; Điều khoản của sản phẩm do doanh nghiệp bảo hiểm phát hành.
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; <span data-year></span> {DOMAIN}</span>
-      <span>Hotline tư vấn: <a href="tel:{PHONE_TEL}" style="color:#fff">{PHONE_FMT}</a></span>
-    </div>
-  </div>
-</footer>
-<div class="fab">
-  <a class="f-phone fab-pulse" href="tel:{PHONE_TEL}" aria-label="Gọi hotline">{I['phone']}</a>
-  <a class="f-zalo" href="{ZALO}" target="_blank" rel="noopener" aria-label="Chat Zalo">{I['zalo']}</a>
-  <a class="f-mess" href="{FB}" target="_blank" rel="noopener" aria-label="Fanpage">{I['fb']}</a>
-</div>
 <script>window.TVBHS_LEAD_ENDPOINT={LEAD_ENDPOINT_JS};</script>
 <script src="{P}assets/js/main.js"></script>
 </body>
@@ -2131,6 +2085,12 @@ sm += "</urlset>\n"
 open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(sm)
 open(os.path.join(ROOT, "robots.txt"), "w", encoding="utf-8").write(
     "User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % SITE)
+_write("cong-cu.html", """<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8">
+<title>\u0110ang chuy\u1ec3n h\u01b0\u1edbng\u2026</title>
+<link rel="canonical" href="%s/cong-cu/">
+<meta http-equiv="refresh" content="0; url=/cong-cu/"><meta name="robots" content="noindex">
+<script>location.replace("/cong-cu/"+location.hash);</script></head>
+<body><p>Trang \u0111\u00e3 chuy\u1ec3n sang <a href="/cong-cu/">/cong-cu/</a></p></body></html>""" % SITE)
 open(os.path.join(ROOT, "CNAME"), "w", encoding="utf-8").write("tuvanbaohiemso.com\n")
 print("  sitemap.xml, robots.txt, CNAME")
 print("Xong.")
