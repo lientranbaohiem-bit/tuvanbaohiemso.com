@@ -66,7 +66,8 @@ def head(title, desc, path_prefix="", canon="", extra="", body_attr=""):
 <meta property="og:description" content="{desc}">
 <meta property="og:locale" content="vi_VN">
 <link rel="canonical" href="{SITE}{clean_url(canon) or '/'}">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23D31145'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='48' font-weight='bold' fill='white' text-anchor='middle'%3ELT%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="{path_prefix}assets/img/logo.png">
+<link rel="apple-touch-icon" href="{path_prefix}assets/img/logo-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -133,7 +134,7 @@ MEGA = f"""
   </div>
 </div>"""
 
-LOGO = """<span class="brand-mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 11.5l2 2 4-4.5"/></svg></span>"""
+LOGO = """<img class="brand-logo" src="assets/img/logo.png" alt="Tư Vấn Bảo Hiểm Số" width="44" height="44">"""
 
 GATE = f"""
 <div class="gate" id="needGate" role="dialog" aria-modal="true" aria-label="Chọn nhu cầu">
@@ -194,7 +195,7 @@ def header(active="", P=""):
 </header>
 <div class="track-band" id="trackBand">
   <div class="wrap">
-    <span class="track-label"><span class="track-dot"></span>Đang xem nội dung dành cho: <b id="trackName"></b></span>
+    <span class="track-label"><span class="track-dot"></span><span class="track-pre">Đang xem nội dung dành cho:</span><span class="track-pre-sm">Đang xem:</span> <b id="trackName"></b></span>
     <button class="track-change" data-open-gate="{P}index.html" type="button">Đổi nhu cầu khác</button>
   </div>
 </div>
@@ -1000,7 +1001,7 @@ ts_body += f"""
     <div class="split">
       <div>
         <span class="eyebrow">Vấn đề</span>
-        <h2>Vì sao đa số người muốn mua thai sản lại không mua được</h2>
+        <h2>Tại sao nên mua bảo hiểm thai sản</h2>
         <p>Phần lớn quyền lợi thai sản trên thị trường Việt Nam nằm trong <b>thẻ sức khoẻ bổ trợ</b>. Mà thẻ bổ trợ thì phải gắn vào một hợp đồng bảo hiểm nhân thọ chính. Nghĩa là để có quyền lợi thai sản trị giá vài chục triệu, bạn được yêu cầu cam kết một hợp đồng 15&ndash;20 năm với mức phí khoảng 20 triệu mỗi năm.</p>
         <p>Với một cặp vợ chồng trẻ vừa mua nhà, vừa chuẩn bị sinh con, đó là một rào cản rất lớn &mdash; và nó khiến nhiều người bỏ luôn ý định chuẩn bị.</p>
         <p><b>Gói thai sản rời giải quyết đúng điểm nghẽn này:</b> tham gia độc lập, giải quyết đúng nhu cầu trước mắt, không buộc cam kết dài hạn. Khi nào gia đình sẵn sàng cho kế hoạch dài hơi hơn thì tính tiếp &mdash; và lúc đó bạn đã có đủ dữ liệu để quyết định.</p>
@@ -1009,7 +1010,7 @@ ts_body += f"""
           <a class="btn btn-ghost" href="{ZALO}" target="_blank" rel="noopener">Hỏi trực tiếp qua Zalo</a>
         </div>
       </div>
-      <div><img src="assets/img/art-thaisan.svg" alt="Bảo hiểm thai sản rời" style="border-radius:22px;box-shadow:var(--shadow-lg)"></div>
+      <div class="photo"><img src="assets/img/thai-san-gia-dinh.jpg" alt="Gia đình trẻ bên em bé mới sinh tại phòng dịch vụ" width="1600" height="1195" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -1023,19 +1024,6 @@ ts_body += f"""
     </div>
     {tbl(["Tình huống","Chỉ có BHYT","Không có bảo hiểm nào","Có gói thai sản rời"], TS_VS)}
     <p style="font-size:.86rem;color:var(--grey-400);margin-top:14px">Con số mang tính tham khảo từ nguồn công khai, không phải cam kết. Mức chi trả thực tế theo Quy tắc &amp; Điều khoản của từng sản phẩm.</p>
-
-    <div class="split" style="margin-top:52px">
-      <div class="photo"><img src="assets/img/thai-san-phong-sinh.jpg" alt="Phòng sinh dịch vụ tại bệnh viện" width="1600" height="1159" loading="lazy"></div>
-      <div>
-        <h3 style="margin-bottom:18px">Bốn điều gói thai sản rời làm được mà BHYT không làm</h3>
-        <div class="steps">
-          <div class="step"><h4>Thời gian chờ chỉ có 270 ngày thôi</h4><p>Ngắn hơn mức 365 ngày phổ biến trên thị trường. Chênh lệch 95 ngày này nghe nhỏ, nhưng với người đang lên kế hoạch sinh con thì nó là <b>ba tháng cửa sổ chuẩn bị</b> &mdash; đủ để không phải hoãn kế hoạch có con lại một chu kỳ.</p></div>
-          <div class="step"><h4>Không phân biệt sinh thường hay sinh mổ</h4><p>Rất nhiều ca dự định sinh thường cuối cùng phải chuyển mổ vì lý do y khoa &mdash; và đó chính là lúc chi phí tăng gần gấp đôi. Một sản phẩm phân biệt hai hình thức sinh sẽ bỏ rơi bạn đúng vào lúc bạn cần nhất.</p></div>
-          <div class="step"><h4>Bảo lãnh viện phí trực tiếp</h4><p>Tại nhiều bệnh viện sản lớn. Nghĩa là bạn không phải xoay tiền mặt ứng trước rồi chờ hoàn &mdash; điều rất đáng giá khi mọi thứ diễn ra gấp trong đêm.</p></div>
-          <div class="step"><h4>Có chi trả cho khám thai và biến chứng thai kỳ</h4><p>Chi phí khám thai định kỳ suốt 9 tháng cộng lại là một khoản không nhỏ mà hầu như không ai tính vào ngân sách ban đầu. Phần biến chứng thai kỳ mới là phần quan trọng nhất về mặt tài chính, vì đó là kịch bản gia đình không tự lo được.</p></div>
-        </div>
-      </div>
-    </div>
 
     <div class="callout warn" style="margin-top:40px">
       <h4>{I['warn']} Con số cụ thể cần được xác nhận theo bộ điều khoản mới nhất</h4>
