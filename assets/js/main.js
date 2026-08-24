@@ -166,11 +166,8 @@
       var cover = hs + debt;
       var budgetLo = income * 0.05, budgetHi = income * 0.10;
       var vnFull = function (n) { return Math.round(n).toLocaleString('vi-VN') + ' đồng'; };
-      var whyYears = deps > 0
-        ? 'Bạn có <b>' + deps + ' người phụ thuộc</b>. Chúng tôi lấy <b>10 năm nền</b> — khoảng thời gian tối thiểu để gia đình sắp xếp lại cuộc sống và người còn lại quay lại được với công việc — rồi <b>cộng thêm 2 năm cho mỗi người phụ thuộc</b>, vì mỗi người phụ thuộc kéo dài thêm quãng thời gian gia đình cần được nuôi. Kết quả: 10 + ' + deps + ' × 2 = <b>' + years + ' năm</b>.'
-        : 'Bạn chưa khai người phụ thuộc nào, nên chúng tôi dùng mốc tối thiểu <b>5 năm</b> — đủ để xử lý nghĩa vụ tài chính còn dang dở, không phải để nuôi ai lâu dài.';
       nOut.innerHTML =
-        '<div class="res-row"><span>Số năm thu nhập cần thay thế</span><b>' + years + ' năm</b></div>' +
+        '<div class="res-row"><span>Số năm thu nhập cần thay thế (đề xuất)</span><b>' + years + ' năm</b></div>' +
         '<div class="res-row"><span>Phần thay thế thu nhập</span><b>' + tr(hs) + '</b></div>' +
         '<div class="res-row"><span>Khoản nợ cần xoá</span><b>' + tr(debt) + '</b></div>' +
         '<div style="margin-top:18px;padding-top:16px;border-top:2px solid var(--red-soft2)">' +
@@ -178,11 +175,6 @@
         '<div class="res-big">' + tr(cover) + '</div>' +
         '<div style="font-size:.95rem;color:var(--grey-600);margin-top:4px">= <b>' + vnFull(cover) + '</b></div></div>' +
         '<div class="res-row" style="margin-top:14px"><span>Ngân sách phí hợp lý (5–10% thu nhập)</span><b>' + vnd(budgetLo) + ' – ' + vnd(budgetHi) + '/tháng</b></div>' +
-        '<div class="res-why"><b>Con số này ra từ đâu?</b>' +
-        '<p><b>Công thức:</b> Số tiền bảo vệ = (Thu nhập tháng × 12 × Số năm cần thay thế ÷ 2) + Tổng dư nợ</p>' +
-        '<p><b>Số năm thu nhập cần thay thế:</b> ' + whyYears + '</p>' +
-        '<p><b>Vì sao chia 2:</b> khi người trụ cột không còn tạo ra thu nhập, chi tiêu của gia đình cũng giảm — bớt một người ăn ở, đi lại, và phần thu nhập trước đây dùng để tái đầu tư cho công việc cũng không còn. Thực tế phần gia đình cần được thay thế thường vào khoảng một nửa thu nhập, nên nhân toàn bộ thu nhập sẽ ra một con số cao hơn nhu cầu thật và đẩy phí lên quá sức.</p>' +
-        '<p><b>Thay số của bạn vào:</b> (' + vnFull(income) + ' × 12 × ' + years + ' ÷ 2) + ' + vnFull(debt) + ' = <b>' + vnFull(cover) + '</b></p></div>' +
         '<p class="res-note">Đây là ước tính theo nguyên tắc chung, chưa trừ đi tài sản có thể dùng ngay, bảo hiểm công ty đang có và kế hoạch riêng của gia đình bạn — những khoản đó thường kéo con số thật xuống. Con số chính xác cần một buổi ngồi tính cụ thể.</p>';
       nOut.classList.add('hot');
     }
