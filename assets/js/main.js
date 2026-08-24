@@ -58,7 +58,13 @@
     hungvuong: { name: 'BV Hùng Vương (TP.HCM)',         thuong: [13e6, 22e6], mo: [22e6, 40e6], bhyt_thuong: [3e6, 5e6],   bhyt_mo: [6e6, 10e6] },
     phusan:    { name: 'BV Phụ sản Quốc tế / tư nhân',   thuong: [35e6, 60e6], mo: [55e6, 95e6], bhyt_thuong: [4e6, 6e6],   bhyt_mo: [7e6, 11e6] },
     vinmec:    { name: 'Vinmec / BV quốc tế cao cấp',    thuong: [70e6, 110e6], mo: [95e6, 160e6], bhyt_thuong: [0, 0],     bhyt_mo: [0, 0] },
-    tinh:      { name: 'BV Sản Nhi tuyến tỉnh',          thuong: [8e6, 15e6],  mo: [15e6, 28e6], bhyt_thuong: [2.5e6, 4e6], bhyt_mo: [5e6, 9e6] }
+    tinh:      { name: 'BV Sản Nhi tuyến tỉnh',          thuong: [8e6, 15e6],  mo: [15e6, 28e6], bhyt_thuong: [2.5e6, 4e6], bhyt_mo: [5e6, 9e6] },
+    phusanhn:  { name: 'BV Phụ sản Hà Nội',               thuong: [12e6, 22e6], mo: [22e6, 40e6], bhyt_thuong: [3e6, 5e6],   bhyt_mo: [6e6, 10e6] },
+    phusantw:  { name: 'BV Phụ sản Trung ương (Hà Nội)',  thuong: [14e6, 25e6], mo: [24e6, 45e6], bhyt_thuong: [3e6, 5e6],   bhyt_mo: [6e6, 10e6] },
+    bachmai:   { name: 'BV Bạch Mai — khoa Sản (Hà Nội)', thuong: [12e6, 22e6], mo: [22e6, 42e6], bhyt_thuong: [3e6, 5e6],   bhyt_mo: [6e6, 10e6] },
+    thanhnhan: { name: 'BV Thanh Nhàn (Hà Nội)',          thuong: [9e6, 17e6],  mo: [17e6, 32e6], bhyt_thuong: [2.5e6, 4e6], bhyt_mo: [5e6, 9e6] },
+    hongngoc:  { name: 'BV Hồng Ngọc / BV tư Hà Nội',     thuong: [35e6, 65e6], mo: [55e6, 95e6], bhyt_thuong: [4e6, 6e6],   bhyt_mo: [7e6, 11e6] },
+    vinmechn:  { name: 'Vinmec Times City (Hà Nội)',      thuong: [70e6, 115e6], mo: [95e6, 165e6], bhyt_thuong: [0, 0],     bhyt_mo: [0, 0] }
   };
   var EXTRAS = { gayte: [1.2e6, 2e6], bacsi: [2e6, 5e6], sanglọc: [0.5e6, 3e6] };
 
@@ -112,19 +118,21 @@
     function calcWait() {
       var dueStr = waitForm.due.value;
       if (!dueStr) { wOut.innerHTML = '<p class="res-note" style="margin:0">Chọn thời điểm bạn dự định sinh để xem hạn chót cần hoàn tất hồ sơ.</p>'; return; }
-      var wait = parseInt(waitForm.wait.value, 10); // 270 | 365
+      var wait = waitForm.wait ? parseInt(waitForm.wait.value, 10) : 270;
+      if (!wait) wait = 270;
       var due = new Date(dueStr + '-15T00:00:00');
       var today = new Date(); today.setHours(0, 0, 0, 0);
       var deadline = new Date(due.getTime() - wait * 86400000);
       var daysLeft = Math.round((deadline - today) / 86400000);
       var dl = deadline.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
       var pill, msg;
+      var SAFE = 'Lưu ý quan trọng: nên hoàn tất hồ sơ <b>trước thời điểm bắt đầu thả để có thai khoảng 1 tháng</b>. Thời gian chờ 270 ngày gần bằng đúng một thai kỳ đủ tháng, nên nếu mua đúng lúc bắt đầu thả thì chỉ cần bé sinh sớm vài ngày là quyền lợi thai sản chưa kịp có hiệu lực. Một tháng đệm đó là để phòng đúng tình huống sinh non.';
       if (daysLeft > 60) {
         pill = '<span class="status-pill status-ok">✓ Bạn vẫn còn thời gian</span>';
-        msg = 'Bạn còn <b>' + daysLeft + ' ngày</b> để hoàn tất hồ sơ. Đây là khoảng thời gian thoải mái — nên tận dụng để so sánh kỹ và thẩm định sức khoẻ không bị gấp.';
+        msg = 'Bạn còn <b>' + daysLeft + ' ngày</b> để hoàn tất hồ sơ. Đây là khoảng thời gian thoải mái — nên tận dụng để so sánh kỹ và thẩm định sức khoẻ không bị gấp.<br><br>' + SAFE;
       } else if (daysLeft > 0) {
         pill = '<span class="status-pill status-warn">⚠ Sắp tới hạn</span>';
-        msg = 'Chỉ còn <b>' + daysLeft + ' ngày</b>. Hồ sơ cần thời gian thẩm định, nên thực tế bạn nên bắt đầu ngay tuần này.';
+        msg = 'Chỉ còn <b>' + daysLeft + ' ngày</b>. Hồ sơ cần thời gian thẩm định, nên thực tế bạn nên bắt đầu ngay tuần này.<br><br>' + SAFE;
       } else {
         pill = '<span class="status-pill status-bad">✕ Đã qua hạn cho lần sinh này</span>';
         msg = 'Hạn chót đã qua <b>' + Math.abs(daysLeft) + ' ngày</b>. Với mốc dự sinh này, quyền lợi thai sản sẽ không kịp hiệu lực. Nhưng bạn vẫn nên xem gói sức khoẻ và nội trú để bảo vệ phần biến chứng — và chuẩn bị sớm cho lần sinh sau.';
@@ -154,30 +162,64 @@
       var debt = parseFloat(needForm.debt.value) * 1e6 || 0;
       var deps = parseInt(needForm.deps.value, 10) || 0;
       var years = deps > 0 ? 10 + deps * 2 : 5;
-      var cover = income * 12 * (years / 2) + debt;
+      var hs = income * 12 * (years / 2);
+      var cover = hs + debt;
       var budgetLo = income * 0.05, budgetHi = income * 0.10;
+      var vnFull = function (n) { return Math.round(n).toLocaleString('vi-VN') + ' đồng'; };
+      var whyYears = deps > 0
+        ? 'Bạn có <b>' + deps + ' người phụ thuộc</b>. Chúng tôi lấy <b>10 năm nền</b> — khoảng thời gian tối thiểu để gia đình sắp xếp lại cuộc sống và người còn lại quay lại được với công việc — rồi <b>cộng thêm 2 năm cho mỗi người phụ thuộc</b>, vì mỗi người phụ thuộc kéo dài thêm quãng thời gian gia đình cần được nuôi. Kết quả: 10 + ' + deps + ' × 2 = <b>' + years + ' năm</b>.'
+        : 'Bạn chưa khai người phụ thuộc nào, nên chúng tôi dùng mốc tối thiểu <b>5 năm</b> — đủ để xử lý nghĩa vụ tài chính còn dang dở, không phải để nuôi ai lâu dài.';
       nOut.innerHTML =
         '<div class="res-row"><span>Số năm thu nhập cần thay thế</span><b>' + years + ' năm</b></div>' +
+        '<div class="res-row"><span>Phần thay thế thu nhập</span><b>' + tr(hs) + '</b></div>' +
         '<div class="res-row"><span>Khoản nợ cần xoá</span><b>' + tr(debt) + '</b></div>' +
         '<div style="margin-top:18px;padding-top:16px;border-top:2px solid var(--red-soft2)">' +
         '<div style="font-size:.86rem;color:var(--grey-600);margin-bottom:4px;font-weight:600">SỐ TIỀN BẢO VỆ GỢI Ý</div>' +
-        '<div class="res-big">' + tr(cover) + '</div></div>' +
+        '<div class="res-big">' + tr(cover) + '</div>' +
+        '<div style="font-size:.95rem;color:var(--grey-600);margin-top:4px">= <b>' + vnFull(cover) + '</b></div></div>' +
         '<div class="res-row" style="margin-top:14px"><span>Ngân sách phí hợp lý (5–10% thu nhập)</span><b>' + vnd(budgetLo) + ' – ' + vnd(budgetHi) + '/tháng</b></div>' +
-        '<p class="res-note">Đây là ước tính theo nguyên tắc chung, chưa tính tới tài sản sẵn có, bảo hiểm công ty và kế hoạch riêng của gia đình bạn. Con số chính xác cần một buổi ngồi tính cụ thể.</p>';
+        '<div class="res-why"><b>Con số này ra từ đâu?</b>' +
+        '<p><b>Công thức:</b> Số tiền bảo vệ = (Thu nhập tháng × 12 × Số năm cần thay thế ÷ 2) + Tổng dư nợ</p>' +
+        '<p><b>Số năm thu nhập cần thay thế:</b> ' + whyYears + '</p>' +
+        '<p><b>Vì sao chia 2:</b> khi người trụ cột không còn tạo ra thu nhập, chi tiêu của gia đình cũng giảm — bớt một người ăn ở, đi lại, và phần thu nhập trước đây dùng để tái đầu tư cho công việc cũng không còn. Thực tế phần gia đình cần được thay thế thường vào khoảng một nửa thu nhập, nên nhân toàn bộ thu nhập sẽ ra một con số cao hơn nhu cầu thật và đẩy phí lên quá sức.</p>' +
+        '<p><b>Thay số của bạn vào:</b> (' + vnFull(income) + ' × 12 × ' + years + ' ÷ 2) + ' + vnFull(debt) + ' = <b>' + vnFull(cover) + '</b></p></div>' +
+        '<p class="res-note">Đây là ước tính theo nguyên tắc chung, chưa trừ đi tài sản có thể dùng ngay, bảo hiểm công ty đang có và kế hoạch riêng của gia đình bạn — những khoản đó thường kéo con số thật xuống. Con số chính xác cần một buổi ngồi tính cụ thể.</p>';
       nOut.classList.add('hot');
     }
     needForm.addEventListener('input', calcNeed);
     calcNeed();
   }
 
-  /* ---------- Forms → chuyển sang Zalo ---------- */
+  /* ---------- Forms → lưu vào Google Sheet + chuyển sang Zalo ---------- */
+  var LEAD_ENDPOINT = window.TVBHS_LEAD_ENDPOINT || '';
+
+  function sendLead(payload) {
+    if (!LEAD_ENDPOINT) return;
+    try {
+      var body = JSON.stringify(payload);
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(LEAD_ENDPOINT, new Blob([body], { type: 'text/plain;charset=utf-8' }));
+      } else {
+        fetch(LEAD_ENDPOINT, {
+          method: 'POST', mode: 'no-cors', keepalive: true,
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: body
+        });
+      }
+    } catch (err) {}
+  }
+
   document.querySelectorAll('form[data-lead]').forEach(function (f) {
     f.addEventListener('submit', function (e) {
       e.preventDefault();
       var ok = f.querySelector('.form-ok');
       var data = new FormData(f);
-      var lines = [];
-      data.forEach(function (v, k) { if (v && k !== 'consent') lines.push(v); });
+      var payload = {};
+      data.forEach(function (v, k) { if (k !== 'consent') payload[k] = v; });
+      payload.trang = location.pathname + location.search;
+      try { payload.kenh = localStorage.getItem('tvbhs_track') || ''; } catch (er) { payload.kenh = ''; }
+      payload.nguon = document.referrer || 'Truy cập trực tiếp';
+      sendLead(payload);
       if (ok) {
         ok.classList.add('show');
         ok.innerHTML = '✓ Đã ghi nhận. Chúng tôi sẽ liên hệ lại trong giờ hành chính.<br>' +
@@ -260,4 +302,13 @@
       else location.href = b.getAttribute('data-open-gate') || 'index.html';
     });
   });
+})();
+
+/* ===== Đổ bóng header khi cuộn ===== */
+(function () {
+  var h = document.querySelector('.header');
+  if (!h) return;
+  function onScroll() { h.classList.toggle('scrolled', window.scrollY > 8); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 })();
