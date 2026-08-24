@@ -704,3 +704,12 @@ html,body{overflow-x:hidden;max-width:100%}
 .calc select optgroup{font-weight:700;color:var(--grey-600)}
 .photo img{display:block;width:100%;height:auto}
 .article h2{scroll-margin-top:96px}
+
+/* ===== v5: logo anh, luu y quan trong ===== */
+.brand-logo{width:44px;height:44px;border-radius:12px;display:block;flex-shrink:0}
+.header .brand-logo{width:40px;height:40px}
+.gate .brand-logo{width:46px;height:46px}
+.footer .brand-logo{width:44px;height:44px}
+.res-note-hi{display:block;margin-top:2px}
+.res-note-hi mark{background:#FFE8B0;color:#5C4200;font-weight:700;font-style:normal;padding:1px 6px;border-radius:5px}
+.res-note-hi i{font-style:italic}
