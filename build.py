@@ -572,6 +572,143 @@ ART3_TBL = [
 ]
 
 # ================================================================ TRANG CHỦ
+# ============================================================
+# v5 — Bộ khối sơ đồ dùng chung (K1–K8)
+# ============================================================
+
+def fig(svg, caption="", note=""):
+    c = '<figcaption>%s</figcaption>' % caption if caption else ''
+    n = '<p class="fig-note">%s</p>' % note if note else ''
+    return '<figure class="fig">%s%s%s</figure>' % (svg, c, n)
+
+def fold(title, body):
+    return ('<details class="fold"><summary>%s</summary>'
+            '<div class="fold-body">%s</div></details>') % (title, body)
+
+def prod(name, tag, bullets, price, assume, href="lien-he.html"):
+    lis = "".join("<li>%s</li>" % b for b in bullets)
+    return ('<div class="prod"><span class="p-tag">%s</span><h3>%s</h3><ul>%s</ul>'
+            '<div class="p-price"><b>%s</b><span>%s</span></div>'
+            '<a class="p-cta" href="%s">Hỏi về gói này &rarr;</a></div>') % (tag, name, lis, price, assume, href)
+
+# K1 — Tháp ba tầng
+K1 = """<svg class="fig-svg" viewBox="0 0 420 210" role="img" aria-label="Tháp tài chính ba tầng: đầu tư, tích luỹ, phòng vệ">
+<polygon points="210,12 282,84 138,84" class="nt-s" fill="none" stroke-width="2"/>
+<text x="210" y="68" font-size="16" text-anchor="middle" class="nt-f">Đầu tư</text>
+<polygon points="134,90 286,90 320,152 100,152" class="nt-s" fill="none" stroke-width="2"/>
+<text x="210" y="128" font-size="16" text-anchor="middle" class="nt-f">Tích luỹ</text>
+<polygon points="96,158 324,158 344,200 76,200" class="ac-s" fill="none" stroke-width="3.5"/>
+<text x="210" y="186" font-size="17" text-anchor="middle" class="ac-f">Phòng vệ</text>
+</svg>"""
+
+# K2 — Đòn bẩy phí/năm → số tiền chi trả
+K2 = """<svg class="fig-svg" viewBox="0 0 460 200" role="img" aria-label="Đòn bẩy: phí đóng mỗi năm so với số tiền được chi trả">
+<rect x="10" y="86" width="96" height="30" rx="6" class="nt-s" fill="none" stroke-width="2"/>
+<text x="58" y="106" font-size="14" text-anchor="middle" class="nt-f">3,85 triệu</text>
+<text x="58" y="134" font-size="12" text-anchor="middle" class="nt-f">phí mỗi năm</text>
+<path d="M116 101 H160" class="ac-s" stroke-width="3" fill="none"/>
+<path d="M152 94 l9 7 -9 7" class="ac-s" stroke-width="3" fill="none"/>
+<rect x="170" y="16" width="280" height="170" rx="10" class="ac-s" fill="none" stroke-width="4"/>
+<text x="310" y="92" font-size="34" text-anchor="middle" class="ac-f">500 triệu</text>
+<text x="310" y="122" font-size="14" text-anchor="middle" class="ac-f">số tiền bảo hiểm</text>
+<text x="310" y="152" font-size="13" text-anchor="middle" class="nt-f">gấp khoảng 130 lần</text>
+</svg>"""
+
+# K3 — Khám sức khoẻ tài chính
+K3 = """<svg class="fig-svg" viewBox="0 0 460 210" role="img" aria-label="Khám sức khoẻ tài chính: bốn dữ kiện đầu vào, buổi khám, ngân sách phí phù hợp">
+<rect x="6" y="10" width="92" height="34" rx="7" class="nt-s" fill="none" stroke-width="1.8"/>
+<text x="52" y="32" font-size="13" text-anchor="middle" class="nt-f">Thu nhập</text>
+<rect x="6" y="60" width="92" height="34" rx="7" class="nt-s" fill="none" stroke-width="1.8"/>
+<text x="52" y="82" font-size="13" text-anchor="middle" class="nt-f">Dư nợ</text>
+<rect x="6" y="110" width="92" height="34" rx="7" class="nt-s" fill="none" stroke-width="1.8"/>
+<text x="52" y="132" font-size="13" text-anchor="middle" class="nt-f">Người phụ thuộc</text>
+<rect x="6" y="160" width="92" height="34" rx="7" class="nt-s" fill="none" stroke-width="1.8"/>
+<text x="52" y="182" font-size="13" text-anchor="middle" class="nt-f">Mục tiêu</text>
+<path d="M104 27 C150 27 150 102 186 102 M104 77 C154 77 154 102 186 102 M104 127 C154 127 154 102 186 102 M104 177 C150 177 150 102 186 102" class="lt-s" fill="none" stroke-width="1.8"/>
+<circle cx="228" cy="102" r="40" class="ac-s" fill="none" stroke-width="3.5"/>
+<text x="228" y="97" font-size="14" text-anchor="middle" class="ac-f">Khám</text>
+<text x="228" y="116" font-size="14" text-anchor="middle" class="ac-f">45 phút</text>
+<path d="M274 102 H310" class="ac-s" stroke-width="3" fill="none"/>
+<path d="M302 95 l9 7 -9 7" class="ac-s" stroke-width="3" fill="none"/>
+<rect x="320" y="66" width="134" height="72" rx="9" class="ac-s" fill="none" stroke-width="3"/>
+<text x="387" y="97" font-size="14" text-anchor="middle" class="ac-f">Ngân sách phí</text>
+<text x="387" y="117" font-size="14" text-anchor="middle" class="ac-f">của riêng bạn</text>
+</svg>"""
+
+# K4 — Buổi 45 phút có gì
+K4 = """<svg class="fig-svg" viewBox="0 0 460 150" role="img" aria-label="Buổi tư vấn 45 phút gồm ba phần">
+<circle cx="70" cy="60" r="34" class="nt-s" fill="none" stroke-width="2"/>
+<text x="70" y="68" font-size="24" text-anchor="middle" class="nt-f">1</text>
+<text x="70" y="120" font-size="13" text-anchor="middle" class="nt-f">Khám tài chính</text>
+<text x="70" y="138" font-size="11.5" text-anchor="middle" class="nt-f">cần hay chưa cần mua</text>
+<path d="M112 60 H152" class="lt-s" stroke-width="2.5"/><path d="M145 54 l8 6 -8 6" class="lt-s" stroke-width="2.5" fill="none"/>
+<circle cx="196" cy="60" r="34" class="nt-s" fill="none" stroke-width="2"/>
+<text x="196" y="68" font-size="24" text-anchor="middle" class="nt-f">2</text>
+<text x="196" y="120" font-size="13" text-anchor="middle" class="nt-f">Giải pháp</text>
+<text x="196" y="138" font-size="11.5" text-anchor="middle" class="nt-f">tương ứng với con số đó</text>
+<path d="M238 60 H278" class="lt-s" stroke-width="2.5"/><path d="M271 54 l8 6 -8 6" class="lt-s" stroke-width="2.5" fill="none"/>
+<circle cx="326" cy="60" r="36" class="ac-s" fill="none" stroke-width="3.5"/>
+<text x="326" y="68" font-size="24" text-anchor="middle" class="ac-f">3</text>
+<text x="326" y="120" font-size="13" text-anchor="middle" class="ac-f">Giải thích</text>
+<text x="326" y="138" font-size="11.5" text-anchor="middle" class="nt-f">quyền lợi và cả nhược điểm</text>
+</svg>"""
+
+# K5 — Khoảng trống chi phí
+K5 = """<svg class="fig-svg" viewBox="0 0 420 230" role="img" aria-label="Khoảng trống giữa phần bảo hiểm y tế chi trả và viện phí thật">
+<rect x="34" y="150" width="110" height="60" rx="6" class="nt-s" fill="none" stroke-width="2"/>
+<text x="89" y="186" font-size="14" text-anchor="middle" class="nt-f">BHYT trả</text>
+<text x="89" y="226" font-size="12" text-anchor="middle" class="nt-f">phần nhỏ</text>
+<rect x="196" y="16" width="130" height="194" rx="6" class="lt-s" fill="none" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="261" y="10" font-size="12.5" text-anchor="middle" class="nt-f">Viện phí thật</text>
+<rect x="196" y="16" width="130" height="128" rx="6" class="ac-s" fill="none" stroke-width="3.5"/>
+<text x="261" y="72" font-size="16" text-anchor="middle" class="ac-f">Phần</text>
+<text x="261" y="94" font-size="16" text-anchor="middle" class="ac-f">gia đình</text>
+<text x="261" y="116" font-size="16" text-anchor="middle" class="ac-f">tự trả</text>
+<text x="261" y="226" font-size="12" text-anchor="middle" class="nt-f">tổng hoá đơn</text>
+</svg>"""
+
+# K6 — Trục thời gian chờ
+K6 = """<svg class="fig-svg" viewBox="0 0 480 150" role="img" aria-label="Trục thời gian: mua bảo hiểm, thả bầu sau một tháng, hết thời gian chờ 270 ngày, ngày dự sinh">
+<line x1="24" y1="80" x2="464" y2="80" class="lt-s" stroke-width="3"/>
+<line x1="40" y1="80" x2="330" y2="80" class="ac-s" stroke-width="6"/>
+<circle cx="40" cy="80" r="9" class="ac-f"/>
+<text x="26" y="52" font-size="13" text-anchor="start" class="ac-f">Mua bảo hiểm</text>
+<circle cx="112" cy="80" r="9" class="ac-f"/>
+<text x="112" y="112" font-size="13" text-anchor="middle" class="ac-f">Thả bầu</text>
+<text x="112" y="130" font-size="11.5" text-anchor="middle" class="nt-f">một tháng sau</text>
+<text x="185" y="66" font-size="13" text-anchor="middle" class="ac-f">270 ngày chờ</text>
+<circle cx="330" cy="80" r="9" class="ac-f"/>
+<text x="330" y="52" font-size="13" text-anchor="middle" class="nt-f">Quyền lợi có hiệu lực</text>
+<circle cx="448" cy="80" r="9" class="nt-f"/>
+<text x="462" y="112" font-size="13" text-anchor="end" class="nt-f">Dự sinh</text>
+</svg>"""
+
+# Sơ đồ bảo lãnh viện phí — hai luồng
+K5B = """<svg class="fig-svg" viewBox="0 0 470 200" role="img" aria-label="Hai luồng thanh toán viện phí: có bảo lãnh và không có bảo lãnh">
+<text x="16" y="22" font-size="13" class="ac-f">CÓ BẢO LÃNH</text>
+<rect x="16" y="34" width="92" height="34" rx="6" class="ac-s" fill="none" stroke-width="2.5"/>
+<text x="62" y="55" font-size="12.5" text-anchor="middle" class="ac-f">Nhập viện</text>
+<path d="M114 51 H146" class="ac-s" stroke-width="2.5"/><path d="M139 45 l8 6 -8 6" class="ac-s" stroke-width="2.5" fill="none"/>
+<rect x="152" y="34" width="120" height="34" rx="6" class="ac-s" fill="none" stroke-width="2.5"/>
+<text x="212" y="55" font-size="12.5" text-anchor="middle" class="ac-f">Bảo hiểm trả thẳng</text>
+<path d="M278 51 H310" class="ac-s" stroke-width="2.5"/><path d="M303 45 l8 6 -8 6" class="ac-s" stroke-width="2.5" fill="none"/>
+<rect x="316" y="34" width="138" height="34" rx="6" class="ac-s" fill="none" stroke-width="2.5"/>
+<text x="385" y="55" font-size="12.5" text-anchor="middle" class="ac-f">Về nhà, không ứng tiền</text>
+<text x="16" y="122" font-size="13" class="nt-f">KHÔNG CÓ BẢO LÃNH</text>
+<rect x="16" y="134" width="92" height="34" rx="6" class="nt-s" fill="none" stroke-width="2"/>
+<text x="62" y="155" font-size="12.5" text-anchor="middle" class="nt-f">Nhập viện</text>
+<path d="M114 151 H146" class="lt-s" stroke-width="2.5"/><path d="M139 145 l8 6 -8 6" class="lt-s" stroke-width="2.5" fill="none"/>
+<rect x="152" y="134" width="120" height="34" rx="6" class="nt-s" fill="none" stroke-width="2"/>
+<text x="212" y="155" font-size="12.5" text-anchor="middle" class="nt-f">Tự ứng tiền mặt</text>
+<path d="M278 151 H310" class="lt-s" stroke-width="2.5"/><path d="M303 145 l8 6 -8 6" class="lt-s" stroke-width="2.5" fill="none"/>
+<rect x="316" y="134" width="138" height="34" rx="6" class="nt-s" fill="none" stroke-width="2"/>
+<text x="385" y="155" font-size="12.5" text-anchor="middle" class="nt-f">Nộp hồ sơ, chờ hoàn</text>
+</svg>"""
+
+
+
+COMMIT_BODY = f"""<p class="lead">Đây không phải khẩu hiệu. Nếu chúng tôi làm sai bất kỳ điều nào dưới đây, bạn hoàn toàn có thể nhắc lại.</p><div class="feat"><span class="feat-ico">{I['chart']}</span><div><h4>Tính được, không chỉ nói được</h4><p>Mọi đề xuất đều đi kèm bảng tính cụ thể cho hoàn cảnh của bạn &mdash; kể cả phép so sánh sòng phẳng giữa bảo hiểm, tiết kiệm và các kênh khác.</p></div></div><div class="feat"><span class="feat-ico">{I['warn']}</span><div><h4>Nói nhược điểm trước khi bạn hỏi</h4><p>Giá trị hoàn lại những năm đầu, điều khoản loại trừ, rủi ro của dòng liên kết đầu tư &mdash; chúng tôi nói hết ngay buổi đầu.</p></div></div><div class="feat"><span class="feat-ico">{I['doc']}</span><div><h4>Kê khai sức khoẻ đầy đủ, không đi tắt</h4><p>Phần lớn vụ từ chối bồi thường đến từ kê khai thiếu. Chúng tôi khai đủ, giữ bản sao, và không bao giờ khuyên bạn bỏ qua một chi tiết y tế nào.</p></div></div><div class="feat"><span class="feat-ico">{I['users']}</span><div><h4>Có mặt khi bạn cần bồi thường</h4><p>Đây là lúc bảo hiểm thực sự có hoặc không có giá trị. Chúng tôi hỗ trợ trực tiếp thay vì để bạn tự gọi tổng đài.</p></div></div>"""
+
 home = f"""
 <section class="hero">
   <div class="hero-inner">
@@ -598,7 +735,7 @@ home = f"""
       </div>
     </div>
     <div class="hero-art">
-      <img src="assets/img/hero.svg" alt="Gia đình được bảo vệ bởi kế hoạch tài chính" width="800" height="620">
+      <img src="assets/img/gia-dinh-bao-ve.jpg" alt="Gia đình ba thế hệ trong ngôi nhà được bảo vệ" width="1600" height="1119" style="border-radius:22px;box-shadow:var(--shadow-lg)">
       <div class="hero-badge">
         <span class="hb-ico">{I['check']}</span>
         <span><b>Nói trước cả nhược điểm</b><span>Trước khi bạn đặt bút ký</span></span>
@@ -615,6 +752,25 @@ home = f"""
       <div class="trust-item"><div class="ti-ico">{I['doc']}</div><b>Không thu phí dịch vụ</b><span>Tư vấn, đọc lại hợp đồng và hỗ trợ hồ sơ bồi thường đều miễn phí.</span></div>
       <div class="trust-item"><div class="ti-ico">{I['users']}</div><b>Đồng hành sau khi ký</b><span>Nhắc kỳ đóng phí và hỗ trợ trực tiếp khi bạn cần làm hồ sơ bồi thường.</span></div>
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="center" style="max-width:52em;margin:0 auto 32px">
+      <span class="eyebrow">Bắt đầu từ bức tranh lớn</span>
+      <h2>Một kế hoạch tài chính đứng được có ba tầng</h2>
+    </div>
+    {fig(K1,
+      "Đầu tư và tích luỹ là hai tầng sinh lời. <b>Phòng vệ</b> là tầng duy nhất không sinh lời &mdash; nhưng thiếu nó thì hai tầng trên bị rút ngược để chữa bệnh, kế hoạch học của con dừng lại, còn khoản vay thì vẫn phải trả đúng hạn.")}
+    <div class="btn-row" style="margin-top:30px;justify-content:center">
+      <a class="btn btn-primary btn-lg" href="lien-he.html">{I['users']} Khám sức khoẻ tài chính miễn phí</a>
+    </div>
+    {fold("Ba tầng đó cụ thể là gì?",
+      "<p><b>Tầng đầu tư</b> &mdash; cổ phiếu, quỹ, bất động sản, việc kinh doanh riêng. Sinh lời cao nhất, rủi ro cao nhất, và cần thời gian dài để phát huy.</p>"
+      "<p><b>Tầng tích luỹ</b> &mdash; tiết kiệm ngân hàng, vàng, quỹ dự phòng khẩn cấp. Đây là tiền dùng cho các mục tiêu trong vài năm tới và cho những tình huống bất ngờ nhỏ.</p>"
+      "<p><b>Tầng phòng vệ</b> &mdash; bảo hiểm sức khoẻ, bảo hiểm nhân thọ, bảo hiểm tai nạn. Nó không làm tiền của bạn nhiều lên. Việc duy nhất của nó là chặn một sự cố lớn khỏi ăn vào hai tầng trên.</p>"
+      "<p>Thứ tự xây thường ngược với thứ tự mọi người nghĩ: <b>xây tầng đáy trước</b>. Một gia đình đang đầu tư mạnh mà không có tầng phòng vệ thì chỉ cần một ca nằm viện dài là phải bán tài sản đầu tư đúng lúc không nên bán.</p>")}
   </div>
 </section>
 
@@ -711,33 +867,17 @@ home = f"""
   <div class="wrap">
     <div class="center" style="max-width:54em;margin:0 auto 10px">
       <span class="eyebrow">Buổi tư vấn trực tiếp</span>
-      <h2>Khách hàng nhận được gì qua buổi tư vấn trực tiếp</h2>
-      <p class="lead">Một buổi làm việc 45&ndash;60 phút, miễn phí, không cam kết mua gì. Đây là chính xác những gì diễn ra và những gì bạn mang về.</p>
+      <h2>Khách nhận được gì trong 45 phút</h2>
     </div>
-    <div class="journey" style="grid-template-columns:repeat(3,1fr)">
-      <div class="jstep">
-        <div class="jnum">1</div>
-        <h4>Xác định nhu cầu, mục tiêu và bức tranh tài chính</h4>
-        <p>Chúng tôi hỏi về thu nhập, khoản vay, người phụ thuộc, kế hoạch sinh con và những gì bạn đang lo nhất. Kết thúc bước này bạn có <b>một bức tranh tài chính gia đình trên một trang giấy</b> &mdash; thứ mà phần lớn gia đình chưa từng ngồi xuống viết ra.</p>
-      </div>
-      <div class="jstep">
-        <div class="jnum">2</div>
-        <h4>Xây dựng giải pháp theo đúng nhu cầu và túi tiền</h4>
-        <p>Không phải một gói duy nhất, mà <b>2&ndash;3 phương án ở các mức phí khác nhau</b>, kèm điểm mạnh và điểm yếu của từng cái. Nếu sau khi tính ra kết luận là <b>bạn chưa cần mua thêm gì</b>, chúng tôi nói đúng như vậy và buổi làm việc dừng ở đó.</p>
-      </div>
-      <div class="jstep">
-        <div class="jnum">3</div>
-        <h4>Đi qua từng dòng: quyền lợi, loại trừ, thời gian chờ</h4>
-        <p>Phần quan trọng nhất và cũng là phần hay bị bỏ qua nhất. Chúng tôi mở bộ điều khoản và đi qua <b>điều khoản loại trừ, bảng thời gian chờ theo từng nhóm quyền lợi, quy trình bồi thường và cách kê khai sức khoẻ</b> &mdash; để bạn biết trước mình được gì và <b>không được gì</b>, thay vì phát hiện ra lúc nằm viện.</p>
-      </div>
+    {fig(K4, "Miễn phí, không cam kết mua gì. Nếu tính ra kết luận là bạn <b>chưa cần mua thêm</b>, chúng tôi nói đúng như vậy và buổi làm việc dừng ở đó.")}
+    <div class="btn-row" style="margin-top:30px;justify-content:center">
+      <a class="btn btn-primary btn-lg" href="lien-he.html">{I['users']} Đặt lịch buổi tư vấn</a>
     </div>
-    <div class="callout" style="margin-top:34px">
-      <h4>Bạn mang về được gì kể cả khi không mua</h4>
-      <p class="mb0">Bảng tính chi phí cho tình huống thật của gia đình bạn &middot; danh sách quyền lợi bạn đang có và đang thiếu &middot; các mốc thời gian cần lưu ý &middot; và một danh sách câu hỏi để bạn tự kiểm tra bất kỳ tư vấn viên nào khác. Toàn bộ đều miễn phí và là của bạn.</p>
-    </div>
-    <div class="center" style="margin-top:34px">
-      <a class="btn btn-primary btn-lg" href="lien-he.html">Đặt lịch buổi tư vấn {I['arrow']}</a>
-    </div>
+    {fold("Ba phần đó diễn ra thế nào",
+      "<p><b>1. Khám sức khoẻ tài chính.</b> Chúng tôi hỏi về thu nhập, khoản vay, người phụ thuộc, kế hoạch sinh con và điều bạn đang lo nhất. Kết thúc bước này bạn có bức tranh tài chính gia đình trên một trang giấy.</p>"
+      "<p><b>2. Giải pháp tương ứng.</b> Không phải một gói duy nhất, mà 2&ndash;3 phương án ở các mức phí khác nhau, kèm điểm mạnh và điểm yếu của từng cái.</p>"
+      "<p><b>3. Giải thích quyền lợi và cả nhược điểm.</b> Chúng tôi mở bộ điều khoản và đi qua điều khoản loại trừ, bảng thời gian chờ theo từng nhóm quyền lợi, quy trình bồi thường và cách kê khai sức khoẻ &mdash; để bạn biết trước mình được gì và <b>không được gì</b>.</p>"
+      "<p><b>Bạn mang về kể cả khi không mua:</b> bảng tính chi phí cho tình huống thật của gia đình &middot; danh sách quyền lợi đang có và đang thiếu &middot; các mốc thời gian cần lưu ý &middot; danh sách câu hỏi để tự kiểm tra bất kỳ tư vấn viên nào khác.</p>")}
   </div>
 </section>
 
@@ -771,63 +911,27 @@ home = f"""
   </div>
 </section>
 
+
+
 <section class="section bg-grey">
   <div class="wrap">
-    <div class="center" style="max-width:50em;margin:0 auto 44px">
-      <span class="eyebrow">Danh mục tư vấn</span>
-      <h2>Sản phẩm chúng tôi đang tư vấn</h2>
-      <p class="lead">Danh mục AIA Việt Nam, cùng các gói bảo hiểm thai sản rời của nhiều đơn vị khác. Việc của chúng tôi không phải bán gói đắt nhất, mà là tìm gói phù hợp với ngân sách và tình huống thật của gia đình bạn.</p>
-    </div>
-    <div class="grid g3">
-      {card_prod('Bảo vệ cuộc sống','AIA &ndash; Khoẻ Trọn Vẹn','Bảo hiểm liên kết chung &mdash; bảo vệ dài hạn kết hợp tài khoản tích luỹ có lãi suất công bố định kỳ.',['Quyền lợi bảo vệ chính linh hoạt','Có thể gắn thêm thẻ sức khoẻ, bệnh hiểm nghèo','Điều chỉnh phí và số tiền bảo hiểm theo giai đoạn'],'san-pham.html#bao-ve')}
-      {card_prod('Bảo vệ cuộc sống','AIA &ndash; Khoẻ An Nhiên','Giải pháp bảo vệ tập trung vào rủi ro sức khoẻ và tử vong, cấu trúc đơn giản, dễ hiểu.',['Phù hợp người muốn thuần bảo vệ','Chi phí bảo vệ tối ưu hơn dòng đầu tư','Dễ kết hợp với sản phẩm bổ trợ'],'san-pham.html#bao-ve')}
-      {card_prod('Bảo vệ &amp; tiết kiệm','AIA &ndash; Vững Tương Lai','Bảo hiểm liên kết chung hướng tới mục tiêu dài hạn: học vấn cho con, quỹ hưu trí.',['Tích luỹ theo mục tiêu có thời hạn','Bảo vệ duy trì kể cả khi có biến cố','Có quyền lợi miễn đóng phí khi cần'],'san-pham.html#tiet-kiem')}
-      {card_prod('Sức khoẻ &amp; nằm viện','Chăm Sóc Sức Khoẻ','Sản phẩm bổ trợ chi trả viện phí nội trú, ngoại trú, phẫu thuật theo hạn mức lựa chọn.',['Nhiều hạng mức quyền lợi để chọn','Có mạng lưới bảo lãnh viện phí','Đây là quyền lợi bị thiếu nhiều nhất'],'suc-khoe.html')}
-      {card_prod('Sức khoẻ &amp; nằm viện','Bệnh Hiểm Nghèo','Chi trả một khoản tiền mặt khi được chẩn đoán bệnh hiểm nghèo thuộc danh sách bảo hiểm.',['Tiền mặt để lo chi phí ngoài viện phí','Bù đắp phần thu nhập mất đi','Quyền lợi theo giai đoạn bệnh'],'suc-khoe.html')}
-      {card_prod('Thai sản rời','Bảo hiểm thai sản &mdash; nhiều lựa chọn','Các gói thai sản tham gia độc lập, không bắt buộc mua kèm hợp đồng nhân thọ dài hạn. Chúng tôi so sánh nhiều đơn vị để chọn gói hợp với mốc dự sinh và ngân sách của bạn.',['Thời gian chờ từ 270 ngày','Không phân biệt sinh thường và sinh mổ','Bảo lãnh viện phí tại nhiều bệnh viện sản lớn'],'thai-san.html', tag='Nổi bật')}
-    </div>
-    <div class="center" style="margin-top:38px">
-      <a class="btn btn-outline btn-lg" href="san-pham.html">Xem tất cả sản phẩm {I['arrow']}</a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="split">
-      <div><img src="assets/img/art-advisor.svg" alt="Tư vấn viên" style="border-radius:22px;box-shadow:var(--shadow-lg);max-width:420px;margin:0 auto"></div>
+    <div class="split" style="align-items:center">
+      <div class="photo"><img src="assets/img/tu-van-gia-dinh.jpg" alt="Buổi tư vấn tại nhà cùng gia đình" width="1200" height="1313" loading="lazy"></div>
       <div>
         <span class="eyebrow">Cách chúng tôi làm việc</span>
-        <h2>Bốn điều chúng tôi cam kết với mọi khách hàng</h2>
-        <p class="lead">Đây không phải khẩu hiệu. Nếu chúng tôi làm sai bất kỳ điều nào dưới đây, bạn hoàn toàn có thể nhắc lại.</p>
-        <div class="feat"><span class="feat-ico">{I['chart']}</span><div><h4>Tính được, không chỉ nói được</h4><p>Mọi đề xuất đều đi kèm bảng tính cụ thể cho hoàn cảnh của bạn &mdash; kể cả phép so sánh sòng phẳng giữa bảo hiểm, tiết kiệm và các kênh khác.</p></div></div>
-        <div class="feat"><span class="feat-ico">{I['warn']}</span><div><h4>Nói nhược điểm trước khi bạn hỏi</h4><p>Giá trị hoàn lại những năm đầu, điều khoản loại trừ, rủi ro của dòng liên kết đầu tư &mdash; chúng tôi nói hết ngay buổi đầu.</p></div></div>
-        <div class="feat"><span class="feat-ico">{I['doc']}</span><div><h4>Kê khai sức khoẻ đầy đủ, không đi tắt</h4><p>Phần lớn vụ từ chối bồi thường đến từ kê khai thiếu. Chúng tôi khai đủ, giữ bản sao, và không bao giờ khuyên bạn bỏ qua một chi tiết y tế nào.</p></div></div>
-        <div class="feat"><span class="feat-ico">{I['users']}</span><div><h4>Có mặt khi bạn cần bồi thường</h4><p>Đây là lúc bảo hiểm thực sự có hoặc không có giá trị. Chúng tôi hỗ trợ trực tiếp thay vì để bạn tự gọi tổng đài.</p></div></div>
-        <a class="btn btn-primary" href="ve-chung-toi.html">Tìm hiểu thêm {I['arrow']}</a>
+        <h2>Nói trước cả phần bất lợi, trước khi bạn đặt bút ký</h2>
+        <p class="lead">Đọc điều khoản loại trừ cùng bạn &middot; nói thẳng khi bạn chưa cần mua &middot; theo hồ sơ bồi thường tới cùng &middot; không thu phí dịch vụ.</p>
+        <div class="btn-row" style="margin-top:24px">
+          <a class="btn btn-primary" href="lien-he.html">Đặt lịch tư vấn</a>
+          <a class="btn btn-ghost" href="ve-chung-toi.html">Về chúng tôi</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="section bg-grey">
-  <div class="wrap">
-    <div class="center" style="max-width:50em;margin:0 auto 44px">
-      <span class="eyebrow">Kiến thức</span>
-      <h2>Đọc trước khi mua bất kỳ hợp đồng nào</h2>
+    <div style="margin-top:44px">
+      {fold("Bốn điều chúng tôi cam kết với mọi khách hàng", COMMIT_BODY)}
+      {fold("Những gì khách hàng hỏi nhiều nhất", faq(HOME_FAQ))}
     </div>
-    <div class="grid g3">{post_cards('')}</div>
-    <div class="center" style="margin-top:38px"><a class="btn btn-outline" href="kien-thuc/index.html">Xem tất cả bài viết {I['arrow']}</a></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap" style="max-width:840px">
-    <div class="center" style="margin-bottom:38px">
-      <span class="eyebrow">Câu hỏi thường gặp</span>
-      <h2>Những gì khách hàng hỏi nhiều nhất</h2>
-    </div>
-    {faq(HOME_FAQ)}
   </div>
 </section>
 
@@ -859,6 +963,29 @@ def prod_section(anchor, eyebrow, title, intro, cards, bg=""):
   </div>
 </section>"""
 
+SP_PRICE = [
+  ["<b>AIA Khoẻ Trọn Vẹn</b><br><span style='font-size:.85rem;color:var(--grey-400)'>Nhân thọ liên kết chung</span>",
+   "<b>3,4 – 5,6 triệu</b>", "Phí cơ bản, kế hoạch trọn đời, số tiền bảo hiểm 500 triệu, tuổi 25–40"],
+  ["<b>AIA Vững Tương Lai</b><br><span style='font-size:.85rem;color:var(--grey-400)'>Nhân thọ liên kết chung</span>",
+   "<b>3,6 – 20 triệu</b>", "Số tiền bảo hiểm 500 triệu, hệ số bảo hiểm 25–140 tuỳ tuổi và lựa chọn"],
+  ["<b>AIA Khoẻ Bình An</b><br><span style='font-size:.85rem;color:var(--grey-400)'>Nhân thọ liên kết chung</span>",
+   "<b>3,6 – 20 triệu</b>", "Số tiền bảo hiểm 500 triệu, bảng hệ số tương tự Vững Tương Lai"],
+  ["<b>Bảo hiểm Sức khoẻ Trọn đời</b><br><span style='font-size:.85rem;color:var(--grey-400)'>Thẻ sức khoẻ</span>",
+   "<b>1,5 – 12,4 triệu</b>", "Phạm vi Việt Nam, tuổi 20–44, từ chương trình Cơ bản đến Hoàn hảo"],
+  ["<b>Toàn diện Bệnh hiểm nghèo 2.0</b><br><span style='font-size:.85rem;color:var(--grey-400)'>Bệnh hiểm nghèo</span>",
+   "<b>0,4 – 2,6 triệu</b>", "Số tiền bảo hiểm 300 triệu, tuổi 25–45"],
+  ["<b>AIA Trọn Bình An</b><br><span style='font-size:.85rem;color:var(--grey-400)'>Gói kèm</span>",
+   "<b>từ 2,2 triệu</b>", "Tử vong 100 triệu + tai nạn 500 triệu + hỗ trợ viện phí 200 nghìn/ngày"],
+  ["<b>Thẻ tai nạn</b><br><span style='font-size:.85rem;color:var(--grey-400)'>Tai nạn</span>",
+   "<b>từ 350 nghìn</b>", "Hạn mức bảo vệ 100 triệu một năm; đổi theo nhóm nghề, tuổi, giới tính"],
+  ["<b>MIC CARE</b><br><span style='font-size:.85rem;color:var(--grey-400)'>Thai sản rời</span>",
+   "<b>từ 6,6 – 9,7 triệu</b>", "Gói Bạch Kim và Kim Cương, quyền lợi thai sản 20–30 triệu"],
+  ["<b>FuseCare</b><br><span style='font-size:.85rem;color:var(--grey-400)'>Thai sản rời</span>",
+   "<b>2,6 – 14,7 triệu</b>", "Tuổi 19–30, sáu chương trình, quyền lợi thai sản 10–80 triệu"],
+  ["<b>Pacific Cross</b><br><span style='font-size:.85rem;color:var(--grey-400)'>Thai sản rời</span>",
+   "<b>19,6 – 35,9 triệu</b>", "Tuổi 19–40, ba gói M1/M2/M3, quyền lợi thai sản 40–100 triệu"],
+]
+
 sp_body = page_head("Sản phẩm", "Danh mục sản phẩm chúng tôi đang tư vấn",
     "Toàn bộ danh mục AIA Việt Nam, cùng các gói bảo hiểm thai sản rời của nhiều đơn vị. Dưới đây là mô tả bản chất từng nhóm sản phẩm — quyền lợi và mức phí cụ thể sẽ được tính riêng theo độ tuổi, tình trạng sức khoẻ và ngân sách của bạn.")
 
@@ -874,6 +1001,20 @@ sp_body += f"""
     </div>
   </div>
 </section>"""
+
+sp_body += f"""
+<section class="section bg-grey">
+  <div class="wrap">
+    <div class="center" style="max-width:52em;margin:0 auto 8px">
+      <span class="eyebrow">Khoảng phí tham khảo</span>
+      <h2>Đóng bao nhiêu một năm cho những gói hay được hỏi nhất</h2>
+      <p class="lead">Bảng dưới để bạn hình dung mức phí trước khi đọc chi tiết từng nhóm. Mỗi dòng đều kèm giả định &mdash; phí thật của bạn tính theo tuổi, giới tính và tình trạng sức khoẻ.</p>
+    </div>
+    {tbl(["Gói","Khoảng phí một năm","Tính trên giả định"], SP_PRICE)}
+    <p class="price-note">Con số trên chỉ để tham khảo, không phải cam kết. Trước khi bạn quyết định, chúng tôi gửi bảng minh hoạ chính thức theo đúng tuổi và nhu cầu của bạn.</p>
+  </div>
+</section>
+"""
 
 sp_body += prod_section("bao-ve", "Nhóm 1", "Bảo hiểm bảo vệ cuộc sống",
   "Đây là nhóm sản phẩm trả lời đúng một câu hỏi: nếu thu nhập của người trụ cột dừng lại, gia đình sống bằng gì? Tiền bảo hiểm ở nhóm này gần như toàn bộ dùng để mua quyền lợi bảo vệ, nên số tiền bảo vệ nhận được trên mỗi đồng phí là cao nhất.",
@@ -1034,6 +1175,51 @@ ts_body += f"""
 
 <section class="section">
   <div class="wrap">
+    <div class="center" style="max-width:52em;margin:0 auto 32px">
+      <span class="eyebrow">Mốc thời gian</span>
+      <h2>Mua trước khi thả bầu một tháng &mdash; đó mới là hạn thật</h2>
+    </div>
+    {fig(K6,
+      "Thời gian chờ 270 ngày tính từ ngày hợp đồng có hiệu lực, gần bằng đúng một thai kỳ. Vì vậy mốc cần nhớ không phải ngày dự sinh, mà là <b>mua bảo hiểm trước khi thả bầu khoảng một tháng</b> &mdash; chừa thời gian thẩm định hồ sơ.")}
+    <div class="btn-row" style="margin-top:30px;justify-content:center">
+      <a class="btn btn-primary btn-lg" href="cong-cu/index.html#thoi-gian-cho">{I['clock']} Tính hạn chót của riêng bạn</a>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-grey">
+  <div class="wrap">
+    <div class="center" style="max-width:52em;margin:0 auto 8px">
+      <span class="eyebrow">Giải pháp</span>
+      <h2>Ba gói thai sản rời đang có trên thị trường</h2>
+      <p class="lead">Cả ba đều tham gia độc lập, không cần mua kèm hợp đồng nhân thọ. Khác nhau ở hạn mức quyền lợi và nhóm bệnh viện.</p>
+    </div>
+    <div class="prods">
+      {prod("MIC CARE", "Bạch Kim / Kim Cương",
+        ["Quyền lợi thai sản 20 – 30 triệu",
+         "Nội trú và phẫu thuật 150 – 200 triệu",
+         "Bảo lãnh viện phí trên 200 bệnh viện"],
+        "từ 6,6 – 9,7 triệu/năm",
+        "Thời gian chờ thai sản 270 ngày, biến chứng thai sản 90 ngày. Không cần khám sức khoẻ.")}
+      {prod("FuseCare", "6 chương trình",
+        ["Quyền lợi thai sản 10 – 80 triệu",
+         "Thời gian chờ chi phí khám thai chỉ 90 ngày",
+         "Trẻ mua cùng ba mẹ được chi trả 100% tại bệnh viện tư"],
+        "2,6 – 14,7 triệu/năm",
+        "Tuổi 19–30, quyền lợi chính cộng thai sản. Mức phí đổi theo chương trình chọn và độ tuổi.")}
+      {prod("Pacific Cross", "M1 / M2 / M3",
+        ["Quyền lợi thai sản 40 – 100 triệu",
+         "Sinh tại bệnh viện quốc tế, thanh toán 100% hạn mức",
+         "Bé sinh ra được bảo hiểm theo quyền lợi nội trú của mẹ"],
+        "19,6 – 35,9 triệu/năm",
+        "Tuổi 19–40. Thời gian chờ thai sản 270 ngày, biến chứng 90 ngày.")}
+    </div>
+    <p class="price-note">Khoảng phí lấy từ bảng phí của đơn vị phân phối, thay đổi theo tuổi mẹ, chương trình chọn và thời điểm tham gia. Con số trên chỉ để tham khảo, không phải cam kết &mdash; chúng tôi gửi bảng phí chính thức trước khi bạn quyết định. Ngoài ba gói trên còn có VBI CARE với hạn mức nội trú tới 400 triệu.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
     <div style="max-width:54em;margin-bottom:36px">
       <span class="eyebrow">Các gói đang tư vấn</span>
       <h2>Chúng tôi so sánh gói thai sản của nhiều đơn vị</h2>
@@ -1050,37 +1236,25 @@ ts_body += f"""
 </section>
 
 <section class="section">
-  <div class="wrap">
-    <div style="max-width:54em;margin-bottom:32px">
-      <span class="eyebrow">So sánh</span>
-      <h2>Thai sản rời so với thẻ bổ trợ gắn hợp đồng nhân thọ</h2>
-      <p class="lead">Không có lựa chọn nào tốt hơn tuyệt đối &mdash; chỉ có lựa chọn phù hợp hơn với tình huống của bạn lúc này.</p>
-    </div>
-    {tbl(["Tiêu chí","Gói thai sản rời","Thẻ thai sản gắn hợp đồng nhân thọ"], TS_COMPARE)}
+  <div class="wrap" style="max-width:900px">
+    <div class="center" style="margin-bottom:26px"><span class="eyebrow">So sánh</span><h2>Thai sản rời so với thẻ bổ trợ gắn hợp đồng nhân thọ</h2></div>
+    {fold("Bảng so sánh chi tiết hai cách tham gia", f'''{tbl(["Tiêu chí","Gói thai sản rời","Thẻ thai sản gắn hợp đồng nhân thọ"], TS_COMPARE)}
     <div class="callout" style="margin-top:30px">
       <h4>Lời khuyên thẳng thắn của chúng tôi</h4>
       <p class="mb0">Nếu gia đình bạn <b>đã có</b> hợp đồng nhân thọ và đang đóng phí ổn định &mdash; hãy kiểm tra xem thẻ bổ trợ hiện có đã bao gồm quyền lợi thai sản chưa trước khi mua thêm. Rất có thể bạn đã có rồi mà không biết. Nếu bạn <b>chưa có gì</b> và đang chuẩn bị sinh trong 1&ndash;2 năm tới, gói rời là điểm khởi đầu hợp lý hơn: giải quyết đúng nhu cầu, chi phí thấp, và không khoá bạn vào một cam kết mà bạn chưa chắc chắn.</p>
-    </div>
+    ''')}
   </div>
 </section>
 
-<section class="section bg-soft">
-  <div class="wrap">
-    <div class="split" style="align-items:start">
-      <div>
-        <span class="eyebrow">Lộ trình</span>
-        <h2>Mua vào lúc nào thì đúng?</h2>
-        <p class="lead">Đây là phần khiến nhiều người tiếc nhất, vì nó hoàn toàn có thể tránh được nếu biết sớm hơn vài tháng.</p>
-        <div class="btn-row" style="margin-top:20px">
-          <a class="btn btn-primary" href="cong-cu/index.html#thoi-gian-cho">Tính hạn chót của chúng tôi {I['arrow']}</a>
-        </div>
-      </div>
-      <div class="steps">
+<section class="section">
+  <div class="wrap" style="max-width:900px">
+    <div class="center" style="margin-bottom:22px"><span class="eyebrow">Thời điểm</span><h2>Mua vào lúc nào thì đúng?</h2><p class="lead">Đây là phần khiến nhiều người tiếc nhất, vì nó hoàn toàn có thể tránh được nếu biết sớm hơn vài tháng.</p></div>
+    <div class="btn-row" style="justify-content:center;margin-bottom:24px"><a class="btn btn-primary" href="cong-cu/index.html#thoi-gian-cho">Tính hạn chót của chúng tôi {I['arrow']}</a></div>
+    {fold("Các mốc cần canh, giải thích từng mốc", f'''<div class="steps">
         <div class="step"><h4>10&ndash;12 tháng trước</h4><p>Vẫn kịp với thời gian chờ 270 ngày, nhưng cần bắt đầu ngay chứ không nên trì hoãn thêm. Việc thẩm định sức khoẻ có thể mất thêm vài tuần.</p></div>
         <div class="step"><h4>Dưới 9 tháng trước</h4><p>Quyền lợi thai sản sẽ không kịp hiệu lực cho lần sinh này. Nhưng đừng bỏ qua hoàn toàn &mdash; gói sức khoẻ và nội trú vẫn có giá trị cho các biến chứng thai kỳ, và bạn nên chuẩn bị sẵn cho lần sinh sau.</p></div>
         <div class="step"><h4>Đã mang thai</h4><p>Hầu hết sản phẩm sẽ từ chối quyền lợi thai sản cho lần mang thai hiện tại. Nếu có ai đó nói với bạn điều ngược lại, hãy yêu cầu họ chỉ đúng điều khoản trong hợp đồng &mdash; đây là dấu hiệu cảnh báo rõ ràng.</p></div>
-      </div>
-    </div>
+      ''')}
   </div>
 </section>
 
@@ -1088,9 +1262,15 @@ ts_body += f"""
   <div class="wrap" style="max-width:900px">
     <div class="center" style="margin-bottom:36px">
       <span class="eyebrow">Hỏi &amp; đáp</span>
-      <h2>Câu hỏi về bảo hiểm thai sản</h2>
     </div>
-    {faq(TS_FAQ)}
+    {fold("Thẻ thai sản rời là gì, khác gì thẻ mua kèm hợp đồng nhân thọ?",
+      "<p><b>Thẻ rời</b> là hợp đồng bảo hiểm sức khoẻ có quyền lợi thai sản, tham gia độc lập theo năm. Bạn đóng phí một năm, được bảo vệ một năm, hết năm thì quyết định có tái tục hay không.</p>"
+      "<p><b>Thẻ gắn hợp đồng nhân thọ</b> là sản phẩm bổ trợ, phải có một hợp đồng nhân thọ chính mới gắn vào được. Nghĩa là để có quyền lợi thai sản vài chục triệu, bạn cam kết một hợp đồng dài 15&ndash;20 năm.</p>"
+      "<p><b>Ưu của thẻ rời:</b> phí thấp hơn nhiều, không ràng buộc dài hạn, thủ tục đơn giản, thường không cần khám sức khoẻ. Hợp với cặp vợ chồng trẻ vừa mua nhà, chưa sẵn sàng cho cam kết dài.</p>"
+      "<p><b>Nhược của thẻ rời:</b> phí tái tục tăng theo tuổi; công ty có quyền không tái tục; không có phần tích luỹ; và nó chỉ giải quyết phần sức khoẻ, không giải quyết bài toán thay thế thu nhập nếu người trụ cột gặp chuyện.</p>"
+      "<p><b>Ưu của thẻ gắn nhân thọ:</b> ổn định lâu dài, quyền lợi bảo vệ rộng hơn, có phần tích luỹ. <b>Nhược:</b> phí cao hơn nhiều lần và cam kết dài &mdash; dừng sớm thì mất phần lớn giá trị đã đóng.</p>"
+      "<p><b>Cách chọn:</b> nếu việc trước mắt là chuẩn bị cho một lần sinh thì thẻ rời gọn hơn. Nếu bạn đang tính cả bài toán bảo vệ dài hạn cho gia đình thì nên xem cả hai cùng lúc, đừng mua từng mảnh rời rạc.</p>")}
+    {fold("Câu hỏi về bảo hiểm thai sản", faq(TS_FAQ))}
   </div>
 </section>
 """
@@ -1422,12 +1602,25 @@ sk_body += f"""
           <p class="mb0">Chi phí điều trị chỉ là một nửa vấn đề. Nửa còn lại là <b>phần thu nhập mất đi</b> trong thời gian nghỉ việc để điều trị hoặc để chăm người bệnh, cộng với chi phí đi lại và người chăm nuôi. Bảo hiểm y tế không xử lý phần này. Đây là lý do quyền lợi chi trả tiền mặt tồn tại.</p>
         </div>
       </div>
-      <div class="photo"><img src="assets/img/suc-khoe-vien-phi.jpg" alt="Thanh toán viện phí tại bệnh viện" width="1600" height="872" loading="lazy"></div>
+      <div>{fig(K5, "Bảo hiểm y tế chi trả theo mức giá và danh mục được quy định. Phần chênh giữa mức đó và hoá đơn thật là <b>phần gia đình tự trả</b>.")}</div>
+    </div>
+    <div class="btn-row" style="margin-top:30px;justify-content:center">
+      <a class="btn btn-primary btn-lg" href="cong-cu/index.html#chi-phi-sinh">{I['calc']} Tính khoảng trống của gia đình bạn</a>
     </div>
   </div>
 </section>
 
 <section class="section bg-grey">
+  <div class="wrap">
+    <div class="center" style="max-width:52em;margin:0 auto 32px">
+      <span class="eyebrow">Cơ chế</span>
+      <h2>Bảo lãnh viện phí &mdash; khác biệt lớn nhất mà ít ai để ý</h2>
+    </div>
+    {fig(K5B, "Có bảo lãnh thì bệnh viện làm việc thẳng với công ty bảo hiểm. Không có thì gia đình phải xoay tiền mặt ứng trước rồi nộp hồ sơ chờ hoàn &mdash; điều rất khó khi mọi thứ diễn ra gấp trong đêm.")}
+  </div>
+</section>
+
+<section class="section">
   <div class="wrap">
     <div style="max-width:56em;margin-bottom:32px">
       <span class="eyebrow">Bốn kịch bản</span>
@@ -1479,10 +1672,35 @@ sk_body += f"""
   </div>
 </section>
 
+<section class="section bg-grey">
+  <div class="wrap">
+    <div class="center" style="max-width:52em;margin:0 auto 8px">
+      <span class="eyebrow">Giải pháp</span>
+      <h2>Hai thẻ nên có trước tiên</h2>
+      <p class="lead">Nếu ngân sách chỉ đủ cho một thứ, thứ tự đúng là thẻ sức khoẻ trước, rồi mới tới bệnh hiểm nghèo.</p>
+    </div>
+    <div class="prods">
+      {prod("Bảo hiểm Sức khoẻ Trọn đời", "Thẻ sức khoẻ",
+        ["Nội trú, phẫu thuật, tiền giường theo hạn mức chọn",
+         "Bốn chương trình: Cơ bản, Nâng cao, Toàn diện, Hoàn hảo",
+         "Có mạng lưới bảo lãnh viện phí, không phải ứng tiền"],
+        "1,5 – 12,4 triệu/năm",
+        "Phạm vi Việt Nam, tuổi 20–44, tuỳ chương trình. Phạm vi toàn cầu trừ Hoa Kỳ cao hơn khoảng 30%.")}
+      {prod("Toàn diện Bệnh hiểm nghèo 2.0", "Bệnh hiểm nghèo",
+        ["Chi trả một lần khi được chẩn đoán, không cần hoá đơn",
+         "Dùng cho phần thu nhập mất đi trong thời gian điều trị",
+         "Phí tăng theo tuổi rất nhanh sau mốc 45"],
+        "0,4 – 2,6 triệu/năm",
+        "Số tiền bảo hiểm 300 triệu, tuổi 25–45. Nam 30 tuổi: khoảng 606 nghìn/năm.")}
+    </div>
+    <p class="price-note">Phí thực tế phụ thuộc tuổi, giới tính, tình trạng sức khoẻ và hạn mức chọn. Con số trên chỉ để tham khảo, không phải cam kết. Ngoài AIA, chúng tôi còn đối chiếu các gói của Pacific Cross, FuseCare, MIC và VBI để chọn ra gói hợp với gia đình bạn.</p>
+  </div>
+</section>
+
 <section class="section bg-soft">
   <div class="wrap" style="max-width:900px">
-    <div class="center" style="margin-bottom:34px"><span class="eyebrow">Hỏi &amp; đáp</span><h2>Câu hỏi về bảo hiểm sức khoẻ</h2></div>
-    {faq(SK_FAQ)}
+    <div class="center" style="margin-bottom:26px"><span class="eyebrow">Hỏi &amp; đáp</span></div>
+    {fold("Câu hỏi về bảo hiểm sức khoẻ", faq(SK_FAQ))}
   </div>
 </section>
 """
@@ -1507,7 +1725,52 @@ bv_body += f"""
           <a class="btn btn-ghost" href="tel:{PHONE_TEL}">Gọi hotline {PHONE_FMT}</a>
         </div>
       </div>
-      <div class="photo"><img src="assets/img/bao-ve-thu-nhap.jpg" alt="Gia đình có người mất khả năng lao động" width="1600" height="872" loading="lazy"></div>
+      <div class="photo"><img src="assets/img/thu-nhap-dung-lai.jpg" alt="Khi thu nhập dừng lại, gia đình sẽ ra sao" width="1200" height="1200" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-grey">
+  <div class="wrap">
+    <div class="center" style="max-width:52em;margin:0 auto 32px">
+      <span class="eyebrow">Cơ chế</span>
+      <h2>Vì sao một khoản phí nhỏ lại gánh được rủi ro lớn</h2>
+    </div>
+    {fig(K2,
+      "Ví dụ có thật từ biểu phí đang áp dụng: <b>nam 30 tuổi, gói AIA Khoẻ Trọn Vẹn, kế hoạch trọn đời</b> &mdash; phí bảo hiểm cơ bản khoảng 3,85 triệu đồng một năm cho số tiền bảo hiểm 500 triệu đồng.",
+      "Phí thực tế thay đổi theo tuổi, giới tính, tình trạng sức khoẻ, kế hoạch chọn và các sản phẩm bổ trợ đi kèm. Con số trên là phí cơ bản, để tham khảo, không phải cam kết.")}
+
+    <div class="grid g3" style="margin-top:36px">
+      <div class="tool">
+        <div class="card-ico">{I['shield']}</div>
+        <h3>600&ndash;1.000 tỷ đồng</h3>
+        <p style="color:var(--grey-600);font-size:.94rem">Vốn điều lệ tối thiểu một doanh nghiệp bảo hiểm nhân thọ phải có và <b>duy trì suốt quá trình hoạt động</b>, tuỳ phạm vi kinh doanh.</p>
+      </div>
+      <div class="tool">
+        <div class="card-ico">{I['doc']}</div>
+        <h3>Dự phòng nghiệp vụ</h3>
+        <p style="color:var(--grey-600);font-size:.94rem">Khoản tiền doanh nghiệp <b>buộc phải để riêng</b> cho các hợp đồng đang có hiệu lực, không được dùng vào việc khác.</p>
+      </div>
+      <div class="tool">
+        <div class="card-ico">{I['chart']}</div>
+        <h3>Biên khả năng thanh toán</h3>
+        <p style="color:var(--grey-600);font-size:.94rem">Luôn phải cao hơn mức tối thiểu. <b>Bộ Tài chính giám sát</b> tỷ lệ an toàn vốn, hoạt động đầu tư và việc tách nguồn vốn.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="center" style="max-width:52em;margin:0 auto 32px">
+      <span class="eyebrow">Mua thế nào cho đúng</span>
+      <h2>Người đóng 10 triệu một năm, người đóng mấy trăm triệu &mdash; ai đúng?</h2>
+      <p class="lead">Cả hai đều có thể đúng, và cả hai đều có thể sai. Con số đúng không phụ thuộc vào tuổi hay vào gói đang được bán chạy, mà phụ thuộc vào bức tranh tài chính của chính gia đình bạn.</p>
+    </div>
+    {fig(K3, "Bốn dữ kiện đó ghép lại ra <b>ngân sách phí phù hợp</b> &mdash; thường nằm trong khoảng 5&ndash;10% thu nhập. Đóng thấp hơn thì không đủ bảo vệ, đóng cao hơn thì dễ đứt gánh giữa chừng, mà đứt gánh là mất phần lớn giá trị đã đóng.")}
+    <div class="btn-row" style="margin-top:30px;justify-content:center">
+      <a class="btn btn-primary btn-lg" href="lien-he.html">{I['users']} Đặt buổi khám sức khoẻ tài chính</a>
+      <a class="btn btn-ghost btn-lg" href="cong-cu/index.html#ngan-sach">{I['chart']} Tự tính trước</a>
     </div>
   </div>
 </section>
@@ -1562,10 +1825,46 @@ bv_body += f"""
   </div>
 </section>
 
+<section class="section">
+  <div class="wrap">
+    <div class="center" style="max-width:52em;margin:0 auto 8px">
+      <span class="eyebrow">Giải pháp</span>
+      <h2>Ba gói nhân thọ chúng tôi đang tư vấn nhiều nhất</h2>
+      <p class="lead">Khoảng phí dưới đây tính từ biểu phí đang áp dụng, cho <b>số tiền bảo hiểm 500 triệu đồng</b>. Đây là phí cơ bản, chưa gồm các sản phẩm bổ trợ.</p>
+    </div>
+    <div class="prods">
+      {prod("AIA Khoẻ Trọn Vẹn", "Liên kết chung",
+        ["Bảo vệ trọn đời, linh hoạt điều chỉnh số tiền bảo hiểm",
+         "Bốn kế hoạch: trọn đời, toàn diện, bền vững, tối ưu",
+         "Gắn thêm được thẻ sức khoẻ và bệnh hiểm nghèo"],
+        "3,4 – 5,6 triệu/năm",
+        "Phí cơ bản, kế hoạch trọn đời, STBH 500 triệu, tuổi 25–40. Nam 30 tuổi: khoảng 3,85 triệu/năm.")}
+      {prod("AIA Vững Tương Lai", "Liên kết chung",
+        ["Kết hợp bảo vệ với mục tiêu dài hạn cho con",
+         "Hệ số bảo hiểm tới 140 lần phí cơ bản ở tuổi 20–29",
+         "Chọn được mức đòn bẩy theo ngân sách"],
+        "3,6 – 20 triệu/năm",
+        "STBH 500 triệu. Hệ số 35–140 (tuổi 20–29) hoặc 25–120 (tuổi 30–34) tuỳ lựa chọn.")}
+      {prod("AIA Khoẻ Bình An", "Liên kết chung",
+        ["Cấu trúc phí tương tự Vững Tương Lai",
+         "Phù hợp khi ưu tiên phần bảo vệ hơn phần tích luỹ",
+         "Điều chỉnh được theo từng giai đoạn của gia đình"],
+        "3,6 – 20 triệu/năm",
+        "STBH 500 triệu. Bảng hệ số bảo hiểm giống Vững Tương Lai.")}
+    </div>
+    <p class="price-note">Phí thực tế phụ thuộc tuổi, giới tính, tình trạng sức khoẻ, kế hoạch chọn và các sản phẩm bổ trợ đi kèm. Con số trên chỉ để tham khảo, không phải cam kết &mdash; chúng tôi sẽ gửi bảng minh hoạ chính thức trước khi bạn quyết định.</p>
+
+    {fold("Hai sản phẩm bổ trợ nên cân nhắc đi kèm",
+      "<p><b>AIA Trọn Bình An</b> &mdash; phí từ khoảng 2,2 triệu đồng một năm, gồm quyền lợi tử vong 100 triệu, tai nạn với số tiền bảo hiểm 500 triệu và hỗ trợ viện phí 200 nghìn mỗi ngày nằm viện.</p>"
+      "<p><b>Thẻ tai nạn</b> &mdash; phí từ khoảng 350 nghìn đồng một năm cho hạn mức bảo vệ 100 triệu một năm. Mức phí thay đổi theo nhóm nghề, tuổi và giới tính.</p>"
+      "<p><b>Miễn thu phí</b> &mdash; nếu người đóng phí mất khả năng lao động, công ty tiếp tục đóng phí thay để hợp đồng không bị mất hiệu lực. Đây là bổ trợ hay bị bỏ qua nhất, dù nó bảo vệ chính cái kế hoạch bạn vừa lập.</p>")}
+  </div>
+</section>
+
 <section class="section bg-soft">
   <div class="wrap" style="max-width:900px">
-    <div class="center" style="margin-bottom:34px"><span class="eyebrow">Hỏi &amp; đáp</span><h2>Câu hỏi thường gặp về bảo vệ thu nhập</h2></div>
-    {faq(BV_FAQ)}
+    <div class="center" style="margin-bottom:26px"><span class="eyebrow">Hỏi &amp; đáp</span></div>
+    {fold("Câu hỏi thường gặp về bảo vệ thu nhập", faq(BV_FAQ))}
   </div>
 </section>
 """
