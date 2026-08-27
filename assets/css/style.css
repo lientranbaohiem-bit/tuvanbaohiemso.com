@@ -198,11 +198,11 @@ p{margin:0 0 1em}
 
 /* ---------- Cards ---------- */
 .grid{display:grid;gap:24px}
-.g2{grid-template-columns:repeat(2,1fr)}
-.g3{grid-template-columns:repeat(3,1fr)}
-.g4{grid-template-columns:repeat(4,1fr)}
-@media(max-width:980px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:620px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:980px){.g3,.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}}
 
 .card{
   background:#fff;border:1px solid var(--grey-200);border-radius:var(--radius-lg);
@@ -453,8 +453,8 @@ table.tbl td strong{color:var(--red)}
 .quote .av{width:44px;height:44px;border-radius:50%;background:var(--red-soft);color:var(--red);display:grid;place-items:center;font-weight:700}
 .quote b{display:block;font-size:.94rem}
 .quote span{font-size:.82rem;color:var(--grey-400)}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
-@media(max-width:900px){.split{grid-template-columns:1fr;gap:34px}}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px;align-items:center}
+@media(max-width:900px){.split{grid-template-columns:minmax(0,1fr);gap:34px}}
 .pill-list{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:26px}
 .pill{padding:7px 15px;border-radius:999px;background:#fff;border:1px solid var(--grey-200);font-size:.85rem;font-weight:600;color:var(--grey-800);cursor:pointer;transition:.18s}
 .pill:hover{border-color:var(--red);color:var(--red)}
@@ -878,4 +878,76 @@ html,body{overflow-x:clip;max-width:100%}
 @media(max-width:720px){
   .dg-flow-row .dg-arrow{margin-top:0;transform:none}
   .dg-flow-row .dg-box{display:flex;align-items:center;justify-content:center;min-height:62px}
+}
+
+/* ============================================================
+   v5.2 — Responsive: không để khối con nào rộng hơn khung cha
+   Nguyên nhân gốc của lỗi chữ bị cắt trên điện thoại:
+   grid item mặc định có min-width:auto (= min-content), nên một
+   tiêu đề dài đẩy cột rộng hơn màn hình, và overflow-x:clip cắt mất phần thừa.
+   ============================================================ */
+.split > *, .grid > *, .prods > *, .trust-grid > *, .journey > *,
+.entry-grid > *, .fy-links > *, .mega-grid > *, .steps > *, .dg-steps > *{
+  min-width:0;
+}
+.split, .grid, .prods, .trust-grid, .journey, .entry-grid, .mega-grid{max-width:100%}
+
+/* chữ dài không được phá khung */
+body, p, li, td, th, dd, dt, figcaption, .card, .prod, .callout, .fold, .dg{
+  overflow-wrap:break-word;
+}
+h1, h2, h3, h4, .q, .hero h1, .card h3, .prod h3{
+  overflow-wrap:break-word; hyphens:auto;
+}
+
+/* media không bao giờ vượt khung */
+img, svg, video, iframe, canvas{max-width:100%}
+img{height:auto}
+
+/* bảng luôn cuộn trong khung riêng, không đẩy trang */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+.tbl-wrap table{min-width:520px}
+
+/* cỡ chữ nhỏ nhất là 11px để đọc được trên điện thoại */
+.card-tag, .p-tag, .prod-cat, .eyebrow{font-size:.72rem}
+
+/* vùng bấm đủ lớn */
+.track-change{min-height:34px;padding-inline:14px}
+@media(max-width:760px){.track-change{min-height:32px}}
+
+/* màn hình rất hẹp (320–360px) */
+@media(max-width:380px){
+  .wrap{padding-left:16px;padding-right:16px}
+  .hero h1{font-size:clamp(1.55rem,7.4vw,2rem)}
+  h2{font-size:clamp(1.25rem,5.6vw,1.6rem)}
+  .btn{padding-left:16px;padding-right:16px}
+  .prod, .card{padding:18px 15px}
+  .fig{padding:16px 12px}
+  .dg-in{min-width:100%}
+}
+
+/* máy tính bảng: hai cột thay vì bốn */
+@media(min-width:761px) and (max-width:1024px){
+  .trust-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .prods{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* màn hình rất rộng: không để dòng chữ dài quá tầm mắt */
+@media(min-width:1600px){
+  .wrap{max-width:1320px}
+}
+
+/* v5.2 — nút liên hệ nổi: dưới 900px xếp ngang ở đáy, không che chữ.
+   Mốc 900px trùng với lúc .split đổi sang một cột, nên bố cục nhất quán. */
+@media(max-width:900px){
+  .fab{
+    right:0;left:0;bottom:0;flex-direction:row;justify-content:center;gap:14px;
+    padding:9px 12px calc(9px + env(safe-area-inset-bottom,0px));
+    background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
+    border-top:1px solid var(--grey-200);
+  }
+  .fab a{width:44px;height:44px;box-shadow:0 2px 8px rgba(15,23,32,.16)}
+  .fab-pulse::after{display:none}
+  body{padding-bottom:70px}
+  .footer{padding-bottom:24px}
 }
