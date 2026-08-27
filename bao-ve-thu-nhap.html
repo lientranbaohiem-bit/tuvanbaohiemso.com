@@ -223,25 +223,21 @@
       <h2>Người đóng 10 triệu một năm, người đóng mấy trăm triệu &mdash; ai đúng?</h2>
       <p class="lead">Cả hai đều có thể đúng, và cả hai đều có thể sai. Con số đúng không phụ thuộc vào tuổi hay vào gói đang được bán chạy, mà phụ thuộc vào bức tranh tài chính của chính gia đình bạn.</p>
     </div>
-    <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 210" role="img" aria-label="Khám sức khoẻ tài chính: bốn dữ kiện đầu vào, buổi khám, ngân sách phí phù hợp">
-<rect x="6" y="10" width="92" height="34" rx="7" class="nt-s" fill="none" stroke-width="1.8"/>
-<text x="52" y="32" font-size="13" text-anchor="middle" class="nt-f">Thu nhập</text>
-<rect x="6" y="60" width="92" height="34" rx="7" class="nt-s" fill="none" stroke-width="1.8"/>
-<text x="52" y="82" font-size="13" text-anchor="middle" class="nt-f">Dư nợ</text>
-<rect x="6" y="110" width="92" height="34" rx="7" class="nt-s" fill="none" stroke-width="1.8"/>
-<text x="52" y="132" font-size="13" text-anchor="middle" class="nt-f">Người phụ thuộc</text>
-<rect x="6" y="160" width="92" height="34" rx="7" class="nt-s" fill="none" stroke-width="1.8"/>
-<text x="52" y="182" font-size="13" text-anchor="middle" class="nt-f">Mục tiêu</text>
-<path d="M104 27 C150 27 150 102 186 102 M104 77 C154 77 154 102 186 102 M104 127 C154 127 154 102 186 102 M104 177 C150 177 150 102 186 102" class="lt-s" fill="none" stroke-width="1.8"/>
-<circle cx="228" cy="102" r="40" class="ac-s" fill="none" stroke-width="3.5"/>
-<text x="228" y="97" font-size="14" text-anchor="middle" class="ac-f">Khám</text>
-<text x="228" y="116" font-size="14" text-anchor="middle" class="ac-f">45 phút</text>
-<path d="M274 102 H310" class="ac-s" stroke-width="3" fill="none"/>
-<path d="M302 95 l9 7 -9 7" class="ac-s" stroke-width="3" fill="none"/>
-<rect x="320" y="66" width="134" height="72" rx="9" class="ac-s" fill="none" stroke-width="3"/>
-<text x="387" y="97" font-size="14" text-anchor="middle" class="ac-f">Ngân sách phí</text>
-<text x="387" y="117" font-size="14" text-anchor="middle" class="ac-f">của riêng bạn</text>
-</svg><figcaption>Bốn dữ kiện đó ghép lại ra <b>ngân sách phí phù hợp</b> &mdash; thường nằm trong khoảng 5&ndash;10% thu nhập. Đóng thấp hơn thì không đủ bảo vệ, đóng cao hơn thì dễ đứt gánh giữa chừng, mà đứt gánh là mất phần lớn giá trị đã đóng.</figcaption></figure>
+    <figure class="fig"><div class="dg">
+  <div class="dg-fhc">
+    <div class="dg-ins">
+      <div class="dg-in">Thu nhập</div>
+      <div class="dg-in">Dư nợ</div>
+      <div class="dg-in">Người phụ thuộc</div>
+      <div class="dg-in">Mục tiêu</div>
+    </div>
+    <span class="dg-arrow"><svg viewBox="0 0 34 12" aria-hidden="true"><path d="M0 6 H27" stroke="currentColor" stroke-width="2" fill="none"/><path d="M25 1 l7 5 -7 5" stroke="currentColor" stroke-width="2" fill="none"/></svg></span>
+    <div class="dg-mid" style="display:grid;grid-template-columns:auto auto;gap:14px;align-items:center">
+      <div class="dg-circle">Khám<br>45 phút</div>
+      <div class="dg-out">Ngân sách phí<br>của riêng bạn</div>
+    </div>
+  </div>
+</div><figcaption>Bốn dữ kiện đó ghép lại ra <b>ngân sách phí phù hợp</b> &mdash; thường nằm trong khoảng 5&ndash;10% thu nhập. Đóng thấp hơn thì không đủ bảo vệ, đóng cao hơn thì dễ đứt gánh giữa chừng, mà đứt gánh là mất phần lớn giá trị đã đóng.</figcaption></figure>
     <div class="btn-row" style="margin-top:30px;justify-content:center">
       <a class="btn btn-primary btn-lg" href="/lien-he"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.2a3.5 3.5 0 0 1 0 5.6M18 20a6.4 6.4 0 0 0-2-4.6"/></svg> Đặt buổi khám sức khoẻ tài chính</a>
       <a class="btn btn-ghost btn-lg" href="/cong-cu/#ngan-sach"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg> Tự tính trước</a>
@@ -303,17 +299,18 @@
   <div class="wrap">
     <div class="center" style="max-width:52em;margin:0 auto 8px">
       <span class="eyebrow">Giải pháp</span>
-      <h2>Ba gói nhân thọ chúng tôi đang tư vấn nhiều nhất</h2>
+      <h2>Bốn gói nhân thọ chúng tôi đang tư vấn nhiều nhất</h2>
       <p class="lead">Khoảng phí dưới đây tính từ biểu phí đang áp dụng, cho <b>số tiền bảo hiểm 500 triệu đồng</b>. Đây là phí cơ bản, chưa gồm các sản phẩm bổ trợ.</p>
     </div>
     <div class="prods">
       <div class="prod"><span class="p-tag">Liên kết chung</span><h3>AIA Khoẻ Trọn Vẹn</h3><ul><li>Bảo vệ trọn đời, linh hoạt điều chỉnh số tiền bảo hiểm</li><li>Bốn kế hoạch: trọn đời, toàn diện, bền vững, tối ưu</li><li>Gắn thêm được thẻ sức khoẻ và bệnh hiểm nghèo</li></ul><div class="p-price"><b>3,4 – 5,6 triệu/năm</b><span>Phí cơ bản, kế hoạch trọn đời, STBH 500 triệu, tuổi 25–40. Nam 30 tuổi: khoảng 3,85 triệu/năm.</span></div><a class="p-cta" href="/lien-he">Hỏi về gói này &rarr;</a></div>
       <div class="prod"><span class="p-tag">Liên kết chung</span><h3>AIA Vững Tương Lai</h3><ul><li>Kết hợp bảo vệ với mục tiêu dài hạn cho con</li><li>Hệ số bảo hiểm tới 140 lần phí cơ bản ở tuổi 20–29</li><li>Chọn được mức đòn bẩy theo ngân sách</li></ul><div class="p-price"><b>3,6 – 20 triệu/năm</b><span>STBH 500 triệu. Hệ số 35–140 (tuổi 20–29) hoặc 25–120 (tuổi 30–34) tuỳ lựa chọn.</span></div><a class="p-cta" href="/lien-he">Hỏi về gói này &rarr;</a></div>
       <div class="prod"><span class="p-tag">Liên kết chung</span><h3>AIA Khoẻ Bình An</h3><ul><li>Cấu trúc phí tương tự Vững Tương Lai</li><li>Phù hợp khi ưu tiên phần bảo vệ hơn phần tích luỹ</li><li>Điều chỉnh được theo từng giai đoạn của gia đình</li></ul><div class="p-price"><b>3,6 – 20 triệu/năm</b><span>STBH 500 triệu. Bảng hệ số bảo hiểm giống Vững Tương Lai.</span></div><a class="p-cta" href="/lien-he">Hỏi về gói này &rarr;</a></div>
+      <div class="prod"><span class="p-tag">Gói giải pháp</span><h3>AIA Trọn Bình An</h3><ul><li>Quyền lợi tử vong 100 triệu</li><li>Tai nạn với số tiền bảo hiểm 500 triệu</li><li>Hỗ trợ viện phí 200 nghìn mỗi ngày nằm viện</li></ul><div class="p-price"><b>từ 2,2 triệu/năm</b><span>Gói giải pháp đóng sẵn, mức phí khởi điểm. Phí đổi theo tuổi và nhóm nghề.</span></div><a class="p-cta" href="/lien-he">Hỏi về gói này &rarr;</a></div>
     </div>
     <p class="price-note">Phí thực tế phụ thuộc tuổi, giới tính, tình trạng sức khoẻ, kế hoạch chọn và các sản phẩm bổ trợ đi kèm. Con số trên chỉ để tham khảo, không phải cam kết &mdash; chúng tôi sẽ gửi bảng minh hoạ chính thức trước khi bạn quyết định.</p>
 
-    <details class="fold"><summary>Hai sản phẩm bổ trợ nên cân nhắc đi kèm</summary><div class="fold-body"><p><b>AIA Trọn Bình An</b> &mdash; phí từ khoảng 2,2 triệu đồng một năm, gồm quyền lợi tử vong 100 triệu, tai nạn với số tiền bảo hiểm 500 triệu và hỗ trợ viện phí 200 nghìn mỗi ngày nằm viện.</p><p><b>Thẻ tai nạn</b> &mdash; phí từ khoảng 350 nghìn đồng một năm cho hạn mức bảo vệ 100 triệu một năm. Mức phí thay đổi theo nhóm nghề, tuổi và giới tính.</p><p><b>Miễn thu phí</b> &mdash; nếu người đóng phí mất khả năng lao động, công ty tiếp tục đóng phí thay để hợp đồng không bị mất hiệu lực. Đây là bổ trợ hay bị bỏ qua nhất, dù nó bảo vệ chính cái kế hoạch bạn vừa lập.</p></div></details>
+    <details class="fold"><summary>Sản phẩm bổ trợ nên cân nhắc đi kèm</summary><div class="fold-body"><p><b>Miễn thu phí</b> &mdash; nếu người đóng phí mất khả năng lao động, công ty tiếp tục đóng phí thay để hợp đồng không bị mất hiệu lực. Đây là bổ trợ hay bị bỏ qua nhất, dù nó bảo vệ chính cái kế hoạch bạn vừa lập.</p></div></details>
   </div>
 </section>
 
