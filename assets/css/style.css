@@ -955,3 +955,9 @@ img{height:auto}
 /* v5.3 — neo nhảy thẳng vào máy tính, chừa chỗ cho header dính */
 .calc{scroll-margin-top:96px}
 @media(max-width:760px){.calc{scroll-margin-top:78px}}
+
+/* v5.4 — hai hành động sau khi tính xong */
+.ns{margin-top:22px;padding-top:18px;border-top:1px solid var(--grey-200)}
+.ns-t{font-size:.9rem;font-weight:700;color:var(--grey-600);margin:0 0 12px}
+.ns-row{display:flex;flex-direction:column;gap:10px}
+.ns-row .btn{width:100%;justify-content:center;text-align:center}
