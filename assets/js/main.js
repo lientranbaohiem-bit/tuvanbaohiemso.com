@@ -307,4 +307,44 @@
   function onScroll() { h.classList.toggle('scrolled', window.scrollY > 8); }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+
+  /* ---------- Hanh trinh: nho trang nhu cau vua xem ---------- */
+  (function () {
+    var KEY = 'tvbhs_journey';
+    var isTool = function (p) { return p.indexOf('/cong-cu/') === 0; };
+    var here = location.pathname;
+
+    if (!isTool(here)) {
+      // Trang nhu cau / kien thuc: ghi lai de may tinh biet duong quay ve
+      try {
+        sessionStorage.setItem(KEY, JSON.stringify({
+          p: here + (location.hash || ''),
+          n: document.body.getAttribute('data-jn') || ''
+        }));
+      } catch (e) {}
+      return;
+    }
+
+    // Trang cong cu: dung lai duong quay ve
+    var back = null;
+    try { back = JSON.parse(sessionStorage.getItem(KEY) || 'null'); } catch (e) {}
+    if (!back || !back.p) {
+      try {
+        if (document.referrer) {
+          var u = new URL(document.referrer);
+          if (u.origin === location.origin && !isTool(u.pathname)) back = { p: u.pathname, n: '' };
+        }
+      } catch (e) {}
+    }
+    if (!back || !back.p) return;
+
+    var links = document.querySelectorAll('.js-back');
+    for (var i = 0; i < links.length; i++) {
+      links[i].setAttribute('href', back.p);
+      var nm = links[i].querySelector('.js-back-name');
+      if (nm && back.n) nm.textContent = back.n;
+      links[i].hidden = false;
+    }
+  })();
+
 })();
