@@ -52,7 +52,7 @@ I = {
 }
 
 # ---------------------------------------------------------------- shell
-ASSET_V = "5.4.1"   # tang so nay moi khi sua style.css hoac main.js
+ASSET_V = "5.5"   # tang so nay moi khi sua style.css hoac main.js
 
 
 def head(title, desc, path_prefix="", canon="", extra="", body_attr=""):
