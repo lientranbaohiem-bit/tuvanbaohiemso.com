@@ -117,16 +117,18 @@
     var wOut = document.getElementById('waitResult');
     function calcWait() {
       var dueStr = waitForm.due.value;
-      if (!dueStr) { wOut.innerHTML = '<p class="res-note" style="margin:0">Chọn thời điểm bạn dự định sinh để xem hạn chót cần hoàn tất hồ sơ.</p>'; return; }
+      if (!dueStr) { wOut.innerHTML = '<p class="res-note" style="margin:0">Chọn thời điểm bạn dự định sinh để xem hạn chót cần hoàn tất hồ sơ (300 ngày trước ngày sinh).</p>'; return; }
       var wait = waitForm.wait ? parseInt(waitForm.wait.value, 10) : 270;
       if (!wait) wait = 270;
+      var BUFFER = 30;                 // đệm trước khi thả bầu, để thẩm định hồ sơ
+      var total = wait + BUFFER;       // 270 + 30 = 300 ngày
       var due = new Date(dueStr + '-15T00:00:00');
       var today = new Date(); today.setHours(0, 0, 0, 0);
-      var deadline = new Date(due.getTime() - wait * 86400000);
+      var deadline = new Date(due.getTime() - total * 86400000);
       var daysLeft = Math.round((deadline - today) / 86400000);
       var dl = deadline.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
       var pill, msg;
-      var SAFE = 'Lưu ý quan trọng: nên hoàn tất hồ sơ <b>trước thời điểm bắt đầu thả để có thai khoảng 1 tháng</b>. Thời gian chờ 270 ngày gần bằng đúng một thai kỳ đủ tháng, nên nếu mua đúng lúc bắt đầu thả thì chỉ cần bé sinh sớm vài ngày là quyền lợi thai sản chưa kịp có hiệu lực. Một tháng đệm đó là để phòng đúng tình huống sinh non.';
+      var SAFE = 'Công thức: <b>300 ngày = 270 ngày chờ + 30 ngày đệm trước khi thả bầu</b>. Thời gian chờ 270 ngày gần bằng đúng một thai kỳ đủ tháng, nên nếu chốt hợp đồng đúng lúc bắt đầu thả thì chỉ cần bé sinh sớm vài ngày là quyền lợi thai sản chưa kịp có hiệu lực. Ba mươi ngày đệm đó là để thẩm định hồ sơ và phòng đúng tình huống sinh non &mdash; <b>cần chốt mua trước khi thả bầu</b>.';
       if (daysLeft > 60) {
         pill = '<span class="status-pill status-ok">✓ Bạn vẫn còn thời gian</span>';
         msg = 'Bạn còn <b>' + daysLeft + ' ngày</b> để hoàn tất hồ sơ. Đây là khoảng thời gian thoải mái — nên tận dụng để so sánh kỹ và thẩm định sức khoẻ không bị gấp.<br><br>' + SAFE;
@@ -140,6 +142,8 @@
       var d = Math.max(0, daysLeft);
       wOut.innerHTML = pill +
         '<div class="res-row"><span>Thời gian chờ áp dụng</span><b>' + wait + ' ngày</b></div>' +
+        '<div class="res-row"><span>Đệm trước khi thả bầu</span><b>' + BUFFER + ' ngày</b></div>' +
+        '<div class="res-row"><span>Tổng cần chuẩn bị trước ngày sinh</span><b>' + total + ' ngày</b></div>' +
         '<div class="res-row"><span>Hạn chót hoàn tất hồ sơ</span><b style="color:var(--red)">' + dl + '</b></div>' +
         '<div class="cd-grid">' +
         '<div class="cd-box"><b>' + Math.floor(d / 30) + '</b><span>tháng</span></div>' +
