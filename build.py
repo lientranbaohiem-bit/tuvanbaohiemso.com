@@ -52,6 +52,9 @@ I = {
 }
 
 # ---------------------------------------------------------------- shell
+ASSET_V = "5.4.1"   # tang so nay moi khi sua style.css hoac main.js
+
+
 def head(title, desc, path_prefix="", canon="", extra="", body_attr=""):
     return f"""<!DOCTYPE html>
 <html lang="vi">
@@ -71,7 +74,7 @@ def head(title, desc, path_prefix="", canon="", extra="", body_attr=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{path_prefix}assets/css/style.css">
+<link rel="stylesheet" href="{path_prefix}assets/css/style.css?v={ASSET_V}">
 {extra}
 </head>
 <body{body_attr}>"""
@@ -297,7 +300,7 @@ def footer(P=""):
   <a class="f-tiktok" href="{TIKTOK}" target="_blank" rel="noopener" aria-label="Kênh TikTok">{I['tiktok']}</a>
 </div>
 <script>window.TVBHS_LEAD_ENDPOINT={LEAD_ENDPOINT_JS};</script>
-<script src="{P}assets/js/main.js"></script>
+<script src="{P}assets/js/main.js?v={ASSET_V}"></script>
 </body>
 </html>"""
 
