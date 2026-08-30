@@ -1259,6 +1259,15 @@ ts_body += cta("", "Bạn dự định sinh vào khoảng nào?",
   "Nhắn cho chúng tôi mốc thời gian dự kiến &mdash; chúng tôi sẽ tính ngược ra hạn chót của riêng bạn và nói rõ bạn còn kịp hay đã trễ. Nếu đã trễ, chúng tôi cũng nói thẳng luôn thay vì để bạn mua một thứ không dùng được.")
 
 # ================================================================ CÔNG CỤ
+NEXT2 = f"""
+          <div class="ns">
+            <p class="ns-t">Tính xong rồi &mdash; bạn muốn làm gì tiếp?</p>
+            <div class="ns-row">
+              <a class="btn btn-primary" href="{ZALO}" target="_blank" rel="noopener">{I['users']} Nhờ tư vấn cho đúng trường hợp của tôi</a>
+              <a class="btn btn-ghost js-back" href="index.html" hidden><span>&larr; Quay lại <span class="js-back-name">trang vừa xem</span></span></a>
+            </div>
+          </div>"""
+
 CALC_BIRTH = f"""
       <div class="calc" id="tinh-chi-phi-sinh">
         <div class="calc-head"><h3>{I['calc']} Máy tính chi phí sinh con</h3><p>Ước tính theo bảng giá dịch vụ 2026</p></div>
@@ -1311,9 +1320,7 @@ CALC_BIRTH = f"""
             </div>
           </form>
           <div class="calc-result" id="birthResult"></div>
-          <div class="btn-row" style="margin-top:20px">
-            <a class="btn btn-primary" href="{ZALO}" target="_blank" rel="noopener">Nhờ tính cho trường hợp của chúng tôi</a>
-          </div>
+{NEXT2}
         </div>
       </div>
 """
@@ -1333,9 +1340,7 @@ CALC_WAIT = f"""
             </div>
           </form>
           <div class="calc-result" id="waitResult"></div>
-          <div class="btn-row" style="margin-top:20px">
-            <a class="btn btn-primary" href="{ZALO}" target="_blank" rel="noopener">Nhắn Zalo hỏi cụ thể</a>
-          </div>
+{NEXT2}
         </div>
       </div>
 """
@@ -1353,6 +1358,7 @@ CALC_NEED = f"""
               <select id="deps" name="deps"><option value="0">Chưa có</option><option value="1" selected>1 người</option><option value="2">2 người</option><option value="3">3 người</option><option value="4">4 người trở lên</option></select></div>
           </form>
           <div class="calc-result" id="needResult"></div>
+{NEXT2}
         </div>
       </div>
 """
@@ -2235,23 +2241,23 @@ print("Dang dung site...")
 
 page("index.html", f"{BRAND} — Tư vấn bảo hiểm minh bạch, quyết định bằng con số",
      "Dịch vụ tư vấn bảo hiểm độc lập: công cụ tính chi phí sinh con, đếm ngược thời gian chờ thai sản, tính ngân sách bảo vệ gia đình và đọc lại hợp đồng miễn phí.",
-     home, active="", P="", canon="", body_attr=" data-gate-auto")
+     home, active="", P="", canon="", body_attr=' data-gate-auto data-jn="Trang chủ"')
 
 page("san-pham.html", f"Danh mục sản phẩm bảo hiểm | {BRAND}",
      "Danh mục sản phẩm AIA Việt Nam và các gói bảo hiểm thai sản rời — mô tả bản chất từng nhóm, kèm cả ưu và nhược điểm.",
-     sp_body, active="sp", P="", canon="san-pham.html")
+     sp_body, active="sp", P="", canon="san-pham.html", body_attr=' data-jn="Sản phẩm &amp; nhu cầu"')
 
 page("thai-san.html", f"Bảo hiểm thai sản rời — thời gian chờ 270 ngày | {BRAND}",
      "Bảo hiểm thai sản tham gia độc lập, không cần hợp đồng nhân thọ chính. Thời gian chờ 270 ngày, không phân biệt sinh thường hay sinh mổ, bảo lãnh viện phí trực tiếp.",
-     ts_body, active="sp", P="", canon="thai-san.html")
+     ts_body, active="sp", P="", canon="thai-san.html", body_attr=' data-jn="Chuẩn bị sinh con"')
 
 page("suc-khoe.html", f"Bảo hiểm sức khoẻ & viện phí cho gia đình | {BRAND}",
      "Khoảng trống giữa bảo hiểm y tế và viện phí thật, ba lớp quyền lợi nên ưu tiên, và cách chọn hạn mức nội trú cho đúng.",
-     sk_body, active="sp", P="", canon="suc-khoe.html")
+     sk_body, active="sp", P="", canon="suc-khoe.html", body_attr=' data-jn="Bảo vệ sức khoẻ"')
 
 page("bao-ve-thu-nhap.html", f"Bảo vệ thu nhập gia đình — bài toán cho người trụ cột | {BRAND}",
      "Nếu thu nhập của bạn dừng lại sáu tháng, ai trả khoản vay và tiền học của con? Cách tính số tiền bảo vệ cần có và so sánh thẳng thắn giữa tiết kiệm, đầu tư và bảo hiểm.",
-     bv_body, active="sp", P="", canon="bao-ve-thu-nhap.html")
+     bv_body, active="sp", P="", canon="bao-ve-thu-nhap.html", body_attr=' data-jn="Bảo vệ thu nhập"')
 
 page("cong-cu/index.html", f"Công cụ tính chi phí sinh con, thời gian chờ & ngân sách bảo vệ | {BRAND}",
      "Ba công cụ miễn phí, không cần để lại thông tin: tính chi phí sinh con và phần BHYT không trả, đếm ngược thời gian chờ bảo hiểm thai sản, tính ngân sách bảo vệ gia đình.",
@@ -2259,7 +2265,7 @@ page("cong-cu/index.html", f"Công cụ tính chi phí sinh con, thời gian ch�
 
 page("ve-chung-toi.html", f"Về chúng tôi | {BRAND}",
      "Dịch vụ tư vấn bảo hiểm độc lập. Cách chúng tôi làm việc, cách chúng tôi kiếm thu nhập, và ba điều chúng tôi không làm.",
-     vt_body, active="vt", P="", canon="ve-chung-toi.html")
+     vt_body, active="vt", P="", canon="ve-chung-toi.html", body_attr=' data-jn="Về chúng tôi"')
 
 page("lien-he.html", f"Liên hệ tư vấn | {BRAND}",
      f"Hotline tư vấn {PHONE_FMT}. Tư vấn miễn phí, không thu phí dịch vụ, không chào bán trong buổi đầu. Phản hồi trong khoảng 15 phút giờ làm việc.",
@@ -2267,13 +2273,13 @@ page("lien-he.html", f"Liên hệ tư vấn | {BRAND}",
 
 page("kien-thuc/index.html", f"Kiến thức bảo hiểm | {BRAND}",
      "Bài viết về chi phí sinh con, thời gian chờ bảo hiểm thai sản và kê khai sức khoẻ — những gì nên đọc trước khi ký hợp đồng.",
-     kt_body, active="kt", P="../", canon="kien-thuc/")
+     kt_body, active="kt", P="../", canon="kien-thuc/", body_attr=' data-jn="Kiến thức"')
 
 _arts = [(POSTS[0], TOC1, ART1), (POSTS[1], TOC2, ART2), (POSTS[2], TOC3, ART3)]
 for _p, _toc, _body in _arts:
     page("kien-thuc/" + _p["slug"], _p["title"] + " | " + BRAND, _p["desc"],
          article(_p, _toc, _body.replace("{P}", "../")), active="kt", P="../",
-         canon="kien-thuc/" + _p["slug"])
+         canon="kien-thuc/" + _p["slug"], body_attr=' data-jn="bài bạn đang đọc"')
 
 page("cong-cu/chi-phi-sinh-con.html",
      f"Công cụ tính chi phí sinh con thực tế 2026 — và phần BHYT không trả | {BRAND}",
