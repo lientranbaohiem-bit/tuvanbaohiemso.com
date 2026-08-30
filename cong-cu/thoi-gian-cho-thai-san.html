@@ -81,8 +81,8 @@
     </div>
   </div>
   <div class="mega-foot">
-    <a href="/cong-cu/#chi-phi-sinh"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2.5"/><path d="M8 6h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h4"/></svg> Tính chi phí sinh con</a>
-    <a href="/cong-cu/#ngan-sach"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg> Tính ngân sách bảo vệ</a>
+    <a href="/cong-cu/chi-phi-sinh-con#tinh-chi-phi-sinh"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2.5"/><path d="M8 6h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h4"/></svg> Tính chi phí sinh con</a>
+    <a href="/cong-cu/ngan-sach-bao-ve#tinh-ngan-sach"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg> Tính ngân sách bảo vệ</a>
     <a href="/cong-cu/#doc-hop-dong"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z"/><path d="M14 2v5h5M9 13h6M9 17h4"/></svg> Đọc lại hợp đồng miễn phí</a>
   </div>
 </div>
@@ -172,8 +172,8 @@
   <div class="wrap">
     <div class="split" style="align-items:start">
 
-      <div class="calc">
-        <div class="calc-head"><h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> Đếm ngược thời gian chờ</h3><p>Tính ngược ra hạn chót hoàn tất hồ sơ</p></div>
+      <div class="calc" id="tinh-thoi-gian-cho">
+        <div class="calc-head"><h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> Đếm ngược thời gian chờ</h3><p>Hạn chót hoàn tất hồ sơ = 300 ngày trước ngày sinh</p></div>
         <div class="calc-body">
           <form id="waitCalc">
             <div class="field">
@@ -182,7 +182,7 @@
             </div>
             <div class="field">
               <label>Thời gian chờ áp dụng</label>
-              <p style="font-size:.92rem;color:var(--grey-600);margin:0">Các gói thai sản chúng tôi đang tư vấn có thời gian chờ <b>270 ngày</b>. Công cụ tính theo mốc này.</p>
+              <p style="font-size:.92rem;color:var(--grey-600);margin:0">Các gói thai sản chúng tôi đang tư vấn có thời gian chờ <b>270 ngày</b>. Công cụ cộng thêm <b>30 ngày đệm trước khi thả bầu</b> &mdash; tổng <b>300 ngày</b> trước ngày sinh dự kiến.</p>
             </div>
           </form>
           <div class="calc-result" id="waitResult"></div>
@@ -208,7 +208,7 @@
     <div class="article" style="margin:0 auto">
 
 <h2 id="cach-dung">Cách dùng công cụ đếm ngược thời gian chờ</h2>
-<p>Bạn chọn khoảng thời gian dự định sinh. Công cụ lấy mốc đó trừ ngược lại 270 ngày và trả về <b>hạn chót mà hợp đồng phải có hiệu lực</b>, kèm số ngày bạn còn lại. Đa số người dùng công cụ này đều bất ngờ theo cùng một hướng: họ có ít thời gian hơn mình tưởng.</p>
+<p>Bạn chọn khoảng thời gian dự định sinh. Công cụ lấy mốc đó trừ ngược lại <b>300 ngày</b> (270 ngày chờ + 30 ngày đệm trước khi thả bầu) và trả về <b>hạn chót mà hợp đồng phải có hiệu lực</b>, kèm số ngày bạn còn lại. Đa số người dùng công cụ này đều bất ngờ theo cùng một hướng: họ có ít thời gian hơn mình tưởng.</p>
 
 <h2 id="la-gi">Thời gian chờ là gì và vì sao nó tồn tại</h2>
 <p>Thời gian chờ là khoảng thời gian từ khi hợp đồng có hiệu lực đến khi một nhóm quyền lợi bắt đầu được chi trả. Với quyền lợi thai sản, mức phổ biến trên thị trường là 270 ngày hoặc 365 ngày. Các gói chúng tôi đang tư vấn áp dụng mức <b>270 ngày</b>.</p>
@@ -217,7 +217,7 @@
 
 <h2 id="mua-truoc">Vì sao nên hoàn tất hồ sơ trước khi thả khoảng một tháng</h2>
 <p>Đây là phần quan trọng nhất của trang này và cũng là phần ít được nói ra nhất.</p>
-<p>Một thai kỳ đủ tháng kéo dài khoảng 280 ngày tính từ ngày đầu kỳ kinh cuối. Thời gian chờ là 270 ngày. Hai con số này gần bằng nhau &mdash; nghĩa là nếu bạn hoàn tất hợp đồng đúng vào thời điểm bắt đầu thả để có thai, thì <b>khoảng đệm an toàn của bạn chỉ khoảng mười ngày</b>.</p>
+<p>Một thai kỳ đủ tháng kéo dài khoảng 280 ngày tính từ ngày đầu kỳ kinh cuối. Thời gian chờ là 270 ngày. Hai con số này gần bằng nhau &mdash; nghĩa là nếu bạn hoàn tất hợp đồng đúng vào thời điểm bắt đầu thả để có thai, thì <b>khoảng đệm an toàn của bạn chỉ khoảng mười ngày</b>. Vì vậy mốc thực tế cần chốt là <b>300 ngày trước ngày sinh</b>: mua xong rồi mới thả bầu, chừa 30 ngày ở giữa.</p>
 <p>Mười ngày là quá mỏng. Chỉ cần bé sinh sớm hơn dự sinh một tuần &mdash; điều hoàn toàn bình thường và xảy ra rất thường xuyên &mdash; là quyền lợi thai sản chưa kịp có hiệu lực, và toàn bộ phí đã đóng cho phần thai sản trở thành vô ích đúng vào lần sinh bạn đang chuẩn bị.</p>
 <p>Vì vậy nguyên tắc của chúng tôi là: <b>hoàn tất hồ sơ trước thời điểm bắt đầu thả khoảng một tháng</b>. Một tháng đệm đó không phải để dư dả cho thoải mái &mdash; nó là để phòng đúng tình huống sinh non. Nếu bạn có tiền sử sinh non hoặc đang mang song thai, khoảng đệm nên dài hơn nữa.</p>
 
