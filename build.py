@@ -128,8 +128,8 @@ MEGA = f"""
     </div>
   </div>
   <div class="mega-foot">
-    <a href="{{P}}cong-cu/index.html#chi-phi-sinh">{I['calc']} Tính chi phí sinh con</a>
-    <a href="{{P}}cong-cu/index.html#ngan-sach">{I['chart']} Tính ngân sách bảo vệ</a>
+    <a href="{{P}}cong-cu/chi-phi-sinh-con.html#tinh-chi-phi-sinh">{I['calc']} Tính chi phí sinh con</a>
+    <a href="{{P}}cong-cu/ngan-sach-bao-ve.html#tinh-ngan-sach">{I['chart']} Tính ngân sách bảo vệ</a>
     <a href="{{P}}cong-cu/index.html#doc-hop-dong">{I['doc']} Đọc lại hợp đồng miễn phí</a>
   </div>
 </div>"""
@@ -664,16 +664,16 @@ K3 = f"""<div class="dg">
 K6 = """<div class="dg">
   <div class="dg-tl">
     <div class="dg-tl-row"><div class="dg-tl-mark"><span class="dg-tl-dot"></span><span class="dg-tl-line"></span></div>
-      <div class="dg-tl-body"><b>1. Mua bảo hiểm</b><span>Hợp đồng bắt đầu có hiệu lực</span></div></div>
-    <p class="dg-tl-gap">&darr; chờ khoảng 1 tháng</p>
+      <div class="dg-tl-body"><b>1. Chốt mua &mdash; hợp đồng có hiệu lực</b><span>Phải hoàn tất trước khi thả bầu</span></div></div>
+    <p class="dg-tl-gap">&darr; 30 ngày đệm &mdash; thẩm định hồ sơ</p>
     <div class="dg-tl-row"><div class="dg-tl-mark"><span class="dg-tl-dot"></span><span class="dg-tl-line"></span></div>
-      <div class="dg-tl-body"><b>2. Thả bầu</b><span>Chừa thời gian thẩm định hồ sơ trước khi bắt đầu</span></div></div>
-    <p class="dg-tl-gap">&darr; 270 ngày chờ, tính từ mốc 1</p>
+      <div class="dg-tl-body"><b>2. Bắt đầu thả bầu</b><span>Sớm nhất là sau mốc 30 ngày này</span></div></div>
+    <p class="dg-tl-gap">&darr; khoảng 270 ngày thai kỳ</p>
     <div class="dg-tl-row"><div class="dg-tl-mark"><span class="dg-tl-dot"></span><span class="dg-tl-line"></span></div>
-      <div class="dg-tl-body"><b>3. Bắt đầu được chi trả</b><span>Từ đây quyền lợi thai sản mới có hiệu lực</span></div></div>
-    <p class="dg-tl-gap">&darr; cửa sổ dự sinh nằm trong khoảng này</p>
+      <div class="dg-tl-body"><b>3. Ngày sinh &mdash; tổng 300 ngày kể từ mốc 1</b><span>270 ngày chờ đã qua từ trước, quyền lợi thai sản đang có hiệu lực</span></div></div>
+    <p class="dg-tl-gap">&darr; hợp đồng thẻ rời có hiệu lực 365 ngày</p>
     <div class="dg-tl-row off"><div class="dg-tl-mark"><span class="dg-tl-dot"></span></div>
-      <div class="dg-tl-body"><b>4. Hợp đồng hết hiệu lực sau 365 ngày</b><span>Sinh sau mốc này thì phải còn hợp đồng tái tục</span></div></div>
+      <div class="dg-tl-body"><b>4. Hết hiệu lực sau 365 ngày</b><span>Sinh sau mốc này thì phải còn hợp đồng tái tục</span></div></div>
   </div>
 </div>"""
 
@@ -817,8 +817,8 @@ home = f"""
         <h3>Bạn đang chuẩn bị sinh con</h3>
         <p>Việc quan trọng nhất lúc này là biết hai con số: chi phí ca sinh và hạn chót còn kịp tham gia bảo hiểm. Bắt đầu từ đây.</p>
         <div class="fy-links">
-          <a class="fy-link" href="cong-cu/index.html#chi-phi-sinh"><span class="fyi">{I['calc']}</span>Tính chi phí ca sinh của bạn</a>
-          <a class="fy-link" href="cong-cu/index.html#thoi-gian-cho"><span class="fyi">{I['clock']}</span>Bạn còn kịp bao nhiêu ngày?</a>
+          <a class="fy-link" href="cong-cu/chi-phi-sinh-con.html#tinh-chi-phi-sinh"><span class="fyi">{I['calc']}</span>Tính chi phí ca sinh của bạn</a>
+          <a class="fy-link" href="cong-cu/thoi-gian-cho-thai-san.html#tinh-thoi-gian-cho"><span class="fyi">{I['clock']}</span>Bạn còn kịp bao nhiêu ngày?</a>
           <a class="fy-link" href="thai-san.html"><span class="fyi">{I['baby']}</span>Gói thai sản rời &mdash; chi tiết</a>
         </div>
       </div>
@@ -841,7 +841,7 @@ home = f"""
         <h3>Bạn là người trụ cột thu nhập của gia đình</h3>
         <p>Câu hỏi không phải &ldquo;nếu tôi mất đi&rdquo;, mà là &ldquo;nếu tôi không đi làm được sáu tháng thì ai trả khoản vay và tiền học của con&rdquo;. Bắt đầu bằng một con số.</p>
         <div class="fy-links">
-          <a class="fy-link" href="cong-cu/index.html#ngan-sach"><span class="fyi">{I['chart']}</span>Gia đình bạn cần bảo vệ bao nhiêu?</a>
+          <a class="fy-link" href="cong-cu/ngan-sach-bao-ve.html#tinh-ngan-sach"><span class="fyi">{I['chart']}</span>Gia đình bạn cần bảo vệ bao nhiêu?</a>
           <a class="fy-link" href="bao-ve-thu-nhap.html"><span class="fyi">{I['shield']}</span>Bài toán thay thế thu nhập</a>
           <a class="fy-link" href="san-pham.html#bao-ve"><span class="fyi">{I['grid']}</span>Sản phẩm bảo vệ cuộc sống</a>
         </div>
@@ -894,19 +894,19 @@ home = f"""
         <div class="card-ico">{I['calc']}</div>
         <h3>Chi phí sinh con thực tế</h3>
         <p style="color:var(--grey-600);font-size:.94rem">Chọn bệnh viện và hình thức sinh &mdash; công cụ trả về tổng chi phí dự kiến, phần BHYT chi trả, và <b>phần gia đình phải tự trả</b>.</p>
-        <a class="btn btn-outline btn-sm" style="margin-top:auto;align-self:flex-start" href="cong-cu/index.html#chi-phi-sinh">Tính ngay {I['arrow']}</a>
+        <a class="btn btn-outline btn-sm" style="margin-top:auto;align-self:flex-start" href="cong-cu/chi-phi-sinh-con.html#tinh-chi-phi-sinh">Tính ngay {I['arrow']}</a>
       </div>
       <div class="tool">
         <div class="card-ico">{I['clock']}</div>
         <h3>Đếm ngược thời gian chờ</h3>
         <p style="color:var(--grey-600);font-size:.94rem">Nhập thời điểm dự định sinh &mdash; công cụ tính ngược ra <b>hạn chót phải hoàn tất hồ sơ</b>. Nhiều người biết con số này khi đã muộn đúng một năm.</p>
-        <a class="btn btn-outline btn-sm" style="margin-top:auto;align-self:flex-start" href="cong-cu/index.html#thoi-gian-cho">Kiểm tra {I['arrow']}</a>
+        <a class="btn btn-outline btn-sm" style="margin-top:auto;align-self:flex-start" href="cong-cu/thoi-gian-cho-thai-san.html#tinh-thoi-gian-cho">Kiểm tra {I['arrow']}</a>
       </div>
       <div class="tool">
         <div class="card-ico">{I['chart']}</div>
         <h3>Ngân sách bảo vệ gia đình</h3>
         <p style="color:var(--grey-600);font-size:.94rem">Nhập thu nhập, khoản vay và số người phụ thuộc &mdash; công cụ ước tính <b>số tiền bảo vệ cần có</b> và mức phí hợp lý theo thu nhập.</p>
-        <a class="btn btn-outline btn-sm" style="margin-top:auto;align-self:flex-start" href="cong-cu/index.html#ngan-sach">Tính ngay {I['arrow']}</a>
+        <a class="btn btn-outline btn-sm" style="margin-top:auto;align-self:flex-start" href="cong-cu/ngan-sach-bao-ve.html#tinh-ngan-sach">Tính ngay {I['arrow']}</a>
       </div>
     </div>
   </div>
@@ -1145,8 +1145,8 @@ ts_body += f"""
         <p>Sinh thường trọn gói tại bệnh viện công dịch vụ thường rơi vào khoảng <b>10&ndash;20 triệu</b>; sinh mổ <b>18&ndash;35 triệu</b>. Tại bệnh viện tư và quốc tế, cùng ca đó lên <b>40&ndash;100 triệu</b> hoặc hơn. Bảo hiểm y tế chi trả theo danh mục và mức giá quy định, nên phần chênh gia đình tự lo vẫn là phần lớn.</p>
         <p>Có thẻ thai sản thì phần chênh đó được chi trả theo hạn mức đã chọn &mdash; thường <b>20 đến 100 triệu</b> tuỳ gói. Nghĩa là bạn đổi một khoản phí biết trước mỗi năm lấy việc <b>không phải xoay tiền gấp</b> vào đúng lúc vợ đang nằm viện.</p>
         <div class="btn-row" style="margin-top:26px">
-          <a class="btn btn-primary" href="cong-cu/index.html#chi-phi-sinh">{I['calc']} Tính chi phí ca sinh của bạn</a>
-          <a class="btn btn-ghost" href="cong-cu/index.html#thoi-gian-cho">{I['clock']} Kiểm tra xem tôi còn đủ điều kiện để mua không?</a>
+          <a class="btn btn-primary" href="cong-cu/chi-phi-sinh-con.html#tinh-chi-phi-sinh">{I['calc']} Tính chi phí ca sinh của bạn</a>
+          <a class="btn btn-ghost" href="cong-cu/thoi-gian-cho-thai-san.html#tinh-thoi-gian-cho">{I['clock']} Kiểm tra xem tôi còn đủ điều kiện để mua không?</a>
         </div>
       </div>
       <div class="photo"><img src="assets/img/thai-san-gia-dinh.jpg" alt="Gia đình trẻ bên em bé mới sinh tại phòng dịch vụ" width="1600" height="1195" loading="lazy"></div>
@@ -1178,10 +1178,10 @@ ts_body += f"""
       <h2>Mua khi nào thì mới được chấp nhận chi trả thai sản?</h2>
     </div>
     {fig(K6,
-      "270 ngày chờ tính từ ngày hợp đồng có hiệu lực, gần bằng đúng một thai kỳ. Nên mốc cần nhớ là <b>mua trước khi thả bầu khoảng một tháng</b> &mdash; chừa thời gian thẩm định hồ sơ. Thẻ rời có hiệu lực một năm, nên phần được chi trả nằm trong <b>cửa sổ từ ngày thứ 270 tới ngày thứ 365</b>; sinh sau đó thì phải còn hợp đồng tái tục.",
-      "Nếu thả bầu ngay khi vừa mua, ngày dự sinh sẽ rơi rất sát mốc 270 ngày &mdash; đó là lý do nên chừa một tháng đệm.")}
+      "Công thức cần nhớ: <b>300 ngày = 270 ngày chờ + 30 ngày trước khi thả bầu</b>. Nghĩa là hồ sơ phải hoàn tất chậm nhất <b>300 ngày trước ngày sinh dự kiến</b>, và <b>phải chốt mua trước khi thả bầu</b>. Thẻ rời có hiệu lực 365 ngày, nên sinh sau mốc đó thì phải còn hợp đồng tái tục.",
+      "Nếu thả bầu ngay khi vừa mua, ngày sinh sẽ rơi sát mốc 270 ngày &mdash; chỉ cần bé sinh sớm vài ngày là quyền lợi chưa kịp hiệu lực. Ba mươi ngày đệm là để phòng đúng tình huống đó.")}
     <div class="btn-row" style="margin-top:30px;justify-content:center">
-      <a class="btn btn-primary btn-lg" href="cong-cu/index.html#thoi-gian-cho">{I['clock']} Tính hạn chót ngày còn mua được bảo hiểm</a>
+      <a class="btn btn-primary btn-lg" href="cong-cu/thoi-gian-cho-thai-san.html#tinh-thoi-gian-cho">{I['clock']} Tính hạn chót ngày còn mua được bảo hiểm</a>
     </div>
   </div>
 </section>
@@ -1230,7 +1230,7 @@ ts_body += f"""
 <section class="section">
   <div class="wrap" style="max-width:900px">
     <div class="center" style="margin-bottom:22px"><span class="eyebrow">Thời điểm</span><h2>Mua vào lúc nào thì đúng?</h2><p class="lead">Đây là phần khiến nhiều người tiếc nhất, vì nó hoàn toàn có thể tránh được nếu biết sớm hơn vài tháng.</p></div>
-    <div class="btn-row" style="justify-content:center;margin-bottom:24px"><a class="btn btn-primary" href="cong-cu/index.html#thoi-gian-cho">Tính hạn chót của chúng tôi {I['arrow']}</a></div>
+    <div class="btn-row" style="justify-content:center;margin-bottom:24px"><a class="btn btn-primary" href="cong-cu/thoi-gian-cho-thai-san.html#tinh-thoi-gian-cho">Tính hạn chót của chúng tôi {I['arrow']}</a></div>
     {fold("Các mốc cần canh, giải thích từng mốc", f'''<div class="steps">
         <div class="step"><h4>10&ndash;12 tháng trước</h4><p>Vẫn kịp với thời gian chờ 270 ngày, nhưng cần bắt đầu ngay chứ không nên trì hoãn thêm. Việc thẩm định sức khoẻ có thể mất thêm vài tuần.</p></div>
         <div class="step"><h4>Dưới 9 tháng trước</h4><p>Quyền lợi thai sản sẽ không kịp hiệu lực cho lần sinh này. Nhưng đừng bỏ qua hoàn toàn &mdash; gói sức khoẻ và nội trú vẫn có giá trị cho các biến chứng thai kỳ, và bạn nên chuẩn bị sẵn cho lần sinh sau.</p></div>
@@ -1260,7 +1260,7 @@ ts_body += cta("", "Bạn dự định sinh vào khoảng nào?",
 
 # ================================================================ CÔNG CỤ
 CALC_BIRTH = f"""
-      <div class="calc">
+      <div class="calc" id="tinh-chi-phi-sinh">
         <div class="calc-head"><h3>{I['calc']} Máy tính chi phí sinh con</h3><p>Ước tính theo bảng giá dịch vụ 2026</p></div>
         <div class="calc-body">
           <form id="birthCalc">
@@ -1319,8 +1319,8 @@ CALC_BIRTH = f"""
 """
 
 CALC_WAIT = f"""
-      <div class="calc">
-        <div class="calc-head"><h3>{I['clock']} Đếm ngược thời gian chờ</h3><p>Tính ngược ra hạn chót hoàn tất hồ sơ</p></div>
+      <div class="calc" id="tinh-thoi-gian-cho">
+        <div class="calc-head"><h3>{I['clock']} Đếm ngược thời gian chờ</h3><p>Hạn chót hoàn tất hồ sơ = 300 ngày trước ngày sinh</p></div>
         <div class="calc-body">
           <form id="waitCalc">
             <div class="field">
@@ -1329,7 +1329,7 @@ CALC_WAIT = f"""
             </div>
             <div class="field">
               <label>Thời gian chờ áp dụng</label>
-              <p style="font-size:.92rem;color:var(--grey-600);margin:0">Các gói thai sản chúng tôi đang tư vấn có thời gian chờ <b>270 ngày</b>. Công cụ tính theo mốc này.</p>
+              <p style="font-size:.92rem;color:var(--grey-600);margin:0">Các gói thai sản chúng tôi đang tư vấn có thời gian chờ <b>270 ngày</b>. Công cụ cộng thêm <b>30 ngày đệm trước khi thả bầu</b> &mdash; tổng <b>300 ngày</b> trước ngày sinh dự kiến.</p>
             </div>
           </form>
           <div class="calc-result" id="waitResult"></div>
@@ -1341,7 +1341,7 @@ CALC_WAIT = f"""
 """
 
 CALC_NEED = f"""
-      <div class="calc">
+      <div class="calc" id="tinh-ngan-sach">
         <div class="calc-head"><h3>{I['chart']} Máy tính ngân sách bảo vệ</h3><p>Ước tính theo nguyên tắc thay thế thu nhập</p></div>
         <div class="calc-body">
           <form id="needCalc">
@@ -1391,7 +1391,7 @@ cc_body += f"""
         <p>Công cụ này lấy mốc dự sinh của bạn trừ ngược lại thời gian chờ, ra hạn chót phải hoàn tất hồ sơ. Con số thường làm nhiều người bất ngờ &mdash; theo hướng họ có ít thời gian hơn mình tưởng.</p>
         <div class="callout warn">
           <h4>{I['warn']} Nhớ trừ thêm thời gian thẩm định</h4>
-          <p class="mb0">Hạn chót công cụ đưa ra là ngày hợp đồng cần <b>có hiệu lực</b>, chứ không phải ngày nộp hồ sơ. Quá trình thẩm định sức khoẻ có thể mất thêm 1&ndash;4 tuần, lâu hơn nếu cần bổ sung giấy tờ y tế. Nên cộng thêm một tháng đệm cho an toàn.</p>
+          <p class="mb0">Hạn chót công cụ đưa ra là ngày hợp đồng cần <b>có hiệu lực</b>, chứ không phải ngày nộp hồ sơ. Công cụ đã tính theo công thức <b>300 ngày = 270 ngày chờ + 30 ngày đệm trước khi thả bầu</b>. Nếu quá trình thẩm định sức khoẻ cần bổ sung giấy tờ y tế thì có thể mất thêm vài tuần nữa, nên bắt đầu càng sớm càng chủ động.</p>
         </div>
         <p style="margin-top:18px"><a class="btn btn-ghost" href="cong-cu/thoi-gian-cho-thai-san.html">Xem trang đầy đủ: vì sao nên mua trước khi thả 1 tháng {I['arrow']}</a></p>
       </div>
@@ -1512,7 +1512,7 @@ vt_body += f"""
       <div>
         <span class="eyebrow">Chúng tôi là ai</span>
         <h2>Một dịch vụ tư vấn, không phải một quầy bán hàng</h2>
-        <p>{DOMAIN} là dịch vụ tư vấn bảo hiểm hoạt động với tư cách đại lý được uỷ quyền của doanh nghiệp bảo hiểm. Chúng tôi không phải doanh nghiệp bảo hiểm và không phát hành hợp đồng &mdash; hợp đồng luôn do doanh nghiệp bảo hiểm phát hành và chịu trách nhiệm chi trả.</p>
+        <p>{DOMAIN} là dịch vụ tư vấn bảo hiểm hoạt động với tư cách đại lý được uỷ quyền của doanh nghiệp bảo hiểm.</p>
         <p>Chúng tôi lập ra trang này vì một quan sát đơn giản: phần lớn người Việt không thiếu nhu cầu bảo hiểm và cũng không thiếu nhận thức &mdash; họ thiếu một chỗ để hiểu vấn đề bằng con số trước khi phải nói chuyện với người bán hàng.</p>
         <p>Nên toàn bộ công cụ tính trên trang này đều <b>miễn phí và không yêu cầu để lại thông tin</b>. Bạn có thể dùng, tự rút ra kết luận, và không bao giờ liên hệ với chúng tôi. Điều đó hoàn toàn ổn.</p>
       </div>
@@ -1586,7 +1586,7 @@ sk_body += f"""
       <div>{fig(K5, "Bảo hiểm y tế chi trả theo mức giá và danh mục được quy định. Phần chênh giữa mức đó và hoá đơn thật là <b>phần gia đình tự trả</b>.")}</div>
     </div>
     <div class="btn-row" style="margin-top:30px;justify-content:center">
-      <a class="btn btn-primary btn-lg" href="cong-cu/index.html#chi-phi-sinh">{I['calc']} Tính khoảng trống của gia đình bạn</a>
+      <a class="btn btn-primary btn-lg" href="cong-cu/chi-phi-sinh-con.html#tinh-chi-phi-sinh">{I['calc']} Tính khoảng trống của gia đình bạn</a>
     </div>
   </div>
 </section>
@@ -1682,7 +1682,7 @@ bv_body += f"""
         <p class="lead">Đây mới là câu hỏi của bảo hiểm nhân thọ &mdash; không phải &ldquo;nếu tôi mất đi&rdquo;. Rủi ro phổ biến hơn nhiều so với tử vong là <b>mất khả năng tạo thu nhập trong một khoảng thời gian dài</b>: một ca phẫu thuật lớn, một đợt điều trị kéo dài, một tai nạn cần nhiều tháng phục hồi.</p>
         <p>Trong khoảng thời gian đó, chi phí gia đình không giảm đi. Tiền học vẫn đóng, khoản vay vẫn đến hạn, và thường còn phát sinh thêm chi phí y tế.</p>
         <div class="btn-row" style="margin-top:26px">
-          <a class="btn btn-primary" href="cong-cu/index.html#ngan-sach">{I['chart']} Tính số tiền bảo vệ cần có</a>
+          <a class="btn btn-primary" href="cong-cu/ngan-sach-bao-ve.html#tinh-ngan-sach">{I['chart']} Tính số tiền bảo vệ cần có</a>
           <a class="btn btn-ghost" href="tel:{PHONE_TEL}">Gọi hotline {PHONE_FMT}</a>
         </div>
       </div>
@@ -1700,24 +1700,6 @@ bv_body += f"""
     {fig(K2,
       "Ví dụ có thật từ biểu phí đang áp dụng: <b>nam 30 tuổi, gói AIA Khoẻ Trọn Vẹn, kế hoạch trọn đời</b> &mdash; phí bảo hiểm cơ bản khoảng 3,85 triệu đồng một năm cho số tiền bảo hiểm 500 triệu đồng.",
       "Phí thực tế thay đổi theo tuổi, giới tính, tình trạng sức khoẻ, kế hoạch chọn và các sản phẩm bổ trợ đi kèm. Con số trên là phí cơ bản, để tham khảo, không phải cam kết.")}
-
-    <div class="grid g3" style="margin-top:36px">
-      <div class="tool">
-        <div class="card-ico">{I['shield']}</div>
-        <h3>600&ndash;1.000 tỷ đồng</h3>
-        <p style="color:var(--grey-600);font-size:.94rem">Vốn điều lệ tối thiểu một doanh nghiệp bảo hiểm nhân thọ phải có và <b>duy trì suốt quá trình hoạt động</b>, tuỳ phạm vi kinh doanh.</p>
-      </div>
-      <div class="tool">
-        <div class="card-ico">{I['doc']}</div>
-        <h3>Dự phòng nghiệp vụ</h3>
-        <p style="color:var(--grey-600);font-size:.94rem">Khoản tiền doanh nghiệp <b>buộc phải để riêng</b> cho các hợp đồng đang có hiệu lực, không được dùng vào việc khác.</p>
-      </div>
-      <div class="tool">
-        <div class="card-ico">{I['chart']}</div>
-        <h3>Biên khả năng thanh toán</h3>
-        <p style="color:var(--grey-600);font-size:.94rem">Luôn phải cao hơn mức tối thiểu. <b>Bộ Tài chính giám sát</b> tỷ lệ an toàn vốn, hoạt động đầu tư và việc tách nguồn vốn.</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1731,7 +1713,7 @@ bv_body += f"""
     {fig(K3, "Bốn dữ kiện đó ghép lại ra <b>ngân sách phí phù hợp</b> &mdash; thường nằm trong khoảng 5&ndash;10% thu nhập. Đóng thấp hơn thì không đủ bảo vệ, đóng cao hơn thì dễ đứt gánh giữa chừng, mà đứt gánh là mất phần lớn giá trị đã đóng.")}
     <div class="btn-row" style="margin-top:30px;justify-content:center">
       <a class="btn btn-primary btn-lg" href="lien-he.html">{I['users']} Đặt buổi khám sức khoẻ tài chính</a>
-      <a class="btn btn-ghost btn-lg" href="cong-cu/index.html#ngan-sach">{I['chart']} Tự tính trước</a>
+      <a class="btn btn-ghost btn-lg" href="cong-cu/ngan-sach-bao-ve.html#tinh-ngan-sach">{I['chart']} Tự tính trước</a>
     </div>
   </div>
 </section>
@@ -2011,7 +1993,7 @@ ART1 = f"""
   <li><b>Lớp 2 &mdash; Tiền mặt dự phòng bằng chi phí một ca sinh mổ dịch vụ.</b> Lấy con số cao nhất trong kịch bản bạn chọn, đó là khoản bạn nên có sẵn.</li>
   <li><b>Lớp 3 &mdash; Bảo hiểm cho phần đuôi.</b> Quyền lợi thai sản và nội trú, để xử lý những kịch bản vượt quá khả năng tự lo. Lớp này có <b>ràng buộc thời gian</b>: thời gian chờ 270&ndash;365 ngày, nghĩa là phải chuẩn bị trước khi mang thai.</li>
 </ol>
-<p>Bạn có thể tự tính con số của mình bằng <a href="{{P}}cong-cu/index.html#chi-phi-sinh">công cụ tính chi phí sinh con</a> trên trang này, và kiểm tra mình còn kịp mua bảo hiểm không bằng <a href="{{P}}cong-cu/index.html#thoi-gian-cho">công cụ đếm ngược thời gian chờ</a>.</p>
+<p>Bạn có thể tự tính con số của mình bằng <a href="{{P}}cong-cu/chi-phi-sinh-con.html#tinh-chi-phi-sinh">công cụ tính chi phí sinh con</a> trên trang này, và kiểm tra mình còn kịp mua bảo hiểm không bằng <a href="{{P}}cong-cu/thoi-gian-cho-thai-san.html#tinh-thoi-gian-cho">công cụ đếm ngược thời gian chờ</a>.</p>
 """
 
 ART2 = f"""
@@ -2032,8 +2014,8 @@ ART2 = f"""
   <li>Trừ ngược lại số ngày chờ của sản phẩm (270 hoặc 365).</li>
   <li>Trừ tiếp <b>khoảng một tháng</b> cho quá trình thẩm định hồ sơ.</li>
 </ol>
-<p>Ví dụ cụ thể: bạn muốn sinh vào tháng 8/2027. Với sản phẩm thời gian chờ 270 ngày, hợp đồng cần có hiệu lực trước khoảng tháng 11/2026. Cộng thêm một tháng đệm cho thẩm định, bạn nên bắt đầu làm hồ sơ từ <b>tháng 10/2026</b>. Mà muốn sinh tháng 8/2027 thì bạn cần có bầu khoảng tháng 11/2026 &mdash; tức <b>gần như cùng lúc</b>.</p>
-<p>Đó là lý do chúng tôi làm hẳn một <a href="{{P}}cong-cu/index.html#thoi-gian-cho">công cụ đếm ngược</a> trên trang này: bạn nhập mốc dự sinh, công cụ trả về hạn chót và số ngày còn lại.</p>
+<p>Ví dụ cụ thể: bạn muốn sinh vào tháng 8/2027. Đếm ngược <b>300 ngày</b> &mdash; 270 ngày chờ cộng 30 ngày đệm trước khi thả bầu &mdash; hợp đồng cần có hiệu lực từ khoảng <b>tháng 10/2026</b>. Mà muốn sinh tháng 8/2027 thì bạn cần có bầu khoảng tháng 11/2026. Nghĩa là <b>phải chốt mua xong trước khi thả bầu</b>, chứ không phải mua cùng lúc.</p>
+<p>Đó là lý do chúng tôi làm hẳn một <a href="{{P}}cong-cu/thoi-gian-cho-thai-san.html#tinh-thoi-gian-cho">công cụ đếm ngược</a> trên trang này: bạn nhập mốc dự sinh, công cụ trả về hạn chót và số ngày còn lại.</p>
 
 <h2 id="270-vs-365">270 ngày và 365 ngày &mdash; chênh lệch này đáng giá bao nhiêu</h2>
 <p>Nghe thì chỉ là 95 ngày. Nhưng với người đang lên kế hoạch sinh con, 95 ngày là ba tháng cửa sổ. Nó có thể là khác biệt giữa &ldquo;kịp cho lần sinh này&rdquo; và &ldquo;phải hoãn kế hoạch có con lại một năm&rdquo;.</p>
@@ -2189,7 +2171,7 @@ TOOL2_TOC = [("cach-dung","Cách dùng công cụ"),("la-gi","Thời gian chờ 
 
 TOOL2_BODY = f"""
 <h2 id="cach-dung">Cách dùng công cụ đếm ngược thời gian chờ</h2>
-<p>Bạn chọn khoảng thời gian dự định sinh. Công cụ lấy mốc đó trừ ngược lại 270 ngày và trả về <b>hạn chót mà hợp đồng phải có hiệu lực</b>, kèm số ngày bạn còn lại. Đa số người dùng công cụ này đều bất ngờ theo cùng một hướng: họ có ít thời gian hơn mình tưởng.</p>
+<p>Bạn chọn khoảng thời gian dự định sinh. Công cụ lấy mốc đó trừ ngược lại <b>300 ngày</b> (270 ngày chờ + 30 ngày đệm trước khi thả bầu) và trả về <b>hạn chót mà hợp đồng phải có hiệu lực</b>, kèm số ngày bạn còn lại. Đa số người dùng công cụ này đều bất ngờ theo cùng một hướng: họ có ít thời gian hơn mình tưởng.</p>
 
 <h2 id="la-gi">Thời gian chờ là gì và vì sao nó tồn tại</h2>
 <p>Thời gian chờ là khoảng thời gian từ khi hợp đồng có hiệu lực đến khi một nhóm quyền lợi bắt đầu được chi trả. Với quyền lợi thai sản, mức phổ biến trên thị trường là 270 ngày hoặc 365 ngày. Các gói chúng tôi đang tư vấn áp dụng mức <b>270 ngày</b>.</p>
@@ -2198,7 +2180,7 @@ TOOL2_BODY = f"""
 
 <h2 id="mua-truoc">Vì sao nên hoàn tất hồ sơ trước khi thả khoảng một tháng</h2>
 <p>Đây là phần quan trọng nhất của trang này và cũng là phần ít được nói ra nhất.</p>
-<p>Một thai kỳ đủ tháng kéo dài khoảng 280 ngày tính từ ngày đầu kỳ kinh cuối. Thời gian chờ là 270 ngày. Hai con số này gần bằng nhau &mdash; nghĩa là nếu bạn hoàn tất hợp đồng đúng vào thời điểm bắt đầu thả để có thai, thì <b>khoảng đệm an toàn của bạn chỉ khoảng mười ngày</b>.</p>
+<p>Một thai kỳ đủ tháng kéo dài khoảng 280 ngày tính từ ngày đầu kỳ kinh cuối. Thời gian chờ là 270 ngày. Hai con số này gần bằng nhau &mdash; nghĩa là nếu bạn hoàn tất hợp đồng đúng vào thời điểm bắt đầu thả để có thai, thì <b>khoảng đệm an toàn của bạn chỉ khoảng mười ngày</b>. Vì vậy mốc thực tế cần chốt là <b>300 ngày trước ngày sinh</b>: mua xong rồi mới thả bầu, chừa 30 ngày ở giữa.</p>
 <p>Mười ngày là quá mỏng. Chỉ cần bé sinh sớm hơn dự sinh một tuần &mdash; điều hoàn toàn bình thường và xảy ra rất thường xuyên &mdash; là quyền lợi thai sản chưa kịp có hiệu lực, và toàn bộ phí đã đóng cho phần thai sản trở thành vô ích đúng vào lần sinh bạn đang chuẩn bị.</p>
 <p>Vì vậy nguyên tắc của chúng tôi là: <b>hoàn tất hồ sơ trước thời điểm bắt đầu thả khoảng một tháng</b>. Một tháng đệm đó không phải để dư dả cho thoải mái &mdash; nó là để phòng đúng tình huống sinh non. Nếu bạn có tiền sử sinh non hoặc đang mang song thai, khoảng đệm nên dài hơn nữa.</p>
 
