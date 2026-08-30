@@ -308,42 +308,98 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  /* ---------- Hanh trinh: nho trang nhu cau vua xem ---------- */
+  /* ---------- Hanh trinh: nho trang VA vi tri khach dang doc ---------- */
   (function () {
-    var KEY = 'tvbhs_journey';
+    var KEY = 'tvbhs_journey';   // trang nhu cau gan nhat + cho khach dang doc
+    var RET = 'tvbhs_return';    // co hieu: lan tai trang sau day la "quay lai"
     var isTool = function (p) { return p.indexOf('/cong-cu/') === 0; };
     var here = location.pathname;
 
+    function read(k) {
+      try { return JSON.parse(sessionStorage.getItem(k) || 'null'); } catch (e) { return null; }
+    }
+    function write(k, v) {
+      try { sessionStorage.setItem(k, JSON.stringify(v)); } catch (e) {}
+    }
+    function drop(k) { try { sessionStorage.removeItem(k); } catch (e) {} }
+
+    // Moi lien ket dan sang trang cong cu, theo dung thu tu xuat hien trong trang.
+    // Thu tu nay on dinh giua hai lan tai vi HTML khong doi.
+    function toolLinks() {
+      var out = [], all = document.querySelectorAll('a[href]');
+      for (var k = 0; k < all.length; k++) {
+        try {
+          if (isTool(new URL(all[k].href, location.href).pathname)) out.push(all[k]);
+        } catch (e) {}
+      }
+      return out;
+    }
+
+    function scrollY() {
+      return window.pageYOffset || document.documentElement.scrollTop || 0;
+    }
+
+    /* ============ A. Trang nhu cau / kien thuc ============ */
     if (!isTool(here)) {
-      // Trang nhu cau / kien thuc: ghi lai de may tinh biet duong quay ve
-      try {
-        sessionStorage.setItem(KEY, JSON.stringify({
-          p: here + (location.hash || ''),
-          n: document.body.getAttribute('data-jn') || ''
-        }));
-      } catch (e) {}
+      var links = toolLinks();
+
+      // A1. Quay lai tu trang cong cu: dua khach ve dung cho vua bam
+      var ret = read(RET);
+      if (ret && ret.p === here) {
+        drop(RET);
+        var target = (ret.i >= 0 && links[ret.i]) ? links[ret.i] : null;
+        var restore = function () {
+          if (target) target.scrollIntoView({ block: 'center' });
+          else if (ret.y) window.scrollTo(0, ret.y);
+        };
+        restore();
+        // anh tai xong co the lam xe dich bo cuc — chinh lai
+        window.addEventListener('load', restore);
+        setTimeout(restore, 300);
+        if (target) {
+          setTimeout(function () {
+            target.classList.add('ns-returned');
+            setTimeout(function () { target.classList.remove('ns-returned'); }, 2000);
+          }, 350);
+        }
+      }
+
+      // A2. Ghi lai trang nay lam diem quay ve
+      var label = document.body.getAttribute('data-jn') || '';
+      write(KEY, { p: here, n: label, y: 0, i: -1 });
+
+      // A3. Bam sang cong cu thi ghi them vi tri dang doc
+      for (var a = 0; a < links.length; a++) {
+        (function (el, idx) {
+          el.addEventListener('click', function () {
+            write(KEY, { p: here, n: label, y: scrollY(), i: idx });
+          });
+        })(links[a], a);
+      }
       return;
     }
 
-    // Trang cong cu: dung lai duong quay ve
-    var back = null;
-    try { back = JSON.parse(sessionStorage.getItem(KEY) || 'null'); } catch (e) {}
+    /* ============ B. Trang cong cu ============ */
+    var back = read(KEY);
     if (!back || !back.p) {
       try {
         if (document.referrer) {
           var u = new URL(document.referrer);
-          if (u.origin === location.origin && !isTool(u.pathname)) back = { p: u.pathname, n: '' };
+          if (u.origin === location.origin && !isTool(u.pathname)) {
+            back = { p: u.pathname, n: '', y: 0, i: -1 };
+          }
         }
       } catch (e) {}
     }
     if (!back || !back.p) return;
 
-    var links = document.querySelectorAll('.js-back');
-    for (var i = 0; i < links.length; i++) {
-      links[i].setAttribute('href', back.p);
-      var nm = links[i].querySelector('.js-back-name');
+    var btns = document.querySelectorAll('.js-back');
+    for (var b = 0; b < btns.length; b++) {
+      btns[b].setAttribute('href', back.p);
+      var nm = btns[b].querySelector('.js-back-name');
       if (nm && back.n) nm.textContent = back.n;
-      links[i].hidden = false;
+      btns[b].hidden = false;
+      btns[b].addEventListener('click', function () { write(RET, back); });
     }
   })();
 
