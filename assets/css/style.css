@@ -962,3 +962,11 @@ img{height:auto}
 .ns-row{display:flex;flex-direction:column;gap:10px}
 .ns-row .btn{width:100%;justify-content:center;text-align:center}
 [hidden]{display:none !important}
+
+/* v5.5 — nhap nhay nhe cho khach thay minh dang o dau khi quay lai */
+@keyframes ns-back-flash{
+  0%,100%{box-shadow:0 0 0 0 rgba(184,16,57,0)}
+  25%,65%{box-shadow:0 0 0 5px rgba(184,16,57,.26)}
+}
+.ns-returned{animation:ns-back-flash 1.9s ease-out 1;border-radius:10px}
+@media(prefers-reduced-motion:reduce){.ns-returned{animation:none;box-shadow:0 0 0 3px rgba(184,16,57,.3)}}
