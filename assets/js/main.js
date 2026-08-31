@@ -52,24 +52,43 @@
   function tr(n) { return (n / 1e6).toFixed(1).replace('.0', '') + ' triệu'; }
 
   /* ---------- Máy tính chi phí sinh con ---------- */
-  // Khoảng chi phí tham khảo (đồng) — nguồn: bảng giá dịch vụ bệnh viện công bố 2026.
+  /* Khoang chi phi tham khao (dong).
+     Nguyen tac: so lay tu cong bo cua benh vien khi co; benh vien nao khong
+     cong bo thi ghi ro la uoc tinh. Ra soat 31/08/2026. */
   var HOSPITALS = {
-    tudu:      { name: 'BV Từ Dũ (TP.HCM)',              thuong: [15e6, 25e6], mo: [25e6, 45e6], bhyt_thuong: [3e6, 5e6],   bhyt_mo: [6e6, 10e6] },
-    hungvuong: { name: 'BV Hùng Vương (TP.HCM)',         thuong: [13e6, 22e6], mo: [22e6, 40e6], bhyt_thuong: [3e6, 5e6],   bhyt_mo: [6e6, 10e6] },
-    phusan:    { name: 'BV Phụ sản Quốc tế / tư nhân',   thuong: [35e6, 60e6], mo: [55e6, 95e6], bhyt_thuong: [4e6, 6e6],   bhyt_mo: [7e6, 11e6] },
-    vinmec:    { name: 'Vinmec / BV quốc tế cao cấp',    thuong: [70e6, 110e6], mo: [95e6, 160e6], bhyt_thuong: [0, 0],     bhyt_mo: [0, 0] },
-    tinh:      { name: 'BV Sản Nhi tuyến tỉnh',          thuong: [8e6, 15e6],  mo: [15e6, 28e6], bhyt_thuong: [2.5e6, 4e6], bhyt_mo: [5e6, 9e6] },
-    phusanhn:  { name: 'BV Phụ sản Hà Nội',               thuong: [12e6, 22e6], mo: [22e6, 40e6], bhyt_thuong: [3e6, 5e6],   bhyt_mo: [6e6, 10e6] },
-    phusantw:  { name: 'BV Phụ sản Trung ương (Hà Nội)',  thuong: [14e6, 25e6], mo: [24e6, 45e6], bhyt_thuong: [3e6, 5e6],   bhyt_mo: [6e6, 10e6] },
-    bachmai:   { name: 'BV Bạch Mai — khoa Sản (Hà Nội)', thuong: [12e6, 22e6], mo: [22e6, 42e6], bhyt_thuong: [3e6, 5e6],   bhyt_mo: [6e6, 10e6] },
-    thanhnhan: { name: 'BV Thanh Nhàn (Hà Nội)',          thuong: [9e6, 17e6],  mo: [17e6, 32e6], bhyt_thuong: [2.5e6, 4e6], bhyt_mo: [5e6, 9e6] },
-    hongngoc:  { name: 'BV Hồng Ngọc / BV tư Hà Nội',     thuong: [35e6, 65e6], mo: [55e6, 95e6], bhyt_thuong: [4e6, 6e6],   bhyt_mo: [7e6, 11e6] },
-    vinmechn:  { name: 'Vinmec Times City (Hà Nội)',      thuong: [70e6, 115e6], mo: [95e6, 165e6], bhyt_thuong: [0, 0],     bhyt_mo: [0, 0] }
+    tudu:      { name: 'BV Từ Dũ (TP.HCM)', nguon: 'Từ Dũ công bố 16/09/2025 — mức có dịch vụ', chinhthuc: 1, mienphi_bacsi: 1,
+                 thuong: [10e6, 15e6],  mo: [18e6, 20e6],  bhyt_thuong: [3e6, 5e6],   bhyt_mo: [5e6, 8e6] },
+    hungvuong: { name: 'BV Hùng Vương (TP.HCM)', nguon: 'Hùng Vương — tạm ứng công bố 2024–2025, quyết toán theo thực tế', chinhthuc: 1, mienphi_bacsi: 1,
+                 thuong: [10e6, 18e6],  mo: [12e6, 22e6],  bhyt_thuong: [3e6, 5e6],   bhyt_mo: [5e6, 8e6] },
+    tamanh:    { name: 'BV Tâm Anh (TP.HCM / Hà Nội)', nguon: 'Tâm Anh công bố — gói trọn gói tiêu chuẩn', chinhthuc: 1, ngoai_goi: [5e6, 15e6],
+                 thuong: [31.4e6, 43.1e6], mo: [36.9e6, 58.7e6], bhyt_thuong: [1e6, 3e6], bhyt_mo: [2e6, 4e6] },
+    vinmec:    { name: 'Vinmec Times City / Central Park', nguon: 'Ước tính từ nguồn thứ ba — Vinmec KHÔNG công bố giá', chinhthuc: 0,
+                 thuong: [37e6, 52e6],  mo: [52e6, 65e6],  bhyt_thuong: [1e6, 3e6],   bhyt_mo: [2e6, 4e6] },
+    vinmectinh:{ name: 'Vinmec chi nhánh tỉnh', nguon: 'Ước tính từ nguồn thứ ba — Vinmec KHÔNG công bố giá', chinhthuc: 0,
+                 thuong: [24e6, 33e6],  mo: [33.5e6, 41e6], bhyt_thuong: [1e6, 3e6],  bhyt_mo: [2e6, 4e6] },
+    phusanhn:  { name: 'BV Phụ sản Hà Nội', nguon: 'Ước tính theo mặt bằng bệnh viện công tuyến cuối', chinhthuc: 0,
+                 thuong: [12e6, 22e6],  mo: [22e6, 40e6],  bhyt_thuong: [3e6, 5e6],   bhyt_mo: [6e6, 10e6] },
+    phusantw:  { name: 'BV Phụ sản Trung ương (Hà Nội)', nguon: 'Ước tính theo mặt bằng bệnh viện công tuyến cuối', chinhthuc: 0,
+                 thuong: [14e6, 25e6],  mo: [24e6, 45e6],  bhyt_thuong: [3e6, 5e6],   bhyt_mo: [6e6, 10e6] },
+    bachmai:   { name: 'BV Bạch Mai — khoa Sản (Hà Nội)', nguon: 'Ước tính theo mặt bằng bệnh viện công tuyến cuối', chinhthuc: 0,
+                 thuong: [12e6, 22e6],  mo: [22e6, 42e6],  bhyt_thuong: [3e6, 5e6],   bhyt_mo: [6e6, 10e6] },
+    thanhnhan: { name: 'BV Thanh Nhàn (Hà Nội)', nguon: 'Ước tính theo mặt bằng bệnh viện tuyến thành phố', chinhthuc: 0,
+                 thuong: [9e6, 17e6],   mo: [17e6, 32e6],  bhyt_thuong: [2.5e6, 4e6], bhyt_mo: [5e6, 9e6] },
+    hongngoc:  { name: 'BV Hồng Ngọc / BV tư Hà Nội', nguon: 'Ước tính theo mặt bằng bệnh viện tư', chinhthuc: 0,
+                 thuong: [35e6, 65e6],  mo: [55e6, 95e6],  bhyt_thuong: [1e6, 3e6],   bhyt_mo: [2e6, 4e6] },
+    tinh:      { name: 'BV Sản Nhi tuyến tỉnh', nguon: 'Ước tính theo mặt bằng tuyến tỉnh', chinhthuc: 0,
+                 thuong: [8e6, 15e6],   mo: [15e6, 28e6],  bhyt_thuong: [2.5e6, 4e6], bhyt_mo: [5e6, 9e6] }
   };
-  var EXTRAS = { gayte: [1.2e6, 2e6], bacsi: [2e6, 5e6], sanglọc: [0.5e6, 3e6] };
+var EXTRAS = { gayte: [1.2e6, 1.9e6], bacsi: [2e6, 5e6], 'sanglọc': [0.5e6, 3e6] };
 
   var birthForm = document.getElementById('birthCalc');
   if (birthForm) {
+    /* Tren trang tung benh vien: tu chon dung benh vien do */
+    try {
+      var box = birthForm.closest('.calc');
+      var bvKey = box && box.getAttribute('data-bv');
+      if (bvKey && HOSPITALS[bvKey]) birthForm.hospital.value = bvKey;
+    } catch (e) {}
     var out = document.getElementById('birthResult');
     function calcBirth() {
       var h = HOSPITALS[birthForm.hospital.value];
@@ -86,10 +105,21 @@
         bLo = h[mode === 'thuong' ? 'bhyt_thuong' : 'bhyt_mo'][0];
         bHi = h[mode === 'thuong' ? 'bhyt_thuong' : 'bhyt_mo'][1];
       }
-      var exLo = 0, exHi = 0;
+      var exLo = 0, exHi = 0, ghiChu = [];
       birthForm.querySelectorAll('input[name="extra"]:checked').forEach(function (c) {
+        if (c.value === 'bacsi' && h.mienphi_bacsi) {
+          ghiChu.push('Bệnh viện này công bố <b>không thu thêm phí</b> khi bạn chọn bác sĩ đỡ sinh, nên khoản đó không được cộng vào.');
+          return;
+        }
         var e = EXTRAS[c.value]; if (e) { exLo += e[0]; exHi += e[1]; }
       });
+      if (h.ngoai_goi) {
+        exLo += h.ngoai_goi[0]; exHi += h.ngoai_goi[1];
+        ghiChu.push('Đã cộng sẵn khoản <b>phát sinh ngoài gói</b>. Nghiên cứu bình duyệt năm 2024 đo được mỗi ca sinh trọn gói tại đây phát sinh thêm trung bình <b>10,2 triệu</b> ngoài giá gói.');
+      }
+      if (!h.chinhthuc) {
+        ghiChu.push('⚠️ Bệnh viện này <b>không công bố bảng giá công khai</b>. Con số trên là ước tính từ nguồn thứ ba, cần gọi bệnh viện xác nhận.');
+      }
       var totLo = lo + exLo, totHi = hi + exHi;
       var covLo = hasBhyt ? bLo : 0, covHi = hasBhyt ? bHi : 0;
       var gapLo = Math.max(0, totLo - covHi), gapHi = Math.max(0, totHi - covLo);
@@ -101,9 +131,11 @@
         '<div style="margin-top:18px;padding-top:16px;border-top:2px solid var(--red-soft2)">' +
         '<div style="font-size:.86rem;color:var(--grey-600);margin-bottom:4px;font-weight:600">PHẦN GIA ĐÌNH TỰ TRẢ</div>' +
         '<div class="res-big">' + tr(gapLo) + ' – ' + tr(gapHi) + '</div></div>' +
-        '<p class="res-note">Đây là khoảng chi phí tham khảo dựa trên bảng giá dịch vụ công bố, chưa gồm phát sinh ngoài dự kiến ' +
-        '(sinh non, nằm phòng chăm sóc đặc biệt cho bé, biến chứng thai kỳ) — những khoản này mới là phần khiến ngân sách vỡ nhiều nhất. ' +
-        'Muốn chúng tôi tính riêng cho trường hợp của bạn, bấm nút bên dưới.</p>';
+        '<p class="res-note"><b>Nguồn số liệu:</b> ' + h.nguon + '.</p>' +
+        (ghiChu.length ? '<p class="res-note">' + ghiChu.join('<br>') + '</p>' : '') +
+        '<p class="res-note">Khoảng này chưa gồm phát sinh ngoài dự kiến — sinh non, bé nằm phòng chăm sóc đặc biệt, biến chứng thai kỳ. ' +
+        'Không bệnh viện nào trong danh sách công bố giá phòng chăm sóc đặc biệt sơ sinh, nên đây là khoản không ai ước tính trước được, ' +
+        'và cũng là khoản khiến ngân sách vỡ nhiều nhất. Muốn chúng tôi tính riêng cho trường hợp của bạn, bấm nút bên dưới.</p>';
       out.classList.add('hot');
     }
     birthForm.addEventListener('input', calcBirth);
@@ -215,6 +247,16 @@
       payload.trang = location.pathname + location.search;
       try { payload.kenh = localStorage.getItem('tvbhs_track') || ''; } catch (er) { payload.kenh = ''; }
       payload.nguon = document.referrer || 'Truy cập trực tiếp';
+      try {
+        var u = JSON.parse(localStorage.getItem('tvbhs_utm') || '{}');
+        var bits = [];
+        ['utm_source','utm_medium','utm_campaign','utm_content'].forEach(function (k) {
+          if (u[k]) bits.push(k.replace('utm_', '') + '=' + u[k]);
+        });
+        if (u.fbclid) bits.push('fbclid');
+        if (u.gclid) bits.push('gclid');
+        if (bits.length) payload.chien_dich = bits.join(' | ');
+      } catch (er) {}
       sendLead(payload);
       if (ok) {
         ok.classList.add('show');
@@ -403,4 +445,133 @@
     }
   })();
 
+})();
+
+/* ============================================================
+   Do luong: GA4 + Meta Pixel + su kien tuy chinh
+   Tat ca deu an toan khi chua gan ID (gtag/fbq chua ton tai).
+   ============================================================ */
+(function () {
+  'use strict';
+
+  function track(name, params, pixelName) {
+    params = params || {};
+    try { if (window.gtag) window.gtag('event', name, params); } catch (e) {}
+    try {
+      if (window.fbq) {
+        var std = ['Lead','Contact','ViewContent','CompleteRegistration','Search','InitiateCheckout'];
+        if (pixelName && std.indexOf(pixelName) > -1) window.fbq('track', pixelName, params);
+        else if (pixelName) window.fbq('trackCustom', pixelName, params);
+      }
+    } catch (e) {}
+    if (window.TVBHS_DEBUG) console.log('[track]', name, pixelName || '', params);
+  }
+  window.tvbhsTrack = track;
+
+  function nhanh() {
+    try { return localStorage.getItem('tvbhs_track') || 'chua-chon'; } catch (e) { return 'chua-chon'; }
+  }
+  function trang() { return location.pathname || '/'; }
+
+  /* ---- 1. Gui form thu lead (su kien quan trong nhat) ---- */
+  document.querySelectorAll('form[data-lead]').forEach(function (f) {
+    f.addEventListener('submit', function () {
+      var qt = '';
+      try {
+        var el = f.querySelector('[name="quan_tam"],[name="nhu_cau"],select');
+        if (el) qt = el.value || '';
+      } catch (e) {}
+      track('generate_lead', {
+        method: 'form_web', trang: trang(), nhanh_nhu_cau: nhanh(),
+        quan_tam: qt, value: 1, currency: 'VND'
+      }, 'Lead');
+    });
+  });
+
+  /* ---- 2. Nhap Zalo / goi hotline ---- */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('zalo.me') > -1) {
+      track('lien_he_zalo', { trang: trang(), nhanh_nhu_cau: nhanh(), vi_tri: a.className || '' }, 'Contact');
+    } else if (h.indexOf('tel:') === 0) {
+      track('goi_hotline', { trang: trang(), nhanh_nhu_cau: nhanh() }, 'Contact');
+    } else if (h.indexOf('facebook.com') > -1 || h.indexOf('tiktok.com') > -1) {
+      track('click_mang_xa_hoi', { trang: trang(), dich: h }, null);
+    }
+  }, true);
+
+  /* ---- 3. Dung cong cu tinh toan (chi ban 1 lan / cong cu / phien xem) ---- */
+  (function () {
+    var daBan = {};
+    [['#birthCalc', 'chi_phi_sinh_con'], ['#waitForm', 'thoi_gian_cho'],
+     ['#needForm', 'ngan_sach_bao_ve']].forEach(function (pair) {
+      var form = document.querySelector(pair[0]);
+      if (!form) return;
+      var key = pair[1], t = null;
+      function ban() {
+        if (daBan[key]) return;
+        daBan[key] = 1;
+        track('dung_cong_cu', { cong_cu: key, trang: trang(), nhanh_nhu_cau: nhanh() }, 'ViewContent');
+      }
+      form.addEventListener('change', function () { clearTimeout(t); t = setTimeout(ban, 900); });
+      form.addEventListener('input',  function () { clearTimeout(t); t = setTimeout(ban, 1800); });
+    });
+  })();
+
+  /* ---- 4. Do sau cuon: 25 / 50 / 75 / 90% ---- */
+  (function () {
+    var moc = [25, 50, 75, 90], daBan = {}, cho = false;
+    function do_() {
+      cho = false;
+      var d = document.documentElement, b = document.body;
+      var cao = Math.max(b.scrollHeight, d.scrollHeight) - window.innerHeight;
+      if (cao <= 0) return;
+      var pct = (window.pageYOffset || d.scrollTop) / cao * 100;
+      moc.forEach(function (m) {
+        if (pct >= m && !daBan[m]) {
+          daBan[m] = 1;
+          track('cuon_trang', { phan_tram: m, trang: trang() }, m >= 75 ? 'DocSau' : null);
+        }
+      });
+    }
+    window.addEventListener('scroll', function () {
+      if (!cho) { cho = true; requestAnimationFrame(do_); }
+    }, { passive: true });
+  })();
+
+  /* ---- 5. Thoi gian doc co y nghia: o lai qua 30 giay ---- */
+  setTimeout(function () {
+    track('doc_lau_30s', { trang: trang(), nhanh_nhu_cau: nhanh() }, null);
+  }, 30000);
+
+  /* ---- 6. Chon nhanh nhu cau o popup ---- */
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-track-pick]');
+    if (!b) return;
+    track('chon_nhu_cau', { nhanh: b.getAttribute('data-track-pick'), trang: trang() }, 'Search');
+  }, true);
+
+  /* ---- 7. Mo cau hoi thuong gap (tin hieu y dinh) ---- */
+  document.querySelectorAll('.acc-q').forEach(function (q) {
+    q.addEventListener('click', function () {
+      if (q.parentElement.classList.contains('open')) return; // dang dong lai
+      track('mo_faq', { cau_hoi: (q.textContent || '').trim().slice(0, 80), trang: trang() }, null);
+    });
+  });
+
+  /* ---- 8. Nguon truy cap: nho lai utm de gan vao lead ---- */
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), got = {};
+      ['utm_source','utm_medium','utm_campaign','utm_content','fbclid','gclid'].forEach(function (k) {
+        if (q.get(k)) got[k] = q.get(k);
+      });
+      if (Object.keys(got).length) {
+        got._t = Date.now();
+        localStorage.setItem('tvbhs_utm', JSON.stringify(got));
+      }
+    } catch (e) {}
+  })();
 })();
