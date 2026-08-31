@@ -3,6 +3,7 @@
 import os, html, json
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
+from benhvien import BV_DATA, CAP_NHAT
 PHONE      = "0777991852"
 PHONE_FMT  = "0777 991 852"
 PHONE_TEL  = "+84777991852"
@@ -52,7 +53,128 @@ I = {
 }
 
 # ---------------------------------------------------------------- shell
-ASSET_V = "5.5"   # tang so nay moi khi sua style.css hoac main.js
+ASSET_V = "6.0"   # tang so nay moi khi sua style.css hoac main.js
+
+# ---------------------------------------------------------------- analytics
+# Dat ID that vao day. De rong thi script tu tat, khong loi trang.
+GA4_ID   = "G-XXXXXXXXXX"      # <- thay bang Measurement ID that tu Google Analytics
+META_PIXEL_ID = "000000000000000"  # <- thay bang Pixel ID that tu Meta Events Manager
+
+ANALYTICS = """
+<script>window.TVBHS_GA4=%s;window.TVBHS_PIXEL=%s;</script>
+<script>
+(function(){var G=window.TVBHS_GA4;if(!G||G.indexOf('XXXX')>-1)return;
+var s=document.createElement('script');s.async=1;
+s.src='https://www.googletagmanager.com/gtag/js?id='+G;
+document.head.appendChild(s);
+window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};
+gtag('js',new Date());gtag('config',G,{send_page_view:true});})();
+</script>
+<script>
+(function(f,b,e,v,n,t,s){var P=window.TVBHS_PIXEL;if(!P||P.indexOf('0000000')>-1)return;
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s);fbq('init',P);fbq('track','PageView');
+})(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+</script>
+""" % (json.dumps(GA4_ID), json.dumps(META_PIXEL_ID))
+
+
+# ---------------------------------------------------------------- schema.org
+def jsonld(obj):
+    return ('<script type="application/ld+json">%s</script>'
+            % json.dumps(obj, ensure_ascii=False, separators=(",", ":")))
+
+
+ORG_SCHEMA = {
+    "@context": "https://schema.org",
+    "@type": ["Organization", "InsuranceAgency"],
+    "@id": SITE + "/#org",
+    "name": BRAND,
+    "url": SITE + "/",
+    "logo": {"@type": "ImageObject", "url": SITE + "/assets/img/logo.png"},
+    "image": SITE + "/assets/img/logo.png",
+    "description": "Dich vu tu van bao hiem doc lap: nhan tho, suc khoe va thai san roi. Tu van bang bang tinh cu the, noi ro ca uu va nhuoc diem truoc khi ky.",
+    "telephone": PHONE_TEL,
+    "email": "lientran.baohiem@gmail.com",
+    "areaServed": {"@type": "Country", "name": "Viet Nam"},
+    "address": {"@type": "PostalAddress", "addressLocality": "TP. Ho Chi Minh",
+                "addressCountry": "VN"},
+    "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "08:00", "closes": "21:00"}],
+    "sameAs": [FB, TIKTOK, ZALO],
+    "priceRange": "Mien phi tu van",
+    "knowsLanguage": "vi",
+}
+
+WEBSITE_SCHEMA = {
+    "@context": "https://schema.org", "@type": "WebSite",
+    "@id": SITE + "/#website", "url": SITE + "/", "name": BRAND,
+    "inLanguage": "vi-VN",
+    "publisher": {"@id": SITE + "/#org"},
+}
+
+
+def _strip(h):
+    """Bo the HTML de dua text sach vao schema."""
+    t = _re.sub(r"<[^>]+>", " ", h or "")
+    t = (t.replace("&mdash;", "-").replace("&ndash;", "-").replace("&nbsp;", " ")
+          .replace("&amp;", "&").replace("&ldquo;", '"').replace("&rdquo;", '"')
+          .replace("&rsquo;", "'").replace("&hellip;", "..."))
+    return _re.sub(r"\s+", " ", t).strip()
+
+
+def faq_schema(items):
+    """items = [(cau hoi, cau tra loi html), ...]"""
+    return {
+        "@context": "https://schema.org", "@type": "FAQPage",
+        "mainEntity": [{"@type": "Question", "name": _strip(q),
+                        "acceptedAnswer": {"@type": "Answer", "text": _strip(a)}}
+                       for q, a in items],
+    }
+
+
+def breadcrumb_schema(trail):
+    """trail = [(ten, duong dan tuong doi hoac ''), ...] - '' nghia la trang hien tai."""
+    items = []
+    for i, (name, url) in enumerate(trail, 1):
+        it = {"@type": "ListItem", "position": i, "name": name}
+        if url is not None:
+            it["item"] = SITE + clean_url(url)
+        items.append(it)
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList",
+            "itemListElement": items}
+
+
+def article_schema(canon, title, desc, date_pub, date_mod=None, section=""):
+    d = {
+        "@context": "https://schema.org", "@type": "Article",
+        "mainEntityOfPage": {"@type": "WebPage", "@id": SITE + clean_url(canon)},
+        "headline": title[:110], "description": desc,
+        "inLanguage": "vi-VN",
+        "author": {"@type": "Organization", "name": BRAND, "url": SITE + "/ve-chung-toi"},
+        "publisher": {"@id": SITE + "/#org"},
+        "datePublished": date_pub,
+        "dateModified": date_mod or date_pub,
+    }
+    if section:
+        d["articleSection"] = section
+    return d
+
+
+def howto_schema(name, desc, steps):
+    return {"@context": "https://schema.org", "@type": "HowTo",
+            "name": name, "description": desc, "inLanguage": "vi-VN",
+            "step": [{"@type": "HowToStep", "position": i, "name": n, "text": t}
+                     for i, (n, t) in enumerate(steps, 1)]}
+
+
+def schema_head(*objs):
+    return "".join(jsonld(o) for o in objs if o)
+
 
 
 def head(title, desc, path_prefix="", canon="", extra="", body_attr=""):
@@ -75,7 +197,7 @@ def head(title, desc, path_prefix="", canon="", extra="", body_attr=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{path_prefix}assets/css/style.css?v={ASSET_V}">
-{extra}
+{ANALYTICS}{extra}
 </head>
 <body{body_attr}>"""
 
@@ -87,6 +209,10 @@ MEGA = f"""
       <a class="mega-link" href="{{P}}thai-san.html">
         <span class="mega-icon">{I['baby']}</span>
         <span><span class="mega-title">Chuẩn bị sinh con</span><span class="mega-desc">Thai sản rời &middot; thời gian chờ 270 ngày</span></span>
+        <span class="mega-arrow">{I['chev']}</span></a>
+      <a class="mega-link" href="{{P}}chi-phi-sinh-con/index.html">
+        <span class="mega-icon">{I['calc']}</span>
+        <span><span class="mega-title">Chi phí sinh con theo bệnh viện</span><span class="mega-desc">Từ Dũ &middot; Hùng Vương &middot; Tâm Anh &middot; Vinmec</span></span>
         <span class="mega-arrow">{I['chev']}</span></a>
       <a class="mega-link" href="{{P}}suc-khoe.html">
         <span class="mega-icon">{I['hospital']}</span>
@@ -342,7 +468,10 @@ def _write(rel, txt):
     open(full, "w", encoding="utf-8").write(txt)
 
 
-def page(fname, title, desc, body, active="", P="", canon="", extra="", body_attr=""):
+def page(fname, title, desc, body, active="", P="", canon="", extra="", body_attr="",
+         base_schema=True):
+    if base_schema:
+        extra = schema_head(ORG_SCHEMA, WEBSITE_SCHEMA) + extra
     out = head(title, desc, P, canon, extra, body_attr) + header(active, P) + body + footer(P)
     out = clean_links(out)
     _write(fname, out)
@@ -1279,24 +1408,24 @@ CALC_BIRTH = f"""
             <div class="field">
               <label for="hospital">Bệnh viện dự định sinh</label>
               <select id="hospital" name="hospital">
-                <optgroup label="TP. Hồ Chí Minh">
+                <optgroup label="TP. Hồ Chí Minh — bệnh viện công">
                   <option value="tudu">BV Từ Dũ</option>
                   <option value="hungvuong">BV Hùng Vương</option>
                 </optgroup>
-                <optgroup label="Hà Nội">
+                <optgroup label="Bệnh viện tư">
+                  <option value="tamanh">BV Tâm Anh (TP.HCM / Hà Nội)</option>
+                  <option value="vinmec">Vinmec Times City / Central Park</option>
+                  <option value="vinmectinh">Vinmec chi nhánh tỉnh</option>
+                  <option value="hongngoc">BV Hồng Ngọc / BV tư Hà Nội</option>
+                </optgroup>
+                <optgroup label="Hà Nội — bệnh viện công">
                   <option value="phusanhn">BV Phụ sản Hà Nội</option>
                   <option value="phusantw">BV Phụ sản Trung ương</option>
                   <option value="bachmai">BV Bạch Mai — khoa Sản</option>
                   <option value="thanhnhan">BV Thanh Nhàn</option>
-                  <option value="hongngoc">BV Hồng Ngọc / BV tư Hà Nội</option>
-                  <option value="vinmechn">Vinmec Times City</option>
                 </optgroup>
-                <optgroup label="Tỉnh / thành khác">
+                <optgroup label="Tỉnh thành khác">
                   <option value="tinh">BV Sản Nhi tuyến tỉnh</option>
-                </optgroup>
-                <optgroup label="Bệnh viện tư &amp; quốc tế">
-                  <option value="phusan">BV Phụ sản Quốc tế / tư nhân</option>
-                  <option value="vinmec">Vinmec / BV quốc tế cao cấp</option>
                 </optgroup>
               </select>
             </div>
@@ -2242,29 +2371,40 @@ TOOL3_BODY = f"""
 
 print("Dang dung site...")
 
+
 page("index.html", f"{BRAND} — Tư vấn bảo hiểm minh bạch, quyết định bằng con số",
      "Dịch vụ tư vấn bảo hiểm độc lập: công cụ tính chi phí sinh con, đếm ngược thời gian chờ thai sản, tính ngân sách bảo vệ gia đình và đọc lại hợp đồng miễn phí.",
-     home, active="", P="", canon="", body_attr=' data-gate-auto data-jn="Trang chủ"')
+     home, active="", P="", canon="", body_attr=' data-gate-auto data-jn="Trang chủ"',
+     extra=schema_head(faq_schema(HOME_FAQ)))
 
 page("san-pham.html", f"Danh mục sản phẩm bảo hiểm | {BRAND}",
      "Danh mục sản phẩm AIA Việt Nam và các gói bảo hiểm thai sản rời — mô tả bản chất từng nhóm, kèm cả ưu và nhược điểm.",
-     sp_body, active="sp", P="", canon="san-pham.html", body_attr=' data-jn="Sản phẩm &amp; nhu cầu"')
+     sp_body, active="sp", P="", canon="san-pham.html", body_attr=' data-jn="Sản phẩm &amp; nhu cầu"',
+     extra=schema_head(faq_schema(SP_FAQ),
+                       breadcrumb_schema([("Trang chủ","index.html"),("Sản phẩm & nhu cầu",None)])))
 
 page("thai-san.html", f"Bảo hiểm thai sản rời — thời gian chờ 270 ngày | {BRAND}",
      "Bảo hiểm thai sản tham gia độc lập, không cần hợp đồng nhân thọ chính. Thời gian chờ 270 ngày, không phân biệt sinh thường hay sinh mổ, bảo lãnh viện phí trực tiếp.",
-     ts_body, active="sp", P="", canon="thai-san.html", body_attr=' data-jn="Chuẩn bị sinh con"')
+     ts_body, active="sp", P="", canon="thai-san.html", body_attr=' data-jn="Chuẩn bị sinh con"',
+     extra=schema_head(faq_schema(TS_FAQ),
+                       breadcrumb_schema([("Trang chủ","index.html"),("Bảo hiểm thai sản rời",None)])))
 
 page("suc-khoe.html", f"Bảo hiểm sức khoẻ & viện phí cho gia đình | {BRAND}",
      "Khoảng trống giữa bảo hiểm y tế và viện phí thật, ba lớp quyền lợi nên ưu tiên, và cách chọn hạn mức nội trú cho đúng.",
-     sk_body, active="sp", P="", canon="suc-khoe.html", body_attr=' data-jn="Bảo vệ sức khoẻ"')
+     sk_body, active="sp", P="", canon="suc-khoe.html", body_attr=' data-jn="Bảo vệ sức khoẻ"',
+     extra=schema_head(faq_schema(SK_FAQ),
+                       breadcrumb_schema([("Trang chủ","index.html"),("Sức khoẻ & viện phí",None)])))
 
 page("bao-ve-thu-nhap.html", f"Bảo vệ thu nhập gia đình — bài toán cho người trụ cột | {BRAND}",
      "Nếu thu nhập của bạn dừng lại sáu tháng, ai trả khoản vay và tiền học của con? Cách tính số tiền bảo vệ cần có và so sánh thẳng thắn giữa tiết kiệm, đầu tư và bảo hiểm.",
-     bv_body, active="sp", P="", canon="bao-ve-thu-nhap.html", body_attr=' data-jn="Bảo vệ thu nhập"')
+     bv_body, active="sp", P="", canon="bao-ve-thu-nhap.html", body_attr=' data-jn="Bảo vệ thu nhập"',
+     extra=schema_head(faq_schema(BV_FAQ),
+                       breadcrumb_schema([("Trang chủ","index.html"),("Bảo vệ thu nhập",None)])))
 
 page("cong-cu/index.html", f"Công cụ tính chi phí sinh con, thời gian chờ & ngân sách bảo vệ | {BRAND}",
      "Ba công cụ miễn phí, không cần để lại thông tin: tính chi phí sinh con và phần BHYT không trả, đếm ngược thời gian chờ bảo hiểm thai sản, tính ngân sách bảo vệ gia đình.",
-     cc_body, active="cc", P="", canon="cong-cu/index.html")
+     cc_body, active="cc", P="", canon="cong-cu/index.html",
+     extra=schema_head(breadcrumb_schema([("Trang chủ","index.html"),("Công cụ",None)])))
 
 page("ve-chung-toi.html", f"Về chúng tôi | {BRAND}",
      "Dịch vụ tư vấn bảo hiểm độc lập. Cách chúng tôi làm việc, cách chúng tôi kiếm thu nhập, và ba điều chúng tôi không làm.",
@@ -2276,13 +2416,27 @@ page("lien-he.html", f"Liên hệ tư vấn | {BRAND}",
 
 page("kien-thuc/index.html", f"Kiến thức bảo hiểm | {BRAND}",
      "Bài viết về chi phí sinh con, thời gian chờ bảo hiểm thai sản và kê khai sức khoẻ — những gì nên đọc trước khi ký hợp đồng.",
-     kt_body, active="kt", P="../", canon="kien-thuc/", body_attr=' data-jn="Kiến thức"')
+     kt_body, active="kt", P="../", canon="kien-thuc/", body_attr=' data-jn="Kiến thức"',
+     extra=schema_head(breadcrumb_schema([("Trang chủ","index.html"),("Kiến thức",None)])))
+
+def _iso(dmy):
+    d, m, y = dmy.split("/")
+    return "%s-%s-%s" % (y, m, d)
+
 
 _arts = [(POSTS[0], TOC1, ART1), (POSTS[1], TOC2, ART2), (POSTS[2], TOC3, ART3)]
 for _p, _toc, _body in _arts:
-    page("kien-thuc/" + _p["slug"], _p["title"] + " | " + BRAND, _p["desc"],
+    _canon = "kien-thuc/" + _p["slug"]
+    _sch = [article_schema(_canon, _p["title"], _p["desc"], _iso(_p["date"]),
+                           section=_p.get("tag", "")),
+            breadcrumb_schema([("Trang chủ", "index.html"), ("Kiến thức", "kien-thuc/"),
+                               (_p["tag"], None)])]
+    if _p.get("faq"):
+        _sch.append(faq_schema(_p["faq"]))
+    page(_canon, _p["title"] + " | " + BRAND, _p["desc"],
          article(_p, _toc, _body.replace("{P}", "../")), active="kt", P="../",
-         canon="kien-thuc/" + _p["slug"], body_attr=' data-jn="bài bạn đang đọc"')
+         canon=_canon, body_attr=' data-jn="bài bạn đang đọc"',
+         extra=schema_head(*_sch))
 
 page("cong-cu/chi-phi-sinh-con.html",
      f"Công cụ tính chi phí sinh con thực tế 2026 — và phần BHYT không trả | {BRAND}",
@@ -2291,9 +2445,25 @@ page("cong-cu/chi-phi-sinh-con.html",
        "Công cụ tính chi phí sinh con thực tế 2026",
        "Hầu hết mọi người biết sinh con tốn &ldquo;khoảng vài chục triệu&rdquo;. Rất ít người biết phần mình phải tự trả sau khi trừ bảo hiểm y tế là bao nhiêu. Đó mới là con số cần chuẩn bị.",
        CALC_BIRTH, TOOL1_BODY, TOOL1_TOC)
+     + '<section class="section bg-soft"><div class="wrap">'
+       '<h2>Xem chi phí chi tiết theo từng bệnh viện</h2>'
+       '<p class="lead">Mỗi trang dưới đây có bảng giá dẫn nguồn, ghi rõ số nào là số bệnh viện '
+       'công bố và số nào chỉ là tham khảo &mdash; kèm cả những khoản bệnh viện không công bố.</p>'
+       '<div class="entry-grid">'
+       + "".join('<a class="entry" href="../chi-phi-sinh-con/%s.html"><b>Chi phí sinh ở %s</b>'
+                 '<span>%s &middot; %s</span></a>' % (b["slug"], b["ten"], b["tinh"], b["loai"])
+                 for b in BV_DATA)
+       + '</div></div></section>'
      + cta("../", "Muốn một bảng tính riêng cho trường hợp của gia đình bạn?",
        "Nhắn cho chúng tôi bệnh viện bạn định sinh, mốc dự sinh và bảo hiểm đang có. Chúng tôi đối chiếu bảng giá mới nhất rồi gửi lại bảng tính riêng trong ngày."),
-     active="cc", P="../", canon="cong-cu/chi-phi-sinh-con.html")
+     active="cc", P="../", canon="cong-cu/chi-phi-sinh-con.html",
+     extra=schema_head(
+       howto_schema("Cách tính chi phí sinh con và phần bảo hiểm y tế không chi trả",
+         "Ba bước để ra con số gia đình thực sự phải tự trả cho một ca sinh.",
+         [("Chọn bệnh viện dự định sinh", "Chọn bệnh viện trong danh sách. Mỗi bệnh viện có khung giá dịch vụ khác nhau, chênh lệch giữa bệnh viện công và bệnh viện tư có thể tới vài chục triệu."),
+          ("Chọn hình thức sinh và tình trạng bảo hiểm y tế", "Chọn sinh thường hay sinh mổ, và cho biết bạn có thẻ bảo hiểm y tế hay không. Nếu chưa biết sẽ sinh thường hay sinh mổ, chọn mục chưa chắc chắn để công cụ tính theo kịch bản xấu."),
+          ("Đọc ba con số kết quả", "Công cụ trả về tổng chi phí dự kiến, phần bảo hiểm y tế chi trả, và phần gia đình phải tự trả. Con số thứ ba mới là số cần chuẩn bị.")]),
+       breadcrumb_schema([("Trang chủ","index.html"),("Công cụ","cong-cu/index.html"),("Chi phí sinh con",None)])))
 
 page("cong-cu/thoi-gian-cho-thai-san.html",
      f"Công cụ tính thời gian chờ bảo hiểm thai sản 270 ngày — bạn còn kịp không? | {BRAND}",
@@ -2304,7 +2474,14 @@ page("cong-cu/thoi-gian-cho-thai-san.html",
        CALC_WAIT, TOOL2_BODY, TOOL2_TOC)
      + cta("../", "Không chắc mình còn kịp hay đã trễ?",
        "Nhắn cho chúng tôi mốc dự sinh dự kiến. Chúng tôi tính ngược ra hạn chót của riêng bạn và nói thẳng còn kịp hay không — nếu đã trễ, chúng tôi cũng nói luôn thay vì để bạn mua một thứ không dùng được."),
-     active="cc", P="../", canon="cong-cu/thoi-gian-cho-thai-san.html")
+     active="cc", P="../", canon="cong-cu/thoi-gian-cho-thai-san.html",
+     extra=schema_head(
+       howto_schema("Cách tính thời gian chờ bảo hiểm thai sản 270 ngày",
+         "Tính ngược từ ngày dự sinh ra hạn chót hợp đồng phải có hiệu lực.",
+         [("Nhập mốc dự sinh dự kiến", "Chọn ngày dự sinh, hoặc nếu chưa mang thai thì chọn thời điểm dự định sinh con."),
+          ("Công cụ trừ ngược 270 ngày", "Hợp đồng phải có hiệu lực trước mốc này thì quyền lợi thai sản mới áp dụng cho lần sinh đó."),
+          ("Đối chiếu với hôm nay", "Nếu số ngày còn lại là số dương, bạn còn kịp. Nếu âm, quyền lợi thai sản sẽ không áp dụng cho lần sinh này.")]),
+       breadcrumb_schema([("Trang chủ","index.html"),("Công cụ","cong-cu/index.html"),("Thời gian chờ thai sản",None)])))
 
 page("cong-cu/ngan-sach-bao-ve.html",
      f"Công cụ tính số tiền bảo hiểm nhân thọ gia đình cần — kèm công thức | {BRAND}",
@@ -2315,12 +2492,179 @@ page("cong-cu/ngan-sach-bao-ve.html",
        CALC_NEED, TOOL3_BODY, TOOL3_TOC)
      + cta("../", "Muốn biết con số thật của riêng gia đình bạn?",
        "Công thức chung chưa trừ tài sản sẵn có, bảo hiểm công ty và thu nhập của người bạn đời — con số thật thường thấp hơn. Chúng tôi ngồi tính cụ thể cùng bạn, miễn phí."),
-     active="cc", P="../", canon="cong-cu/ngan-sach-bao-ve.html")
+     active="cc", P="../", canon="cong-cu/ngan-sach-bao-ve.html",
+     extra=schema_head(
+       howto_schema("Cách tính số tiền bảo hiểm gia đình cần có",
+         "Công thức tính số tiền bảo vệ dựa trên thu nhập, dư nợ và số người phụ thuộc.",
+         [("Nhập thu nhập hằng tháng", "Lấy thu nhập ròng, phần thực sự nuôi gia đình."),
+          ("Nhập tổng dư nợ và số người phụ thuộc", "Gồm vay mua nhà, vay tiêu dùng, và số người đang sống dựa vào thu nhập của bạn."),
+          ("Đọc số tiền bảo vệ gợi ý", "Con số này là mức trần chưa trừ tài sản sẵn có và bảo hiểm công ty. Số thật thường thấp hơn.")]),
+       breadcrumb_schema([("Trang chủ","index.html"),("Công cụ","cong-cu/index.html"),("Ngân sách bảo vệ",None)])))
+
+
+# ================================================================ CUM A: chi phi sinh con theo benh vien
+
+_BADGE = {
+  "chinh-thuc":   ('status-ok',   'Số chính thức bệnh viện công bố'),
+  "thu-cap":      ('status-warn', 'Nguồn thứ ba — chưa được bệnh viện xác nhận'),
+  "chua-xac-minh":('status-bad',  'Chưa xác minh được'),
+}
+
+
+def bv_bang(b):
+    cls, nhan = _BADGE[b["kiem_chung"]]
+    return ('<h3>%s</h3>'
+            '<p class="footnote"><span class="status-pill %s">%s</span> &nbsp;Nguồn: %s</p>'
+            '%s') % (b["ten"], cls, nhan, b["nguon"], tbl(b["cot"], b["hang"]))
+
+
+def bv_body(bv, P="../"):
+    o = []
+    o.append(page_head('<a href="%schi-phi-sinh-con/index.html">Chi phí sinh con</a> / %s'
+                       % (P, bv["ten"]), bv["title"].split(":")[0], bv["desc"], P))
+
+    o.append('<section class="section"><div class="wrap">')
+    o.append('<div class="callout info"><h4>Con số ngắn gọn trước khi vào chi tiết</h4><p>%s</p></div>'
+             % bv["tom_tat"])
+    if bv.get("canh_bao"):
+        o.append('<div class="callout warn"><h4>Cách chúng tôi xử lý trang này</h4><p>%s</p></div>'
+                 % bv["canh_bao"])
+    o.append('<p class="footnote">Trang này rà soát lần gần nhất ngày %s. %s '
+             '<a href="%s" target="_blank" rel="noopener nofollow">Xem nguồn gốc</a>.</p>'
+             % (CAP_NHAT, bv["nguon_nhan"], bv["nguon_url"]))
+    o.append('</div></section>')
+
+    # bang gia
+    o.append('<section class="section bg-soft"><div class="wrap">')
+    o.append('<h2>Bảng giá &mdash; và mỗi con số lấy từ đâu</h2>')
+    o.append('<p class="lead">Mỗi bảng dưới đây đều gắn nhãn mức độ kiểm chứng. Chúng tôi không trộn '
+             'số chính thức với số nghe nói vào cùng một bảng.</p>')
+    for b in bv["bang"]:
+        o.append(bv_bang(b))
+    o.append('</div></section>')
+
+    # diem nhan dac biet (Tam Anh)
+    if bv.get("diem_nhan"):
+        d = bv["diem_nhan"]
+        rowsx = "".join('<tr><td>%s</td><td>%s</td><td>%s</td></tr>' % r for r in d["so"])
+        o.append('<section class="section"><div class="wrap">')
+        o.append('<h2>%s</h2><p class="lead">%s</p>' % (d["tieu_de"], d["noi_dung"]))
+        o.append('<div class="tbl-wrap"><table class="tbl"><thead><tr>'
+                 '<th>Khoản mục</th><th>Số tiền</th><th>Mức dao động</th></tr></thead>'
+                 '<tbody>%s</tbody></table></div>' % rowsx)
+        o.append('<div class="callout"><h4>Vì sao con số này quan trọng hơn bảng giá</h4><p>%s</p></div>'
+                 % d["ket"])
+        o.append('</div></section>')
+
+    # cong cu nhung
+    o.append('<section class="section bg-grey"><div class="wrap">')
+    o.append('<h2>Tính thử cho trường hợp của bạn</h2>')
+    o.append('<p class="lead">Chọn hình thức sinh và tình trạng bảo hiểm y tế để ra con số '
+             'gia đình thực sự phải tự trả &mdash; không phải tổng hoá đơn.</p>')
+    o.append(CALC_BIRTH.replace('id="tinh-chi-phi-sinh"', 'id="tinh-chi-phi-sinh" data-bv="%s"'
+                                % bv["calc_key"]))
+    o.append('</div></section>')
+
+    # khong bao gom (neu co)
+    if bv.get("khong_bao_gom"):
+        lis = "".join("<li>%s</li>" % x for x in bv["khong_bao_gom"])
+        o.append('<section class="section"><div class="wrap">')
+        o.append('<h2>Gói không bao gồm những gì</h2>')
+        o.append('<p class="lead">Đây là phần khiến ngân sách vỡ, và gần như không bài viết nào '
+                 'liệt kê ra.</p><ul class="tick">%s</ul>' % lis)
+        o.append('</div></section>')
+
+    # khong cong bo -- diem khac biet cua site
+    lis = "".join("<li>%s</li>" % x for x in bv["khong_cong_bo"])
+    o.append('<section class="section bg-soft"><div class="wrap">')
+    o.append('<h2>Những con số bệnh viện không công bố &mdash; và chúng tôi không bịa ra</h2>')
+    o.append('<p class="lead">Phần lớn bài viết về chi phí sinh con sẽ điền hết mọi ô trong bảng, '
+             'kể cả ô không có dữ liệu. Chúng tôi để trống, và nói rõ trống ở đâu. '
+             'Vì bạn đang lập ngân sách thật cho một ca sinh thật.</p>')
+    o.append('<ul class="tick">%s</ul>' % lis)
+    o.append('</div></section>')
+
+    # luu y
+    o.append('<section class="section"><div class="wrap">')
+    o.append('<h2>Những điều nên biết trước khi nhập viện</h2>')
+    for t, b in bv["luu_y"]:
+        o.append('<div class="feat"><span class="feat-ico">%s</span><div><h4>%s</h4><p>%s</p></div></div>'
+                 % (I['info'] if 'info' in I else I['doc'], t, b))
+    o.append('</div></section>')
+
+    # faq
+    o.append('<section class="section bg-grey"><div class="wrap">')
+    o.append('<h2>Câu hỏi thường gặp về chi phí sinh ở %s</h2>' % bv["ten"])
+    o.append(faq(bv["faq"]))
+    o.append('</div></section>')
+
+    # lien ket noi bo
+    o.append('<section class="section"><div class="wrap">')
+    o.append('<h2>Đọc tiếp</h2><div class="entry-grid">')
+    for other in BV_DATA:
+        if other["slug"] == bv["slug"]:
+            continue
+        o.append('<a class="entry" href="%schi-phi-sinh-con/%s.html"><b>Chi phí sinh ở %s</b>'
+                 '<span>%s &middot; %s</span></a>' % (P, other["slug"], other["ten"],
+                                                      other["tinh"], other["loai"]))
+    o.append('<a class="entry" href="' + P + 'thai-san.html"><b>Bảo hiểm thai sản rời</b>'
+             '<span>Thời gian chờ 270 ngày &mdash; kiểm tra bạn còn kịp không</span></a>')
+    o.append('<a class="entry" href="' + P + 'cong-cu/thoi-gian-cho-thai-san.html">'
+             '<b>Công cụ đếm ngược thời gian chờ</b>'
+             '<span>Tính ngược từ ngày dự sinh ra hạn chót</span></a>')
+    o.append('</div></div></section>')
+    return "".join(o)
+
+
+def bv_hub_body(P="../"):
+    o = [page_head("Chi phí sinh con", "Chi phí sinh con theo từng bệnh viện",
+         "Bảng giá từng bệnh viện, ghi rõ số nào là số chính thức bệnh viện công bố và số nào chỉ là tham khảo.", P)]
+    o.append('<section class="section"><div class="wrap">')
+    o.append('<div class="callout info"><h4>Cách đọc loạt bài này</h4><p>Mỗi trang bệnh viện gắn nhãn '
+             'mức độ kiểm chứng cho từng bảng số. <b>Số chính thức</b> là số bệnh viện tự công bố, có ngày. '
+             '<b>Nguồn thứ ba</b> là số chúng tôi đối chiếu từ nơi khác vì bệnh viện không công bố. '
+             'Chỗ nào không có dữ liệu, chúng tôi để trống thay vì đoán.</p></div>')
+    o.append('<div class="entry-grid">')
+    for bv in BV_DATA:
+        o.append('<a class="entry" href="%s%s.html"><b>%s</b><span>%s &middot; %s</span></a>'
+                 % (P + "chi-phi-sinh-con/", bv["slug"], bv["ten"], bv["tinh"], bv["loai"]))
+    o.append('</div></div></section>')
+    o.append('<section class="section bg-soft"><div class="wrap">')
+    o.append('<h2>Tính nhanh chi phí ca sinh của bạn</h2>')
+    o.append(CALC_BIRTH)
+    o.append('</div></section>')
+    return "".join(o)
+
+
+for _bv in BV_DATA:
+    _canon = "chi-phi-sinh-con/%s.html" % _bv["slug"]
+    page(_canon, _bv["title"] + " | " + BRAND, _bv["desc"],
+         bv_body(_bv, "../")
+         + cta("../", "Muốn bảng dự toán riêng cho ca sinh của bạn?",
+               "Nhắn cho chúng tôi bệnh viện bạn định sinh, mốc dự sinh và bảo hiểm đang có. "
+               "Chúng tôi đối chiếu bảng giá mới nhất rồi gửi lại bảng tính riêng trong ngày."),
+         active="kt", P="../", canon=_canon,
+         body_attr=' data-jn="Chuẩn bị sinh con"',
+         extra=schema_head(
+             faq_schema(_bv["faq"]),
+             breadcrumb_schema([("Trang chủ", "index.html"),
+                                ("Chi phí sinh con", "chi-phi-sinh-con/index.html"),
+                                (_bv["ten"], None)]),
+             article_schema(_canon, _bv["title"], _bv["desc"], "2026-08-31",
+                            section="Chi phí sinh con")))
+
+page("chi-phi-sinh-con/index.html",
+     "Chi phí sinh con theo từng bệnh viện — bảng giá dẫn nguồn | " + BRAND,
+     "Chi phí sinh con tại Từ Dũ, Hùng Vương, Tâm Anh, Vinmec. Mỗi bảng giá ghi rõ nguồn và ngày công bố; chỗ nào bệnh viện không công bố thì để trống thay vì đoán.",
+     bv_hub_body("../"), active="kt", P="../", canon="chi-phi-sinh-con/index.html",
+     extra=schema_head(breadcrumb_schema([("Trang chủ", "index.html"), ("Chi phí sinh con", None)])))
+
 
 urls = ["", "san-pham", "thai-san", "suc-khoe", "bao-ve-thu-nhap",
         "cong-cu/", "cong-cu/chi-phi-sinh-con", "cong-cu/thoi-gian-cho-thai-san",
         "cong-cu/ngan-sach-bao-ve", "ve-chung-toi", "lien-he", "kien-thuc/"] + \
-       ["kien-thuc/" + p["slug"][:-5] for p in POSTS]
+       ["kien-thuc/" + p["slug"][:-5] for p in POSTS] + \
+       ["chi-phi-sinh-con/"] + ["chi-phi-sinh-con/" + b["slug"] for b in BV_DATA]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 for u in urls:
     sm += "  <url><loc>%s/%s</loc><changefreq>weekly</changefreq></url>\n" % (SITE, u)
