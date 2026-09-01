@@ -62,6 +62,14 @@
                  thuong: [10e6, 18e6],  mo: [12e6, 22e6],  bhyt_thuong: [3e6, 5e6],   bhyt_mo: [5e6, 8e6] },
     tamanh:    { name: 'BV Tâm Anh (TP.HCM / Hà Nội)', nguon: 'Tâm Anh công bố — gói trọn gói tiêu chuẩn', chinhthuc: 1, ngoai_goi: [5e6, 15e6],
                  thuong: [31.4e6, 43.1e6], mo: [36.9e6, 58.7e6], bhyt_thuong: [1e6, 3e6], bhyt_mo: [2e6, 4e6] },
+    fv:        { name: 'BV FV (TP.HCM)', nguon: 'FV công bố, bản cập nhật 21/05/2026 — gói Bạc đến Kim Cương, phòng tiêu chuẩn. Gói Bạch Kim và các hạng phòng cao hơn lên tới 168 triệu', chinhthuc: 1, da_gom_gayte: 1,
+                 thuong: [45e6, 75e6],  mo: [55e6, 85e6],  bhyt_thuong: [2e6, 8e6],   bhyt_mo: [2e6, 8e6] },
+    cih:       { name: 'BV Quốc tế City (TP.HCM)', nguon: 'Quốc tế City công bố, cập nhật 27/02/2026 — gói sinh Như Ý và Cát Tường', chinhthuc: 1,
+                 ngoai_goi: [4.95e6, 8.25e6],
+                 ngoai_goi_note: 'Đã cộng sẵn <b>tiền phòng 3 ngày</b>, vì bệnh viện ghi rõ <b>giá gói sinh chưa bao gồm tiền phòng</b> (1,65 – 2,75 triệu mỗi ngày). Bệnh viện không công bố số ngày nằm viện, nên 3 ngày ở đây là giả định của bạn — hãy hỏi bệnh viện con số thật.',
+                 thuong: [25.1e6, 31.7e6], mo: [36.18e6, 55.81e6], bhyt_thuong: [1e6, 3e6], bhyt_mo: [2e6, 4e6] },
+    hanhphuc:  { name: 'BV Quốc tế Hạnh Phúc', nguon: 'Hạnh Phúc công bố, bảng giá cập nhật 12/08/2025 — ba gói An Nhiên, Cát Tường, Như Ý (đã gồm phòng đơn)', chinhthuc: 1,
+                 thuong: [29.9e6, 59.9e6], mo: [39.9e6, 69.9e6], bhyt_thuong: [1e6, 3e6], bhyt_mo: [2e6, 4e6] },
     vinmec:    { name: 'Vinmec Times City / Central Park', nguon: 'Ước tính từ nguồn thứ ba — Vinmec KHÔNG công bố giá', chinhthuc: 0,
                  thuong: [37e6, 52e6],  mo: [52e6, 65e6],  bhyt_thuong: [1e6, 3e6],   bhyt_mo: [2e6, 4e6] },
     vinmectinh:{ name: 'Vinmec chi nhánh tỉnh', nguon: 'Ước tính từ nguồn thứ ba — Vinmec KHÔNG công bố giá', chinhthuc: 0,
@@ -111,11 +119,15 @@ var EXTRAS = { gayte: [1.2e6, 1.9e6], bacsi: [2e6, 5e6], 'sanglọc': [0.5e6, 3e
           ghiChu.push('Bệnh viện này công bố <b>không thu thêm phí</b> khi bạn chọn bác sĩ đỡ sinh, nên khoản đó không được cộng vào.');
           return;
         }
+        if (c.value === 'gayte' && h.da_gom_gayte) {
+          ghiChu.push('Bệnh viện này ghi rõ <b>gây tê ngoài màng cứng đã nằm trong giá gói</b>, nên khoản đó không được cộng thêm.');
+          return;
+        }
         var e = EXTRAS[c.value]; if (e) { exLo += e[0]; exHi += e[1]; }
       });
       if (h.ngoai_goi) {
         exLo += h.ngoai_goi[0]; exHi += h.ngoai_goi[1];
-        ghiChu.push('Đã cộng sẵn khoản <b>phát sinh ngoài gói</b>. Nghiên cứu bình duyệt năm 2024 đo được mỗi ca sinh trọn gói tại đây phát sinh thêm trung bình <b>10,2 triệu</b> ngoài giá gói.');
+        ghiChu.push(h.ngoai_goi_note || 'Đã cộng sẵn khoản <b>phát sinh ngoài gói</b>. Nghiên cứu bình duyệt năm 2024 đo được mỗi ca sinh trọn gói tại đây phát sinh thêm trung bình <b>10,2 triệu</b> ngoài giá gói.');
       }
       if (!h.chinhthuc) {
         ghiChu.push('⚠️ Bệnh viện này <b>không công bố bảng giá công khai</b>. Con số trên là ước tính từ nguồn thứ ba, cần gọi bệnh viện xác nhận.');
