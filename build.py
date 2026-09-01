@@ -57,8 +57,8 @@ ASSET_V = "6.1"   # tang so nay moi khi sua style.css hoac main.js
 
 # ---------------------------------------------------------------- analytics
 # Dat ID that vao day. De rong thi script tu tat, khong loi trang.
-GA4_ID   = "G-N60DQ7GW9Q"      # Measurement ID that - property tuvanbaohiemso.com, tao 31/08/2026
-META_PIXEL_ID = "1082574950921352"  # Pixel ID that - tuvanbaohiemso.com, tao 31/08/2026
+GA4_ID   = "G-N60DQ7GW9Q"           # Measurement ID that - property tuvanbaohiemso.com
+META_PIXEL_ID = "1082574950921352"  # Pixel ID that - Meta Events Manager
 
 ANALYTICS = """
 <script>window.TVBHS_GA4=%s;window.TVBHS_PIXEL=%s;</script>
@@ -124,7 +124,10 @@ def _strip(h):
     t = (t.replace("&mdash;", "-").replace("&ndash;", "-").replace("&nbsp;", " ")
           .replace("&amp;", "&").replace("&ldquo;", '"').replace("&rdquo;", '"')
           .replace("&rsquo;", "'").replace("&hellip;", "..."))
-    return _re.sub(r"\s+", " ", t).strip()
+    t = _re.sub(r"\s+", " ", t)
+    t = _re.sub(r"\s+([,.;:!?%)\]])", r"\1", t)   # bo khoang trang thua truoc dau cau
+    t = _re.sub(r"([(\[])\s+", r"\1", t)
+    return t.strip()
 
 
 def faq_schema(items):
@@ -1402,7 +1405,7 @@ NEXT2 = f"""
 
 CALC_BIRTH = f"""
       <div class="calc" id="tinh-chi-phi-sinh">
-        <div class="calc-head"><h3>{I['calc']} Máy tính chi phí sinh con</h3><p>Ước tính theo bảng giá dịch vụ 2026</p></div>
+        <div class="calc-head"><h3>{I['calc']} Máy tính chi phí sinh con</h3><p>Ước tính theo bảng giá mới nhất mà mỗi bệnh viện công bố</p></div>
         <div class="calc-body">
           <form id="birthCalc">
             <div class="field">
@@ -1414,6 +1417,9 @@ CALC_BIRTH = f"""
                 </optgroup>
                 <optgroup label="Bệnh viện tư">
                   <option value="tamanh">BV Tâm Anh (TP.HCM / Hà Nội)</option>
+                  <option value="fv">BV FV (TP.HCM)</option>
+                  <option value="cih">BV Quốc tế City (TP.HCM)</option>
+                  <option value="hanhphuc">BV Quốc tế Hạnh Phúc</option>
                   <option value="vinmec">Vinmec Times City / Central Park</option>
                   <option value="vinmectinh">Vinmec chi nhánh tỉnh</option>
                   <option value="hongngoc">BV Hồng Ngọc / BV tư Hà Nội</option>
@@ -2536,9 +2542,9 @@ def bv_body(bv, P="../"):
 
     # bang gia
     o.append('<section class="section bg-soft"><div class="wrap">')
-    o.append('<h2>Bảng giá &mdash; và mỗi con số lấy từ đâu</h2>')
-    o.append('<p class="lead">Mỗi bảng dưới đây đều gắn nhãn mức độ kiểm chứng. Chúng tôi không trộn '
-             'số chính thức với số nghe nói vào cùng một bảng.</p>')
+    o.append('<h2>Bảng giá và nguồn của từng con số</h2>')
+    o.append('<p class="lead">Mỗi bảng dưới đây gắn nhãn mức độ kiểm chứng. Số bệnh viện công bố '
+             'và số nghe lại không nằm chung một bảng.</p>')
     for b in bv["bang"]:
         o.append(bv_bang(b))
     o.append('</div></section>')
@@ -2556,13 +2562,23 @@ def bv_body(bv, P="../"):
                  % d["ket"])
         o.append('</div></section>')
 
-    # cong cu nhung
+    # cong cu nhung -- chi hien khi benh vien co cong bo du so de tinh
     o.append('<section class="section bg-grey"><div class="wrap">')
-    o.append('<h2>Tính thử cho trường hợp của bạn</h2>')
-    o.append('<p class="lead">Chọn hình thức sinh và tình trạng bảo hiểm y tế để ra con số '
-             'gia đình thực sự phải tự trả &mdash; không phải tổng hoá đơn.</p>')
-    o.append(CALC_BIRTH.replace('id="tinh-chi-phi-sinh"', 'id="tinh-chi-phi-sinh" data-bv="%s"'
-                                % bv["calc_key"]))
+    if bv.get("calc_key"):
+        o.append('<h2>Tính thử cho trường hợp của bạn</h2>')
+        o.append('<p class="lead">Chọn hình thức sinh và tình trạng bảo hiểm y tế để ra con số '
+                 'gia đình thực sự phải tự trả &mdash; không phải tổng hoá đơn.</p>')
+        o.append(CALC_BIRTH.replace('id="tinh-chi-phi-sinh"', 'id="tinh-chi-phi-sinh" data-bv="%s"'
+                                    % bv["calc_key"]))
+    else:
+        o.append('<h2>Vì sao trang này không có máy tính chi phí</h2>')
+        o.append('<p class="lead">Máy tính chi phí sinh con của chúng tôi chỉ chạy với bệnh viện '
+                 'có công bố giá. %s không công bố, nên không có con số nào để tính &mdash; và '
+                 'chúng tôi không dựng một máy tính chạy bằng số phỏng đoán. Bạn vẫn có thể tính '
+                 'thử với các bệnh viện khác, hoặc nhắn cho chúng tôi để được dựng bảng dự toán '
+                 'riêng cho ca sinh của bạn.</p>' % bv["ten"])
+        o.append('<p><a class="btn btn-primary" href="%scong-cu/chi-phi-sinh-con.html">'
+                 'Mở máy tính chi phí sinh con</a></p>' % P)
     o.append('</div></section>')
 
     # khong bao gom (neu co)
@@ -2570,17 +2586,17 @@ def bv_body(bv, P="../"):
         lis = "".join("<li>%s</li>" % x for x in bv["khong_bao_gom"])
         o.append('<section class="section"><div class="wrap">')
         o.append('<h2>Gói không bao gồm những gì</h2>')
-        o.append('<p class="lead">Đây là phần khiến ngân sách vỡ, và gần như không bài viết nào '
-                 'liệt kê ra.</p><ul class="tick">%s</ul>' % lis)
+        o.append('<p class="lead">Đây là nhóm khoản ít được liệt kê, và cũng là nhóm làm ngân sách '
+                 'đội lên nhiều nhất.</p><ul class="tick">%s</ul>' % lis)
         o.append('</div></section>')
 
     # khong cong bo -- diem khac biet cua site
     lis = "".join("<li>%s</li>" % x for x in bv["khong_cong_bo"])
     o.append('<section class="section bg-soft"><div class="wrap">')
-    o.append('<h2>Những con số bệnh viện không công bố &mdash; và chúng tôi không bịa ra</h2>')
-    o.append('<p class="lead">Phần lớn bài viết về chi phí sinh con sẽ điền hết mọi ô trong bảng, '
-             'kể cả ô không có dữ liệu. Chúng tôi để trống, và nói rõ trống ở đâu. '
-             'Vì bạn đang lập ngân sách thật cho một ca sinh thật.</p>')
+    o.append('<h2>Những con số bệnh viện không công bố</h2>')
+    o.append('<p class="lead">Phần lớn bài viết về chi phí sinh con điền hết mọi ô trong bảng, '
+             'kể cả ô không có dữ liệu. Trang này để trống và ghi rõ trống ở đâu, vì con số '
+             'đoán ra sẽ đi thẳng vào ngân sách của một ca sinh thật.</p>')
     o.append('<ul class="tick">%s</ul>' % lis)
     o.append('</div></section>')
 
@@ -2650,12 +2666,13 @@ for _bv in BV_DATA:
              breadcrumb_schema([("Trang chủ", "index.html"),
                                 ("Chi phí sinh con", "chi-phi-sinh-con/index.html"),
                                 (_bv["ten"], None)]),
-             article_schema(_canon, _bv["title"], _bv["desc"], "2026-08-31",
+             article_schema(_canon, _bv["title"], _bv["desc"],
+                            _bv.get("ngay_dang", "2026-08-31"),
                             section="Chi phí sinh con")))
 
 page("chi-phi-sinh-con/index.html",
      "Chi phí sinh con theo từng bệnh viện — bảng giá dẫn nguồn | " + BRAND,
-     "Chi phí sinh con tại Từ Dũ, Hùng Vương, Tâm Anh, Vinmec. Mỗi bảng giá ghi rõ nguồn và ngày công bố; chỗ nào bệnh viện không công bố thì để trống thay vì đoán.",
+     "Chi phí sinh con tại Từ Dũ, Hùng Vương, Tâm Anh, FV, Quốc tế City, Hạnh Phúc, Hoàn Mỹ Sài Gòn, Vinmec. Mỗi bảng giá ghi rõ nguồn và ngày công bố; chỗ nào bệnh viện không công bố thì để trống thay vì đoán.",
      bv_hub_body("../"), active="kt", P="../", canon="chi-phi-sinh-con/index.html",
      extra=schema_head(breadcrumb_schema([("Trang chủ", "index.html"), ("Chi phí sinh con", None)])))
 
