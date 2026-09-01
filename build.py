@@ -53,12 +53,12 @@ I = {
 }
 
 # ---------------------------------------------------------------- shell
-ASSET_V = "6.0"   # tang so nay moi khi sua style.css hoac main.js
+ASSET_V = "6.1"   # tang so nay moi khi sua style.css hoac main.js
 
 # ---------------------------------------------------------------- analytics
 # Dat ID that vao day. De rong thi script tu tat, khong loi trang.
-GA4_ID   = "G-XXXXXXXXXX"      # <- thay bang Measurement ID that tu Google Analytics
-META_PIXEL_ID = "000000000000000"  # <- thay bang Pixel ID that tu Meta Events Manager
+GA4_ID   = "G-N60DQ7GW9Q"      # Measurement ID that - property tuvanbaohiemso.com, tao 31/08/2026
+META_PIXEL_ID = "1082574950921352"  # Pixel ID that - tuvanbaohiemso.com, tao 31/08/2026
 
 ANALYTICS = """
 <script>window.TVBHS_GA4=%s;window.TVBHS_PIXEL=%s;</script>
