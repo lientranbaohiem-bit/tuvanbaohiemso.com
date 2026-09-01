@@ -19,6 +19,22 @@ SITE       = "https://tuvanbaohiemso.com"
 LEAD_ENDPOINT = "https://script.google.com/macros/s/AKfycbzLoi7UxQJF6MpyLgY6xem9MGgtGym_eENJW4dacYJVJXTOS9oWZO_h06LsA4EgfaQxfA/exec"
 LEAD_ENDPOINT_JS = json.dumps(LEAD_ENDPOINT)
 
+# ---------------------------------------------------------------- vi tri bai viet
+# Tat ca bai SEO moi (ke ca cum "chi phi sinh con theo benh vien") deu nam trong
+# muc Kien thuc: /kien-thuc/... — de mot cho, de vao check.
+BV_DIR = "kien-thuc/"
+BV_PRE = "chi-phi-sinh-con-"
+BV_HUB = BV_DIR + "chi-phi-sinh-con-theo-benh-vien.html"
+
+
+def bv_url(slug):
+    return BV_DIR + BV_PRE + slug + ".html"
+
+
+# Duong dan cu (truoc 01/09/2026) — giu file chuyen huong 301-style de khong chet link.
+BV_OLD = [("chi-phi-sinh-con/index.html", BV_HUB)] + \
+         [("chi-phi-sinh-con/%s.html" % b["slug"], bv_url(b["slug"])) for b in BV_DATA]
+
 # ---------------------------------------------------------------- icons
 I = {
 "shield":'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
@@ -213,7 +229,7 @@ MEGA = f"""
         <span class="mega-icon">{I['baby']}</span>
         <span><span class="mega-title">Chuẩn bị sinh con</span><span class="mega-desc">Thai sản rời &middot; thời gian chờ 270 ngày</span></span>
         <span class="mega-arrow">{I['chev']}</span></a>
-      <a class="mega-link" href="{{P}}chi-phi-sinh-con/index.html">
+      <a class="mega-link" href="{{P}}kien-thuc/chi-phi-sinh-con-theo-benh-vien.html">
         <span class="mega-icon">{I['calc']}</span>
         <span><span class="mega-title">Chi phí sinh con theo bệnh viện</span><span class="mega-desc">Từ Dũ &middot; Hùng Vương &middot; Tâm Anh &middot; Vinmec</span></span>
         <span class="mega-arrow">{I['chev']}</span></a>
@@ -2030,6 +2046,10 @@ lh_body += f"""
 """
 
 # ================================================================ KIẾN THỨC (index)
+bv_kt_cards = "".join(
+    '<a class="entry" href="../%s"><b>Chi phí sinh ở %s</b><span>%s &middot; %s</span></a>'
+    % (bv_url(b["slug"]), b["ten"], b["tinh"], b["loai"]) for b in BV_DATA)
+
 kt_body = page_head("Kiến thức", "Kiến thức bảo hiểm", 
   "Những bài viết chúng tôi mong bạn đọc trước khi ký bất kỳ hợp đồng nào &mdash; kể cả hợp đồng của chúng tôi.", "../")
 
@@ -2037,6 +2057,16 @@ kt_body += f"""
 <section class="section">
   <div class="wrap">
     <div class="grid g3">{post_cards('../', limit=9)}</div>
+  </div>
+</section>
+
+<section class="section bg-soft">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:26px"><span class="eyebrow">Loạt bài</span><h2>Chi phí sinh con theo từng bệnh viện</h2>
+      <p class="lead" style="max-width:56em;margin:12px auto 0">Mỗi trang có bảng giá dẫn nguồn kèm ngày công bố, ghi rõ số nào là số bệnh viện tự công bố và số nào chỉ là tham khảo &mdash; và cả những khoản bệnh viện không công bố.</p>
+    </div>
+    <div class="entry-grid">{bv_kt_cards}</div>
+    <p style="margin-top:18px"><a class="btn btn-ghost" href="../{BV_HUB}">Xem trang tổng hợp cả loạt bài {I['arrow']}</a></p>
   </div>
 </section>
 
@@ -2456,8 +2486,8 @@ page("cong-cu/chi-phi-sinh-con.html",
        '<p class="lead">Mỗi trang dưới đây có bảng giá dẫn nguồn, ghi rõ số nào là số bệnh viện '
        'công bố và số nào chỉ là tham khảo &mdash; kèm cả những khoản bệnh viện không công bố.</p>'
        '<div class="entry-grid">'
-       + "".join('<a class="entry" href="../chi-phi-sinh-con/%s.html"><b>Chi phí sinh ở %s</b>'
-                 '<span>%s &middot; %s</span></a>' % (b["slug"], b["ten"], b["tinh"], b["loai"])
+       + "".join('<a class="entry" href="../%s"><b>Chi phí sinh ở %s</b>'
+                 '<span>%s &middot; %s</span></a>' % (bv_url(b["slug"]), b["ten"], b["tinh"], b["loai"])
                  for b in BV_DATA)
        + '</div></div></section>'
      + cta("../", "Muốn một bảng tính riêng cho trường hợp của gia đình bạn?",
@@ -2526,8 +2556,8 @@ def bv_bang(b):
 
 def bv_body(bv, P="../"):
     o = []
-    o.append(page_head('<a href="%schi-phi-sinh-con/index.html">Chi phí sinh con</a> / %s'
-                       % (P, bv["ten"]), bv["title"].split(":")[0], bv["desc"], P))
+    o.append(page_head('<a href="%s%s">Chi phí sinh con</a> / %s'
+                       % (P, BV_HUB, bv["ten"]), bv["title"].split(":")[0], bv["desc"], P))
 
     o.append('<section class="section"><div class="wrap">')
     o.append('<div class="callout info"><h4>Con số ngắn gọn trước khi vào chi tiết</h4><p>%s</p></div>'
@@ -2620,8 +2650,8 @@ def bv_body(bv, P="../"):
     for other in BV_DATA:
         if other["slug"] == bv["slug"]:
             continue
-        o.append('<a class="entry" href="%schi-phi-sinh-con/%s.html"><b>Chi phí sinh ở %s</b>'
-                 '<span>%s &middot; %s</span></a>' % (P, other["slug"], other["ten"],
+        o.append('<a class="entry" href="%s%s"><b>Chi phí sinh ở %s</b>'
+                 '<span>%s &middot; %s</span></a>' % (P, bv_url(other["slug"]), other["ten"],
                                                       other["tinh"], other["loai"]))
     o.append('<a class="entry" href="' + P + 'thai-san.html"><b>Bảo hiểm thai sản rời</b>'
              '<span>Thời gian chờ 270 ngày &mdash; kiểm tra bạn còn kịp không</span></a>')
@@ -2642,8 +2672,8 @@ def bv_hub_body(P="../"):
              'Chỗ nào không có dữ liệu, chúng tôi để trống thay vì đoán.</p></div>')
     o.append('<div class="entry-grid">')
     for bv in BV_DATA:
-        o.append('<a class="entry" href="%s%s.html"><b>%s</b><span>%s &middot; %s</span></a>'
-                 % (P + "chi-phi-sinh-con/", bv["slug"], bv["ten"], bv["tinh"], bv["loai"]))
+        o.append('<a class="entry" href="%s%s"><b>%s</b><span>%s &middot; %s</span></a>'
+                 % (P, bv_url(bv["slug"]), bv["ten"], bv["tinh"], bv["loai"]))
     o.append('</div></div></section>')
     o.append('<section class="section bg-soft"><div class="wrap">')
     o.append('<h2>Tính nhanh chi phí ca sinh của bạn</h2>')
@@ -2653,7 +2683,7 @@ def bv_hub_body(P="../"):
 
 
 for _bv in BV_DATA:
-    _canon = "chi-phi-sinh-con/%s.html" % _bv["slug"]
+    _canon = bv_url(_bv["slug"])
     page(_canon, _bv["title"] + " | " + BRAND, _bv["desc"],
          bv_body(_bv, "../")
          + cta("../", "Muốn bảng dự toán riêng cho ca sinh của bạn?",
@@ -2664,24 +2694,38 @@ for _bv in BV_DATA:
          extra=schema_head(
              faq_schema(_bv["faq"]),
              breadcrumb_schema([("Trang chủ", "index.html"),
-                                ("Chi phí sinh con", "chi-phi-sinh-con/index.html"),
+                                ("Kiến thức", "kien-thuc/index.html"),
+                                ("Chi phí sinh con theo bệnh viện", BV_HUB),
                                 (_bv["ten"], None)]),
              article_schema(_canon, _bv["title"], _bv["desc"],
                             _bv.get("ngay_dang", "2026-08-31"),
                             section="Chi phí sinh con")))
 
-page("chi-phi-sinh-con/index.html",
+page(BV_HUB,
      "Chi phí sinh con theo từng bệnh viện — bảng giá dẫn nguồn | " + BRAND,
      "Chi phí sinh con tại Từ Dũ, Hùng Vương, Tâm Anh, FV, Quốc tế City, Hạnh Phúc, Hoàn Mỹ Sài Gòn, Vinmec. Mỗi bảng giá ghi rõ nguồn và ngày công bố; chỗ nào bệnh viện không công bố thì để trống thay vì đoán.",
-     bv_hub_body("../"), active="kt", P="../", canon="chi-phi-sinh-con/index.html",
-     extra=schema_head(breadcrumb_schema([("Trang chủ", "index.html"), ("Chi phí sinh con", None)])))
+     bv_hub_body("../"), active="kt", P="../", canon=BV_HUB,
+     body_attr=' data-jn="Chuẩn bị sinh con"',
+     extra=schema_head(breadcrumb_schema([("Trang chủ", "index.html"),
+                                          ("Kiến thức", "kien-thuc/index.html"),
+                                          ("Chi phí sinh con theo bệnh viện", None)])))
+
+# --- file chuyen huong tai duong dan cu, de link da phat tan khong chet ---
+for _old, _new in BV_OLD:
+    _write(_old, """<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8">
+<title>\u0110ang chuy\u1ec3n h\u01b0\u1edbng\u2026</title>
+<link rel="canonical" href="{site}/{new}">
+<meta http-equiv="refresh" content="0; url=/{new}"><meta name="robots" content="noindex">
+<script>location.replace("/{new}"+location.hash);</script></head>
+<body><p>Trang \u0111\u00e3 chuy\u1ec3n sang <a href="/{new}">/{new}</a></p></body></html>""".format(
+        site=SITE, new=_new))
 
 
 urls = ["", "san-pham", "thai-san", "suc-khoe", "bao-ve-thu-nhap",
         "cong-cu/", "cong-cu/chi-phi-sinh-con", "cong-cu/thoi-gian-cho-thai-san",
         "cong-cu/ngan-sach-bao-ve", "ve-chung-toi", "lien-he", "kien-thuc/"] + \
        ["kien-thuc/" + p["slug"][:-5] for p in POSTS] + \
-       ["chi-phi-sinh-con/"] + ["chi-phi-sinh-con/" + b["slug"] for b in BV_DATA]
+       [BV_HUB[:-5]] + [bv_url(b["slug"])[:-5] for b in BV_DATA]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 for u in urls:
     sm += "  <url><loc>%s/%s</loc><changefreq>weekly</changefreq></url>\n" % (SITE, u)
