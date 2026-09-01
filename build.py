@@ -32,8 +32,12 @@ def bv_url(slug):
 
 
 # Duong dan cu (truoc 01/09/2026) — giu file chuyen huong 301-style de khong chet link.
+# Chi 8 benh vien dau + hub tung nam o duong dan cu (truoc 02/09/2026).
+# Benh vien them sau nay nam thang trong kien-thuc/, khong can file chuyen huong.
+_BV_DA_TUNG_LIVE = ["tu-du", "hung-vuong", "tam-anh", "vinmec",
+                    "fv", "quoc-te-city", "hanh-phuc", "hoan-my-sai-gon"]
 BV_OLD = [("chi-phi-sinh-con/index.html", BV_HUB)] + \
-         [("chi-phi-sinh-con/%s.html" % b["slug"], bv_url(b["slug"])) for b in BV_DATA]
+         [("chi-phi-sinh-con/%s.html" % sl, bv_url(sl)) for sl in _BV_DA_TUNG_LIVE]
 
 # ---------------------------------------------------------------- icons
 I = {
@@ -69,7 +73,7 @@ I = {
 }
 
 # ---------------------------------------------------------------- shell
-ASSET_V = "6.1"   # tang so nay moi khi sua style.css hoac main.js
+ASSET_V = "6.2"   # tang so nay moi khi sua style.css hoac main.js
 
 # ---------------------------------------------------------------- analytics
 # Dat ID that vao day. De rong thi script tu tat, khong loi trang.
@@ -1436,6 +1440,8 @@ CALC_BIRTH = f"""
                   <option value="fv">BV FV (TP.HCM)</option>
                   <option value="cih">BV Quốc tế City (TP.HCM)</option>
                   <option value="hanhphuc">BV Quốc tế Hạnh Phúc</option>
+                  <option value="ansinh">BV An Sinh (TP.HCM)</option>
+                  <option value="mekong">BV Phụ sản MêKông (TP.HCM)</option>
                   <option value="vinmec">Vinmec Times City / Central Park</option>
                   <option value="vinmectinh">Vinmec chi nhánh tỉnh</option>
                   <option value="hongngoc">BV Hồng Ngọc / BV tư Hà Nội</option>
