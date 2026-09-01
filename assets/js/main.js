@@ -54,7 +54,7 @@
   /* ---------- Máy tính chi phí sinh con ---------- */
   /* Khoang chi phi tham khao (dong).
      Nguyen tac: so lay tu cong bo cua benh vien khi co; benh vien nao khong
-     cong bo thi ghi ro la uoc tinh. Ra soat 31/08/2026. */
+     cong bo thi ghi ro la uoc tinh. Ra soat 02/09/2026. */
   var HOSPITALS = {
     tudu:      { name: 'BV Từ Dũ (TP.HCM)', nguon: 'Từ Dũ công bố 16/09/2025 — mức có dịch vụ', chinhthuc: 1, mienphi_bacsi: 1,
                  thuong: [10e6, 15e6],  mo: [18e6, 20e6],  bhyt_thuong: [3e6, 5e6],   bhyt_mo: [5e6, 8e6] },
@@ -84,6 +84,15 @@
                  thuong: [9e6, 17e6],   mo: [17e6, 32e6],  bhyt_thuong: [2.5e6, 4e6], bhyt_mo: [5e6, 9e6] },
     hongngoc:  { name: 'BV Hồng Ngọc / BV tư Hà Nội', nguon: 'Ước tính theo mặt bằng bệnh viện tư', chinhthuc: 0,
                  thuong: [35e6, 65e6],  mo: [55e6, 95e6],  bhyt_thuong: [1e6, 3e6],   bhyt_mo: [2e6, 4e6] },
+    ansinh:    { name: 'BV An Sinh (TP.HCM)', nguon: 'An Sinh công bố — bảng giá gói sinh 2026, giá ưu đãi trọn gói, đã gồm phòng 2 giường (3 ngày với sinh thường, 4 ngày với sinh mổ). Khoảng sinh mổ ở đây là ĐƠN THAI; song thai cao hơn 2 triệu mỗi mức, tới 36 triệu ở lần mổ thứ 3', chinhthuc: 1,
+                 gayte_ghi_chu: 'An Sinh bán <b>hai gói sinh thường riêng</b>: 17.600.000đ không giảm đau và 20.000.000đ có giảm đau. Khoảng giá ở trên đã bao gồm cả hai, nên khoản gây tê không được cộng thêm lần nữa. Chênh lệch giữa hai gói là <b>2.400.000đ</b>.',
+                 thuong: [17.6e6, 20e6], mo: [28e6, 34e6], bhyt_thuong: [1e6, 3e6], bhyt_mo: [2e6, 4e6] },
+    mekong:    { name: 'BV Phụ sản MêKông (TP.HCM)', nguon: 'MêKông công bố 03/06/2022 — đây là GIÁ THỦ THUẬT, chưa gồm tiền phòng. Bệnh viện chưa cập nhật bảng giá từ 2022', chinhthuc: 1,
+                 ngoai_goi: [4.8e6, 9.6e6],
+                 ngoai_goi_note: 'Đã cộng sẵn <b>tiền phòng 3 đêm</b>, vì bảng giá của bệnh viện tách riêng: phòng đôi từ 1,6 triệu, phòng đơn từ 2,5 triệu, VIP từ 3,2 triệu mỗi đêm (công bố 01/09/2022). Bệnh viện không công bố số đêm nằm viện, nên 3 đêm ở đây là giả định của bạn.',
+                 gayte_gia: [2.4e6, 2.4e6],
+                 gayte_gia_note: 'Gây tê ngoài màng cứng ở đây tính theo đúng mức bệnh viện công bố là <b>2.400.000đ</b> (bảng giá 03/06/2022), không dùng mức ước tính chung.',
+                 thuong: [7.5e6, 8.5e6], mo: [10e6, 14.5e6], bhyt_thuong: [1e6, 3e6], bhyt_mo: [2e6, 4e6] },
     tinh:      { name: 'BV Sản Nhi tuyến tỉnh', nguon: 'Ước tính theo mặt bằng tuyến tỉnh', chinhthuc: 0,
                  thuong: [8e6, 15e6],   mo: [15e6, 28e6],  bhyt_thuong: [2.5e6, 4e6], bhyt_mo: [5e6, 9e6] }
   };
@@ -119,8 +128,13 @@ var EXTRAS = { gayte: [1.2e6, 1.9e6], bacsi: [2e6, 5e6], 'sanglọc': [0.5e6, 3e
           ghiChu.push('Bệnh viện này công bố <b>không thu thêm phí</b> khi bạn chọn bác sĩ đỡ sinh, nên khoản đó không được cộng vào.');
           return;
         }
-        if (c.value === 'gayte' && h.da_gom_gayte) {
-          ghiChu.push('Bệnh viện này ghi rõ <b>gây tê ngoài màng cứng đã nằm trong giá gói</b>, nên khoản đó không được cộng thêm.');
+        if (c.value === 'gayte' && (h.da_gom_gayte || h.gayte_ghi_chu)) {
+          ghiChu.push(h.gayte_ghi_chu || 'Bệnh viện này ghi rõ <b>gây tê ngoài màng cứng đã nằm trong giá gói</b>, nên khoản đó không được cộng thêm.');
+          return;
+        }
+        if (c.value === 'gayte' && h.gayte_gia) {
+          exLo += h.gayte_gia[0]; exHi += h.gayte_gia[1];
+          if (h.gayte_gia_note) ghiChu.push(h.gayte_gia_note);
           return;
         }
         var e = EXTRAS[c.value]; if (e) { exLo += e[0]; exHi += e[1]; }
