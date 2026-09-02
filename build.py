@@ -73,7 +73,7 @@ I = {
 }
 
 # ---------------------------------------------------------------- shell
-ASSET_V = "6.2"   # tang so nay moi khi sua style.css hoac main.js
+ASSET_V = "6.3"   # tang so nay moi khi sua style.css hoac main.js
 
 # ---------------------------------------------------------------- analytics
 # Dat ID that vao day. De rong thi script tu tat, khong loi trang.
@@ -1441,6 +1441,7 @@ CALC_BIRTH = f"""
                   <option value="cih">BV Quốc tế City (TP.HCM)</option>
                   <option value="hanhphuc">BV Quốc tế Hạnh Phúc</option>
                   <option value="ansinh">BV An Sinh (TP.HCM)</option>
+                  <option value="xuyena">BV Đa khoa Xuyên Á (Củ Chi)</option>
                   <option value="mekong">BV Phụ sản MêKông (TP.HCM)</option>
                   <option value="vinmec">Vinmec Times City / Central Park</option>
                   <option value="vinmectinh">Vinmec chi nhánh tỉnh</option>
