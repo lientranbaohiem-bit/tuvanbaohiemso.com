@@ -54,7 +54,7 @@
   /* ---------- Máy tính chi phí sinh con ---------- */
   /* Khoang chi phi tham khao (dong).
      Nguyen tac: so lay tu cong bo cua benh vien khi co; benh vien nao khong
-     cong bo thi ghi ro la uoc tinh. Ra soat 02/09/2026. */
+     cong bo thi ghi ro la uoc tinh. Ra soat 03/09/2026. */
   var HOSPITALS = {
     tudu:      { name: 'BV Từ Dũ (TP.HCM)', nguon: 'Từ Dũ công bố 16/09/2025 — mức có dịch vụ', chinhthuc: 1, mienphi_bacsi: 1,
                  thuong: [10e6, 15e6],  mo: [18e6, 20e6],  bhyt_thuong: [3e6, 5e6],   bhyt_mo: [5e6, 8e6] },
@@ -74,8 +74,16 @@
                  thuong: [37e6, 52e6],  mo: [52e6, 65e6],  bhyt_thuong: [1e6, 3e6],   bhyt_mo: [2e6, 4e6] },
     vinmectinh:{ name: 'Vinmec chi nhánh tỉnh', nguon: 'Ước tính từ nguồn thứ ba — Vinmec KHÔNG công bố giá', chinhthuc: 0,
                  thuong: [24e6, 33e6],  mo: [33.5e6, 41e6], bhyt_thuong: [1e6, 3e6],  bhyt_mo: [2e6, 4e6] },
-    phusanhn:  { name: 'BV Phụ sản Hà Nội', nguon: 'Ước tính theo mặt bằng bệnh viện công tuyến cuối', chinhthuc: 0,
-                 thuong: [12e6, 22e6],  mo: [22e6, 40e6],  bhyt_thuong: [3e6, 5e6],   bhyt_mo: [6e6, 10e6] },
+    xuyena:    { name: 'BV Đa khoa Xuyên Á (Củ Chi, TP.HCM)', nguon: 'Xuyên Á công bố, bảng giá dịch vụ kỹ thuật cập nhật 15/05/2025 — cơ sở Củ Chi. Cột BHYT lấy đúng từ bảng giá của bệnh viện, không phải ước tính', chinhthuc: 1,
+                 ngoai_goi: [0.96e6, 1.65e6],
+                 ngoai_goi_note: 'Đã cộng sẵn <b>tiền giường khoa Sản 3 ngày</b>: từ 320.000đ (phòng 10 giường) đến 550.000đ (phòng 2 giường) mỗi ngày. Bệnh viện không công bố số ngày nằm viện, nên 3 ngày là giả định của bạn. Chọn phòng Tiêu chuẩn A (1.700.000đ/ngày) thì khoản này lên 5,1 triệu.',
+                 thuong: [2.18e6, 3.33e6], mo: [4.36e6, 7.76e6],
+                 bhyt_thuong: [0.7867e6, 1.5103e6], bhyt_mo: [2.6048e6, 3.3762e6] },
+    phusanhn:  { name: 'BV Phụ sản Hà Nội', nguon: 'Phụ sản Hà Nội công bố 20/08/2026 — cận dưới là KHU THƯỜNG, cận trên là KHU DỊCH VỤ, chưa gồm phí chọn bác sĩ (5–9 triệu với ca thường, tới 13 triệu với ca phức tạp). Phần BHYT ở đây tính bằng 80–100% mức giá khung BHYT mà bệnh viện công bố, vì bệnh viện không công bố phần chi trả thực tế', chinhthuc: 1,
+                 ngoai_goi: [2.1e6, 7.5e6],
+                 ngoai_goi_note: 'Đã cộng sẵn <b>tiền phòng 3 ngày</b>: 700.000đ/ngày ở khu thường đến 2.500.000đ/ngày ở phòng 2 giường khu D và B4. Bệnh viện có cả phòng 1 giường khu B3 giá <b>5.000.000đ/ngày</b> — chọn hạng đó thì riêng tiền phòng 3 ngày là 15 triệu.',
+                 thuong: [0.7867e6, 4.366e6],  mo: [2.6048e6, 7.672e6],
+                 bhyt_thuong: [0.63e6, 0.787e6],   bhyt_mo: [2.08e6, 2.6e6] },
     phusantw:  { name: 'BV Phụ sản Trung ương (Hà Nội)', nguon: 'Ước tính theo mặt bằng bệnh viện công tuyến cuối', chinhthuc: 0,
                  thuong: [14e6, 25e6],  mo: [24e6, 45e6],  bhyt_thuong: [3e6, 5e6],   bhyt_mo: [6e6, 10e6] },
     bachmai:   { name: 'BV Bạch Mai — khoa Sản (Hà Nội)', nguon: 'Ước tính theo mặt bằng bệnh viện công tuyến cuối', chinhthuc: 0,
@@ -148,7 +156,11 @@ var EXTRAS = { gayte: [1.2e6, 1.9e6], bacsi: [2e6, 5e6], 'sanglọc': [0.5e6, 3e
       }
       var totLo = lo + exLo, totHi = hi + exHi;
       var covLo = hasBhyt ? bLo : 0, covHi = hasBhyt ? bHi : 0;
-      var gapLo = Math.max(0, totLo - covHi), gapHi = Math.max(0, totHi - covLo);
+      /* Ghep dung canh: kich ban re di voi phan BHYT tra it, kich ban dat di voi
+         phan BHYT tra nhieu. Ghep cheo (totLo - covHi) tao ra khoang rong vo ly
+         va hay cho ra can duoi bang 0. */
+      var gapLo = Math.max(0, totLo - covLo), gapHi = Math.max(0, totHi - covHi);
+      if (gapHi < gapLo) { var _t = gapLo; gapLo = gapHi; gapHi = _t; }
 
       out.innerHTML =
         '<div class="res-row"><span>Bệnh viện</span><b>' + h.name + '</b></div>' +
@@ -264,9 +276,21 @@ var EXTRAS = { gayte: [1.2e6, 1.9e6], bacsi: [2e6, 5e6], 'sanglọc': [0.5e6, 3e
   }
 
   document.querySelectorAll('form[data-lead]').forEach(function (f) {
+    var daGui = false;
     f.addEventListener('submit', function (e) {
       e.preventDefault();
       var ok = f.querySelector('.form-ok');
+      /* Chan gui trung: mot form chi ghi nhan mot lead moi lan tai trang.
+         Khong co doan nay thi bam Gui hai lan se tao hai dong CRM va hai su kien generate_lead. */
+      if (daGui) {
+        if (ok) {
+          ok.classList.add('show');
+          ok.innerHTML = '✓ Thông tin của bạn đã được ghi nhận rồi.<br>' +
+            '<span style="font-weight:500;font-size:.9rem">Cần gấp thì nhắn Zalo <b>0777 991 852</b>, chúng tôi trả lời trong 15 phút.</span>';
+        }
+        return;
+      }
+      daGui = true;
       var data = new FormData(f);
       var payload = {};
       data.forEach(function (v, k) { if (k !== 'consent') payload[k] = v; });
@@ -501,7 +525,10 @@ var EXTRAS = { gayte: [1.2e6, 1.9e6], bacsi: [2e6, 5e6], 'sanglọc': [0.5e6, 3e
 
   /* ---- 1. Gui form thu lead (su kien quan trong nhat) ---- */
   document.querySelectorAll('form[data-lead]').forEach(function (f) {
+    var daBan = false;
     f.addEventListener('submit', function () {
+      if (daBan) return;      /* mot form chi ban generate_lead mot lan moi lan tai trang */
+      daBan = true;
       var qt = '';
       try {
         var el = f.querySelector('[name="quan_tam"],[name="nhu_cau"],select');
