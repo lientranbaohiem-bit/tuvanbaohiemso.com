@@ -4,6 +4,7 @@ import os, html, json
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 from benhvien import BV_DATA, CAP_NHAT
+from baiviet import BAI_VIET
 PHONE      = "0777991852"
 PHONE_FMT  = "0777 991 852"
 PHONE_TEL  = "+84777991852"
@@ -25,6 +26,44 @@ LEAD_ENDPOINT_JS = json.dumps(LEAD_ENDPOINT)
 BV_DIR = "kien-thuc/"
 BV_PRE = "chi-phi-sinh-con-"
 BV_HUB = BV_DIR + "chi-phi-sinh-con-theo-benh-vien.html"
+
+# Cum bai viet -> trang tru cot tuong ung. Dung cho lien ket hai chieu.
+CUM_TRU_COT = {
+  "C": ("san-pham.html",        "Sản phẩm và hợp đồng"),
+  "D": ("suc-khoe.html",        "Bảo hiểm sức khoẻ"),
+  "E": ("bao-ve-thu-nhap.html", "Bảo vệ thu nhập"),
+}
+
+
+def bai_url(slug):
+    return BV_DIR + slug + ".html"
+
+
+def bai_theo_cum(cum):
+    return [b for b in BAI_VIET if b.get("cum") == cum]
+
+
+def khoi_bai_lien_quan(cum, tieu_de, dan, P="", them_benh_vien=False, gioi_han=9):
+    """Khoi 'bai lien quan' dat o CUOI trang tru cot.
+
+    Truoc 03/09/2026 khong trang tru cot nao tro xuong bai kien thuc, nen Google
+    chi doc duoc cum noi dung theo mot chieu. Ham nay bu chieu con lai.
+    Chua co bai nao thi tra ve chuoi rong, khong in khung trong.
+    """
+    o = []
+    for b in bai_theo_cum(cum)[:gioi_han]:
+        o.append('<a class="entry" href="%s%s"><b>%s</b><span>%s</span></a>'
+                 % (P, bai_url(b["slug"]), b.get("h1") or b["title"], b.get("tag", "")))
+    if them_benh_vien:
+        for bv in BV_DATA[:gioi_han]:
+            o.append('<a class="entry" href="%s%s"><b>Chi phí sinh ở %s</b>'
+                     '<span>%s &middot; %s</span></a>'
+                     % (P, bv_url(bv["slug"]), bv["ten"], bv["tinh"], bv["loai"]))
+    if not o:
+        return ""
+    return ('<section class="section bg-soft"><div class="wrap">'
+            '<h2>%s</h2><p class="lead">%s</p>'
+            '<div class="entry-grid">%s</div></div></section>') % (tieu_de, dan, "".join(o))
 
 
 def bv_url(slug):
@@ -2422,25 +2461,36 @@ page("index.html", f"{BRAND} — Tư vấn bảo hiểm minh bạch, quyết đ�
 
 page("san-pham.html", f"Danh mục sản phẩm bảo hiểm | {BRAND}",
      "Danh mục sản phẩm AIA Việt Nam và các gói bảo hiểm thai sản rời — mô tả bản chất từng nhóm, kèm cả ưu và nhược điểm.",
-     sp_body, active="sp", P="", canon="san-pham.html", body_attr=' data-jn="Sản phẩm &amp; nhu cầu"',
+     sp_body + khoi_bai_lien_quan("C", "Trước khi ký, nên đọc mấy bài này",
+       "Kê khai sức khoẻ, điều khoản loại trừ, thời gian chờ và lý do hồ sơ bị từ chối. "
+       "Đây là phần quyết định hợp đồng của bạn có giá trị hay không.", P=""),
+     active="sp", P="", canon="san-pham.html", body_attr=' data-jn="Sản phẩm &amp; nhu cầu"',
      extra=schema_head(faq_schema(SP_FAQ),
                        breadcrumb_schema([("Trang chủ","index.html"),("Sản phẩm & nhu cầu",None)])))
 
 page("thai-san.html", f"Bảo hiểm thai sản rời — thời gian chờ 270 ngày | {BRAND}",
      "Bảo hiểm thai sản tham gia độc lập, không cần hợp đồng nhân thọ chính. Thời gian chờ 270 ngày, không phân biệt sinh thường hay sinh mổ, bảo lãnh viện phí trực tiếp.",
-     ts_body, active="sp", P="", canon="thai-san.html", body_attr=' data-jn="Chuẩn bị sinh con"',
+     ts_body + khoi_bai_lien_quan("B", "Chi phí sinh con ở từng bệnh viện",
+       "Trước khi tính quyền lợi bảo hiểm, nên biết ca sinh thật tốn bao nhiêu. Mỗi trang "
+       "dưới đây là bảng giá bệnh viện tự công bố, có ghi ngày và mức độ kiểm chứng.",
+       P="", them_benh_vien=True),
+     active="sp", P="", canon="thai-san.html", body_attr=' data-jn="Chuẩn bị sinh con"',
      extra=schema_head(faq_schema(TS_FAQ),
                        breadcrumb_schema([("Trang chủ","index.html"),("Bảo hiểm thai sản rời",None)])))
 
 page("suc-khoe.html", f"Bảo hiểm sức khoẻ & viện phí cho gia đình | {BRAND}",
      "Khoảng trống giữa bảo hiểm y tế và viện phí thật, ba lớp quyền lợi nên ưu tiên, và cách chọn hạn mức nội trú cho đúng.",
-     sk_body, active="sp", P="", canon="suc-khoe.html", body_attr=' data-jn="Bảo vệ sức khoẻ"',
+     sk_body + khoi_bai_lien_quan("D", "Đọc thêm về chi phí điều trị",
+       "Con số thật của từng nhóm bệnh, lấy từ bảng giá bệnh viện công bố.", P=""),
+     active="sp", P="", canon="suc-khoe.html", body_attr=' data-jn="Bảo vệ sức khoẻ"',
      extra=schema_head(faq_schema(SK_FAQ),
                        breadcrumb_schema([("Trang chủ","index.html"),("Sức khoẻ & viện phí",None)])))
 
 page("bao-ve-thu-nhap.html", f"Bảo vệ thu nhập gia đình — bài toán cho người trụ cột | {BRAND}",
      "Nếu thu nhập của bạn dừng lại sáu tháng, ai trả khoản vay và tiền học của con? Cách tính số tiền bảo vệ cần có và so sánh thẳng thắn giữa tiết kiệm, đầu tư và bảo hiểm.",
-     bv_body, active="sp", P="", canon="bao-ve-thu-nhap.html", body_attr=' data-jn="Bảo vệ thu nhập"',
+     bv_body + khoi_bai_lien_quan("E", "Đọc thêm về bảo vệ thu nhập",
+       "Cách tính số tiền gia đình thực sự cần, và những tình huống làm thu nhập dừng lại.", P=""),
+     active="sp", P="", canon="bao-ve-thu-nhap.html", body_attr=' data-jn="Bảo vệ thu nhập"',
      extra=schema_head(faq_schema(BV_FAQ),
                        breadcrumb_schema([("Trang chủ","index.html"),("Bảo vệ thu nhập",None)])))
 
@@ -2561,7 +2611,7 @@ def bv_bang(b):
             '%s') % (b["ten"], cls, nhan, b["nguon"], tbl(b["cot"], b["hang"]))
 
 
-def bv_body(bv, P="../"):
+def benh_vien_body(bv, P="../"):
     o = []
     o.append(page_head('<a href="%s%s">Chi phí sinh con</a> / %s'
                        % (P, BV_HUB, bv["ten"]), bv["title"].split(":")[0], bv["desc"], P))
@@ -2692,7 +2742,7 @@ def bv_hub_body(P="../"):
 for _bv in BV_DATA:
     _canon = bv_url(_bv["slug"])
     page(_canon, _bv["title"] + " | " + BRAND, _bv["desc"],
-         bv_body(_bv, "../")
+         benh_vien_body(_bv, "../")
          + cta("../", "Muốn bảng dự toán riêng cho ca sinh của bạn?",
                "Nhắn cho chúng tôi bệnh viện bạn định sinh, mốc dự sinh và bảo hiểm đang có. "
                "Chúng tôi đối chiếu bảng giá mới nhất rồi gửi lại bảng tính riêng trong ngày."),
@@ -2728,11 +2778,93 @@ for _old, _new in BV_OLD:
         site=SITE, new=_new))
 
 
+# ================================================================ BAI VIET CUM C / D / E
+
+def bai_body(b, P="../"):
+    o = []
+    _tru, _ten = CUM_TRU_COT.get(b.get("cum"), ("kien-thuc/index.html", "Kiến thức"))
+    o.append(page_head('<a href="%s%s">%s</a>' % (P, _tru, _ten),
+                       b.get("h1") or b["title"].split(":")[0], b["desc"], P))
+
+    o.append('<section class="section"><div class="wrap">')
+    o.append('<div class="callout info"><h4>Tóm tắt</h4><p>%s</p></div>' % b["tom_tat"])
+    if b.get("canh_bao"):
+        o.append('<div class="callout warn"><h4>Cách chúng tôi xử lý bài này</h4><p>%s</p></div>'
+                 % b["canh_bao"])
+    o.append('<p class="footnote">Bài rà soát lần gần nhất ngày %s.</p>' % CAP_NHAT)
+    o.append('</div></section>')
+
+    if b.get("bang"):
+        o.append('<section class="section bg-soft"><div class="wrap">')
+        o.append('<h2>Số liệu &mdash; và mỗi con số lấy từ đâu</h2>')
+        for t in b["bang"]:
+            o.append(bv_bang(t))
+        o.append('</div></section>')
+
+    if b.get("y_chinh"):
+        o.append('<section class="section"><div class="wrap">')
+        for tieu_de, noi_dung in b["y_chinh"]:
+            o.append('<div class="feat"><span class="feat-ico">%s</span><div><h4>%s</h4><p>%s</p></div></div>'
+                     % (I['doc'], tieu_de, noi_dung))
+        o.append('</div></section>')
+
+    if b.get("khong_ro"):
+        lis = "".join("<li>%s</li>" % x for x in b["khong_ro"])
+        o.append('<section class="section bg-soft"><div class="wrap">')
+        o.append('<h2>Những chỗ chúng tôi chưa có số chắc chắn</h2>')
+        o.append('<p class="lead">Phần này để trống có chủ đích. Chúng tôi ghi rõ chỗ nào '
+                 'chưa kiểm chứng được, thay vì điền cho đủ bài.</p>')
+        o.append('<ul class="tick">%s</ul>' % lis)
+        o.append('</div></section>')
+
+    if b.get("faq"):
+        o.append('<section class="section bg-grey"><div class="wrap">')
+        o.append('<h2>Câu hỏi thường gặp</h2>')
+        o.append(faq(b["faq"]))
+        o.append('</div></section>')
+
+    # doc tiep: bai cung cum + tru cot
+    khac = [x for x in bai_theo_cum(b.get("cum")) if x["slug"] != b["slug"]][:3]
+    o.append('<section class="section"><div class="wrap">')
+    o.append('<h2>Đọc tiếp</h2><div class="entry-grid">')
+    for x in khac:
+        o.append('<a class="entry" href="%s%s"><b>%s</b><span>%s</span></a>'
+                 % (P, bai_url(x["slug"]), x.get("h1") or x["title"], x.get("tag", "")))
+    for sl in b.get("lien_quan", []):
+        o.append('<a class="entry" href="%s%s"><b>Xem thêm</b><span>%s</span></a>'
+                 % (P, bai_url(sl), sl.replace("-", " ")))
+    o.append('<a class="entry" href="%s%s"><b>%s</b><span>Trang tổng quan</span></a>'
+             % (P, _tru, _ten))
+    o.append('</div></div></section>')
+    return "".join(o)
+
+
+for _b in BAI_VIET:
+    _canon = bai_url(_b["slug"])
+    _tru, _ten = CUM_TRU_COT.get(_b.get("cum"), ("kien-thuc/index.html", "Kiến thức"))
+    _sch = [breadcrumb_schema([("Trang chủ", "index.html"),
+                               ("Kiến thức", "kien-thuc/index.html"),
+                               (_b.get("h1") or _b["title"], None)]),
+            article_schema(_canon, _b["title"], _b["desc"],
+                           _b.get("ngay_dang", "2026-09-04"), section=_ten)]
+    if _b.get("faq"):
+        _sch.append(faq_schema(_b["faq"]))
+    page(_canon, _b["title"] + " | " + BRAND, _b["desc"],
+         bai_body(_b, "../")
+         + cta("../", "Muốn biết trường hợp của bạn rơi vào đâu?",
+               "Nhắn cho chúng tôi tình huống cụ thể. Chúng tôi đọc hợp đồng và điều khoản "
+               "rồi trả lời thẳng, không chào bán trong buổi đầu."),
+         active="kt", P="../", canon=_canon,
+         body_attr=' data-jn="bài bạn đang đọc"',
+         extra=schema_head(*_sch))
+
+
 urls = ["", "san-pham", "thai-san", "suc-khoe", "bao-ve-thu-nhap",
         "cong-cu/", "cong-cu/chi-phi-sinh-con", "cong-cu/thoi-gian-cho-thai-san",
         "cong-cu/ngan-sach-bao-ve", "ve-chung-toi", "lien-he", "kien-thuc/"] + \
        ["kien-thuc/" + p["slug"][:-5] for p in POSTS] + \
-       [BV_HUB[:-5]] + [bv_url(b["slug"])[:-5] for b in BV_DATA]
+       [BV_HUB[:-5]] + [bv_url(b["slug"])[:-5] for b in BV_DATA] + \
+       [bai_url(b["slug"])[:-5] for b in BAI_VIET]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 for u in urls:
     sm += "  <url><loc>%s/%s</loc><changefreq>weekly</changefreq></url>\n" % (SITE, u)
