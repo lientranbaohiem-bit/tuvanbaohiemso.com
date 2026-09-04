@@ -2096,6 +2096,22 @@ bv_kt_cards = "".join(
     '<a class="entry" href="../%s"><b>Chi phí sinh ở %s</b><span>%s &middot; %s</span></a>'
     % (bv_url(b["slug"]), b["ten"], b["tinh"], b["loai"]) for b in BV_DATA)
 
+bai_kt_cards = "".join(
+    '<a class="entry" href="../%s"><b>%s</b><span>%s &middot; %s</span></a>'
+    % (bai_url(b["slug"]), b["h1"], b.get("tag", ""),
+       CUM_TRU_COT.get(b.get("cum"), ("", "Kiến thức"))[1])
+    for b in BAI_VIET)
+
+bai_kt_block = ""
+if bai_kt_cards:
+    bai_kt_block = (
+      '<section class="section"><div class="wrap">'
+      '<div class="center" style="margin-bottom:26px"><span class="eyebrow">Lo\u1ea1t b\u00e0i</span>'
+      '<h2>S\u1ee9c kho\u1ebb, thu nh\u1eadp v\u00e0 h\u1ee3p \u0111\u1ed3ng</h2>'
+      '<p class="lead" style="max-width:56em;margin:12px auto 0">Chi ph\u00ed \u0111i\u1ec1u tr\u1ecb, quy\u1ec1n l\u1ee3i trong h\u1ee3p \u0111\u1ed3ng v\u00e0 nh\u1eefng ch\u1ed7 h\u1ed3 s\u01a1 hay b\u1ecb t\u1eeb ch\u1ed1i. M\u1ed7i b\u00e0i d\u1eabn ngu\u1ed3n l\u00e0 v\u0103n b\u1ea3n lu\u1eadt ho\u1eb7c nghi\u00ean c\u1ee9u b\u00ecnh duy\u1ec7t, ghi r\u00f5 ph\u1ea7n n\u00e0o ch\u01b0a ki\u1ec3m ch\u1ee9ng \u0111\u01b0\u1ee3c.</p></div>'
+      '<div class="entry-grid">' + bai_kt_cards + '</div>'
+      '</div></section>')
+
 kt_body = page_head("Kiến thức", "Kiến thức bảo hiểm", 
   "Những bài viết chúng tôi mong bạn đọc trước khi ký bất kỳ hợp đồng nào &mdash; kể cả hợp đồng của chúng tôi.", "../")
 
@@ -2115,6 +2131,7 @@ kt_body += f"""
     <p style="margin-top:18px"><a class="btn btn-ghost" href="../{BV_HUB}">Xem trang tổng hợp cả loạt bài {I['arrow']}</a></p>
   </div>
 </section>
+{bai_kt_block}
 
 <section class="section bg-grey">
   <div class="wrap" style="max-width:860px">
