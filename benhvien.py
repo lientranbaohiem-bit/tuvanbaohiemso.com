@@ -10,7 +10,7 @@ NGUYEN TAC BIEN TAP - doc truoc khi sua file nay:
   4. Truong "kiem_chung" cua moi bang: "chinh-thuc" | "thu-cap" | "chua-xac-minh"
 """
 
-CAP_NHAT = "03/09/2026"   # ngay ra soat noi dung gan nhat
+CAP_NHAT = "04/09/2026"   # ngay ra soat noi dung gan nhat
 
 BV_DATA = [
 
@@ -1676,6 +1676,100 @@ BV_DATA = [
     "Bệnh viện không công bố gói nào có tên gọi như vậy. Các con số 20 đến 25 triệu đang lan truyền đến từ bài chia sẻ của sản phụ đăng năm 2023, không phải từ bảng giá bệnh viện."),
    ("Bảng giá này áp cho cơ sở nào?",
     "Quyết định 2312 chỉ áp cho Cơ sở 2. Bảng giá dịch vụ theo yêu cầu của Cơ sở 1 tại 43 Tràng Thi hiện không truy cập được trên website bệnh viện."),
+ ],
+},
+
+# =====================================================================
+{
+ "slug": "hong-ngoc",
+ "ngay_dang": "2026-09-04",
+ "ten": "Bệnh viện Đa khoa Hồng Ngọc",
+ "tinh": "Hà Nội",
+ "loai": "Bệnh viện tư",
+ "calc_key": "",
+ "nguon_ngay": "14/08/2026",
+ "nguon_nhan": "Trang <i>Thai sản và sinh con trọn gói</i> trên website bệnh viện, sơ đồ trang ghi sửa lần cuối <b>14/08/2026</b>. Đây là URL thai sản duy nhất trong sitemap dịch vụ chính thức.",
+ "nguon_url": "https://hongngochospital.vn/vi/dich-vu/thai-san-sinh-con-tron-goi",
+ "canh_bao": "Hồng Ngọc không công bố giá bất kỳ gói thai sản nào. Chúng tôi quét sitemap dịch vụ chính thức: không có URL nào chứa bảng giá hay giá phòng. Con số &ldquo;sinh thường 30&ndash;45 triệu&rdquo; đang lan truyền đến từ một trang đặt khám bên thứ ba, và <b>số hotline in trên trang đó không phải số của bệnh viện</b>. Chúng tôi không đăng lại con số đó như giá chính thức.",
+ "title": "Chi phí sinh con ở Bệnh viện Hồng Ngọc: tám gói theo tuần thai, không gói nào có giá",
+ "desc": "Hồng Ngọc chia gói thai sản theo 8 mốc tuần và công bố số đêm nằm viện, nhưng không đăng giá gói nào. Đây là những gì bệnh viện thật sự công bố, và bốn khoản gói không bao gồm.",
+ "tom_tat": "Hồng Ngọc có <b>tám gói thai sản</b> chia theo tuần đăng ký, từ tuần 8 đến gói chuyển dạ tuần 38. Số đêm nằm viện thì một trang của bệnh viện ghi 2 đêm với sinh thường và 4 đêm với sinh mổ, trang khác lại ghi 2 ngày 1 đêm và 4 ngày 3 đêm, nên phải hỏi lại lúc đăng ký. Còn giá thì không gói nào có trên website. Bệnh viện công bố mức ưu đãi mà không công bố giá gốc để trừ vào.",
+
+ "bang": [
+   {"ten": "Tám gói thai sản, theo mốc tuần đăng ký",
+    "kiem_chung": "chinh-thuc",
+    "nguon": "hongngochospital.vn, trang Thai sản và sinh con trọn gói, sửa lần cuối 14/08/2026. Tên gói nguyên văn; cột giá để trống vì bệnh viện không công bố.",
+    "cot": ["Gói", "Mốc đăng ký", "Giá bệnh viện công bố"],
+    "hang": [
+      ["Gói 8 tuần", "từ tuần thai thứ 8", "không công bố"],
+      ["Gói 12 tuần", "từ tuần 12", "không công bố"],
+      ["Gói 16 tuần", "từ tuần 16", "không công bố"],
+      ["Gói 22 tuần", "từ tuần 22", "không công bố"],
+      ["Gói 28 tuần", "từ tuần 28", "không công bố"],
+      ["Gói 32 tuần", "từ tuần 32", "không công bố"],
+      ["Gói 36 tuần", "từ tuần 36", "không công bố"],
+      ["Gói chuyển dạ", "từ tuần 38", "không công bố"],
+    ]},
+   {"ten": "Số đêm nằm viện trong gói",
+    "kiem_chung": "chinh-thuc",
+    "nguon": "hongngochospital.vn, trang dịch vụ thai sản trọn gói",
+    "cot": ["Hình thức sinh", "Số đêm bệnh viện công bố"],
+    "hang": [
+      ["Sinh thường", "<b>2 đêm</b>"],
+      ["Sinh mổ", "<b>4 đêm</b>"],
+    ]},
+   {"ten": "Ba cơ sở, cùng một bảng gói",
+    "kiem_chung": "chinh-thuc",
+    "nguon": "hongngochospital.vn, trang giới thiệu cơ sở",
+    "cot": ["Cơ sở", "Địa chỉ"],
+    "hang": [
+      ["Hồng Ngọc Yên Ninh", "55 Yên Ninh, Ba Đình"],
+      ["Hồng Ngọc Phúc Trường Minh", "8 Châu Văn Liêm, Nam Từ Liêm"],
+      ["Hồng Ngọc Keangnam", "Keangnam Landmark Tower"],
+    ]},
+ ],
+
+ "khong_bao_gom": [
+   "Sàng lọc trước sinh NIPT.",
+   "Chiếu Plasma.",
+   "Đo thính lực cho bé.",
+   "Xét nghiệm lấy máu gót chân sàng lọc sơ sinh.",
+   "Danh sách này chỉ có bốn dòng, ngắn bất thường so với các bệnh viện tư khác cùng hạng. Ví dụ An Sinh liệt kê cả bệnh lý kèm theo của sản phụ, tai biến trong và sau sanh, phí bác sĩ theo yêu cầu và tiền lưu trú vượt ngày. Hồng Ngọc không nói gì về những khoản đó, nên không rõ là đã bao gồm hay chưa liệt kê hết.",
+ ],
+
+ "khong_cong_bo": [
+   "Giá của cả tám gói. Không có con số nào trên website. Sơ đồ trang dịch vụ chính thức không chứa URL nào về bảng giá.",
+   "Giá tách riêng cho sinh thường và sinh mổ.",
+   "Hạng phòng và giá phòng mỗi ngày.",
+   "Giá gây tê ngoài màng cứng. Bệnh viện có nhắc dịch vụ &ldquo;đẻ không đau&rdquo; nhưng không nói khoản này nằm trong gói hay tính riêng, và không nêu giá.",
+   "Chênh lệch giá giữa ba cơ sở. Website dùng chung một bảng gói cho cả ba, không nói cơ sở nào đắt hơn.",
+   "Ca sinh có dùng được BHYT không, và nếu có thì phần chênh phải bù bao nhiêu.",
+   "Danh sách công ty bảo hiểm nhận bảo lãnh viện phí. Trang <i>bảo lãnh viện phí</i> của bệnh viện hiện trả về lỗi 404; website chỉ nói chung là có áp dụng bảo hiểm.",
+   "Giá gốc để tính mức ưu đãi. Bệnh viện công bố &ldquo;giảm đến 15%&rdquo; ở một trang và &ldquo;ưu đãi tới 20%&rdquo; ở trang khác, cộng thêm 1 triệu cho gói dưới 22 tuần, tổng có chỗ ghi tới 16 triệu. Giảm trên nền giá nào thì không có.",
+ ],
+
+ "luu_y": [
+   ("Con số 30 đến 45 triệu trên mạng đến từ đâu",
+    "Từ một trang đặt khám bên thứ ba, không ghi ngày đăng. Chúng tôi kiểm tra số hotline in trên trang đó và thấy nó không trùng với số của bệnh viện. Trang này đưa dải sinh thường 30&ndash;45 triệu, sinh mổ 40&ndash;65 triệu, phòng VIP 60&ndash;100 triệu, không chia theo tuần đăng ký dù bệnh viện bán gói theo tuần. Chúng tôi để con số đó ngoài bảng và ghi lại đây để bạn biết nó không phải giá bệnh viện."),
+   ("Bán gói theo tuần thì đăng ký sớm sẽ đắt hơn",
+    "Gói 8 tuần bao cả chặng khám thai gần trọn thai kỳ, gói chuyển dạ từ tuần 38 gần như chỉ bao ca sinh. Vì vậy dải giá của tám gói này chắc chắn rất rộng. Một con số duy nhất kiểu &ldquo;sinh ở Hồng Ngọc hết X triệu&rdquo; không nói được gì nếu không kèm mốc tuần."),
+   ("Hai trang của bệnh viện ghi số ngày nằm viện hơi khác nhau",
+    "Một trang ghi 2 đêm và 4 đêm. Trang khác ghi 2 ngày 1 đêm và 4 ngày 3 đêm. Chênh lệch nhỏ nhưng đủ để lệch một đêm phòng khi quyết toán, nên hỏi lại lúc đăng ký."),
+   ("Ba bệnh viện Hà Nội liên tiếp không công bố giá sinh",
+    "Cùng đợt rà soát ngày 04/09/2026, chúng tôi mở thêm website Bệnh viện Thanh Nhàn và Bệnh viện Đức Giang. Thanh Nhàn có menu Bảng giá gồm năm trang con, cả năm đều trống. Đức Giang có công bố bảng giá theo Nghị quyết 91/2026/NQ-HĐND ngày 27/01/2026, nhưng đăng dưới dạng file bảng tính, còn bản PDF chỉ là ảnh chụp. Ba bệnh viện Hà Nội, không nơi nào cho biết một ca sinh hết bao nhiêu."),
+   ("Ba câu nên hỏi khi gọi bệnh viện",
+    "Một: gói tương ứng tuần thai hiện tại của tôi giá bao nhiêu, đã gồm phòng hạng nào. Hai: gây tê ngoài màng cứng nằm trong gói hay tính riêng. Ba: nếu nằm quá số đêm trong gói thì tính thêm bao nhiêu mỗi đêm."),
+ ],
+
+ "faq": [
+   ("Sinh con ở Bệnh viện Hồng Ngọc hết bao nhiêu tiền?",
+    "Bệnh viện không công bố giá gói nào trên website, nên không có câu trả lời chắc chắn. Những gì công bố được là cấu trúc tám gói theo mốc tuần từ tuần 8 đến gói chuyển dạ tuần 38. Số đêm nằm viện thì bệnh viện ghi không thống nhất giữa các trang: một trang ghi 2 đêm với sinh thường và 4 đêm với sinh mổ, trang khác ghi 2 ngày 1 đêm và 4 ngày 3 đêm."),
+   ("Hồng Ngọc có mấy gói thai sản?",
+    "Tám gói, chia theo tuần đăng ký: tuần 8, 12, 16, 22, 28, 32, 36 và gói chuyển dạ từ tuần 38. Đăng ký càng sớm thì gói càng bao nhiều lần khám thai, nên giá càng cao."),
+   ("Gói thai sản Hồng Ngọc không bao gồm những gì?",
+    "Bệnh viện nêu bốn khoản: sàng lọc NIPT, chiếu Plasma, đo thính lực và xét nghiệm lấy máu gót chân. Danh sách này ngắn hơn hẳn các bệnh viện tư cùng hạng, nên nên hỏi thêm về bệnh lý kèm theo, tai biến sau sinh và phí chọn bác sĩ."),
+   ("Vì sao bài này không có bảng giá như các trang khác?",
+    "Vì bệnh viện không công bố giá. Các trang khác điền số từ nguồn thứ ba không ghi ngày, có trang còn in hotline không phải của bệnh viện. Chúng tôi để trống ô giá và nói rõ lý do, thay vì đưa một con số mà bạn không kiểm chứng được."),
  ],
 },
 
