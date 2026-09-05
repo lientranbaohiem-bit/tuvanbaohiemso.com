@@ -10,7 +10,7 @@ NGUYEN TAC BIEN TAP - doc truoc khi sua file nay:
   4. Truong "kiem_chung" cua moi bang: "chinh-thuc" | "thu-cap" | "chua-xac-minh"
 """
 
-CAP_NHAT = "04/09/2026"   # ngay ra soat noi dung gan nhat
+CAP_NHAT = "05/09/2026"   # ngay ra soat noi dung gan nhat
 
 BV_DATA = [
 
@@ -1773,5 +1773,106 @@ BV_DATA = [
  ],
 },
 
+
+{
+ "slug": "thu-cuc",
+ "ngay_dang": "2026-09-05",
+ "ten": "Bệnh viện Đa khoa Quốc tế Thu Cúc",
+ "tinh": "Hà Nội",
+ "loai": "Bệnh viện tư",
+ "calc_key": "",
+ "nguon_ngay": "19/02/2025",
+ "nguon_nhan": "Trang <i>Dịch vụ sinh con ở Thu Cúc</i> trên website bệnh viện, ghi cập nhật 19/02/2025. Phần cấu trúc gói lấy từ trang gói VIP, ghi cập nhật 07/04/2026.",
+ "nguon_url": "https://benhvienthucuc.vn/song-khoe/san-khoa/dich-vu-sinh-con-o-thu-cuc",
+ "canh_bao": "Thu Cúc có đăng công khai giá gói thai sản trên website, việc nhiều bệnh viện tư khác không làm. Nhưng website đang để cùng lúc hai bảng giá: bản cập nhật 19/02/2025, và một bài từ 04/06/2021 với số cao hơn khá nhiều. Bài này lấy bản 2025. Bản 2021 chúng tôi ghi lại ở phần lưu ý để bạn đối chiếu, không trộn vào bảng chính.",
+ "title": "Chi phí sinh con ở Bệnh viện Thu Cúc: bảng giá gói 2025 và bảy khoản bệnh viện chưa công bố",
+ "desc": "Thu Cúc đăng giá bốn gói thai sản, sinh thường từ 15 triệu và sinh mổ từ 25 triệu theo bảng cập nhật 19/02/2025. Kèm bảy khoản bệnh viện chưa công bố mà bạn nên hỏi trước khi đặt cọc.",
+ "tom_tat": "Thu Cúc đăng giá bốn gói thai sản, chia theo tuần bạn đăng ký. Sinh thường rẻ nhất là gói chuyển dạ 15 triệu, đắt nhất là gói từ tuần 8 với 25 triệu. Sinh mổ chạy từ 25 đến 39 triệu. Đây là số bệnh viện công bố ngày 19/02/2025. Cái bệnh viện không nói là mỗi gói được nằm viện mấy ngày, phòng hạng nào, và gói không bao gồm khoản gì.",
+
+ "bang": [
+   {"ten": "Giá bốn gói thai sản, theo mốc tuần đăng ký",
+    "kiem_chung": "chinh-thuc",
+    "nguon": "benhvienthucuc.vn, trang Dịch vụ sinh con ở Thu Cúc, cập nhật 19/02/2025. Giá sinh mổ là một dải vì bệnh viện tính khác nhau theo lần sinh thứ mấy.",
+    "cot": ["Mốc đăng ký", "Sinh thường", "Sinh mổ"],
+    "hang": [
+      ["Từ tuần 8", "25.000.000đ", "38 &ndash; 39 triệu"],
+      ["Từ tuần 28", "18.000.000đ", "31 &ndash; 32 triệu"],
+      ["Từ tuần 36", "16.500.000đ", "28 &ndash; 29 triệu"],
+      ["Gói chuyển dạ", "15.000.000đ", "25 &ndash; 26 triệu"],
+    ]},
+   {"ten": "Cấu trúc gói: hai dòng, tám mốc tuần",
+    "kiem_chung": "chinh-thuc",
+    "nguon": "benhvienthucuc.vn, trang gói thai sản và sinh con trọn gói VIP, cập nhật 07/04/2026. Trang này mô tả cấu trúc nhưng không kèm giá.",
+    "cot": ["Hạng mục", "Bệnh viện công bố"],
+    "hang": [
+      ["Số dòng sản phẩm", "2 dòng: Tiêu chuẩn và VIP"],
+      ["Mốc tuần đăng ký", "tuần 8, 12, 16, 22, 28, 32, 36 và gói chuyển dạ &mdash; tám mốc, bảng giá chỉ có 4"],
+      ["Gây tê ngoài màng cứng", "nằm trong gói VIP với ca sinh thường"],
+      ["Ca sinh mổ", "gây tê tuỷ sống, giảm đau sau mổ truyền tĩnh mạch"],
+      ["Phòng gói VIP", "phòng riêng một mẹ, có giường cho người nhà"],
+      ["Ưu đãi gói VIP", "tặng thêm 1 ngày lưu viện"],
+    ]},
+   {"ten": "Bảng giá cũ năm 2021, vẫn còn trên website",
+    "kiem_chung": "chinh-thuc",
+    "nguon": "benhvienthucuc.vn, bài <i>Dịch vụ sinh đẻ tại Bệnh viện Thu Cúc giá bao nhiêu tiền</i>, cập nhật 04/06/2021. Đây là số cũ của chính bệnh viện, đăng ở đây để đối chiếu, không phải giá hiện hành.",
+    "cot": ["Mốc đăng ký", "Sinh thường (2021)", "Sinh mổ (2021)"],
+    "hang": [
+      ["Đẻ đơn thuần", "19.400.000đ", "35,7 &ndash; 37,3 triệu"],
+      ["Gói tuần 28", "23.000.000đ", "39,4 &ndash; 41 triệu"],
+      ["Gói tuần 36", "22.100.000đ", "38,3 &ndash; 39,4 triệu"],
+    ]},
+   {"ten": "Bốn cơ sở, cùng một bảng giá công bố",
+    "kiem_chung": "chinh-thuc",
+    "nguon": "benhvienthucuc.vn, trang giới thiệu hệ thống, truy cập 05/09/2026",
+    "cot": ["Cơ sở", "Địa chỉ"],
+    "hang": [
+      ["Thu Cúc Thụy Khuê (bệnh viện chính)", "286 Thụy Khuê, Tây Hồ, Hà Nội"],
+      ["Thu Cúc Trần Duy Hưng", "Cầu Giấy, Hà Nội"],
+      ["Thu Cúc Đại Từ", "Hoàng Mai, Hà Nội"],
+      ["Thu Cúc Hải Phòng", "Hải Phòng"],
+    ]},
+ ],
+
+ "khong_bao_gom": [
+   "Bệnh viện không đăng danh mục gói không bao gồm ở bất kỳ trang nào chúng tôi mở được. Đây là khoảng trống lớn nhất trong bảng giá của Thu Cúc.",
+   "Để so sánh: An Sinh liệt kê rõ bệnh lý kèm theo của sản phụ, tai biến trong và sau sanh, phí bác sĩ theo yêu cầu, tiền lưu trú vượt số ngày trong gói. Đó là bốn nhóm khoản An Sinh nêu, và là bốn nhóm bạn nên hỏi Thu Cúc trước khi đặt cọc.",
+ ],
+
+ "khong_cong_bo": [
+   "Số ngày hoặc số đêm nằm viện của từng gói. Không trang nào ghi. Đây là khoản dễ phát sinh nhất khi quyết toán.",
+   "Hạng phòng và giá phòng mỗi ngày. Trang gói chỉ mô tả định tính, kiểu phòng riêng có giường người nhà, không có con số.",
+   "Giá gây tê ngoài màng cứng khi tính riêng. Bệnh viện nói khoản này nằm trong gói VIP, nhưng không nói gói Tiêu chuẩn thì tính thêm bao nhiêu. Hai bài đúng chủ đề đẻ không đau trên website trả về lỗi 404 khi chúng tôi kiểm tra ngày 05/09/2026.",
+   "Bốn mức giá trong bảng thuộc dòng Tiêu chuẩn hay dòng VIP. Trang bảng giá không ghi, trang mô tả hai dòng lại không có giá.",
+   "Giá có khác nhau giữa bốn cơ sở không. Website dùng chung một bảng cho cả bốn.",
+   "Tỷ lệ và điều kiện áp dụng BHYT. Website chỉ nói chung là có áp dụng được, không nêu phần chênh phải bù.",
+   "Danh sách đơn vị nhận bảo lãnh viện phí. Bệnh viện có chuyên mục riêng cho việc này nhưng chúng tôi chưa mở được nội dung, nên không đăng lại tên đơn vị nào.",
+ ],
+
+ "luu_y": [
+   ("Website đang để song song hai bảng giá lệch nhau",
+    "Bảng chúng tôi đăng là bản 19/02/2025. Bài từ 04/06/2021 thì vẫn nằm nguyên trên benhvienthucuc.vn với số cao hơn, chúng tôi để nguyên ở bảng thứ tư bên trên để bạn đối chiếu. Cùng một gói mà hai bảng lệch nhau tới hơn 10 triệu: gói tuần 36 sinh mổ, bản 2021 ghi 38,3 đến 39,4 triệu, bản 2025 ghi 28 đến 29 triệu. Nếu bạn tra Google và ra con số cao, khả năng lớn là bạn đang đọc bài 2021."),
+   ("Đăng ký càng sớm giá càng cao, và đó là hợp lý",
+    "Gói từ tuần 8 bao gần trọn chặng khám thai nên đắt nhất. Gói chuyển dạ gần như chỉ bao ca sinh nên rẻ nhất, với sinh thường thì chênh nhau 10 triệu theo bảng 19/02/2025. Nên câu hỏi sinh ở Thu Cúc hết bao nhiêu là câu chưa trả lời được nếu chưa nói đăng ký từ tuần mấy."),
+   ("Bảng giá có bốn mốc, cấu trúc gói lại có tám",
+    "Trang mô tả sản phẩm liệt kê tám mốc đăng ký, còn bảng giá chỉ đăng bốn. Bốn mốc còn lại là tuần 12, 16, 22 và 32, không có giá ở đâu. Chúng tôi không suy ra giá của chúng bằng cách nội suy, vì bệnh viện chưa bao giờ công bố."),
+   ("Dải giá sinh mổ phụ thuộc lần sinh thứ mấy",
+    "Bệnh viện ghi giá mổ là một khoảng chứ không phải một số, và lý do là mổ lần hai lần ba khác mổ lần đầu. Khi hỏi giá, nói rõ đây là lần sinh thứ mấy, nếu không, con số nhận được có thể chỉ là cận dưới của dải."),
+   ("Bốn câu nên hỏi trước khi đặt cọc",
+    "Một: gói này được nằm viện mấy ngày, quá ngày thì mỗi ngày thêm bao nhiêu. Hai: bốn mức giá đang niêm yết là dòng Tiêu chuẩn hay VIP, chênh nhau bao nhiêu. Ba: gây tê ngoài màng cứng ở gói Tiêu chuẩn tính thêm bao nhiêu. Bốn: những khoản nào gói không bao gồm, xin gửi bằng văn bản."),
+ ],
+
+ "faq": [
+   ("Sinh con ở Bệnh viện Thu Cúc hết bao nhiêu tiền?",
+    "Theo bảng giá bệnh viện công bố ngày 19/02/2025: sinh thường 15.000.000đ với gói chuyển dạ, 16.500.000đ với gói từ tuần 36, 18.000.000đ với gói từ tuần 28 và 25.000.000đ với gói từ tuần 8. Sinh mổ tương ứng 25 đến 26 triệu, 28 đến 29 triệu, 31 đến 32 triệu và 38 đến 39 triệu. Bệnh viện không nói mỗi gói được nằm viện mấy ngày, nên tổng thực tế có thể khác."),
+   ("Vì sao trên mạng có nơi ghi sinh mổ ở Thu Cúc tới 41 triệu?",
+    "Vì website bệnh viện vẫn còn một bài từ 04/06/2021 với bảng giá cao hơn bản 2025. Bài đó ghi gói tuần 28 sinh mổ 39,4 đến 41 triệu. Đây là số cũ của chính bệnh viện, không phải số bịa, nhưng đã có bản mới hơn thay thế."),
+   ("Gói thai sản Thu Cúc có gồm gây tê ngoài màng cứng không?",
+    "Với gói VIP thì bệnh viện nói có, ca sinh thường được gây tê ngoài màng cứng và ca sinh mổ được gây tê tuỷ sống kèm giảm đau sau mổ. Với gói Tiêu chuẩn thì website không nói, và cũng không nêu giá nếu phải trả thêm."),
+   ("Gói thai sản Thu Cúc không bao gồm những gì?",
+    "Bệnh viện không đăng danh mục này ở bất kỳ trang nào chúng tôi mở được. Vì vậy nên hỏi trực tiếp bốn nhóm khoản mà bệnh viện khác thường liệt kê là không bao gồm: bệnh lý kèm theo của mẹ, tai biến trong và sau sinh, phí chọn bác sĩ, và tiền phòng khi nằm quá số ngày trong gói."),
+   ("Bốn cơ sở Thu Cúc có cùng giá không?",
+    "Website dùng chung một bảng giá cho cả bốn cơ sở và không nói cơ sở nào khác. Nhưng bệnh viện cũng không khẳng định là giống nhau, nên nếu bạn định sinh ở Hải Phòng thì vẫn nên hỏi lại."),
+ ],
+},
 
 ]
