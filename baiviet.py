@@ -343,7 +343,7 @@ BAI_VIET = [
  "title": "Bệnh có sẵn được hiểu thế nào: định nghĩa nằm ở Thông tư 67, không nằm ở Luật",
  "h1": "Bệnh có sẵn được hiểu thế nào",
  "desc": "Luật Kinh doanh bảo hiểm 2022 không có cụm từ bệnh có sẵn. Định nghĩa nằm ở Thông tư 67/2023/TT-BTC Điều 12, kèm bốn mốc thời gian doanh nghiệp không được vượt: 36 tháng, 90 ngày, 1 năm và 270 ngày.",
- "tom_tat": "Nhiều bài trên mạng nói định nghĩa bệnh có sẵn do từng công ty bảo hiểm tự đặt. Chỗ này đúng một nửa. Luật Kinh doanh bảo hiểm số 08/2022/QH15 không có cụm từ này, nhưng Thông tư 67/2023/TT-BTC thì có, ở Điều 12 khoản 3. Doanh nghiệp vẫn tự soạn quy tắc điều khoản, chỉ là phải nằm trong khung đó. Và khung đó đặt bốn mốc cứng: <b>36 tháng</b>, <b>90 ngày</b>, <b>1 năm</b>, <b>270 ngày</b>.",
+ "tom_tat": "Nhiều bài trên mạng nói định nghĩa bệnh có sẵn do từng công ty bảo hiểm tự đặt. Chỗ này đúng một nửa. Luật Kinh doanh bảo hiểm số 08/2022/QH15 không có cụm từ này, nhưng Thông tư 67/2023/TT-BTC thì có, ở Điều 12 khoản 3. Doanh nghiệp vẫn tự soạn quy tắc điều khoản, chỉ là phải nằm trong khung đó. Và khung đó đặt bốn mốc cứng: <b>36 tháng</b>, <b>90 ngày</b>, <b>1 năm</b>, <b>270 ngày</b>. Bài này trích nguyên văn điều khoản kèm số điều, số khoản để bạn tự đối chiếu, không thay cho tư vấn pháp lý cho trường hợp cụ thể.",
  "canh_bao": "Bài này trích nguyên văn điều khoản và ghi rõ số điều, số khoản để bạn tự đối chiếu. Chúng tôi không đưa ra tư vấn pháp lý cho trường hợp cụ thể, và không so sánh sản phẩm của các công ty bảo hiểm.",
 
  "bang": [

@@ -2636,9 +2636,8 @@ def benh_vien_body(bv, P="../"):
     o.append('<section class="section"><div class="wrap">')
     o.append('<div class="callout info"><h4>Con số ngắn gọn trước khi vào chi tiết</h4><p>%s</p></div>'
              % bv["tom_tat"])
-    if bv.get("canh_bao"):
-        o.append('<div class="callout warn"><h4>Cách chúng tôi xử lý trang này</h4><p>%s</p></div>'
-                 % bv["canh_bao"])
+    # Khoi "Cach chung toi xu ly trang nay" da bo ngay 06/09/2026 theo yeu cau.
+    # Truong canh_bao van giu trong benhvien.py nhung khong render.
     o.append('<p class="footnote">Trang này rà soát lần gần nhất ngày %s. %s '
              '<a href="%s" target="_blank" rel="noopener nofollow">Xem nguồn gốc</a>.</p>'
              % (CAP_NHAT, bv["nguon_nhan"], bv["nguon_url"]))
@@ -2805,9 +2804,8 @@ def bai_body(b, P="../"):
 
     o.append('<section class="section"><div class="wrap">')
     o.append('<div class="callout info"><h4>Tóm tắt</h4><p>%s</p></div>' % b["tom_tat"])
-    if b.get("canh_bao"):
-        o.append('<div class="callout warn"><h4>Cách chúng tôi xử lý bài này</h4><p>%s</p></div>'
-                 % b["canh_bao"])
+    # Khoi "Cach chung toi xu ly bai nay" da bo ngay 06/09/2026 theo yeu cau.
+    # Truong canh_bao van giu trong baiviet.py nhung khong render.
     o.append('<p class="footnote">Bài rà soát lần gần nhất ngày %s.</p>' % CAP_NHAT)
     o.append('</div></section>')
 
