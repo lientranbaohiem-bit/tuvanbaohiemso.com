@@ -10,7 +10,7 @@ NGUYEN TAC BIEN TAP - doc truoc khi sua file nay:
   4. Truong "kiem_chung" cua moi bang: "chinh-thuc" | "thu-cap" | "chua-xac-minh"
 """
 
-CAP_NHAT = "07/09/2026"   # ngay ra soat noi dung gan nhat
+CAP_NHAT = "08/09/2026"   # ngay ra soat noi dung gan nhat
 
 BV_DATA = [
 
@@ -1996,6 +1996,126 @@ BV_DATA = [
     "Cả hai đều thêm khám và siêu âm không giới hạn, gây tê ngoài màng cứng cho ca sinh thường, phòng riêng, chiếu tia plasma, sàng lọc thính lực và bộ ảnh newborn. VVIP cho chọn giờ sinh trong giờ hành chính, Luxury cho chọn giờ bất kỳ. Sàng lọc lấy máu gót chân là 8 bệnh với VVIP và 13 bệnh với Luxury. Riêng Luxury có thêm trông bé ban đêm, thêm 1 ngày lưu viện gói VIP và tắm gội khô cho mẹ."),
    ("Vì sao bài này không có bảng giá như các trang khác?",
     "Vì bệnh viện không công bố giá. Các trang khác điền số từ nguồn thứ ba không ghi ngày và không dẫn được về công bố nào của bệnh viện. Chúng tôi để trống ô giá và nói rõ lý do, thay vì đưa một con số bạn không kiểm chứng được."),
+ ],
+},
+
+{
+ "slug": "viet-phap-ha-noi",
+ "ngay_dang": "2026-09-08",
+ "ten": "Bệnh viện Việt Pháp Hà Nội",
+ "tinh": "Hà Nội",
+ "loai": "Bệnh viện quốc tế",
+ "calc_key": "",
+ "nguon_ngay": "19/12/2025",
+ "nguon_nhan": "Trang <i>Thai sản trọn gói</i> trên hfh.com.vn, cập nhật 19/12/2025. Biểu giá phòng lấy từ trang <i>Room rates</i> cùng website, cập nhật 01/04/2026. Hai trang hai ngày khác nhau, chúng tôi để nguyên chứ không gộp.",
+ "nguon_url": "https://www.hfh.com.vn/vi/maternity/thai-san.html",
+ "title": "Chi phí sinh con ở Bệnh viện Việt Pháp Hà Nội: 16 mức giá gói và biểu giá phòng đầy đủ",
+ "desc": "Việt Pháp Hà Nội công bố giá 16 gói thai sản, sinh thường từ 39,3 triệu và sinh mổ từ 58,2 triệu, theo bảng cập nhật 19/12/2025. Kèm biểu giá phòng và khoản gói không bao gồm.",
+ "tom_tat": "Trong 19 bệnh viện chúng tôi đã rà, đây là nơi công bố giá đầy đủ nhất. Bảng gói có bốn mốc đăng ký nhân bốn loại ca sinh, tức <b>16 mức giá</b>. Sinh thường thai đơn 39,3 tới 52,8 triệu, sinh mổ thai đơn 58,2 tới 68,8 triệu, theo bảng cập nhật 19/12/2025. Bệnh viện còn đăng riêng biểu giá phòng theo ngày, cập nhật 01/04/2026. Có cả hai bảng thì bạn mới ước được phần phát sinh, chứ không chỉ nhìn giá gói.",
+
+ "bang": [
+   {"ten": "Giá 16 gói thai sản, theo mốc đăng ký và loại ca sinh",
+    "kiem_chung": "chinh-thuc",
+    "nguon": "hfh.com.vn, trang Thai sản trọn gói, cập nhật 19/12/2025. Đơn vị: đồng.",
+    "cot": ["Loại ca sinh", "Đăng ký tuần 12", "Tuần 22", "Tuần 32", "Khi chuyển dạ"],
+    "hang": [
+      ["Sinh thường, thai đơn", "52.800.000", "46.800.000", "39.800.000", "39.300.000"],
+      ["Sinh mổ, thai đơn", "68.800.000", "62.800.000", "58.800.000", "58.200.000"],
+      ["Sinh thường, thai đôi", "62.800.000", "54.200.000", "46.500.000", "45.800.000"],
+      ["Sinh mổ, thai đôi", "78.200.000", "70.200.000", "64.600.000", "63.800.000"],
+    ]},
+   {"ten": "Biểu giá phòng theo ngày",
+    "kiem_chung": "chinh-thuc",
+    "nguon": "hfh.com.vn, trang Room rates, cập nhật 01/04/2026. Giá đã gồm tiền giường và phí bác sĩ, chưa gồm thuốc, xét nghiệm và chẩn đoán hình ảnh. Lưu ý ngày của bảng này khác ngày của bảng gói bên trên.",
+    "cot": ["Loại phòng", "Giá mỗi ngày"],
+    "hang": [
+      ["Phòng chung nội khoa", "10.920.000đ"],
+      ["Phòng chung nhi và hậu phẫu", "9.900.000đ"],
+      ["Phòng đơn nội khoa", "12.480.000đ"],
+      ["Phòng đơn hậu phẫu", "11.500.000đ"],
+      ["Maternity Luxury Suite", "15.000.000đ"],
+      ["Junior Suite", "15.000.000đ"],
+      ["Phòng Kangaroo", "11.000.000đ"],
+      ["Executive Suite", "21.600.000 &ndash; 26.400.000đ"],
+      ["Phòng theo dõi (Monitoring)", "24.200.000đ"],
+      ["Hồi sức tăng cường (High dependency)", "28.600.000đ"],
+      ["Hồi sức tích cực (ICU)", "<b>36.000.000đ</b>"],
+    ]},
+   {"ten": "Quy tắc tính ngày ra viện",
+    "kiem_chung": "chinh-thuc",
+    "nguon": "hfh.com.vn, trang Room rates, cập nhật 01/04/2026",
+    "cot": ["Giờ ra viện", "Cách tính"],
+    "hang": [
+      ["Trước 12 giờ trưa", "không tính thêm"],
+      ["Sau 12 giờ trưa", "tính thêm 50% giá phòng một ngày"],
+      ["Sau 17 giờ", "tính trọn một ngày phòng"],
+    ]},
+   {"ten": "Gây tê giảm đau: cả sinh thường và sinh mổ đều có trong gói",
+    "kiem_chung": "chinh-thuc",
+    "nguon": "hfh.com.vn, trang Thai sản trọn gói, cập nhật 19/12/2025. Trích theo đúng cách bệnh viện ghi.",
+    "cot": ["Hình thức sinh", "Phương pháp giảm đau trong gói"],
+    "hang": [
+      ["Sinh thường", "gây tê ngoài màng cứng"],
+      ["Sinh mổ", "gây tê tuỷ sống"],
+    ]},
+   {"ten": "Bảo lãnh viện phí trực tiếp",
+    "kiem_chung": "chinh-thuc",
+    "nguon": "hfh.com.vn, trang Chính sách giá, siêu dữ liệu ghi 06/01/2026. Bệnh viện công bố số lượng nhưng không liệt kê tên đơn vị nào, nên chúng tôi cũng không nêu tên.",
+    "cot": ["Nhóm", "Số lượng bệnh viện công bố"],
+    "hang": [
+      ["Công ty bảo hiểm có thoả thuận thanh toán trực tiếp", "<b>43</b>"],
+      ["Đơn vị hỗ trợ", "7"],
+      ["Công ty quản lý bảo hiểm", "1"],
+    ]},
+ ],
+
+ "khong_bao_gom": [
+   "Xét nghiệm và thăm khám bổ sung ngoài danh mục gói. Bệnh viện ghi được ưu đãi 10% cho phần này.",
+   "Truyền máu và thuốc theo chỉ định của bác sĩ.",
+   "Mổ lấy thai theo giờ yêu cầu.",
+   "Điều trị bệnh lý khác của mẹ hoặc của bé phát sinh trong quá trình nằm viện.",
+   "Phần chênh khi nâng cấp phòng so với hạng phòng đi kèm gói.",
+ ],
+
+ "khong_cong_bo": [
+   "Số ngày hoặc số đêm nằm viện trong gói. Đây là khoảng trống lớn nhất, vì giá phòng ở đây rất cao nên một đêm thừa là khoản đáng kể.",
+   "Hạng phòng đi kèm từng gói. Bệnh viện có nói nâng cấp phòng thì trả thêm, nhưng không nói nền là hạng nào.",
+   "Giá lẻ của ca đỡ đẻ và ca mổ lấy thai khi không mua gói.",
+   "Giá lẻ của gây tê ngoài màng cứng khi tính riêng.",
+   "Giá NICU cho bé. Biểu giá chỉ có ICU, hồi sức tăng cường và phòng theo dõi, không nói các mức này có áp cho sơ sinh hay không.",
+   "Tên 43 công ty bảo hiểm có thoả thuận thanh toán trực tiếp. Bệnh viện chỉ công bố con số.",
+ ],
+
+ "luu_y": [
+   ("Điểm khác biệt lớn nhất so với các bệnh viện đã rà: sinh thường cũng được gây tê ngoài màng cứng",
+    "Gói ở đây ghi rõ sinh thường thì gây tê ngoài màng cứng, sinh mổ thì gây tê tuỷ sống. Cả hai đều nằm trong gói. Điều này ngược với Bảo Sơn, nơi gói tiêu chuẩn chỉ bao gây tê màng cứng cho ca sinh mổ còn sinh thường phải trả thêm. Nếu bạn định sinh thường và muốn đẻ không đau, đây là khác biệt đáng tiền."),
+   ("Hai bảng giá, hai ngày khác nhau, đừng gộp lại thành giá 2026",
+    "Bảng gói cập nhật 19/12/2025. Biểu giá phòng cập nhật 01/04/2026. Chúng tôi để nguyên hai mốc thay vì gộp, vì gộp lại rồi gọi chung là giá hiện hành là sai. Khi gọi hỏi, xác nhận lại cả hai."),
+   ("Giá phòng ở đây là khoản dễ vượt dự trù nhất",
+    "Phòng chung nội khoa 10,92 triệu một ngày. ICU 36 triệu một ngày. Mà gói thì không nói được nằm mấy đêm. Nên con số 39,3 triệu của gói chuyển dạ sinh thường chỉ là điểm bắt đầu, phần phát sinh treo vào số đêm và hạng phòng. Hỏi rõ hai thứ đó trước khi đem so với bệnh viện khác."),
+   ("Quy tắc giờ ra viện có thể làm phát sinh nửa ngày phòng",
+    "Ra viện trước 12 giờ trưa thì không tính thêm. Sau 12 giờ tính thêm nửa ngày, sau 17 giờ tính trọn một ngày. Với mức giá phòng ở đây, chênh lệch giữa ra viện lúc 11 giờ và lúc 18 giờ có thể tới hơn 10 triệu."),
+   ("Bệnh viện nói thẳng là không chấp nhận công nợ cá nhân",
+    "Chính sách giá ghi nội trú phải đặt cọc theo dự toán, và bệnh viện không nhận công nợ cá nhân. Nếu bạn trông vào bảo lãnh viện phí thì phải có thư bảo lãnh trước, đừng tính chuyện thanh toán sau."),
+   ("Đừng nhầm với Bệnh viện Việt Pháp ở TP.HCM",
+    "Tên gọi Việt Pháp ở TP.HCM là Bệnh viện FV, một bệnh viện hoàn toàn khác, tên miền khác, bảng giá khác. Chúng tôi có bài riêng cho FV."),
+   ("Bốn câu nên hỏi trước khi chốt gói",
+    "Một: gói này được nằm viện mấy đêm, hạng phòng nào. Hai: quá số đêm thì tính theo biểu giá phòng nào. Ba: nếu bé phải nằm theo dõi hoặc hồi sức thì tính theo mức nào trong biểu giá. Bốn: thẻ bảo hiểm của tôi có nằm trong 43 đơn vị thanh toán trực tiếp không, xin xác nhận trước khi nhập viện."),
+ ],
+
+ "faq": [
+   ("Sinh con ở Bệnh viện Việt Pháp Hà Nội hết bao nhiêu tiền?",
+    "Theo bảng giá bệnh viện công bố ngày 19/12/2025: sinh thường thai đơn từ 39.300.000đ với gói chuyển dạ tới 52.800.000đ nếu đăng ký từ tuần 12. Sinh mổ thai đơn từ 58.200.000đ tới 68.800.000đ. Thai đôi cao hơn, sinh thường 45.800.000đ tới 62.800.000đ và sinh mổ 63.800.000đ tới 78.200.000đ. Bệnh viện không nói gói được nằm viện mấy đêm nên tổng thực tế có thể cao hơn."),
+   ("Gói thai sản ở đây có gồm đẻ không đau không?",
+    "Có. Bệnh viện ghi rõ gói bao gồm gây tê ngoài màng cứng cho ca sinh thường và gây tê tuỷ sống cho ca sinh mổ. Đây là điểm khác với một số bệnh viện tư khác, nơi gây tê ngoài màng cứng khi sinh thường phải trả thêm."),
+   ("Giá phòng ở Việt Pháp Hà Nội bao nhiêu một ngày?",
+    "Theo biểu giá cập nhật 01/04/2026: phòng chung nhi và hậu phẫu 9.900.000đ, phòng chung nội khoa 10.920.000đ, phòng Kangaroo 11.000.000đ, phòng đơn hậu phẫu 11.500.000đ, phòng đơn nội khoa 12.480.000đ, Maternity Luxury Suite và Junior Suite 15.000.000đ, Executive Suite 21.600.000 đến 26.400.000đ. Phòng theo dõi 24.200.000đ, hồi sức tăng cường 28.600.000đ, hồi sức tích cực 36.000.000đ. Giá đã gồm tiền giường và phí bác sĩ."),
+   ("Gói thai sản không bao gồm những gì?",
+    "Bệnh viện liệt kê năm nhóm: xét nghiệm và thăm khám bổ sung ngoài gói (được ưu đãi 10%), truyền máu và thuốc theo chỉ định, mổ lấy thai theo giờ yêu cầu, điều trị bệnh lý khác của mẹ hoặc bé, và phần chênh khi nâng cấp phòng."),
+   ("Bệnh viện có nhận bảo lãnh viện phí không?",
+    "Có. Bệnh viện công bố có thoả thuận thanh toán trực tiếp với 43 công ty bảo hiểm, cùng 7 đơn vị hỗ trợ và 1 công ty quản lý bảo hiểm, theo trang chính sách giá. Nhưng bệnh viện không liệt kê tên đơn vị nào, nên phải hỏi trực tiếp xem thẻ của bạn có trong danh sách không. Bệnh viện cũng ghi rõ không chấp nhận công nợ cá nhân."),
+   ("Đây có phải Bệnh viện FV không?",
+    "Không. FV là Bệnh viện Việt Pháp ở TP.HCM, một bệnh viện khác với tên miền khác và bảng giá khác. Bài này nói về Hanoi French Hospital ở Hà Nội."),
  ],
 },
 
