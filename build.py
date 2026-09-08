@@ -44,6 +44,9 @@ def bai_theo_cum(cum):
 
 
 def khoi_bai_lien_quan(cum, tieu_de, dan, P="", them_benh_vien=False, gioi_han=9):
+    # gioi_han=None -> khong cat, hien het. Trang /thai-san.html dung None tu
+    # 09/09/2026: truoc do no chi tro toi 9 benh vien dau tien, nen 11 trang
+    # benh vien them sau khong co lien ket nao tu trang tru cot.
     """Khoi 'bai lien quan' dat o CUOI trang tru cot.
 
     Truoc 03/09/2026 khong trang tru cot nao tro xuong bai kien thuc, nen Google
@@ -2490,7 +2493,7 @@ page("thai-san.html", f"Bảo hiểm thai sản rời — thời gian chờ 270 
      ts_body + khoi_bai_lien_quan("B", "Chi phí sinh con ở từng bệnh viện",
        "Trước khi tính quyền lợi bảo hiểm, nên biết ca sinh thật tốn bao nhiêu. Mỗi trang "
        "dưới đây là bảng giá bệnh viện tự công bố, có ghi ngày và mức độ kiểm chứng.",
-       P="", them_benh_vien=True),
+       P="", them_benh_vien=True, gioi_han=None),
      active="sp", P="", canon="thai-san.html", body_attr=' data-jn="Chuẩn bị sinh con"',
      extra=schema_head(faq_schema(TS_FAQ),
                        breadcrumb_schema([("Trang chủ","index.html"),("Bảo hiểm thai sản rời",None)])))

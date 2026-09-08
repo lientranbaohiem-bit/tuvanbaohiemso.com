@@ -10,7 +10,7 @@ NGUYEN TAC BIEN TAP - doc truoc khi sua file nay:
   4. Truong "kiem_chung" cua moi bang: "chinh-thuc" | "thu-cap" | "chua-xac-minh"
 """
 
-CAP_NHAT = "08/09/2026"   # ngay ra soat noi dung gan nhat
+CAP_NHAT = "09/09/2026"   # ngay ra soat noi dung gan nhat
 
 BV_DATA = [
 
@@ -2116,6 +2116,113 @@ BV_DATA = [
     "Có. Bệnh viện công bố có thoả thuận thanh toán trực tiếp với 43 công ty bảo hiểm, cùng 7 đơn vị hỗ trợ và 1 công ty quản lý bảo hiểm, theo trang chính sách giá. Nhưng bệnh viện không liệt kê tên đơn vị nào, nên phải hỏi trực tiếp xem thẻ của bạn có trong danh sách không. Bệnh viện cũng ghi rõ không chấp nhận công nợ cá nhân."),
    ("Đây có phải Bệnh viện FV không?",
     "Không. FV là Bệnh viện Việt Pháp ở TP.HCM, một bệnh viện khác với tên miền khác và bảng giá khác. Bài này nói về Hanoi French Hospital ở Hà Nội."),
+ ],
+},
+
+
+{
+ "slug": "phu-san-nhi-da-nang",
+ "ngay_dang": "2026-09-09",
+ "ten": "Bệnh viện Phụ sản &ndash; Nhi Đà Nẵng",
+ "tinh": "Đà Nẵng",
+ "loai": "Bệnh viện công tuyến cuối",
+ "calc_key": "",
+ "nguon_ngay": "12/08/2026",
+ "nguon_nhan": "Mục <i>Giá dịch vụ khám chữa bệnh</i> trên phusannhidanang.org.vn. Văn bản mới nhất là <b>Quyết định 658/QĐ-BVPSNĐN ngày 12/08/2026</b>, đăng ngày 12/08/2026. Bảng giường và bảng khám lấy từ <b>Quyết định 296/QĐ-BVPSNĐN ngày 19/09/2025</b> đăng cùng mục, vì QĐ 658 chỉ điều chỉnh ba dịch vụ của QĐ 296 chứ không thay thế nó.",
+ "nguon_url": "https://phusannhidanang.org.vn/Home/NhomNews/?topic=38",
+ "title": "Chi phí sinh con ở Bệnh viện Phụ sản &ndash; Nhi Đà Nẵng: tám mức giá giường và chỗ không có giá sinh",
+ "desc": "Bệnh viện công bố tám mức giá giường theo yêu cầu từ 650.000 đến 2.000.000đ một ngày, theo Quyết định 296 ngày 19/09/2025. Nhưng trong khối phẫu thuật sản phụ khoa của phụ lục theo yêu cầu không có dòng nào là đỡ đẻ hay mổ lấy thai.",
+ "tom_tat": "Đây là bệnh viện công bố giá kỹ nhất trong nhóm bệnh viện công miền Trung mà chúng tôi đọc: sáu văn bản giá đang cùng nằm trên một trang, quyết định mới nhất ký ngày <b>12/08/2026</b>. Giường theo yêu cầu có <b>tám mức</b>, từ <b>650.000đ</b> tới <b>2.000.000đ</b> mỗi giường mỗi ngày. Nhưng thứ một sản phụ cần nhất thì không có: không gói thai sản, và trong ba trang liên tiếp của phụ lục kỹ thuật mà chúng tôi đọc &mdash; toàn bộ khối phẫu thuật sản phụ khoa, số thứ tự 581 đến 691 &mdash; không có dòng nào là đỡ đẻ hay mổ lấy thai.",
+
+ "bang": [
+   {"ten": "Giá ngày giường bệnh theo yêu cầu &mdash; tám mức, nguyên văn",
+    "kiem_chung": "chinh-thuc",
+    "nguon": "Phụ lục II Quyết định 296/QĐ-BVPSNĐN ngày 19/09/2025, mục <i>Giá dịch vụ ngày giường bệnh theo yêu cầu</i>. Đơn vị: đồng, mức giá cho 1 giường 1 ngày.",
+    "cot": ["Loại giường (nguyên văn)", "Giá mỗi giường mỗi ngày"],
+    "hang": [
+      ["Giường Yêu cầu Quốc tế (Loại 2 giường/phòng)", "<b>2.000.000đ</b>"],
+      ["Giường Yêu cầu mẹ và trẻ (Loại 4 giường/phòng)", "1.500.000đ"],
+      ["Giường Yêu cầu Kangaroo (Loại 4 giường/phòng)", "1.500.000đ"],
+      ["Giường Yêu cầu Chất lượng cao (Loại 2 giường/phòng)", "1.200.000đ"],
+      ["Giường Yêu cầu Quốc tế (Loại 4 giường/phòng)", "1.000.000đ"],
+      ["Giường Yêu cầu (Loại 2 giường/phòng)", "800.000đ"],
+      ["Giường Yêu cầu Chất lượng cao (Loại 4 giường/phòng)", "800.000đ"],
+      ["Giường Yêu cầu (Loại 4 giường/phòng)", "<b>650.000đ</b>"],
+    ]},
+   {"ten": "Giá khám theo yêu cầu &mdash; hai quyết định đang cùng hiệu lực",
+    "kiem_chung": "chinh-thuc",
+    "nguon": "Phụ lục I Quyết định 658/QĐ-BVPSNĐN ngày 12/08/2026 và Phụ lục I Quyết định 296/QĐ-BVPSNĐN ngày 19/09/2025. Chúng tôi giữ nguyên tên dịch vụ như văn bản viết.",
+    "cot": ["Dịch vụ (nguyên văn)", "Mức giá mỗi lần", "Văn bản"],
+    "hang": [
+      ["Khám bệnh yêu cầu (Khám chuyên gia)", "<b>200.000đ</b>", "QĐ 658, ngày 12/08/2026"],
+      ["Khám tiền mê và tư vấn giảm đau / Khám tiền mê cho sản phụ thai từ 26 tuần", "120.000đ", "QĐ 296, ngày 19/09/2025"],
+      ["Khám bệnh yêu cầu (150.000đ)", "120.000đ", "QĐ 296, ngày 19/09/2025"],
+      ["Khám sức khỏe theo đoàn", "100.000đ", "QĐ 296, ngày 19/09/2025"],
+    ]},
+   {"ten": "Vài mức xét nghiệm theo yêu cầu, để bạn hình dung phần phát sinh",
+    "kiem_chung": "chinh-thuc",
+    "nguon": "Phụ lục II Quyết định 658/QĐ-BVPSNĐN ngày 12/08/2026, <i>Giá dịch vụ kỹ thuật và xét nghiệm theo yêu cầu xây dựng theo cơ cấu giá có trong Nghị quyết 68/2024/NQ-HĐND</i>. Đây là mười dòng đầu trong bảng, không phải toàn bộ.",
+    "cot": ["Dịch vụ (nguyên văn)", "Mức giá mỗi lần"],
+    "hang": [
+      ["Định lượng Cortisol (niệu)", "130.000đ"],
+      ["Định lượng Amoniac (NH3) [Máu]", "110.000đ"],
+      ["Định lượng bổ thể C3 [Máu]", "90.000đ"],
+      ["Định lượng bổ thể C4 [Máu]", "90.000đ"],
+      ["Đo hoạt độ CK-MB [Máu]", "63.000đ"],
+      ["Định lượng Mg [Máu]", "56.000đ"],
+      ["Điện giải đồ (Na, K, Cl) [Máu]", "52.000đ"],
+      ["Đo hoạt độ CK (Creatine kinase) [Máu]", "50.000đ"],
+      ["Định lượng Glucose [Máu]", "43.000đ"],
+      ["Định lượng Canxi toàn phần [Máu]", "32.000đ"],
+    ]},
+   {"ten": "Sáu văn bản giá đang cùng nằm trên một trang",
+    "kiem_chung": "chinh-thuc",
+    "nguon": "Mục <i>Giá dịch vụ khám chữa bệnh</i> trên phusannhidanang.org.vn, trang 1, đọc ngày 09/09/2026. Mục này còn trang 2 mà chúng tôi chưa mở.",
+    "cot": ["Văn bản", "Ngày đăng", "Nội dung"],
+    "hang": [
+      ["Quyết định 658/QĐ-BVPSNĐN", "12/08/2026", "ban hành giá dịch vụ khám chữa bệnh theo yêu cầu, có ba phụ lục"],
+      ["Nghị quyết 96/2026/NQ-HĐND (HĐND TP Đà Nẵng)", "10/08/2026", "giá dịch vụ thuộc danh mục BHYT, giá do ngân sách trả và giá ngoài BHYT không phải theo yêu cầu"],
+      ["Quyết định 296/QĐ-BVPSNĐN", "19/09/2025", "bản giá theo yêu cầu đầy đủ, 25 trang, có bảng giường và hơn 700 dòng dịch vụ"],
+      ["Quyết định 539/QĐ-BVPSNĐN", "11/06/2025", "điều chỉnh giá và bãi bỏ một số dịch vụ theo yêu cầu"],
+      ["Quyết định 1207/QĐ-BVPSNĐN", "30/12/2024", "bản giá theo yêu cầu trước đó"],
+      ["Nghị quyết 68/NQ-HĐND (HĐND TP Đà Nẵng)", "13/12/2024", "cơ cấu giá mà Phụ lục II của QĐ 658 dựa vào"],
+    ]},
+ ],
+
+ "khong_cong_bo": [
+   "Giá đỡ đẻ và giá mổ lấy thai theo yêu cầu. Phụ lục III của Quyết định 296 dài 20 trang với hơn 700 dòng; chúng tôi đọc bốn trang trong đó, gồm ba trang liên tiếp phủ toàn bộ khối phẫu thuật sản phụ khoa (số thứ tự 581 đến 691), và không gặp dòng nào là đỡ đẻ hay mổ lấy thai. Chúng tôi không đọc hết 20 trang nên không khẳng định là hoàn toàn không có.",
+   "Gói thai sản trọn gói. Bệnh viện công bố giá theo từng dịch vụ, không có sản phẩm gói như các bệnh viện tư.",
+   "Số ngày nằm viện tương ứng với mỗi loại giường. Bảng giường chỉ có đơn giá một ngày.",
+   "Mức tạm ứng khi nhập viện sinh.",
+   "Giá đỡ đẻ và mổ lấy thai theo mức BHYT. Phần này nằm trong Nghị quyết 96/2026/NQ-HĐND, bệnh viện đăng dưới dạng file bảng tính đính kèm mà chúng tôi chưa mở được.",
+ ],
+
+ "luu_y": [
+   ("Muốn biết giá một dịch vụ ở đây, bạn phải ghép ít nhất hai quyết định",
+    "Quyết định 658 ngày 12/08/2026 không thay thế Quyết định 296 ngày 19/09/2025. Phụ lục III của QĐ 658 ghi rõ nó là <i>các dịch vụ tại QĐ 296/QĐ-BVPSNĐN điều chỉnh</i>, và chỉ có ba dòng: lọc máu liên tục cấp cứu, nội soi can thiệp cắt polyp ống tiêu hoá trên 1cm hoặc nhiều polyp, và tập mạnh cơ đáy chậu. Nghĩa là giá giường, giá phẫu thuật, giá thủ thuật vẫn theo QĐ 296. Đây là cách công bố đúng quy trình hành chính nhưng khó cho người đọc: bạn phải biết văn bản nào sửa văn bản nào."),
+   ("Giá giường không đi theo số giường trong phòng",
+    "Giường Yêu cầu mẹ và trẻ loại 4 giường một phòng có giá 1.500.000đ, cao hơn giường Chất lượng cao loại 2 giường một phòng giá 1.200.000đ. Giường Quốc tế loại 4 giường một phòng 1.000.000đ cũng cao hơn giường Yêu cầu loại 2 giường một phòng 800.000đ. Tên hạng mới là thứ quyết định mức giá, không phải bạn nằm chung với mấy người. Khi hỏi giá nên hỏi đúng tên hạng giường như trong bảng."),
+   ("Chênh lệch giữa mức thấp nhất và cao nhất là hơn ba lần",
+    "650.000đ so với 2.000.000đ. Nếu nằm bốn ngày thì riêng tiền giường đã chênh 5.400.000đ. Với một ca sinh mổ nằm bốn đến năm ngày, đây là khoản đáng cân nhắc trước khi ký chọn hạng phòng, chứ không phải khoản để quyết định lúc đang chuyển dạ."),
+   ("Có một dòng mà tên dịch vụ và mức giá không khớp nhau",
+    "Phụ lục I Quyết định 296 có dòng ghi tên là <i>Khám bệnh yêu cầu (150.000đ)</i> nhưng cột mức giá ghi 120.000. Chúng tôi để nguyên như văn bản viết và không đoán ý. Nếu bạn cần con số này thì nên hỏi lại bệnh viện, vì hai số trong cùng một dòng."),
+   ("Giá theo yêu cầu ở đây tính đến từng đồng lẻ",
+    "Trong phụ lục kỹ thuật của Quyết định 296, nhiều dòng có mức như 6.428.337đ, 5.631.124đ, 9.232.130đ. Đó là dấu hiệu giá được dựng từ công thức tính chi phí theo Thông tư 21/2024/TT-BYT chứ không phải làm tròn theo cảm tính. Nói cách khác, phần giá theo yêu cầu ở bệnh viện công có căn cứ tính, và bạn có quyền hỏi bảng giá gốc."),
+   ("Bốn câu nên hỏi trước khi nhập viện",
+    "Một: giá đỡ đẻ hoặc mổ lấy thai của tôi tính theo văn bản nào, xin cho xem dòng đó. Hai: hạng giường tôi đăng ký tên chính xác là gì trong bảng giá, và bao nhiêu một ngày. Ba: dự kiến nằm mấy ngày. Bốn: những khoản nào chắc chắn ngoài phạm vi BHYT chi trả."),
+ ],
+
+ "faq": [
+   ("Sinh con ở Bệnh viện Phụ sản &ndash; Nhi Đà Nẵng hết bao nhiêu tiền?",
+    "Bệnh viện không công bố con số tổng cho một ca sinh, và cũng không có gói thai sản. Thứ công bố được là đơn giá từng phần: giường theo yêu cầu từ 650.000đ đến 2.000.000đ một ngày theo Quyết định 296 ngày 19/09/2025, khám chuyên gia 200.000đ một lần theo Quyết định 658 ngày 12/08/2026. Phần công sinh nằm trong bảng giá BHYT của thành phố, không nằm trong hai quyết định này."),
+   ("Giá phòng ở đây bao nhiêu một ngày?",
+    "Có tám mức. Giường Yêu cầu loại 4 giường một phòng 650.000đ, giường Yêu cầu loại 2 giường một phòng 800.000đ, Chất lượng cao loại 4 giường 800.000đ, Quốc tế loại 4 giường 1.000.000đ, Chất lượng cao loại 2 giường 1.200.000đ, Kangaroo loại 4 giường 1.500.000đ, mẹ và trẻ loại 4 giường 1.500.000đ, Quốc tế loại 2 giường 2.000.000đ. Đây là giá mỗi giường mỗi ngày theo Quyết định 296 ngày 19/09/2025."),
+   ("Bệnh viện có gói thai sản trọn gói không?",
+    "Không. Ở thời điểm chúng tôi rà, ngày 09/09/2026, bệnh viện công bố giá theo từng dịch vụ chứ không có sản phẩm gói. Nếu bạn quen với cách các bệnh viện tư báo một con số cho cả ca sinh thì ở đây không có con số đó."),
+   ("Vì sao không tìm thấy giá mổ lấy thai trên website bệnh viện?",
+    "Quyết định 658 ngày 12/08/2026 chỉ có ba phụ lục: khám chuyên gia, xét nghiệm theo yêu cầu, và ba dịch vụ điều chỉnh từ quyết định cũ. Không phụ lục nào có mổ lấy thai. Quyết định 296 có phụ lục kỹ thuật dài 20 trang, nhưng ba trang liên tiếp phủ hết khối phẫu thuật sản phụ khoa mà chúng tôi đọc cũng không có dòng nào là mổ lấy thai. Nhiều khả năng ca sinh ở đây tính theo bảng giá BHYT của thành phố chứ không phải bảng theo yêu cầu, nhưng bạn nên hỏi lại bệnh viện cho chắc."),
+   ("Bảng giá nào đang có hiệu lực?",
+    "Cả hai. Quyết định 658 ngày 12/08/2026 là bản mới nhất nhưng nó chỉ điều chỉnh ba dịch vụ của Quyết định 296 ngày 19/09/2025 và bổ sung phần khám chuyên gia cùng bảng xét nghiệm. Phần giường và phần lớn dịch vụ kỹ thuật vẫn theo Quyết định 296. Khi hỏi giá, nên nói rõ bạn hỏi dịch vụ nào để nhân viên tra đúng văn bản."),
  ],
 },
 
