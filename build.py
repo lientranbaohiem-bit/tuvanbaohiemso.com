@@ -29,6 +29,7 @@ BV_HUB = BV_DIR + "chi-phi-sinh-con-theo-benh-vien.html"
 
 # Cum bai viet -> trang tru cot tuong ung. Dung cho lien ket hai chieu.
 CUM_TRU_COT = {
+  "A": ("thai-san.html",        "Chuẩn bị sinh con"),
   "C": ("san-pham.html",        "Sản phẩm và hợp đồng"),
   "D": ("suc-khoe.html",        "Bảo hiểm sức khoẻ"),
   "E": ("bao-ve-thu-nhap.html", "Bảo vệ thu nhập"),
@@ -2490,7 +2491,7 @@ page("san-pham.html", f"Danh mục sản phẩm bảo hiểm | {BRAND}",
 
 page("thai-san.html", f"Bảo hiểm thai sản rời — thời gian chờ 270 ngày | {BRAND}",
      "Bảo hiểm thai sản tham gia độc lập, không cần hợp đồng nhân thọ chính. Thời gian chờ 270 ngày, không phân biệt sinh thường hay sinh mổ, bảo lãnh viện phí trực tiếp.",
-     ts_body + khoi_bai_lien_quan("B", "Chi phí sinh con ở từng bệnh viện",
+     ts_body + khoi_bai_lien_quan("A", "Chi phí sinh con ở từng bệnh viện",
        "Trước khi tính quyền lợi bảo hiểm, nên biết ca sinh thật tốn bao nhiêu. Mỗi trang "
        "dưới đây là bảng giá bệnh viện tự công bố, có ghi ngày và mức độ kiểm chứng.",
        P="", them_benh_vien=True, gioi_han=None),

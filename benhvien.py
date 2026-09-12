@@ -10,7 +10,7 @@ NGUYEN TAC BIEN TAP - doc truoc khi sua file nay:
   4. Truong "kiem_chung" cua moi bang: "chinh-thuc" | "thu-cap" | "chua-xac-minh"
 """
 
-CAP_NHAT = "09/09/2026"   # ngay ra soat noi dung gan nhat
+CAP_NHAT = "13/09/2026"   # ngay ra soat noi dung gan nhat
 
 BV_DATA = [
 
