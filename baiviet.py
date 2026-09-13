@@ -1479,4 +1479,179 @@ BAI_VIET = [
  "lien_quan": ["ke-khai-sai-khi-mua-bao-hiem", "21-ngay-can-nhac-hop-dong-bao-hiem", "dieu-khoan-loai-tru"],
 },
 
+
+{
+ "slug": "nghi-om-dai-ngay-bhxh-tra-bao-nhieu",
+ "cum": "E",
+ "ngay_dang": "2026-09-14",
+ "tag": "Bảo vệ thu nhập",
+ "doc": "9 phút đọc",
+ "title": "Nghỉ ốm dài ngày: bảo hiểm xã hội trả 75% trong 30 đến 70 ngày, sau đó còn 50 đến 65%",
+ "h1": "Nghỉ ốm bao lâu thì bảo hiểm xã hội còn trả tiền",
+ "desc": "Luật Bảo hiểm xã hội số 41/2024/QH15 cho nghỉ ốm hưởng 75% tối đa 30 đến 70 ngày một năm, tuỳ số năm đã đóng. Hết số ngày đó, chỉ bệnh thuộc danh mục dài ngày mới được hưởng tiếp, ở mức 50 đến 65%.",
+ "tom_tat": "Luật Bảo hiểm xã hội số 41/2024/QH15, hiệu lực từ 01/07/2025, cho nghỉ ốm tối đa <b>30</b> đến <b>70</b> ngày một năm ở mức 75%. Số ngày cụ thể phụ thuộc vào thời gian đã đóng bảo hiểm xã hội bắt buộc và vào điều kiện làm việc. Người làm việc trong điều kiện bình thường và đã đóng dưới 15 năm được 30 ngày. Đây là con số ít người biết, vì phần lớn bài viết chỉ nhắc tới mức 75% mà không nhắc tới trần ngày. Hết số ngày đó mà vẫn phải điều trị thì chỉ người mắc bệnh thuộc danh mục bệnh cần chữa trị dài ngày do Bộ Y tế ban hành mới được hưởng tiếp, và mức tụt xuống 50 đến 65%. Bài này dẫn các Điều 42 đến 46 của Luật, kèm nguyên văn những khoản quan trọng nhất. Đây là thông tin pháp luật, không phải tư vấn cho trường hợp cụ thể.",
+ "bang": [
+  {
+   "ten": "Số ngày tối đa hưởng chế độ ốm đau trong một năm, theo Điều 43 khoản 1",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật Bảo hiểm xã hội số 41/2024/QH15, Điều 43 khoản 1 điểm a và điểm b. Năm tính từ ngày 01 tháng 01 đến ngày 31 tháng 12. Số ngày tính theo ngày làm việc, không kể ngày nghỉ lễ, tết, ngày nghỉ hằng tuần.",
+   "cot": ["Thời gian đã đóng bảo hiểm xã hội bắt buộc", "Điều kiện làm việc bình thường", "Nghề nặng nhọc, độc hại, nguy hiểm hoặc vùng đặc biệt khó khăn"],
+   "hang": [
+    ["Dưới 15 năm", "30 ngày", "40 ngày"],
+    ["Từ đủ 15 năm đến dưới 30 năm", "40 ngày", "50 ngày"],
+    ["Từ đủ 30 năm trở lên", "60 ngày", "70 ngày"]
+   ]
+  },
+  {
+   "ten": "Mức trợ cấp ở từng giai đoạn, theo Điều 45",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật Bảo hiểm xã hội số 41/2024/QH15, Điều 45 khoản 2 và khoản 3. Tỷ lệ tính trên tiền lương làm căn cứ đóng bảo hiểm xã hội quy định tại khoản 1 Điều 45.",
+   "cot": ["Giai đoạn", "Điều khoản", "Mức hưởng"],
+   "hang": [
+    ["Trong số ngày của khoản 1 Điều 43, và thời gian chăm con ốm theo Điều 44", "Điều 45 khoản 2", "75%"],
+    ["Hưởng tiếp do bệnh thuộc danh mục dài ngày, đã đóng từ đủ 30 năm trở lên", "Điều 45 khoản 3 điểm a", "65%"],
+    ["Hưởng tiếp do bệnh thuộc danh mục dài ngày, đã đóng từ đủ 15 năm đến dưới 30 năm", "Điều 45 khoản 3 điểm b", "55%"],
+    ["Hưởng tiếp do bệnh thuộc danh mục dài ngày, đã đóng dưới 15 năm", "Điều 45 khoản 3 điểm c", "50%"]
+   ]
+  },
+  {
+   "ten": "Bốn trường hợp không được hưởng chế độ ốm đau, theo Điều 42 khoản 2",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật Bảo hiểm xã hội số 41/2024/QH15, Điều 42 khoản 2, trích nguyên văn bốn điểm a, b, c, d.",
+   "cot": ["Điểm", "Nguyên văn"],
+   "hang": [
+    ["a", "<i>Tự gây thương tích hoặc tự gây tổn hại cho sức khỏe của mình</i>"],
+    ["b", "<i>Sử dụng chất ma túy, tiền chất ma túy theo danh mục do Chính phủ quy định, trừ trường hợp sử dụng thuốc tiền chất hoặc thuốc dạng phối hợp có chứa tiền chất theo chỉ định của người hành nghề khám bệnh, chữa bệnh thuộc cơ sở khám bệnh, chữa bệnh</i>"],
+    ["c", "<i>Trong thời gian lần đầu phải nghỉ việc để điều trị, phục hồi chức năng lao động khi bị tai nạn lao động, bệnh nghề nghiệp</i>"],
+    ["d", "<i>Trong thời gian nghỉ việc theo quy định tại khoản 1 Điều này trùng với thời gian nghỉ theo quy định của pháp luật về lao động hoặc đang nghỉ việc hưởng nguyên lương theo quy định của pháp luật chuyên ngành khác hoặc đang nghỉ việc hưởng chế độ thai sản, dưỡng sức phục hồi sức khỏe theo quy định của pháp luật về bảo hiểm xã hội</i>"]
+   ]
+  },
+  {
+   "ten": "Số ngày dưỡng sức tối đa sau khi ốm đau, theo Điều 46 khoản 2",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật Bảo hiểm xã hội số 41/2024/QH15, Điều 46 khoản 2 điểm a, b, c. Điều kiện cần có ở khoản 1: đã nghỉ việc hưởng chế độ ốm đau từ đủ 30 ngày trở lên trong một năm, và trong khoảng 30 ngày kể từ ngày hết thời gian nghỉ mà sức khỏe chưa phục hồi.",
+   "cot": ["Trường hợp", "Số ngày tối đa"],
+   "hang": [
+    ["Sức khỏe chưa phục hồi sau thời gian ốm đau do mắc bệnh cần chữa trị dài ngày", "10 ngày"],
+    ["Sức khỏe chưa phục hồi sau thời gian ốm đau do phải phẫu thuật", "07 ngày"],
+    ["Trường hợp khác", "05 ngày"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Ba mươi ngày là mức của người đóng dưới 15 năm",
+   "Điều 43 khoản 1 điểm a đặt ba mốc cho người làm việc trong điều kiện bình thường. Đóng dưới 15 năm thì 30 ngày, từ đủ 15 năm đến dưới 30 năm thì 40 ngày, từ đủ 30 năm trở lên thì 60 ngày. Điểm b nâng mỗi mốc lên 10 ngày cho người làm nghề nặng nhọc, độc hại, nguy hiểm hoặc làm việc ở vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn. Số ngày này tính theo ngày làm việc, không kể ngày nghỉ lễ, tết và ngày nghỉ hằng tuần. Một năm ở đây là từ ngày 01 tháng 01 đến ngày 31 tháng 12, không phải 12 tháng kể từ ngày nghỉ đầu tiên."],
+  ["Hết số ngày đó mà vẫn phải điều trị thì sao",
+   "Điều 43 khoản 2 chỉ mở tiếp cho một nhóm. Nguyên văn: <i>Hết thời hạn hưởng chế độ ốm đau quy định tại khoản 1 Điều này mà vẫn tiếp tục điều trị thì người lao động nghỉ việc do mắc bệnh thuộc danh mục bệnh cần chữa trị dài ngày do Bộ trưởng Bộ Y tế ban hành được hưởng tiếp chế độ ốm đau với mức theo quy định tại khoản 3 Điều 45 của Luật này.</i> Nghĩa là bệnh không nằm trong danh mục ấy thì hết ngày là hết trợ cấp. Bệnh nằm trong danh mục thì được hưởng tiếp, nhưng mức tụt từ 75% xuống 65%, 55% hoặc 50% tuỳ thời gian đã đóng. Khoản 2 không đặt trần cho giai đoạn hưởng tiếp này."],
+  ["Một ngày trợ cấp bằng lương tháng chia cho 24",
+   "Điều 45 khoản 5 ghi rõ cách chia. Mức một ngày bằng mức theo tháng chia cho 24 ngày, không phải chia cho 30. Mức nửa ngày bằng một nửa mức một ngày. Nghỉ dưới nửa ngày tính là nửa ngày, từ nửa ngày đến dưới một ngày tính là một ngày. Căn cứ tính là tiền lương làm căn cứ đóng bảo hiểm xã hội của tháng gần nhất trước tháng nghỉ việc, theo khoản 1 điểm a. Người nghỉ ngay trong tháng đầu tiên tham gia thì lấy tiền lương của chính tháng đó, theo điểm b."],
+  ["Chăm con ốm tính riêng, cha và mẹ đều được",
+   "Điều 44 khoản 1 cho tối đa 20 ngày một năm nếu con dưới 03 tuổi, tối đa 15 ngày nếu con từ đủ 03 tuổi đến dưới 07 tuổi. Luật ghi rõ là <i>cho mỗi con</i>, nên nhà hai con nhỏ thì hai lượt tính riêng. Khoản 2 nói cả cha và mẹ cùng tham gia bảo hiểm xã hội bắt buộc thì mỗi người hưởng theo khoản 1, tức hai người không phải chia nhau một suất. Mức hưởng của thời gian này vẫn là 75%, theo khoản 2 Điều 45."],
+  ["Dưỡng sức: khoản 1 nói tối đa 10 ngày, khoản 2 chia lại thành ba mức",
+   "Điều 46 khoản 1 cho nghỉ dưỡng sức tối đa 10 ngày một năm, với điều kiện trong năm đã nghỉ ốm từ đủ 30 ngày trở lên và sức khỏe chưa phục hồi trong vòng 30 ngày kể từ khi hết thời gian nghỉ. Khoản 2 sau đó thu hẹp: 10 ngày chỉ dành cho người ốm do bệnh cần chữa trị dài ngày, 07 ngày cho người vừa phẫu thuật, 05 ngày cho các trường hợp khác. Thời gian này tính liên tục, kể cả ngày nghỉ lễ, tết và ngày nghỉ hằng tuần, khác với cách tính ở Điều 43. Mức hưởng một ngày bằng 30% mức tham chiếu, theo khoản 3."],
+  ["Luật đang được đề nghị sửa",
+   "Chiều 10/09/2026, Thường trực Ủy ban Văn hóa và Xã hội của Quốc hội họp thẩm tra sơ bộ Dự án Luật sửa đổi, bổ sung một số điều của Luật Bảo hiểm xã hội năm 2024. Theo tờ trình do Thứ trưởng Bộ Nội vụ Nguyễn Mạnh Khương đọc, dự thảo gồm 3 điều và không thay đổi phạm vi điều chỉnh. Nội dung sửa liên quan tới sắp xếp tổ chức bộ máy, tới chế độ chính sách bảo hiểm xã hội và tới việc đầu tư quỹ. Tài liệu chúng tôi đọc được cho thấy đây mới là dự thảo ở bước thẩm tra sơ bộ. Các con số trong bài này lấy theo bản Luật số 41/2024/QH15 đang có hiệu lực."]
+ ],
+ "khong_ro": [
+  "Mức tham chiếu bằng bao nhiêu đồng. Điều 46 khoản 3 lấy 30% mức tham chiếu làm mức dưỡng sức một ngày, nhưng con số của mức tham chiếu không nằm trong các điều từ 42 đến 46.",
+  "Danh mục bệnh cần chữa trị dài ngày gồm những bệnh nào. Điều 43 khoản 2 giao Bộ trưởng Bộ Y tế ban hành.",
+  "Danh mục nghề, công việc nặng nhọc, độc hại, nguy hiểm. Điều 43 khoản 1 điểm b giao Bộ trưởng Bộ Lao động - Thương binh và Xã hội ban hành.",
+  "Cách tính ngày làm việc và cách xác định điều kiện của từng trường hợp. Điều 45 khoản 6 giao Bộ trưởng Bộ Lao động - Thương binh và Xã hội quy định chi tiết.",
+  "Số ngày trần của giai đoạn hưởng tiếp sau khi hết thời hạn khoản 1 Điều 43. Khoản 2 không nêu.",
+  "Quy định cho người tham gia bảo hiểm xã hội tự nguyện. Các điều từ 42 đến 46 nằm ở phần bảo hiểm xã hội bắt buộc."
+ ],
+ "faq": [
+  ["Nghỉ ốm thì bảo hiểm xã hội trả bao nhiêu phần trăm lương?",
+   "Khoản 2 Điều 45 Luật Bảo hiểm xã hội số 41/2024/QH15 quy định mức 75% tiền lương làm căn cứ đóng bảo hiểm xã hội, áp cho thời gian nghỉ trong số ngày của khoản 1 Điều 43 và cho thời gian chăm con ốm theo Điều 44. Mức một ngày tính bằng mức theo tháng chia cho 24 ngày, theo khoản 5 Điều 45."],
+  ["Một năm được nghỉ ốm tối đa bao nhiêu ngày?",
+   "Nếu bạn làm việc trong điều kiện bình thường: 30 ngày nếu đã đóng bảo hiểm xã hội bắt buộc dưới 15 năm, 40 ngày nếu từ đủ 15 năm đến dưới 30 năm, 60 ngày nếu từ đủ 30 năm trở lên. Nếu làm nghề nặng nhọc, độc hại, nguy hiểm hoặc làm việc ở vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn thì lần lượt là 40, 50 và 70 ngày. Đây là ngày làm việc, không kể lễ, tết và ngày nghỉ hằng tuần."],
+  ["Hết số ngày đó mà vẫn phải nằm viện thì còn được trả tiền không?",
+   "Chỉ khi bệnh của bạn thuộc danh mục bệnh cần chữa trị dài ngày do Bộ trưởng Bộ Y tế ban hành. Khi đó khoản 2 Điều 43 cho hưởng tiếp, nhưng mức áp theo khoản 3 Điều 45, tức 65% nếu đã đóng từ đủ 30 năm trở lên, 55% nếu từ đủ 15 năm đến dưới 30 năm, và 50% nếu dưới 15 năm. Bệnh không thuộc danh mục thì hết ngày là hết trợ cấp."],
+  ["Con ốm thì nghỉ được mấy ngày, cha mẹ có phải chia nhau không?",
+   "Điều 44 cho tối đa 20 ngày một năm cho mỗi con dưới 03 tuổi và tối đa 15 ngày cho mỗi con từ đủ 03 tuổi đến dưới 07 tuổi. Khoản 2 nói nếu cả cha và mẹ cùng tham gia bảo hiểm xã hội bắt buộc thì mỗi người được hưởng theo khoản 1, nên hai người không chia nhau một suất."]
+ ],
+ "lien_quan": ["bhyt-khong-chi-tra-nhung-gi", "chi-phi-dieu-tri-ung-thu", "gia-mot-ngay-giuong-11-benh-vien"],
+},
+
+
+{
+ "slug": "dong-phi-tre-va-khoi-phuc-hop-dong",
+ "cum": "C",
+ "ngay_dang": "2026-09-14",
+ "tag": "Hợp đồng",
+ "doc": "8 phút đọc",
+ "title": "Đóng phí trễ: 60 ngày gia hạn, hai năm để khôi phục, và hai việc doanh nghiệp không được làm",
+ "h1": "Quên đóng phí thì hợp đồng dừng lại lúc nào",
+ "desc": "Điều 37 Luật Kinh doanh bảo hiểm số 08/2022/QH15 cho thời gian gia hạn đóng phí 60 ngày và cho hai năm để khôi phục hợp đồng đã bị chấm dứt. Khoản 4 cấm doanh nghiệp tự khấu trừ phí và cấm khởi kiện đòi phí.",
+ "tom_tat": "Luật Kinh doanh bảo hiểm số 08/2022/QH15, hiệu lực từ 01/01/2023, cho thời gian gia hạn đóng phí bảo hiểm nhân thọ là <b>60</b> ngày. Con số này nằm ở khoản 2 Điều 37, không phải ở điều khoản sản phẩm của từng công ty. Hết thời gian gia hạn mà phí vẫn chưa vào thì khoản 1 Điều 26 cho hai bên quyền đơn phương chấm dứt hợp đồng. Sau đó vẫn còn một cửa: khoản 3 Điều 37 cho các bên thoả thuận khôi phục hiệu lực trong thời hạn <b>02</b> năm kể từ ngày bị chấm dứt. Khoản 4 Điều 37 còn chặn hai việc mà nhiều người tưởng doanh nghiệp được làm. Bài này trích nguyên văn cả bốn khoản của Điều 37, cùng khoản 1 Điều 26 và điểm b khoản 1 Điều 27. Chúng tôi đối chiếu với danh sách điều bị Luật số 139/2025/QH15 sửa đổi và không tìm thấy dấu hiệu ba điều này bị sửa. Đây là thông tin pháp luật, không phải tư vấn cho trường hợp cụ thể.",
+ "bang": [
+  {
+   "ten": "Bốn bước luật đặt ra khi phí không được đóng",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật Kinh doanh bảo hiểm số 08/2022/QH15, Điều 37 khoản 2, Điều 26 khoản 1, Điều 27 khoản 1 điểm b và Điều 37 khoản 3. Cột cuối tóm theo đúng câu chữ điều luật; nguyên văn nằm ở bảng dưới.",
+   "cot": ["Bước", "Điều khoản", "Nội dung"],
+   "hang": [
+    ["1", "Điều 37 khoản 2", "Đã đóng một hoặc một số kỳ phí mà không thể đóng được các khoản tiếp theo thì thời gian gia hạn đóng phí là <b>60</b> ngày"],
+    ["2", "Điều 26 khoản 1", "Không đóng phí hoặc không đóng đủ theo thời hạn thoả thuận hoặc sau thời gian gia hạn thì phát sinh quyền đơn phương chấm dứt hợp đồng"],
+    ["3", "Điều 27 khoản 1 điểm b", "Với hợp đồng nhân thọ và hợp đồng sức khoẻ, sự kiện bảo hiểm xảy ra trước thời điểm chấm dứt thì doanh nghiệp vẫn phải trả tiền, và được khấu trừ phí đến thời điểm đó"],
+    ["4", "Điều 37 khoản 3", "Các bên có thể thoả thuận khôi phục hiệu lực hợp đồng trong thời hạn 02 năm kể từ ngày bị chấm dứt, khi bên mua đã đóng số phí còn thiếu"]
+   ]
+  },
+  {
+   "ten": "Những gì Điều 37 khoản 4 chặn",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật Kinh doanh bảo hiểm số 08/2022/QH15, Điều 37 khoản 4, trích nguyên văn.",
+   "cot": ["Việc", "Nguyên văn"],
+   "hang": [
+    ["Tự khấu trừ phí từ giá trị hoàn lại", "<i>không được tự ý khấu trừ phí bảo hiểm từ giá trị hoàn lại của hợp đồng bảo hiểm khi chưa có sự đồng ý của bên mua bảo hiểm</i>"],
+    ["Khởi kiện đòi bên mua đóng phí", "<i>không được khởi kiện đòi bên mua bảo hiểm đóng phí bảo hiểm</i>"],
+    ["Vế loại trừ đi kèm", "<i>Quy định này không áp dụng đối với bảo hiểm nhóm.</i>"]
+   ]
+  },
+  {
+   "ten": "Nguyên văn bốn khoản Điều 37",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật Kinh doanh bảo hiểm số 08/2022/QH15, Điều 37 Đóng phí bảo hiểm nhân thọ. Điều này có bốn khoản, không khoản nào chia điểm.",
+   "cot": ["Khoản", "Nguyên văn"],
+   "hang": [
+    ["1", "<i>Bên mua bảo hiểm có thể đóng phí bảo hiểm một lần hoặc nhiều lần theo thời hạn, phương thức thỏa thuận trong hợp đồng bảo hiểm.</i>"],
+    ["2", "<i>Trường hợp phí bảo hiểm được đóng nhiều lần và bên mua bảo hiểm đã đóng một hoặc một số kỳ phí bảo hiểm nhưng không thể đóng được các khoản phí bảo hiểm tiếp theo thì thời gian gia hạn đóng phí là 60 ngày.</i>"],
+    ["3", "<i>Các bên có thể thỏa thuận khôi phục hiệu lực hợp đồng bảo hiểm đã bị đơn phương chấm dứt thực hiện quy định tại khoản 1 Điều 26 của Luật này trong thời hạn 02 năm kể từ ngày bị chấm dứt và bên mua bảo hiểm đã đóng số phí bảo hiểm còn thiếu.</i>"],
+    ["4", "<i>Trường hợp bên mua bảo hiểm không đóng hoặc không đóng đủ phí bảo hiểm thì doanh nghiệp bảo hiểm không được tự ý khấu trừ phí bảo hiểm từ giá trị hoàn lại của hợp đồng bảo hiểm khi chưa có sự đồng ý của bên mua bảo hiểm và không được khởi kiện đòi bên mua bảo hiểm đóng phí bảo hiểm. Quy định này không áp dụng đối với bảo hiểm nhóm.</i>"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Sáu mươi ngày là con số của luật",
+   "Khoản 2 Điều 37 đặt thời gian gia hạn đóng phí là 60 ngày và không cho phép thoả thuận ngắn hơn. Điều kiện kèm theo cũng đáng đọc kỹ: khoản này chỉ áp cho trường hợp phí được đóng nhiều lần và bên mua đã đóng ít nhất một kỳ. Người chưa đóng kỳ nào thì không thuộc phạm vi của khoản này. Điều 26 khoản 1 nhắc lại cụm <i>sau thời gian gia hạn đóng phí</i> mà không tự định nghĩa, nên con số 60 ngày ở Điều 37 là chỗ neo."],
+  ["Trong sáu mươi ngày đó, hợp đồng vẫn đang chạy",
+   "Điểm b khoản 1 Điều 27 xử lý đúng tình huống nhiều người lo nhất. Nguyên văn: <i>Đối với hợp đồng bảo hiểm nhân thọ và hợp đồng bảo hiểm sức khỏe, doanh nghiệp bảo hiểm, chi nhánh doanh nghiệp bảo hiểm phi nhân thọ nước ngoài có trách nhiệm trả tiền bảo hiểm cho người được bảo hiểm khi sự kiện bảo hiểm xảy ra trước thời điểm đơn phương chấm dứt thực hiện hợp đồng bảo hiểm và có quyền khấu trừ phí bảo hiểm đến thời điểm đơn phương chấm dứt thực hiện hợp đồng bảo hiểm.</i> Như vậy sự kiện xảy ra trước thời điểm chấm dứt thì doanh nghiệp vẫn phải trả tiền, phần phí còn thiếu được trừ vào khoản chi trả. Câu hỏi then chốt trở thành thời điểm chấm dứt rơi vào ngày nào."],
+  ["Hai năm để khôi phục, nhưng phải có thoả thuận",
+   "Khoản 3 Điều 37 dùng chữ <i>các bên có thể thỏa thuận</i>. Đây không phải quyền đơn phương của người mua. Luật đặt hai điều kiện: việc khôi phục diễn ra trong thời hạn 02 năm kể từ ngày bị chấm dứt, và bên mua đã đóng số phí bảo hiểm còn thiếu. Khoản này cũng chỉ nói tới hợp đồng bị chấm dứt theo khoản 1 Điều 26, tức trường hợp chấm dứt vì không đóng phí. Các trường hợp chấm dứt khác của Điều 26 không được khoản 3 nhắc tới."],
+  ["Doanh nghiệp không được tự lấy tiền trong hợp đồng để đóng phí",
+   "Khoản 4 Điều 37 chặn hai việc. Một là tự ý khấu trừ phí từ giá trị hoàn lại khi chưa có sự đồng ý của bên mua. Hai là khởi kiện đòi bên mua đóng phí. Vế thứ nhất đáng chú ý vì nhiều hợp đồng nhân thọ có cơ chế tự động ứng phí từ giá trị hoàn lại để giữ hiệu lực. Câu chữ của luật đặt điều kiện là phải có sự đồng ý của bên mua. Vế thứ hai loại bỏ khả năng bị kiện đòi phí, nên phí bảo hiểm nhân thọ không phải một khoản nợ mà doanh nghiệp đòi được qua toà."],
+  ["Bảo hiểm nhóm nằm ngoài cả hai vế",
+   "Câu cuối khoản 4 ghi <i>Quy định này không áp dụng đối với bảo hiểm nhóm.</i> Điểm a khoản 1 Điều 27 cũng có một vế loại trừ tương tự: nghĩa vụ đóng đủ phí đến thời điểm chấm dứt không áp cho hợp đồng nhân thọ và hợp đồng sức khoẻ, <i>trừ hợp đồng bảo hiểm nhóm</i>. Hai vế này nằm ở hai điều khác nhau nhưng cùng chỉ về một chỗ. Người tham gia qua hợp đồng nhóm của công ty đang ở một chế độ khác với người mua hợp đồng cá nhân."]
+ ],
+ "khong_ro": [
+  "Thời điểm chính xác hợp đồng chấm dứt. Điều 26 cho quyền đơn phương chấm dứt nhưng không nói việc chấm dứt có hiệu lực từ ngày nào.",
+  "Doanh nghiệp có phải thông báo trước khi hết thời gian gia hạn hay không. Điều 26 và Điều 37 đều không quy định.",
+  "Điều kiện để được khôi phục hiệu lực. Khoản 3 Điều 37 chỉ nêu hai điều kiện là trong 02 năm và đã đóng số phí còn thiếu, không nhắc tới việc thẩm định lại sức khoẻ.",
+  "Số phí còn thiếu có bị tính lãi chậm trả hay không. Điều 37 không nói.",
+  "Điều 37 đặt tiêu đề là Đóng phí bảo hiểm nhân thọ. Chúng tôi không kiểm được thời gian gia hạn 60 ngày có áp cho hợp đồng bảo hiểm sức khoẻ riêng lẻ hay không.",
+  "Cụm mất hiệu lực không xuất hiện trong Điều 26, Điều 27 và Điều 37. Luật dùng chữ đơn phương chấm dứt thực hiện hợp đồng bảo hiểm."
+ ],
+ "faq": [
+  ["Quên đóng phí bảo hiểm nhân thọ thì bao lâu mất hợp đồng?",
+   "Khoản 2 Điều 37 Luật Kinh doanh bảo hiểm số 08/2022/QH15 cho thời gian gia hạn đóng phí là 60 ngày, với điều kiện phí được đóng nhiều lần và bạn đã đóng ít nhất một kỳ. Hết 60 ngày mà phí vẫn chưa vào thì khoản 1 Điều 26 cho hai bên quyền đơn phương chấm dứt hợp đồng. Luật không nói việc chấm dứt có hiệu lực từ ngày nào, nên đây là chỗ cần đọc kỹ điều khoản sản phẩm."],
+  ["Trong thời gian gia hạn mà xảy ra chuyện thì có được trả tiền không?",
+   "Điểm b khoản 1 Điều 27 ghi rõ doanh nghiệp <i>có trách nhiệm trả tiền bảo hiểm</i> khi sự kiện bảo hiểm xảy ra trước thời điểm đơn phương chấm dứt hợp đồng, và được khấu trừ phí đến thời điểm đó. Điều này áp cho hợp đồng bảo hiểm nhân thọ và hợp đồng bảo hiểm sức khoẻ."],
+  ["Hợp đồng đã chấm dứt rồi thì còn khôi phục được không?",
+   "Khoản 3 Điều 37 cho các bên thoả thuận khôi phục hiệu lực trong thời hạn 02 năm kể từ ngày bị chấm dứt, với điều kiện bạn đã đóng số phí bảo hiểm còn thiếu. Luật dùng chữ thoả thuận, nghĩa là cần cả hai bên đồng ý chứ không phải quyền đơn phương của người mua."],
+  ["Công ty bảo hiểm có được kiện đòi tôi đóng phí không?",
+   "Khoản 4 Điều 37 ghi rõ doanh nghiệp <i>không được khởi kiện đòi bên mua bảo hiểm đóng phí bảo hiểm</i>, và cũng không được tự ý khấu trừ phí từ giá trị hoàn lại khi chưa có sự đồng ý của bạn. Câu cuối khoản này loại trừ bảo hiểm nhóm khỏi cả hai vế."]
+ ],
+ "lien_quan": ["huy-hop-dong-va-lay-lai-duoc-bao-nhieu", "21-ngay-can-nhac-hop-dong-bao-hiem", "ke-khai-sai-khi-mua-bao-hiem"],
+},
+
 ]

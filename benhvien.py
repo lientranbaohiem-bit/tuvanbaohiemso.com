@@ -10,7 +10,7 @@ NGUYEN TAC BIEN TAP - doc truoc khi sua file nay:
   4. Truong "kiem_chung" cua moi bang: "chinh-thuc" | "thu-cap" | "chua-xac-minh"
 """
 
-CAP_NHAT = "13/09/2026"   # ngay ra soat noi dung gan nhat
+CAP_NHAT = "14/09/2026"   # ngay ra soat noi dung gan nhat
 
 BV_DATA = [
 
@@ -2223,6 +2223,97 @@ BV_DATA = [
     "Quyết định 658 ngày 12/08/2026 chỉ có ba phụ lục: khám chuyên gia, xét nghiệm theo yêu cầu, và ba dịch vụ điều chỉnh từ quyết định cũ. Không phụ lục nào có mổ lấy thai. Quyết định 296 có phụ lục kỹ thuật dài 20 trang, nhưng ba trang liên tiếp phủ hết khối phẫu thuật sản phụ khoa mà chúng tôi đọc cũng không có dòng nào là mổ lấy thai. Nhiều khả năng ca sinh ở đây tính theo bảng giá BHYT của thành phố chứ không phải bảng theo yêu cầu, nhưng bạn nên hỏi lại bệnh viện cho chắc."),
    ("Bảng giá nào đang có hiệu lực?",
     "Cả hai. Quyết định 658 ngày 12/08/2026 là bản mới nhất nhưng nó chỉ điều chỉnh ba dịch vụ của Quyết định 296 ngày 19/09/2025 và bổ sung phần khám chuyên gia cùng bảng xét nghiệm. Phần giường và phần lớn dịch vụ kỹ thuật vẫn theo Quyết định 296. Khi hỏi giá, nên nói rõ bạn hỏi dịch vụ nào để nhân viên tra đúng văn bản."),
+ ],
+},
+
+
+{
+ "slug": "quoc-te-my-aih",
+ "ngay_dang": "2026-09-14",
+ "ten": "Bệnh viện Quốc tế Mỹ (AIH)",
+ "tinh": "TP.HCM",
+ "loai": "Bệnh viện quốc tế",
+ "calc_key": "",
+ "nguon_ngay": "13/09/2026",
+ "nguon_nhan": "Chúng tôi mở lần lượt từng trang gói sinh trên aih.com.vn ngày 13/09/2026 và chép lại giá của từng loại ca. Không trang giá nào của bệnh viện ghi ngày ban hành hay số quyết định. Bệnh viện đặt sẵn một dòng lưu ý ngay trên trang gói: &ldquo;Giá gói thể hiện trên website được sử dụng cho mục đích tham khảo. Vui lòng gọi điện thoại đến tổng đài để có thông tin chính thức.&rdquo;",
+ "nguon_url": "https://aih.com.vn/goi-dich-vu/goi-sinh-thuong-voi-bac-si-aih",
+ "title": "Chi phí sinh con ở Bệnh viện Quốc tế Mỹ AIH: 18 mức giá gói và khoản chênh khi chọn bác sĩ",
+ "desc": "AIH đăng 18 mức giá gói sinh, sinh thường từ 34,6 triệu đồng và sinh mổ đơn thai 47,5 triệu đồng. Chênh giữa nhóm bác sĩ AIH và nhóm bác sĩ cao cấp là 2,4 đến 4,1 triệu đồng.",
+ "tom_tat": "Bệnh viện Quốc tế Mỹ đăng <b>18</b> mức giá gói sinh, chia làm hai nhóm bác sĩ song song, theo bản chúng tôi đọc ngày 13/09/2026. Gói sinh thường với bác sĩ AIH thấp nhất là 34.600.000 đồng cho ca đơn thai, cao nhất 58.600.000 đồng cho ca đa thai có vết mổ cũ và dùng phòng sinh bốn trong một. Cùng những loại ca đó, gói với bác sĩ cao cấp AIH hoặc bác sĩ hợp tác cao hơn từ 2.400.000 đến 4.100.000 đồng. Bệnh viện không gọi khoản chênh này là phí chọn bác sĩ, nhưng đó chính là số tiền của việc chọn. Ca sinh mổ đơn thai là 47.500.000 đồng ở nhóm thứ nhất và 50.800.000 đồng ở nhóm thứ hai.",
+ "bang": [
+  {
+   "ten": "Tám loại ca sinh thường, giá ở hai nhóm bác sĩ và mức chênh",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "aih.com.vn, các trang gói sinh thường, chúng tôi đọc ngày 13/09/2026. Bệnh viện không ghi ngày ban hành. Mọi gói đều ghi lưu viện 02 ngày. Đơn vị: đồng.",
+   "cot": ["Loại ca sinh, theo tên bệnh viện đặt", "Với bác sĩ AIH", "Với bác sĩ cao cấp AIH hoặc bác sĩ hợp tác", "Chênh"],
+   "hang": [
+    ["Sinh thường đơn thai", "34.600.000", "37.000.000", "2.400.000"],
+    ["Sinh thường đơn thai (phòng sinh 4 trong 1)", "38.400.000", "41.100.000", "2.700.000"],
+    ["Sinh thường đơn thai sản phụ có vết sinh mổ cũ", "39.800.000", "42.600.000", "2.800.000"],
+    ["Sinh thường đơn thai sản phụ có vết sinh mổ cũ (phòng sinh 4 trong 1)", "43.700.000", "46.800.000", "3.100.000"],
+    ["Sinh thường đa thai", "48.700.000", "52.100.000", "3.400.000"],
+    ["Sinh thường đa thai (phòng sinh 4 trong 1)", "52.600.000", "56.300.000", "3.700.000"],
+    ["Sinh thường đa thai sản phụ có vết sinh mổ cũ", "54.700.000", "58.500.000", "3.800.000"],
+    ["Sinh thường đa thai sản phụ có vết sinh mổ cũ (phòng sinh 4 trong 1)", "58.600.000", "62.700.000", "4.100.000"]
+   ]
+  },
+  {
+   "ten": "Hai gói sinh mổ đơn thai",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "aih.com.vn, trang Gói sinh mổ với bác sĩ AIH và trang Gói sinh mổ với bác sĩ cao cấp AIH hoặc bác sĩ hợp tác, chúng tôi đọc ngày 13/09/2026. Đơn vị: đồng.",
+   "cot": ["Gói", "Giá", "Lưu viện"],
+   "hang": [
+    ["Sinh mổ đơn thai, với bác sĩ AIH", "47.500.000", "03 ngày"],
+    ["Sinh mổ đơn thai, với bác sĩ cao cấp AIH hoặc bác sĩ hợp tác", "50.800.000", "03 ngày"]
+   ]
+  },
+  {
+   "ten": "Bảng gói đánh dấu khoản nào có, khoản nào không",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "aih.com.vn, bảng chi tiết trong trang gói sinh thường đơn thai và trang gói sinh mổ đơn thai, chúng tôi đọc ngày 13/09/2026. Tên khoản mục giữ nguyên như bệnh viện ghi.",
+   "cot": ["Khoản mục", "Gói sinh thường", "Gói sinh mổ"],
+   "hang": [
+    ["Lưu viện", "02 ngày", "03 ngày"],
+    ["Phòng tiêu chuẩn", "có", "có"],
+    ["Giường dành cho người thân", "có", "có"],
+    ["Phí phòng sinh thường", "có", "không"],
+    ["Phí bác sĩ đỡ sinh", "có", "có"],
+    ["Phí phòng mổ", "không", "có, 1,5 giờ"],
+    ["Phí phòng hồi sức", "không", "có, 2 giờ"],
+    ["Phí bác sĩ gây mê", "không", "có"]
+   ]
+  }
+ ],
+ "khong_bao_gom": [
+  "Phí phòng hồi sức, với gói sinh thường. Bảng gói đánh dấu khoản này nằm ngoài.",
+  "Phí phòng mổ, với gói sinh thường. Ca sinh thường phải chuyển sang mổ thì khoản này ra ngoài gói.",
+  "Phí bác sĩ gây mê, với gói sinh thường. Đây là khoản gắn liền với gây tê ngoài màng cứng, và bệnh viện không đăng mức.",
+  "Phí phòng sinh thường, với gói sinh mổ. Trong bảng gói sinh mổ mà chúng tôi đọc, đây là khoản mục đánh dấu nằm ngoài."
+ ],
+ "khong_cong_bo": [
+  "Giá gây tê ngoài màng cứng. Bảng gói sinh thường chỉ đánh dấu phí bác sĩ gây mê nằm ngoài gói mà không nêu phải trả bao nhiêu.",
+  "Biểu giá một ngày giường theo hạng phòng. Bệnh viện chỉ ghi gói gồm phòng tiêu chuẩn.",
+  "Giá một ngày nằm thêm khi vượt số ngày của gói.",
+  "Công đỡ đẻ và ca mổ lấy thai tính riêng, cho người không mua gói.",
+  "Ngày ban hành hoặc số quyết định của bảng giá. Không trang giá nào ghi."
+ ],
+ "luu_y": [
+  ["Khoản chênh giữa hai nhóm bác sĩ là con số hiếm thấy",
+   "Trong 20 bệnh viện chúng tôi rà trước đó, phí chọn bác sĩ là khoản hay bị bỏ trống nhất. Bệnh viện Từ Dũ và Bệnh viện Hùng Vương ghi 0 đồng. Bệnh viện Phụ sản Hà Nội và Bệnh viện Phụ sản Trung ương đăng thành một cột cộng thêm. Bốn nơi khác nói có thu mà không nêu mức. AIH không gọi tên khoản này, nhưng đăng hai dòng gói song song cho cùng tám loại ca sinh, nên khoảng cách giữa hai dòng tự nói ra con số. Cách này giống Bệnh viện An Sinh, nơi giá giảm đau đẻ lộ ra qua chênh lệch giữa hai gói."],
+  ["Bệnh viện tự ghi bảng giá của mình chỉ để tham khảo",
+   "Ngay trên trang gói, bệnh viện đặt một dòng: <i>Giá gói thể hiện trên website được sử dụng cho mục đích tham khảo. Vui lòng gọi điện thoại đến tổng đài để có thông tin chính thức.</i> Không trang nào ghi ngày ban hành. Như vậy con số đăng công khai và con số chính thức được bệnh viện tách làm hai thứ. Khi gọi hỏi, nên đọc đúng tên loại ca sinh trong bảng để nhân viên tra đúng dòng."],
+  ["Chúng tôi mới đọc giá của một trong tám loại ca sinh mổ",
+   "Bệnh viện liệt kê tám loại ca sinh mổ: đơn thai, đa thai, có vết mổ cũ lần một, lần hai, lần ba, đơn thai vì nhau tiền đạo, đa thai có vết mổ cũ, đa thai vì nhau tiền đạo. Mỗi loại có trang riêng. Chúng tôi mới đọc trang sinh mổ đơn thai ở cả hai nhóm bác sĩ. Bảy loại còn lại có giá trên website nhưng chúng tôi chưa đọc, nên không đưa vào bảng."]
+ ],
+ "faq": [
+  ["Sinh con ở Bệnh viện Quốc tế Mỹ AIH hết bao nhiêu tiền?",
+   "Theo giá bệnh viện đăng trên website, bản chúng tôi đọc ngày 13/09/2026: gói sinh thường đơn thai với bác sĩ AIH là 34.600.000đ, lưu viện 2 ngày; cùng ca đó với bác sĩ cao cấp AIH hoặc bác sĩ hợp tác là 37.000.000đ. Gói sinh mổ đơn thai là 47.500.000đ và 50.800.000đ, lưu viện 3 ngày. Ca đa thai và ca có vết mổ cũ cao hơn, cao nhất là 62.700.000đ. Bệnh viện ghi rõ các mức này chỉ để tham khảo và đề nghị gọi tổng đài để có con số chính thức."],
+  ["Chọn bác sĩ ở AIH tốn thêm bao nhiêu?",
+   "Bệnh viện không đăng một khoản tên là phí chọn bác sĩ. Nhưng cùng một loại ca sinh, gói với bác sĩ cao cấp AIH hoặc bác sĩ hợp tác cao hơn gói với bác sĩ AIH từ 2.400.000đ tới 4.100.000đ ở tám loại ca sinh thường, và 3.300.000đ ở ca sinh mổ đơn thai. Ca càng phức tạp thì khoảng cách càng rộng."],
+  ["Gói sinh ở AIH có gồm đẻ không đau không?",
+   "Bảng gói sinh thường đánh dấu phí bác sĩ gây mê nằm ngoài gói, nên nếu bạn muốn gây tê ngoài màng cứng thì đây là khoản phải trả thêm. Bệnh viện không đăng mức phải trả là bao nhiêu. Với gói sinh mổ thì phí bác sĩ gây mê nằm trong gói. Đây là điểm nên hỏi kỹ trước khi đăng ký."],
+  ["Gói ghi lưu viện 2 ngày, nằm quá thì tính thế nào?",
+   "Bệnh viện không đăng giá một ngày nằm thêm, cũng không đăng biểu giá phòng theo hạng. Bảng gói chỉ ghi phòng tiêu chuẩn và số ngày lưu viện. Vì vậy phần vượt ngày là khoản không dự trù được từ thông tin trên website, cần hỏi tổng đài."]
  ],
 },
 
