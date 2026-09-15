@@ -1654,4 +1654,272 @@ BAI_VIET = [
  "lien_quan": ["huy-hop-dong-va-lay-lai-duoc-bao-nhieu", "21-ngay-can-nhac-hop-dong-bao-hiem", "ke-khai-sai-khi-mua-bao-hiem"],
 },
 
+
+{
+ "slug": "goi-sinh-duoc-nam-may-dem",
+ "cum": "A",
+ "ngay_dang": "2026-09-15",
+ "tag": "Chuẩn bị sinh con",
+ "doc": "8 phút đọc",
+ "title": "Gói sinh được nằm mấy đêm: chỉ 6 trong 21 bệnh viện nói ra con số",
+ "h1": "Gói sinh được nằm mấy đêm",
+ "desc": "Chúng tôi rà 21 bệnh viện và chỉ 6 nơi công bố số ngày nằm viện đi kèm ca sinh. Trong 21 nơi đó, chỉ một bệnh viện nêu cả số ngày lẫn cách tính tiền cho những đêm vượt quá.",
+ "tom_tat": "Trong 21 bệnh viện chúng tôi đã rà tính tới ngày 15/09/2026, chỉ <b>6</b> nơi công bố số ngày nằm viện đi kèm ca sinh. Con số chạy từ 2 ngày tới 5 ngày với sinh thường và sinh mổ. Mười lăm nơi còn lại bán gói hoặc niêm yết giá mà không nói gói ấy được nằm mấy đêm. Đây là khoản dễ vỡ dự trù nhất, vì giá một đêm ở nhóm bệnh viện quốc tế lên tới hàng chục triệu đồng. Chỉ một bệnh viện vừa nêu số ngày vừa nêu cách tính tiền cho những đêm vượt quá.",
+ "bang": [
+  {
+   "ten": "Sáu bệnh viện có nêu số ngày, và con số của từng nơi",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Tổng hợp từ 21 trang bệnh viện trên site này, mỗi trang dẫn nguồn và ngày công bố riêng. Cột cuối ghi đúng đơn vị bệnh viện dùng, vì ngày và đêm không phải một.",
+   "cot": ["Bệnh viện", "Sinh thường", "Sinh mổ", "Bệnh viện ghi bằng"],
+   "hang": [
+    ["Quốc tế Mỹ (AIH)", "2 ngày", "3 ngày", "ngày"],
+    ["Đa khoa Hồng Ngọc", "2 đêm", "4 đêm", "đêm"],
+    ["An Sinh", "3 ngày", "4 ngày", "ngày"],
+    ["Quốc tế Hạnh Phúc", "3 ngày", "4 ngày, ca mổ lần đầu", "ngày"],
+    ["FV", "3 đêm", "4 đêm", "đêm"],
+    ["Từ Dũ", "khoảng 3 ngày", "khoảng 5 ngày", "ngày"]
+   ]
+  },
+  {
+   "ten": "Sáu nơi có nói tới những đêm vượt quá, và nói tới đâu",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Tổng hợp từ các trang bệnh viện trên site này. Mười lăm bệnh viện còn lại không có dòng nào về phần vượt ngày.",
+   "cot": ["Bệnh viện", "Bệnh viện nói gì về phần vượt"],
+   "hang": [
+    ["Quốc tế Hạnh Phúc", "tính <b>25% đến 75%</b> giá phòng mỗi đêm, theo khung giờ ra viện"],
+    ["An Sinh", "xác nhận khoản lưu trú vượt số ngày nằm ngoài gói, không cho biết đơn giá"],
+    ["FV", "ghi đêm vượt quá 3 đêm hoặc 4 đêm nằm ngoài gói, không công bố cách tính"],
+    ["Quốc tế Mỹ (AIH)", "không đăng giá một ngày nằm thêm, cũng không đăng biểu giá phòng theo hạng"],
+    ["Đa khoa Bảo Sơn", "gói Luxury được thêm 1 ngày lưu viện, không nói nền là mấy ngày"],
+    ["Đa khoa Quốc tế Thu Cúc", "một gói được tặng thêm 1 ngày lưu viện, không công bố số ngày của bất kỳ gói nào"]
+   ]
+  },
+  {
+   "ten": "Giá một đêm ở mười nơi có đăng biểu giá phòng",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Tổng hợp biểu giá phòng và giá ngày giường từ các trang bệnh viện trên site này. Mỗi con số có nguồn và ngày công bố riêng trên trang bệnh viện tương ứng; bảng giá Phụ sản MêKông là bản ngày 01/09/2022, chưa được cập nhật. Đơn vị: đồng mỗi ngày hoặc mỗi đêm.",
+   "cot": ["Bệnh viện", "Thấp nhất", "Cao nhất"],
+   "hang": [
+    ["Việt Pháp Hà Nội", "9.900.000", "26.400.000"],
+    ["Quốc tế Hạnh Phúc", "2.800.000", "6.800.000"],
+    ["Phụ sản MêKông (bản 01/09/2022)", "từ 1.600.000", "từ 3.200.000"],
+    ["Quốc tế City", "1.650.000", "3.300.000"],
+    ["Hùng Vương, phòng 1 giường", "3.000.000", "3.700.000"],
+    ["Phụ sản Hà Nội", "280.000", "3.500.000"],
+    ["Phụ sản – Nhi Đà Nẵng, giường theo yêu cầu", "650.000", "2.000.000"],
+    ["Phụ sản Trung ương, cơ sở 2", "800.000", "1.500.000"],
+    ["Đa khoa Xuyên Á, cơ sở Củ Chi", "320.000", "1.700.000"],
+    ["Nhân dân Gia Định", "232.900", "928.100"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Ngày và đêm không phải một",
+   "Bốn bệnh viện đếm bằng ngày, hai bệnh viện đếm bằng đêm. Một ca nhập viện sáng thứ Hai và ra viện chiều thứ Tư là ba ngày, nhưng chỉ hai đêm. Chênh lệch một đơn vị ở đây là chênh một lần tiền phòng. Bệnh viện Đa khoa Hồng Ngọc cho thấy rủi ro này nằm ngay trong tài liệu của một bệnh viện: một trang ghi sinh thường 2 đêm và sinh mổ 4 đêm, trang khác lại ghi 2 ngày 1 đêm và 4 ngày 3 đêm. Khi gọi hỏi, nên hỏi thẳng số đêm chứ không hỏi số ngày."],
+  ["Chỉ một nơi nêu cả số ngày lẫn cách tính phần vượt",
+   "Bệnh viện Quốc tế Hạnh Phúc ghi gói sinh thường 3 ngày, gói sinh mổ lần đầu 4 ngày, và ghi tiếp rằng nằm viện vượt số ngày trong gói thì tính 25% đến 75% giá phòng mỗi đêm, theo khung giờ ra viện. Giá phòng của bệnh viện này từ 2.800.000 đồng tới 6.800.000 đồng một đêm, nên phần vượt có thể ước lượng được trước. An Sinh và FV nói rõ phần vượt nằm ngoài gói nhưng không cho đơn giá. Bốn nơi còn lại trong bảng trên chỉ nhắc tới việc cộng thêm ngày như một ưu đãi."],
+  ["Mười lăm nơi không nói gói được nằm mấy đêm",
+   "Trong nhóm này có cả bệnh viện đăng giá rất kỹ. Bệnh viện Việt Pháp Hà Nội công bố 16 mức giá gói và một biểu giá phòng đủ mười dòng, nhưng không nói gói nào được nằm mấy đêm. Với giá phòng từ 9.900.000 đồng một ngày, một đêm thừa ở đây lớn hơn toàn bộ chi phí một ca sinh thường ở nhiều bệnh viện công. Bệnh viện Quốc tế City còn đặt tiền phòng hẳn ra ngoài gói và tính riêng theo ngày, nên không biết số ngày thì không tính được tổng."],
+  ["Câu hỏi nên hỏi trước khi đặt cọc",
+   "Có bốn ý nên hỏi và nên yêu cầu ghi vào phiếu báo giá: gói này được nằm mấy đêm, tính từ lúc nào; hạng phòng đi kèm là hạng nào; một đêm vượt tính bao nhiêu; và ca sinh mổ có được nhiều đêm hơn ca sinh thường không. Bốn câu này chỉ có sáu bệnh viện trong bảng đầu trả lời được ngay bằng tài liệu đã đăng."],
+  ["Vì sao con số này hay bị bỏ trống",
+   "Số ngày nằm viện sau sinh phụ thuộc vào diễn biến của mẹ và của bé, nên bệnh viện có lý do để không cam kết. Nhưng bốn bệnh viện tư trong bảng đầu vẫn nêu được một con số nền, kèm cách xử lý phần vượt ở ba nơi. Khoảng cách giữa hai nhóm không nằm ở y khoa mà nằm ở mức độ công khai. Thiếu con số nền thì một bảng giá gói vẫn chưa thành một khoản dự trù."]
+ ],
+ "khong_ro": [
+  "Số ngày nằm viện của 15 bệnh viện còn lại. Phần lớn các nơi này nói thẳng trên trang của họ là không công bố.",
+  "Thời điểm bắt đầu đếm ngày hoặc đêm. Không bệnh viện nào trong sáu nơi nêu số ngày nói rõ đếm từ lúc nhập viện, từ lúc sinh, hay từ lúc chuyển về phòng hậu sản.",
+  "Số ngày dành cho bé khi bé phải ở lại lâu hơn mẹ.",
+  "Đơn giá một đêm vượt ở An Sinh, FV, Quốc tế Mỹ, Bảo Sơn và Thu Cúc.",
+  "Cách tính khi ca sinh thường chuyển thành ca sinh mổ giữa chừng: số ngày áp theo gói nào."
+ ],
+ "faq": [
+  ["Gói sinh trọn gói thường được nằm viện mấy ngày?",
+   "Trong 21 bệnh viện chúng tôi rà, sáu nơi có công bố: Quốc tế Mỹ AIH 2 ngày sinh thường và 3 ngày sinh mổ; Hồng Ngọc 2 đêm và 4 đêm; An Sinh 3 ngày và 4 ngày; Quốc tế Hạnh Phúc 3 ngày và 4 ngày; FV 3 đêm và 4 đêm; Từ Dũ khoảng 3 ngày và khoảng 5 ngày. Mười lăm nơi còn lại không công bố, nên đừng suy số của bệnh viện này sang bệnh viện khác."],
+  ["Nằm quá số ngày trong gói thì tính tiền thế nào?",
+   "Chỉ Bệnh viện Quốc tế Hạnh Phúc công bố cách tính: 25% đến 75% giá phòng mỗi đêm, tuỳ khung giờ ra viện. An Sinh và FV xác nhận phần vượt nằm ngoài gói nhưng không nêu đơn giá. Những nơi khác không có dòng nào về việc này. Đây là câu bạn nên hỏi và yêu cầu ghi vào phiếu báo giá trước khi đặt cọc."],
+  ["Một đêm nằm thêm tốn khoảng bao nhiêu?",
+   "Tuỳ nơi, và khoảng cách rất rộng. Theo biểu giá phòng các bệnh viện tự đăng: Nhân dân Gia Định từ 232.900đ, Xuyên Á cơ sở Củ Chi từ 320.000đ, Phụ sản Hà Nội từ 280.000đ ở khu thường, Quốc tế Hạnh Phúc từ 2.800.000đ, còn Việt Pháp Hà Nội từ 9.900.000đ tới 26.400.000đ. Mỗi con số có ngày công bố riêng, xem trang bệnh viện tương ứng."],
+  ["Bệnh viện ghi 2 đêm và bệnh viện ghi 3 ngày, nơi nào cho nằm lâu hơn?",
+   "Không so sánh trực tiếp được nếu không biết mốc bắt đầu đếm. Ba ngày thường tương ứng hai đêm, nhưng cũng có thể là ba đêm nếu nhập viện buổi tối. Không bệnh viện nào trong sáu nơi công bố nói rõ đếm từ lúc nào, nên khi gọi hỏi hãy hỏi số đêm và hỏi mốc bắt đầu."]
+ ],
+ "lien_quan": ["goi-sinh-tron-goi-khong-bao-gom-gi", "gia-mot-ngay-giuong-11-benh-vien", "phi-chon-bac-si-do-sinh"],
+},
+
+
+{
+ "slug": "khi-nao-khong-duoc-tra-tien-bao-hiem",
+ "cum": "C",
+ "ngay_dang": "2026-09-15",
+ "tag": "Hợp đồng",
+ "doc": "8 phút đọc",
+ "title": "Năm trường hợp doanh nghiệp không phải trả tiền bảo hiểm, và khoản buộc họ trả lại tiền",
+ "h1": "Khi nào công ty bảo hiểm không phải trả tiền",
+ "desc": "Điều 40 Luật Kinh doanh bảo hiểm 08/2022/QH15 liệt kê năm trường hợp doanh nghiệp không phải trả tiền bảo hiểm. Khoản 3 của chính điều này buộc họ trả lại giá trị hoàn lại hoặc toàn bộ phí đã đóng.",
+ "tom_tat": "Luật Kinh doanh bảo hiểm số 08/2022/QH15, hiệu lực từ 01/01/2023, dành riêng Điều 40 cho các trường hợp doanh nghiệp không phải trả tiền bảo hiểm. Khoản 1 liệt kê <b>năm</b> trường hợp, trong đó bốn trường hợp được nêu đích danh và một trường hợp để hai bên tự thoả thuận. Điều đáng chú ý nằm ở khoản 3: rơi vào năm trường hợp đó thì doanh nghiệp vẫn phải trả lại giá trị hoàn lại của hợp đồng hoặc toàn bộ phí đã đóng. Không phải trả tiền bảo hiểm và giữ luôn tiền là hai chuyện khác nhau. Bài này trích nguyên văn cả ba khoản của Điều 40, khoản 2 Điều 39 và Điều 41. Chúng tôi đối chiếu với danh sách điều bị Luật số 139/2025/QH15 sửa đổi và không tìm thấy dấu hiệu ba điều này bị sửa. Đây là thông tin pháp luật, không phải tư vấn cho trường hợp cụ thể.",
+ "bang": [
+  {
+   "ten": "Năm trường hợp tại khoản 1 Điều 40, nguyên văn",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật Kinh doanh bảo hiểm số 08/2022/QH15, Điều 40 khoản 1, trích nguyên văn năm điểm a, b, c, d, đ. Câu dẫn của khoản: <i>Doanh nghiệp bảo hiểm, chi nhánh doanh nghiệp bảo hiểm phi nhân thọ nước ngoài không phải bồi thường, trả tiền bảo hiểm trong trường hợp sau đây.</i>",
+   "cot": ["Điểm", "Nguyên văn"],
+   "hang": [
+    ["a", "<i>Người được bảo hiểm chết do tự tử trong thời hạn 02 năm kể từ ngày nộp khoản phí bảo hiểm đầu tiên hoặc kể từ ngày hợp đồng bảo hiểm khôi phục hiệu lực</i>"],
+    ["b", "<i>Người được bảo hiểm chết do lỗi cố ý của bên mua bảo hiểm hoặc lỗi cố ý của người thụ hưởng, trừ trường hợp quy định tại khoản 2 Điều này</i>"],
+    ["c", "<i>Người được bảo hiểm bị thương tật vĩnh viễn do lỗi cố ý của chính bản thân người được bảo hiểm hoặc bên mua bảo hiểm hoặc người thụ hưởng, trừ trường hợp quy định tại khoản 2 Điều này</i>"],
+    ["d", "<i>Người được bảo hiểm chết do bị thi hành án tử hình</i>"],
+    ["đ", "<i>Trường hợp khác theo thỏa thuận trong hợp đồng bảo hiểm</i>"]
+   ]
+  },
+  {
+   "ten": "Hai khoản còn lại của Điều 40, nguyên văn",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật Kinh doanh bảo hiểm số 08/2022/QH15, Điều 40 khoản 2 và khoản 3. Điều 40 có ba khoản; khoản 1 chia năm điểm, khoản 2 và khoản 3 không chia điểm.",
+   "cot": ["Khoản", "Nguyên văn"],
+   "hang": [
+    ["2", "<i>Trường hợp có nhiều người thụ hưởng, nếu một hoặc một số người thụ hưởng cố ý gây ra cái chết hay thương tật vĩnh viễn cho người được bảo hiểm, doanh nghiệp bảo hiểm, chi nhánh doanh nghiệp bảo hiểm phi nhân thọ nước ngoài vẫn phải bồi thường, trả tiền bảo hiểm cho những người thụ hưởng khác theo thỏa thuận trong hợp đồng bảo hiểm.</i>"],
+    ["3", "<i>Trường hợp quy định tại khoản 1 Điều này, doanh nghiệp bảo hiểm, chi nhánh doanh nghiệp bảo hiểm phi nhân thọ nước ngoài phải trả cho bên mua bảo hiểm giá trị hoàn lại của hợp đồng bảo hiểm hoặc toàn bộ số phí bảo hiểm đã đóng sau khi trừ các chi phí hợp lý (nếu có) theo thỏa thuận trong hợp đồng bảo hiểm, trừ trường hợp quy định tại khoản 2 Điều này. Nếu bên mua bảo hiểm chết thì số tiền trả lại được giải quyết theo quy định của pháp luật về thừa kế.</i>"]
+   ]
+  },
+  {
+   "ten": "Bốn nhóm người không được giao kết hợp đồng cho trường hợp chết, theo khoản 2 Điều 39",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật Kinh doanh bảo hiểm số 08/2022/QH15, Điều 39 khoản 2, trích nguyên văn bốn điểm a, b, c, d. Điều 39 có hai khoản.",
+   "cot": ["Điểm", "Nguyên văn"],
+   "hang": [
+    ["a", "<i>Người chưa thành niên, trừ trường hợp cha, mẹ hoặc người giám hộ của người đó đồng ý bằng văn bản</i>"],
+    ["b", "<i>Người mất năng lực hành vi dân sự</i>"],
+    ["c", "<i>Người có khó khăn trong nhận thức, làm chủ hành vi</i>"],
+    ["d", "<i>Người bị hạn chế năng lực hành vi dân sự</i>"]
+   ]
+  },
+  {
+   "ten": "Ba khoản của Điều 41 về người thụ hưởng, nguyên văn",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật Kinh doanh bảo hiểm số 08/2022/QH15, Điều 41 Chỉ định, thay đổi người thụ hưởng. Điều này có ba khoản, không khoản nào chia điểm.",
+   "cot": ["Khoản", "Nguyên văn"],
+   "hang": [
+    ["1", "<i>Bên mua bảo hiểm có quyền chỉ định người thụ hưởng, trừ hợp đồng bảo hiểm nhóm.</i>"],
+    ["2", "<i>Trường hợp có nhiều người thụ hưởng, những người được quyền chỉ định người thụ hưởng theo quy định của Luật này có thể xác định thứ tự hoặc tỷ lệ thụ hưởng.</i>"],
+    ["3", "<i>Bên mua bảo hiểm có thể thay đổi người thụ hưởng nhưng phải được sự đồng ý bằng văn bản của người được bảo hiểm.</i>"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Mốc hai năm ở điểm a đếm lại từ đầu sau mỗi lần khôi phục",
+   "Điểm a khoản 1 Điều 40 đặt hai mốc song song: <i>kể từ ngày nộp khoản phí bảo hiểm đầu tiên</i> hoặc <i>kể từ ngày hợp đồng bảo hiểm khôi phục hiệu lực</i>. Vế thứ hai nối thẳng với khoản 3 Điều 37, điều cho phép các bên thoả thuận khôi phục hiệu lực hợp đồng đã bị chấm dứt vì không đóng phí, trong thời hạn 02 năm. Như vậy một hợp đồng ký năm 2020, mất hiệu lực năm 2025 rồi khôi phục năm 2026, thì mốc 02 năm của điểm a chạy lại từ năm 2026 chứ không phải từ năm 2020. Đây là hệ quả ít được nói tới của việc để hợp đồng mất hiệu lực rồi khôi phục."],
+  ["Không phải trả tiền bảo hiểm không đồng nghĩa với giữ luôn tiền",
+   "Khoản 3 Điều 40 dùng chữ <b>phải trả</b>. Rơi vào bất kỳ trường hợp nào của khoản 1, doanh nghiệp vẫn phải trả cho bên mua giá trị hoàn lại của hợp đồng hoặc toàn bộ số phí đã đóng, sau khi trừ các chi phí hợp lý nếu có. Ngoại lệ duy nhất là trường hợp ở khoản 2. Luật cũng xử lý tình huống chính bên mua đã chết: số tiền trả lại giải quyết theo pháp luật về thừa kế. Câu chữ này đặt nghĩa vụ hoàn tiền thành mặc định, không phải thành thiện chí."],
+  ["Một người thụ hưởng gây án thì những người còn lại vẫn được trả",
+   "Khoản 2 Điều 40 tách bạch từng người thụ hưởng. Nếu hợp đồng có nhiều người thụ hưởng và một trong số đó cố ý gây ra cái chết hay thương tật vĩnh viễn cho người được bảo hiểm, doanh nghiệp <i>vẫn phải bồi thường, trả tiền bảo hiểm cho những người thụ hưởng khác</i>. Đây cũng chính là vế loại trừ được dẫn ngược lại ở điểm b và điểm c khoản 1. Hành vi của một người không kéo theo hậu quả cho những người còn lại."],
+  ["Điểm đ để ngỏ, và đó là chỗ phải đọc hợp đồng",
+   "Bốn điểm đầu của khoản 1 nêu đích danh bốn tình huống. Điểm đ thì ghi <i>trường hợp khác theo thỏa thuận trong hợp đồng bảo hiểm</i>, không giới hạn số lượng cũng không giới hạn nội dung. Nghĩa là danh sách thật của từng hợp đồng dài hơn năm dòng của luật, và phần dài thêm nằm trong quy tắc điều khoản sản phẩm. Điều 19 của cùng bộ luật buộc doanh nghiệp phải có bằng chứng đã giải thích rõ và bên mua đã hiểu các điều khoản loại trừ, nên phần thoả thuận thêm này không thể chỉ nằm im trong tập tài liệu."],
+  ["Thay người thụ hưởng cần chữ ký của người được bảo hiểm",
+   "Điều 41 phân vai rõ. Khoản 1 cho bên mua quyền chỉ định người thụ hưởng, trừ hợp đồng bảo hiểm nhóm. Khoản 2 cho phép xác định thứ tự hoặc tỷ lệ khi có nhiều người. Khoản 3 đặt một điều kiện mà nhiều người không lường: thay đổi người thụ hưởng <i>phải được sự đồng ý bằng văn bản của người được bảo hiểm</i>. Với hợp đồng mà bên mua và người được bảo hiểm là hai người khác nhau, việc đổi tên người thụ hưởng không phải quyết định một chiều của người đóng phí."],
+  ["Bốn nhóm người không mua bảo hiểm tử vong cho được",
+   "Khoản 2 Điều 39 chặn việc giao kết hợp đồng nhân thọ hoặc sức khoẻ cho trường hợp chết của người chưa thành niên, người mất năng lực hành vi dân sự, người có khó khăn trong nhận thức và làm chủ hành vi, và người bị hạn chế năng lực hành vi dân sự. Riêng nhóm đầu có một ngoại lệ: được phép nếu cha, mẹ hoặc người giám hộ đồng ý bằng văn bản. Ba nhóm còn lại không có ngoại lệ nào trong câu chữ điều luật."]
+ ],
+ "khong_ro": [
+  "Các chi phí hợp lý ở khoản 3 gồm những khoản nào và tối đa bao nhiêu. Điều 40 không nêu, cũng không dẫn sang điều khác.",
+  "Thương tật vĩnh viễn ở điểm c được xác định theo tiêu chuẩn nào và do ai kết luận.",
+  "Mốc 02 năm ở điểm a tính thế nào nếu ngày nộp phí đầu tiên và ngày hợp đồng có hiệu lực là hai ngày khác nhau.",
+  "Hợp đồng khôi phục hiệu lực nhiều lần thì mốc 02 năm tính từ lần khôi phục nào.",
+  "Giới hạn của điểm đ. Luật không nêu trường hợp nào không được đưa vào thoả thuận.",
+  "Cách xử lý khi người thụ hưởng duy nhất chính là người cố ý gây ra cái chết. Khoản 2 chỉ nói tới trường hợp có nhiều người thụ hưởng."
+ ],
+ "faq": [
+  ["Tự tử thì bảo hiểm nhân thọ có trả không?",
+   "Điểm a khoản 1 Điều 40 Luật Kinh doanh bảo hiểm số 08/2022/QH15 nói doanh nghiệp không phải trả tiền bảo hiểm nếu người được bảo hiểm chết do tự tử <i>trong thời hạn 02 năm kể từ ngày nộp khoản phí bảo hiểm đầu tiên hoặc kể từ ngày hợp đồng bảo hiểm khôi phục hiệu lực</i>. Sau mốc đó thì điểm a không còn áp dụng. Lưu ý mốc này chạy lại từ đầu mỗi lần hợp đồng được khôi phục hiệu lực."],
+  ["Rơi vào các trường hợp đó thì mất hết tiền đã đóng phải không?",
+   "Không. Khoản 3 Điều 40 buộc doanh nghiệp <i>phải trả</i> cho bên mua giá trị hoàn lại của hợp đồng hoặc toàn bộ số phí đã đóng, sau khi trừ các chi phí hợp lý nếu có, trừ trường hợp ở khoản 2. Nếu chính bên mua đã chết thì số tiền này giải quyết theo pháp luật về thừa kế."],
+  ["Tôi muốn đổi người thụ hưởng, có cần hỏi ai không?",
+   "Khoản 3 Điều 41 ghi bên mua bảo hiểm có thể thay đổi người thụ hưởng <i>nhưng phải được sự đồng ý bằng văn bản của người được bảo hiểm</i>. Nếu bạn vừa là bên mua vừa là người được bảo hiểm thì đây là chữ ký của chính bạn. Nếu bạn mua cho người khác thì cần văn bản đồng ý của người đó."],
+  ["Có mua được bảo hiểm tử vong cho con nhỏ không?",
+   "Điểm a khoản 2 Điều 39 cấm giao kết hợp đồng nhân thọ hoặc sức khoẻ cho trường hợp chết của người chưa thành niên, <i>trừ trường hợp cha, mẹ hoặc người giám hộ của người đó đồng ý bằng văn bản</i>. Nghĩa là được, với điều kiện có văn bản đồng ý đó."]
+ ],
+ "lien_quan": ["dong-phi-tre-va-khoi-phuc-hop-dong", "ly-do-ho-so-bi-tu-choi-boi-thuong", "dieu-khoan-loai-tru"],
+},
+
+
+{
+ "slug": "nghi-cham-nguoi-nha-om-duoc-may-ngay",
+ "cum": "E",
+ "ngay_dang": "2026-09-15",
+ "tag": "Bảo vệ thu nhập",
+ "doc": "8 phút đọc",
+ "title": "Người nhà nằm viện: luật cho nghỉ có lương ba ngày, và chỉ khi có tang",
+ "h1": "Người nhà nằm viện thì nghỉ được mấy ngày",
+ "desc": "Điều 115 Bộ luật Lao động 2019 cho nghỉ hưởng nguyên lương tối đa 03 ngày, và các trường hợp đều là cưới hoặc tang. Chế độ ốm đau của bảo hiểm xã hội chỉ chi trả cho việc chăm con dưới 07 tuổi.",
+ "tom_tat": "Bộ luật Lao động số 45/2019/QH14, hiệu lực từ 01/01/2021, cho người lao động nghỉ việc riêng hưởng nguyên lương tối đa <b>03</b> ngày. Nhìn kỹ danh sách của Điều 115 sẽ thấy một điểm ít ai để ý: mọi trường hợp được nghỉ có lương đều là đám cưới hoặc đám tang, không có trường hợp nào là người nhà nằm viện. Phía bảo hiểm xã hội cũng chỉ mở một cửa: Điều 42 Luật Bảo hiểm xã hội số 41/2024/QH15 liệt kê sáu trường hợp hưởng chế độ ốm đau, và trường hợp duy nhất liên quan tới việc chăm người khác là <i>chăm sóc con dưới 07 tuổi bị ốm đau</i>. Chăm vợ, chồng, cha, mẹ hay con từ đủ 07 tuổi trở lên nằm ngoài cả hai văn bản. Đây là thông tin pháp luật, không phải tư vấn cho trường hợp cụ thể.",
+ "bang": [
+  {
+   "ten": "Nghỉ việc riêng theo Điều 115 Bộ luật Lao động 2019",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Điều 115 Bộ luật Lao động số 45/2019/QH14. Chúng tôi đọc qua bài <i>Quy định về nghỉ việc riêng, nghỉ không hưởng lương với người lao động</i> trên xaydungchinhsach.chinhphu.vn và đối chiếu với một bài trích nguyên văn cùng điều trên thuvienphapluat.vn ngày 15/09/2026. Bản toàn văn Bộ luật Lao động chúng tôi không mở được nên không dẫn thẳng từ đó.",
+   "cot": ["Trường hợp", "Số ngày", "Lương", "Điều khoản"],
+   "hang": [
+    ["Người lao động kết hôn", "03 ngày", "hưởng nguyên lương", "khoản 1 điểm a"],
+    ["Con đẻ, con nuôi kết hôn", "01 ngày", "hưởng nguyên lương", "khoản 1 điểm b"],
+    ["Cha đẻ, mẹ đẻ, cha nuôi, mẹ nuôi, cha mẹ của vợ hoặc chồng, vợ hoặc chồng, con đẻ, con nuôi chết", "03 ngày", "hưởng nguyên lương", "khoản 1 điểm c"],
+    ["Ông bà nội, ông bà ngoại, anh chị em ruột chết; cha hoặc mẹ kết hôn; anh chị em ruột kết hôn", "01 ngày", "<b>không</b> hưởng lương", "khoản 2"],
+    ["Trường hợp khác", "theo thoả thuận", "<b>không</b> hưởng lương", "khoản 3"]
+   ]
+  },
+  {
+   "ten": "Chăm người ốm: bảo hiểm xã hội chi trả cho ai",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật Bảo hiểm xã hội số 41/2024/QH15, Điều 42 khoản 1 điểm e, Điều 44 khoản 1 và khoản 2, Điều 45 khoản 2. Điều 42 khoản 1 liệt kê sáu trường hợp hưởng chế độ ốm đau; điểm e là trường hợp duy nhất về việc chăm sóc người khác.",
+   "cot": ["Người được chăm", "Số ngày tối đa một năm", "Mức hưởng"],
+   "hang": [
+    ["Con dưới 03 tuổi", "20 ngày cho mỗi con", "75%"],
+    ["Con từ đủ 03 tuổi đến dưới 07 tuổi", "15 ngày cho mỗi con", "75%"],
+    ["Con từ đủ 07 tuổi trở lên", "không có chế độ", "—"],
+    ["Vợ hoặc chồng", "không có chế độ", "—"],
+    ["Cha, mẹ hoặc người thân khác", "không có chế độ", "—"]
+   ]
+  },
+  {
+   "ten": "Nghỉ việc riêng và chăm con ốm khác nhau ở đâu",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Điều 115 Bộ luật Lao động số 45/2019/QH14 và Điều 44 khoản 3 Luật Bảo hiểm xã hội số 41/2024/QH15.",
+   "cot": ["Khoản mục", "Nghỉ việc riêng (Điều 115)", "Chăm con ốm (Điều 44)"],
+   "hang": [
+    ["Ai trả tiền", "người sử dụng lao động", "quỹ bảo hiểm xã hội"],
+    ["Mức nhận", "nguyên lương hoặc không lương", "75% tiền lương làm căn cứ đóng"],
+    ["Cách đếm ngày", "luật không nói rõ", "ngày làm việc, không kể lễ, tết, ngày nghỉ hằng tuần"],
+    ["Cha và mẹ", "mỗi người theo danh sách của điều luật", "mỗi người hưởng riêng theo khoản 1, không chia nhau"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Danh sách của Điều 115 toàn là cưới và tang",
+   "Đọc lần lượt ba khoản của Điều 115 sẽ thấy một điểm chung. Khoản 1 cho nghỉ hưởng nguyên lương trong ba trường hợp: bản thân kết hôn, con kết hôn, và người thân trong danh sách qua đời. Khoản 2 cho nghỉ một ngày không hưởng lương khi ông bà hoặc anh chị em ruột qua đời, hoặc khi cha mẹ và anh chị em ruột kết hôn. Không khoản nào nhắc tới việc người thân ốm, nằm viện hay phẫu thuật. Người lao động có cha mẹ nhập viện dài ngày không có quyền nghỉ hưởng lương theo điều này, dù chỉ một ngày."],
+  ["Khoản 3 là cửa duy nhất còn lại, và nó phụ thuộc vào thoả thuận",
+   "Khoản 3 Điều 115 cho phép người lao động thoả thuận với người sử dụng lao động để nghỉ không hưởng lương. Đây là một quyền được thoả thuận, không phải một quyền được nghỉ. Trên thực tế, ngày phép năm theo Điều 113 là nguồn ngày nghỉ có lương mà người lao động chủ động dùng được cho việc chăm người nhà ốm. Hết phép năm thì mỗi ngày ở viện là một ngày mất thu nhập."],
+  ["Bảo hiểm xã hội cũng chỉ mở một cửa",
+   "Điều 42 khoản 1 Luật Bảo hiểm xã hội số 41/2024/QH15 liệt kê sáu trường hợp hưởng chế độ ốm đau. Năm trường hợp đầu là người lao động tự mình điều trị hoặc hiến, lấy, ghép mô. Trường hợp thứ sáu, điểm e, là <i>chăm sóc con dưới 07 tuổi bị ốm đau</i>. Đó là lần duy nhất trong cả mục chế độ ốm đau mà việc chăm sóc người khác được tính. Con từ đủ 07 tuổi trở lên, vợ, chồng, cha, mẹ đều nằm ngoài."],
+  ["Con ốm: hai mươi ngày và mười lăm ngày, cho mỗi con",
+   "Điều 44 khoản 1 cho tối đa 20 ngày một năm nếu con dưới 03 tuổi, tối đa 15 ngày nếu con từ đủ 03 tuổi đến dưới 07 tuổi, và luật ghi rõ là cho mỗi con. Khoản 2 nói nếu cả cha và mẹ cùng tham gia bảo hiểm xã hội bắt buộc thì mỗi người hưởng theo khoản 1, tức hai người không chia nhau một suất. Mức hưởng là 75% tiền lương làm căn cứ đóng, theo khoản 2 Điều 45, và một ngày tính bằng mức theo tháng chia cho 24 ngày."],
+  ["Khoảng trống này là một khoản tiền, không phải một điều khó chịu",
+   "Ghép hai văn bản lại thì thấy phần thu nhập không được bù. Một người chăm cha mẹ nằm viện hai tuần sẽ dùng hết phép năm rồi chuyển sang nghỉ không lương, và không có khoản trợ cấp nào từ quỹ bảo hiểm xã hội cho những ngày đó. Cùng lúc, tiền viện phí vẫn chạy. Bài <i>Giá một ngày giường ở 11 bệnh viện</i> trên site này cho thấy một ngày giường chạy từ 203.600 đồng tới 36 triệu đồng tuỳ nơi. Khoảng trống thu nhập và khoản chi viện phí rơi vào đúng một khoảng thời gian."]
+ ],
+ "khong_ro": [
+  "Ngày nghỉ theo Điều 115 có tính theo ngày làm việc hay ngày lịch. Điều luật không nói, khác với Điều 44 Luật Bảo hiểm xã hội vốn ghi rõ là ngày làm việc.",
+  "Người lao động có phải báo trước bao lâu, và người sử dụng lao động có quyền từ chối ngày nghỉ ở khoản 1 hay không.",
+  "Số ngày nghỉ không hưởng lương tối đa theo khoản 3. Điều 115 không đặt trần, cũng không đặt sàn.",
+  "Cách tính khi hai trường hợp ở khoản 1 rơi vào cùng một thời điểm.",
+  "Mức phạt khi người sử dụng lao động không bảo đảm ngày nghỉ này. Bài của xaydungchinhsach.chinhphu.vn có nêu khung phạt nhưng không dẫn số hiệu nghị định, nên chúng tôi không đăng lại con số."
+ ],
+ "faq": [
+  ["Cha mẹ nằm viện thì tôi được nghỉ mấy ngày có lương?",
+   "Điều 115 Bộ luật Lao động số 45/2019/QH14 không có trường hợp nào là người thân ốm hoặc nằm viện. Ba trường hợp được nghỉ hưởng nguyên lương ở khoản 1 đều là kết hôn hoặc tang. Vì vậy bạn phải dùng ngày phép năm theo Điều 113, hoặc thoả thuận nghỉ không hưởng lương theo khoản 3 Điều 115."],
+  ["Con ốm thì nghỉ được mấy ngày và có được trả tiền không?",
+   "Điều 44 Luật Bảo hiểm xã hội số 41/2024/QH15 cho tối đa 20 ngày một năm cho mỗi con dưới 03 tuổi và tối đa 15 ngày cho mỗi con từ đủ 03 tuổi đến dưới 07 tuổi. Mức hưởng là 75% tiền lương làm căn cứ đóng bảo hiểm xã hội, theo khoản 2 Điều 45, do quỹ bảo hiểm xã hội chi trả. Con từ đủ 07 tuổi trở lên thì không có chế độ này."],
+  ["Cả hai vợ chồng cùng đóng bảo hiểm xã hội thì có phải chia nhau số ngày không?",
+   "Không. Khoản 2 Điều 44 ghi nếu cả cha và mẹ cùng tham gia bảo hiểm xã hội bắt buộc thì thời gian hưởng chế độ khi chăm sóc con ốm đau của mỗi người theo quy định tại khoản 1, tức mỗi người có phần riêng."],
+  ["Chăm vợ hoặc chồng nằm viện thì bảo hiểm xã hội có trả gì không?",
+   "Trong mục chế độ ốm đau của Luật Bảo hiểm xã hội số 41/2024/QH15, Điều 42 khoản 1 liệt kê sáu trường hợp và trường hợp duy nhất về chăm sóc người khác là chăm sóc con dưới 07 tuổi. Chăm vợ hoặc chồng không nằm trong sáu trường hợp đó."]
+ ],
+ "lien_quan": ["nghi-om-dai-ngay-bhxh-tra-bao-nhieu", "gia-mot-ngay-giuong-11-benh-vien", "bhyt-khong-chi-tra-nhung-gi"],
+},
+
 ]
