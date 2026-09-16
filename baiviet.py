@@ -1922,4 +1922,268 @@ BAI_VIET = [
  "lien_quan": ["nghi-om-dai-ngay-bhxh-tra-bao-nhieu", "gia-mot-ngay-giuong-11-benh-vien", "bhyt-khong-chi-tra-nhung-gi"],
 },
 
+
+{
+ "slug": "gia-mot-ngay-nam-hoi-suc",
+ "cum": "D",
+ "ngay_dang": "2026-09-16",
+ "tag": "Bảo hiểm sức khoẻ",
+ "doc": "8 phút đọc",
+ "title": "Giá một ngày nằm hồi sức 2026: từ 558.600 đồng tới 36 triệu đồng",
+ "h1": "Một ngày nằm hồi sức tốn bao nhiêu",
+ "desc": "Chúng tôi rà biểu giá của 21 bệnh viện và tìm được sáu mức giá giường hồi sức, thấp nhất 558.600 đồng và cao nhất 36 triệu đồng một ngày. Không bệnh viện nào công bố giá hồi sức cho trẻ sơ sinh.",
+ "tom_tat": "Trong 21 bệnh viện chúng tôi đã rà tính tới ngày 16/09/2026, chỉ bốn nơi có đăng giá giường hồi sức, tổng cộng <b>sáu</b> mức. Thấp nhất là 558.600 đồng một ngày, cao nhất là <b>36 triệu đồng</b> một ngày. Khoảng cách giữa hai đầu là 64 lần, rộng hơn mọi khoản khác chúng tôi từng so. Điểm đáng chú ý hơn nằm ở chỗ khác: <b>chín</b> bệnh viện nói thẳng là không công bố giá hồi sức cho trẻ sơ sinh, trong đó có cả hai nơi vừa nêu giá hồi sức người lớn. Đây là khoản chi phí lớn nhất và khó dự trù nhất của một ca nằm viện.",
+ "bang": [
+  {
+   "ten": "Sáu mức giá giường hồi sức bệnh viện có công bố",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Tổng hợp biểu giá của 21 bệnh viện trên site này. Tên giường giữ nguyên như bệnh viện ghi. Mỗi con số có nguồn và ngày công bố riêng trên trang bệnh viện tương ứng. Đơn vị: đồng mỗi ngày.",
+   "cot": ["Bệnh viện", "Tên giường, nguyên văn", "Giá mỗi ngày"],
+   "hang": [
+    ["Việt Pháp Hà Nội", "Hồi sức tích cực (ICU)", "<b>36.000.000</b>"],
+    ["Việt Pháp Hà Nội", "Hồi sức tăng cường (High dependency)", "28.600.000"],
+    ["Quốc tế City", "Phòng chăm sóc đặc biệt", "3.300.000"],
+    ["Nhân dân Gia Định", "Hồi sức tích cực (ICU)", "928.100"],
+    ["Đa khoa Xuyên Á, cơ sở Tây Ninh", "Hồi sức cấp cứu khoa Phụ sản", "580.000"],
+    ["Nhân dân Gia Định", "Hồi sức cấp cứu", "<b>558.600</b>"]
+   ]
+  },
+  {
+   "ten": "Một ngày hồi sức bằng mấy ngày giường thường, trong cùng một bệnh viện",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Cùng nguồn với bảng trên. Cột so sánh lấy một hạng giường thường của chính bệnh viện đó, không so giữa các bệnh viện với nhau.",
+   "cot": ["Bệnh viện", "Giường hồi sức", "Một hạng giường thường của chính nơi đó", "Gấp"],
+   "hang": [
+    ["Việt Pháp Hà Nội", "36.000.000", "phòng chung nhi và hậu phẫu 9.900.000", "3,6 lần"],
+    ["Nhân dân Gia Định", "928.100", "giường Nội khoa Loại 2 là 273.800", "3,4 lần"],
+    ["Quốc tế City", "3.300.000", "phòng 1 giường 2.750.000", "1,2 lần"],
+    ["Đa khoa Xuyên Á, cơ sở Tây Ninh", "580.000", "phòng 2 giường 650.000", "0,9 lần"]
+   ]
+  },
+  {
+   "ten": "Chín bệnh viện không công bố giá hồi sức cho trẻ sơ sinh",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Trích từ trường những khoản bệnh viện không công bố, trên chính 21 trang bệnh viện của site này.",
+   "cot": ["Bệnh viện", "Bệnh viện nói gì"],
+   "hang": [
+    ["Từ Dũ", "bảng giá duy nhất từng công bố là bản năm 2015, chúng tôi không đăng lại"],
+    ["Hùng Vương", "không có bất kỳ công bố nào"],
+    ["Đa khoa Tâm Anh", "không công bố đơn giá theo ngày"],
+    ["Vinmec", "chỉ xác nhận hồi sức sơ sinh nằm ngoài gói"],
+    ["Quốc tế City", "có khoa hồi sức tích cực sơ sinh nhưng không công bố giá"],
+    ["Quốc tế Hạnh Phúc", "chỉ có câu loại trừ chung, không có con số"],
+    ["Hoàn Mỹ Sài Gòn", "xác nhận nằm ngoài gói, không cho biết ngoài gói thì bao nhiêu"],
+    ["Đa khoa Bảo Sơn", "không nêu"],
+    ["Việt Pháp Hà Nội", "biểu giá chỉ có hồi sức người lớn, không nói các mức đó có áp cho sơ sinh hay không"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Khoảng cách 64 lần, rộng hơn mọi khoản đã so",
+   "Mức thấp nhất là giường hồi sức cấp cứu của Bệnh viện Nhân dân Gia Định, 558.600 đồng một ngày. Mức cao nhất là giường hồi sức tích cực của Bệnh viện Việt Pháp Hà Nội, 36 triệu đồng một ngày. Hai con số cách nhau 64 lần. Để so sánh, khoảng cách giá một ngày giường thường giữa 21 bệnh viện là khoảng 180 lần nếu tính cả hai đầu, nhưng phần lớn các bệnh viện nằm chụm quanh vài trăm nghìn đồng. Với giường hồi sức thì không có vùng chụm nào: bốn bệnh viện, sáu mức, rải đều từ nửa triệu tới 36 triệu."],
+  ["Không ai công bố giá hồi sức cho trẻ sơ sinh",
+   "Đây là phát hiện đáng chú ý nhất của lần rà này. Chín bệnh viện nói thẳng là không công bố, và trong đó có cả Bệnh viện Quốc tế City lẫn Bệnh viện Việt Pháp Hà Nội, hai nơi vừa đăng giá hồi sức người lớn ở bảng đầu. Việt Pháp Hà Nội ghi biểu giá phòng gồm hồi sức tích cực, hồi sức tăng cường và phòng theo dõi, nhưng không nói các mức đó có áp cho trẻ sơ sinh hay không. Nghĩa là ngay cả bệnh viện công bố giá đầy đủ nhất trong 21 nơi cũng để trống đúng khoản này."],
+  ["Ở một bệnh viện, giường hồi sức rẻ hơn phòng hai giường",
+   "Bệnh viện Đa khoa Xuyên Á cơ sở Tây Ninh niêm yết giường hồi sức cấp cứu khoa Phụ sản 580.000 đồng một ngày, trong khi phòng 2 giường của cùng khoa là 650.000 đồng. Giường hồi sức nằm giữa phòng 3 giường và phòng 2 giường về giá. Điều này nhắc một chuyện dễ hiểu nhầm: giá giường hồi sức là tiền chỗ nằm và chăm sóc, không phải toàn bộ chi phí của một ca hồi sức. Thuốc, máy thở, xét nghiệm và can thiệp đều tính riêng."],
+  ["Vì sao khoản này quan trọng hơn giá gói",
+   "Giá gói sinh hay giá một ca mổ là con số biết trước. Giá hồi sức thì không, vì không ai biết trước sẽ nằm mấy ngày. Ở Bệnh viện Việt Pháp Hà Nội, năm ngày hồi sức tích cực là 180 triệu đồng, lớn hơn gói sinh đắt nhất của chính bệnh viện đó. Ở Bệnh viện Nhân dân Gia Định, cùng năm ngày là 4.640.500 đồng. Hai kịch bản đó không so được với nhau, và người bệnh thường chỉ biết mình thuộc kịch bản nào khi đã nằm trong đó."],
+  ["Bốn câu nên hỏi khi nhập viện",
+   "Có bốn ý nên hỏi và nên yêu cầu ghi vào phiếu báo giá: giường hồi sức của khoa này bao nhiêu một ngày; mức đó đã gồm thuốc và máy thở chưa; trẻ sơ sinh nằm hồi sức thì tính theo mức nào; và bảo hiểm y tế chi trả phần nào trong đó. Ba câu đầu chỉ bốn bệnh viện trong bảng đầu trả lời được bằng tài liệu đã đăng. Câu thứ ba thì chưa bệnh viện nào trong 21 nơi trả lời được."]
+ ],
+ "khong_ro": [
+  "Giá giường hồi sức của 17 bệnh viện còn lại. Phần lớn không đăng biểu giá giường đầy đủ, hoặc đăng mà không có dòng hồi sức.",
+  "Giá hồi sức sơ sinh ở cả 21 bệnh viện. Không nơi nào công bố.",
+  "Giá giường hồi sức đã gồm những gì. Không bệnh viện nào trong bốn nơi có giá nói rõ mức đó đã bao thuốc, máy thở, oxy hay chưa.",
+  "Mức bảo hiểm y tế chi trả cho ngày giường hồi sức. Các bảng giá này không có cột bảo hiểm y tế cho dòng hồi sức.",
+  "Số ngày nằm hồi sức trung bình của từng loại ca. Không thuộc phạm vi tài liệu bệnh viện công bố."
+ ],
+ "faq": [
+  ["Một ngày nằm ICU tốn bao nhiêu tiền?",
+   "Tuỳ bệnh viện, và khoảng cách rất rộng. Theo biểu giá các bệnh viện tự đăng, bản chúng tôi đọc tới ngày 16/09/2026: Nhân dân Gia Định 558.600đ cho hồi sức cấp cứu và 928.100đ cho hồi sức tích cực; Xuyên Á cơ sở Tây Ninh 580.000đ; Quốc tế City 3.300.000đ cho phòng chăm sóc đặc biệt; Việt Pháp Hà Nội 28.600.000đ cho hồi sức tăng cường và 36.000.000đ cho hồi sức tích cực. Mỗi con số có ngày công bố riêng, xem trang bệnh viện tương ứng."],
+  ["Giá đó đã gồm thuốc và máy thở chưa?",
+   "Không bệnh viện nào trong bốn nơi có công bố giá nói rõ điều này. Theo cách các bảng giá bệnh viện thường được lập, ngày giường là tiền chỗ nằm và công chăm sóc, còn thuốc, vật tư, máy thở, xét nghiệm và thủ thuật tính riêng theo thực tế. Đây là câu bạn nên hỏi và yêu cầu ghi vào phiếu báo giá."],
+  ["Trẻ sơ sinh phải nằm hồi sức thì tính tiền thế nào?",
+   "Không một bệnh viện nào trong 21 nơi chúng tôi rà công bố giá hồi sức sơ sinh. Chín nơi nói thẳng là không công bố, trong đó có cả những bệnh viện có khoa hồi sức tích cực sơ sinh. Nếu bạn đang chuẩn bị sinh, đây là khoản nên hỏi trực tiếp và hỏi trước, vì nó là rủi ro tài chính lớn nhất mà bảng giá không cho biết trước được."],
+  ["Bảo hiểm y tế có trả tiền giường hồi sức không?",
+   "Các bảng giá chúng tôi đọc không có cột bảo hiểm y tế cho dòng hồi sức, nên chúng tôi không có căn cứ để trả lời bằng con số. Với bệnh viện tư và với giường theo yêu cầu, phần lớn khoản chênh do người bệnh tự trả. Bài <i>BHYT không chi trả những gì</i> trên site này nói kỹ hơn về ranh giới đó."]
+ ],
+ "lien_quan": ["gia-mot-ngay-giuong-11-benh-vien", "bhyt-khong-chi-tra-nhung-gi", "goi-sinh-duoc-nam-may-dem"],
+},
+
+
+{
+ "slug": "bhyt-tra-bao-nhieu-tu-tra-bao-nhieu",
+ "cum": "D",
+ "ngay_dang": "2026-09-16",
+ "tag": "Bảo hiểm sức khoẻ",
+ "doc": "9 phút đọc",
+ "title": "BHYT trả bao nhiêu, tự trả bao nhiêu: 19 dòng giá có đủ hai cột từ hai bệnh viện",
+ "h1": "Bảo hiểm y tế trả được bao nhiêu phần",
+ "desc": "Hai bệnh viện đăng bảng giá có cả cột tự trả lẫn cột bảo hiểm y tế. Đặt cạnh nhau, khoảng cách chạy từ 1 lần tới 43,9 lần tuỳ dịch vụ, và có khoản không hề có mức bảo hiểm y tế.",
+ "tom_tat": "Phần lớn bệnh viện chỉ đăng một cột giá, nên không ai biết bảo hiểm y tế đỡ được bao nhiêu. Trong 21 bệnh viện chúng tôi đã rà, có hai nơi đăng bảng giá với <b>cả hai cột</b> đặt cạnh nhau: Bệnh viện Đại học Y Dược TP.HCM và Bệnh viện Đa khoa Xuyên Á. Ghép lại được <b>19</b> dòng dịch vụ có đủ hai con số. Khoảng cách giữa mức tự trả và mức bảo hiểm y tế chạy từ 1,0 lần tới <b>43,9</b> lần, tuỳ dịch vụ. Có dịch vụ bệnh viện ghi thẳng là không có mức bảo hiểm y tế.",
+ "bang": [
+  {
+   "ten": "Mười chín dòng giá có đủ hai cột, xếp theo mức chênh",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Bệnh viện Đại học Y Dược TP.HCM, Quyết định 1364/QĐ-ĐHYD ngày 16/07/2020 và bảng giá Cơ sở 2 cập nhật 15/01/2026. Bệnh viện Đa khoa Xuyên Á cơ sở Củ Chi, bảng giá công bố 15/05/2025. Tên dịch vụ giữ nguyên như bệnh viện ghi. Cột cuối do chúng tôi chia, làm tròn một chữ số thập phân. Đơn vị: đồng.",
+   "cot": ["Bệnh viện", "Dịch vụ, nguyên văn", "Tự trả", "Bảo hiểm y tế", "Gấp"],
+   "hang": [
+    ["ĐH Y Dược TP.HCM", "Tiêm bắp thịt (kích thích trưởng thành phổi thai nhi)", "500.000", "11.400", "<b>43,9</b>"],
+    ["ĐH Y Dược TP.HCM", "Đẻ thường (Đỡ đẻ thường ngôi chỏm)", "5.900.000", "706.000", "8,4"],
+    ["Xuyên Á", "Siêu âm thai 3 tháng giữa (Doppler màu 4D)", "468.000", "58.600", "8,0"],
+    ["ĐH Y Dược TP.HCM", "Đẻ khó, sanh giúp bằng Forceps hoặc Giác hút sản khoa", "6.800.000", "952.000", "7,1"],
+    ["ĐH Y Dược TP.HCM", "Siêu âm Doppler thai nhi", "543.000", "89.300", "6,1"],
+    ["Xuyên Á", "Siêu âm Doppler thai nhi", "360.000", "89.300", "4,0"],
+    ["ĐH Y Dược TP.HCM", "Siêu âm thai", "212.000", "58.600", "3,6"],
+    ["Xuyên Á", "Siêu âm thai (thai, nhau thai, nước ối)", "180.000", "58.600", "3,1"],
+    ["Xuyên Á", "Khám Phụ sản", "120.000", "39.800", "3,0"],
+    ["ĐH Y Dược TP.HCM", "Khám thai", "150.000", "50.600", "3,0"],
+    ["Xuyên Á", "Đỡ đẻ thường ngôi chỏm", "2.180.000", "786.700", "2,8"],
+    ["Xuyên Á", "Phẫu thuật lấy thai lần đầu, song thai", "6.540.000", "2.604.800", "2,5"],
+    ["ĐH Y Dược TP.HCM", "Chọc ối làm xét nghiệm tế bào", "1.700.000", "722.000", "2,4"],
+    ["Xuyên Á", "Đỡ đẻ từ sinh đôi trở lên", "3.330.000", "1.510.300", "2,2"],
+    ["Xuyên Á", "Đỡ đẻ ngôi ngược", "2.000.000", "1.191.900", "1,7"],
+    ["Xuyên Á", "Phẫu thuật lấy thai lần đầu", "4.360.000", "2.604.800", "1,7"],
+    ["Xuyên Á", "Phẫu thuật lấy thai lần hai", "5.330.000", "3.376.200", "1,6"],
+    ["Xuyên Á", "Forceps", "1.170.000", "1.141.900", "<b>1,0</b>"],
+    ["Xuyên Á", "Giác hút", "1.170.000", "1.141.900", "<b>1,0</b>"]
+   ]
+  },
+  {
+   "ten": "Mức hưởng bảo hiểm y tế do Bệnh viện Quốc tế City công bố",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Bệnh viện Quốc tế City, trang chính sách bảo hiểm y tế, bản cập nhật 27/02/2026. Đây là bệnh viện tư có hợp đồng khám chữa bệnh bảo hiểm y tế; mức hưởng tính trên khung giá bảo hiểm y tế, không tính trên giá dịch vụ của bệnh viện.",
+   "cot": ["Trường hợp", "Mức hưởng trên khung giá bảo hiểm y tế"],
+   "hang": [
+    ["Đúng tuyến", "100%, 95% hoặc 80% tuỳ nhóm đối tượng"],
+    ["Trái tuyến, chỉ nội trú", "60%, 57% hoặc 48%"],
+    ["Ngoại trú trái tuyến", "<b>không áp dụng</b>"],
+    ["Các gói khám thai", "bảo hiểm y tế không chi trả, bệnh viện loại trừ rõ"],
+    ["Phụ thu phí quản lý thuốc", "10%"]
+   ]
+  },
+  {
+   "ten": "Bệnh viện Từ Dũ đánh dấu khoản nào bảo hiểm y tế trả",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Bệnh viện Từ Dũ, bảng tiền phòng và các khoản cộng thêm, bản công bố 16/09/2025. Bệnh viện dùng cột đánh dấu thay vì cột số tiền.",
+   "cot": ["Khoản mục, nguyên văn", "Giá", "Bảo hiểm y tế có trả không"],
+   "hang": [
+    ["Ngày giường điều trị nội trú", "203.600 đồng/ngày", "có, trong phạm vi bảo hiểm y tế"],
+    ["Phòng hậu sản dịch vụ (khu N, M, H, B)", "600.000 đến 4.000.000 đồng/ngày", "<b>không, tự trả 100%</b>"],
+    ["Giảm đau sản khoa (gây tê ngoài màng cứng)", "1.849.000 đồng", "tuỳ chỉ định"],
+    ["Bộ khăn phẫu thuật (dùng 1 lần)", "586.000 đồng", "không"],
+    ["Chọn bác sĩ đỡ sinh", "0 đồng", "không phát sinh"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Không có một tỷ lệ chung nào cả",
+   "Người ta hay nói bảo hiểm y tế trả 80% hoặc 95%. Con số đó là mức hưởng tính trên <i>khung giá bảo hiểm y tế</i>, không phải trên giá bệnh viện thu. Bảng đầu cho thấy hai khung này lệch nhau bao nhiêu. Cùng một dịch vụ siêu âm Doppler thai nhi, Bệnh viện Đại học Y Dược TP.HCM thu 543.000 đồng còn khung bảo hiểm y tế là 89.300 đồng. Người có thẻ hưởng 80% thì được tính trên 89.300 đồng, không phải trên 543.000 đồng."],
+  ["Chênh lệch chạy từ 1 lần tới gần 44 lần",
+   "Khoản lệch nhiều nhất trong 19 dòng là mũi tiêm bắp thịt kích thích trưởng thành phổi thai nhi ở Bệnh viện Đại học Y Dược TP.HCM: bệnh viện thu 500.000 đồng, khung bảo hiểm y tế 11.400 đồng. Khoản lệch ít nhất là thủ thuật Forceps và Giác hút ở Bệnh viện Đa khoa Xuyên Á, 1.170.000 đồng so với 1.141.900 đồng, chênh đúng 28.100 đồng. Hai thái cực này nằm trong cùng một nhóm dịch vụ sản khoa. Không suy được từ dịch vụ này sang dịch vụ khác."],
+  ["Thủ thuật lệch ít, chẩn đoán hình ảnh lệch nhiều",
+   "Xếp 19 dòng theo mức chênh sẽ thấy một trật tự. Bốn dòng lệch ít nhất đều là thủ thuật can thiệp: Forceps, Giác hút, mổ lấy thai lần hai, mổ lấy thai lần đầu. Các dòng lệch nhiều nhất là tiêm thuốc, đỡ đẻ thường và siêu âm. Với một ca sinh thường không biến chứng, phần tự trả sẽ chiếm tỷ trọng lớn; với một ca mổ phức tạp, bảo hiểm y tế gánh được phần đáng kể hơn."],
+  ["Có khoản không hề có mức bảo hiểm y tế",
+   "Bệnh viện Đại học Y Dược TP.HCM ghi thẳng ở dòng gây tê ngoài màng cứng: <i>không có mức BHYT</i>. Bệnh viện Từ Dũ đánh dấu phòng hậu sản dịch vụ là tự trả 100%. Bệnh viện Quốc tế City ghi các gói khám thai bảo hiểm y tế không chi trả. Đây là nhóm khoản mà tỷ lệ phần trăm không có ý nghĩa gì, vì không có gì để tính phần trăm lên."],
+  ["Trái tuyến: ngoại trú không được gì",
+   "Bảng của Bệnh viện Quốc tế City nêu ba mức trái tuyến cho nội trú là 60%, 57% và 48%, và ghi ngoại trú trái tuyến <b>không áp dụng</b>. Bệnh viện cũng công bố phụ thu phí quản lý thuốc 10%. Đây là bệnh viện tư có hợp đồng khám chữa bệnh bảo hiểm y tế, nên con số này là chính sách của chính họ, không phải quy định chung."],
+  ["Mười chín bệnh viện còn lại không cho biết",
+   "Chỉ hai trong 21 bệnh viện đăng bảng giá hai cột, và một nơi nữa dùng cột đánh dấu thay vì cột số. Mười tám nơi còn lại chỉ đăng một cột. Với người có thẻ bảo hiểm y tế, một bảng giá một cột không trả lời được câu hỏi quan trọng nhất là phải bù bao nhiêu. Khi gọi hỏi, nên hỏi thẳng hai con số cho từng dịch vụ, chứ không hỏi phần trăm."]
+ ],
+ "khong_ro": [
+  "Mức bảo hiểm y tế của 18 bệnh viện còn lại. Các nơi đó chỉ đăng một cột giá.",
+  "Bảng giá Cơ sở 1 của Bệnh viện Đại học Y Dược TP.HCM là bản năm 2020 theo Quyết định 1364. Khung giá bảo hiểm y tế đã thay đổi từ đó, nên tỷ lệ chênh của các dòng thuộc bảng này có thể đã khác.",
+  "Mức hưởng cụ thể của từng nhóm đối tượng. Bảng của Quốc tế City nêu ba mức mà không nói nhóm nào ứng với mức nào.",
+  "Phần bảo hiểm y tế trả cho ngày giường hồi sức. Không bảng nào có dòng này.",
+  "Cách tính khi người bệnh dùng dịch vụ theo yêu cầu ở bệnh viện công: phần chênh giữa giá yêu cầu và khung bảo hiểm y tế do ai gánh và gánh bao nhiêu."
+ ],
+ "faq": [
+  ["Bảo hiểm y tế trả bao nhiêu phần trăm chi phí sinh con?",
+   "Câu hỏi này không có một con số trả lời được. Tỷ lệ 100%, 95% hay 80% là mức hưởng tính trên <i>khung giá bảo hiểm y tế</i>, còn bệnh viện thu theo giá của bệnh viện. Hai khung đó lệch nhau rất nhiều: theo bảng giá hai bệnh viện đăng đủ hai cột, khoảng cách chạy từ 1 lần tới 43,9 lần tuỳ dịch vụ. Muốn biết thực tế phải bù bao nhiêu thì phải hỏi cả hai con số cho từng dịch vụ."],
+  ["Vì sao cùng một ca đẻ mà chỗ nói vài trăm nghìn, chỗ nói vài triệu?",
+   "Vì hai bên đang nói hai cột khác nhau. Ví dụ ở Bệnh viện Đa khoa Xuyên Á cơ sở Củ Chi, dòng đỡ đẻ thường ngôi chỏm có giá bệnh viện 2.180.000đ và mức bảo hiểm y tế 786.700đ. Ở Bệnh viện Đại học Y Dược TP.HCM, cùng tên dịch vụ là 5.900.000đ và 706.000đ. Con số bạn nghe được tuỳ vào người nói đang đọc cột nào."],
+  ["Đẻ không đau có được bảo hiểm y tế trả không?",
+   "Bệnh viện Đại học Y Dược TP.HCM ghi thẳng ở dòng gây tê ngoài màng cứng là <i>không có mức BHYT</i>. Bệnh viện Từ Dũ ghi khoản giảm đau sản khoa là <i>tuỳ chỉ định</i>. Hai cách ghi khác nhau, nên đây là khoản phải hỏi riêng ở từng nơi chứ không suy chung được."],
+  ["Khám trái tuyến thì bảo hiểm y tế trả gì?",
+   "Theo bảng Bệnh viện Quốc tế City công bố ngày 27/02/2026: trái tuyến chỉ áp dụng cho nội trú, ở mức 60%, 57% hoặc 48% tuỳ nhóm đối tượng, còn ngoại trú trái tuyến thì không áp dụng. Đây là chính sách bệnh viện đó công bố cho chính họ."]
+ ],
+ "lien_quan": ["bhyt-khong-chi-tra-nhung-gi", "gia-mot-ngay-nam-hoi-suc", "bao-lanh-vien-phi-hoat-dong-the-nao"],
+},
+
+
+{
+ "slug": "tam-ung-khi-nhap-vien-sinh",
+ "cum": "A",
+ "ngay_dang": "2026-09-16",
+ "tag": "Chuẩn bị sinh con",
+ "doc": "7 phút đọc",
+ "title": "Tạm ứng khi nhập viện sinh 2026: từ 5 triệu tới 30 triệu đồng, và một nơi không nhận tạm ứng",
+ "h1": "Đi sinh phải mang sẵn bao nhiêu tiền",
+ "desc": "Ba bệnh viện công bố mức tạm ứng khi nhập viện sinh, chạy từ 5 triệu tới 30 triệu đồng. Năm nơi khác nói thẳng là không công bố, và một nơi không nhận tạm ứng mà thu trọn gói một lần.",
+ "tom_tat": "Tạm ứng là số tiền phải có sẵn lúc nhập viện, không phải chi phí cuối cùng của ca sinh. Trong 21 bệnh viện chúng tôi đã rà tính tới ngày 16/09/2026, chỉ <b>ba</b> nơi công bố mức tạm ứng bằng con số. Thấp nhất là 5 triệu đồng, cao nhất <b>30 triệu đồng</b>, gấp sáu lần. Năm nơi nói thẳng là không công bố mức tạm ứng. Bệnh viện An Sinh thì làm khác hẳn: ghi rõ không nhận tạm ứng, thu trọn gói một lần.",
+ "bang": [
+  {
+   "ten": "Bảy mức tạm ứng từ ba bệnh viện có công bố, xếp từ cao xuống thấp",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Tổng hợp từ ba trang bệnh viện trên site này, mỗi trang dẫn nguồn và ngày công bố riêng. Đơn vị: đồng.",
+   "cot": ["Bệnh viện", "Trường hợp", "Mức tạm ứng"],
+   "hang": [
+    ["Phụ sản Hà Nội", "khu dịch vụ, đẻ thường hoặc mổ lấy thai", "<b>30.000.000</b>"],
+    ["Phụ sản Hà Nội", "khu thường, mổ đẻ đa thai hoặc rau cài răng lược", "20.000.000"],
+    ["Phụ sản Hà Nội", "khu thường, đẻ thường hoặc mổ lấy thai", "15.000.000"],
+    ["Hùng Vương", "diện dịch vụ, sinh thường hoặc sinh mổ", "10.000.000 đến 18.000.000"],
+    ["Từ Dũ", "có dịch vụ", "từ 10.000.000"],
+    ["Hùng Vương", "diện nhà nước, sinh thường", "6.000.000 đến 7.000.000"],
+    ["Từ Dũ", "không dịch vụ", "<b>5.000.000</b>"]
+   ]
+  },
+  {
+   "ten": "Chính sách thu tiền của những nơi không nêu mức tạm ứng",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Trích từ các trang bệnh viện trên site này. Đây là chính sách bệnh viện công bố, không phải mức tiền.",
+   "cot": ["Bệnh viện", "Bệnh viện ghi gì"],
+   "hang": [
+    ["An Sinh", "thanh toán một lần trọn gói, <b>không nhận tạm ứng</b> hoặc trả nhiều lần"],
+    ["Việt Pháp Hà Nội", "nội trú phải đặt cọc theo dự toán, bệnh viện không nhận công nợ cá nhân"],
+    ["Quốc tế Hạnh Phúc", "đặt cọc gói sinh trước thì được giảm 20% các dịch vụ khác; không nêu mức cọc"],
+    ["Hoàn Mỹ Sài Gòn", "giảm 10% khi đăng ký online kèm đặt cọc trước; không nêu mức cọc"],
+    ["FV", "phải đặt cọc nếu chưa có thư bảo lãnh; không nêu số tiền"],
+    ["Quốc tế City", "trang chính sách đặt cọc chỉ nêu nguyên tắc chung, không có con số cho sản khoa"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Tạm ứng không phải là chi phí",
+   "Bệnh viện Phụ sản Hà Nội ghi rõ đây là số tiền phải có sẵn lúc nhập viện, và quyết toán theo thực tế khi ra viện. Bệnh viện Hùng Vương cũng nói cùng cách: thu tạm ứng rồi quyết toán theo thực tế, dư được hoàn lại khi xuất viện. Nghĩa là con số tạm ứng có thể cao hơn hoặc thấp hơn chi phí cuối cùng. Nhầm hai thứ này là lý do nhiều bài trên mạng đưa ra con số chi phí sinh cao hoặc thấp bất thường."],
+  ["Gấp sáu lần giữa mức thấp nhất và cao nhất",
+   "Bệnh viện Từ Dũ thu 5 triệu đồng cho ca không dịch vụ. Bệnh viện Phụ sản Hà Nội thu 30 triệu đồng cho khu dịch vụ. Cả hai đều là bệnh viện công tuyến cuối. Khoảng cách này chủ yếu do khu điều trị chứ không do loại ca sinh: ngay trong Bệnh viện Phụ sản Hà Nội, khu dịch vụ tạm ứng gấp đôi khu thường, 30 triệu so với 15 triệu."],
+  ["Ca khó được tạm ứng riêng, nhưng chỉ ở một nơi",
+   "Bệnh viện Phụ sản Hà Nội tách riêng một mức 20 triệu đồng cho ca mổ đẻ đa thai hoặc rau cài răng lược ở khu thường, cao hơn mức thường 15 triệu. Đây là bệnh viện duy nhất trong ba nơi công bố phân biệt mức tạm ứng theo mức độ phức tạp của ca sinh. Hai nơi còn lại chỉ chia theo diện dịch vụ và không dịch vụ."],
+  ["Một nơi không nhận tạm ứng, và điều đó đắt hơn",
+   "Bệnh viện An Sinh ghi thanh toán một lần trọn gói, không nhận tạm ứng hoặc trả nhiều lần. Cộng với việc bệnh viện nói thẳng là khách có bảo hiểm thương mại không được bảo lãnh trực tiếp, số tiền cần chuẩn bị đúng bằng giá gói chứ không phải một phần của nó. Gói sinh của bệnh viện này chạy từ 17.600.000 đồng tới hơn 34 triệu đồng, nên đó là khoản phải có đủ ngay từ đầu."],
+  ["Đặt cọc trước đổi lấy giảm giá",
+   "Hai bệnh viện gắn việc đặt cọc với ưu đãi. Bệnh viện Quốc tế Hạnh Phúc giảm 20% các dịch vụ khác cho người đã đặt cọc gói sinh, và đó là lý do bảng giá của họ có hai cột niêm yết và ưu đãi. Bệnh viện Hoàn Mỹ Sài Gòn giảm 10% khi đăng ký online kèm đặt cọc trước, không phụ thuộc tuần thai. Cả hai đều không nêu phải cọc bao nhiêu."],
+  ["Cách hỏi cho ra con số",
+   "Có ba ý nên hỏi khi gọi tới bệnh viện: phải mang sẵn bao nhiêu lúc nhập viện; số đó là tạm ứng được quyết toán hay là khoản thu cố định; và nếu có thẻ bảo hiểm y tế hoặc thư bảo lãnh thì mức phải nộp có giảm không. Ba câu này chỉ ba bệnh viện trong bảng đầu trả lời được ngay bằng tài liệu đã đăng."]
+ ],
+ "khong_ro": [
+  "Mức tạm ứng của 18 bệnh viện còn lại. Năm nơi nói thẳng là không công bố; những nơi khác không có trang nào nhắc tới khoản này.",
+  "Mức cọc cụ thể của Bệnh viện Quốc tế Hạnh Phúc và Bệnh viện Hoàn Mỹ Sài Gòn, dù cả hai đều gắn ưu đãi với việc đặt cọc.",
+  "Tạm ứng có giảm khi người bệnh có thẻ bảo hiểm y tế hay không. Không bệnh viện nào trong ba nơi công bố nói tới.",
+  "Thời điểm hoàn lại phần dư sau quyết toán, và hoàn bằng hình thức gì.",
+  "Mức tạm ứng cho ca sinh non hoặc ca phải nằm hồi sức sơ sinh. Không nơi nào nêu."
+ ],
+ "faq": [
+  ["Đi sinh cần mang sẵn bao nhiêu tiền?",
+   "Tuỳ bệnh viện và tuỳ khu điều trị. Theo mức ba bệnh viện công bố: Từ Dũ 5.000.000đ cho ca không dịch vụ và từ 10.000.000đ cho ca có dịch vụ; Hùng Vương 6.000.000 đến 7.000.000đ cho diện nhà nước và 10.000.000 đến 18.000.000đ cho diện dịch vụ; Phụ sản Hà Nội 15.000.000đ ở khu thường, 20.000.000đ cho ca mổ đa thai hoặc rau cài răng lược ở khu thường, và 30.000.000đ ở khu dịch vụ. Mười tám bệnh viện còn lại không công bố."],
+  ["Tạm ứng có phải là tổng chi phí không?",
+   "Không. Bệnh viện Phụ sản Hà Nội và Bệnh viện Hùng Vương đều ghi rõ đây là khoản nộp trước, quyết toán theo thực tế khi ra viện, dư thì hoàn lại. Vì vậy một ca sinh có thể tốn nhiều hơn hoặc ít hơn mức tạm ứng."],
+  ["Có bệnh viện nào không thu tạm ứng không?",
+   "Bệnh viện An Sinh ghi thanh toán một lần trọn gói, không nhận tạm ứng hoặc trả nhiều lần. Nhưng điều đó không có nghĩa là bạn mang ít tiền hơn: vì phải trả trọn gói một lần và bệnh viện nói rõ không bảo lãnh trực tiếp cho bảo hiểm thương mại, số tiền cần chuẩn bị đúng bằng giá gói."],
+  ["Đặt cọc trước có được giảm giá không?",
+   "Hai bệnh viện công bố có. Quốc tế Hạnh Phúc giảm 20% các dịch vụ khác cho người đã đặt cọc gói sinh. Hoàn Mỹ Sài Gòn giảm 10% khi đăng ký online kèm đặt cọc trước, áp dụng ở bất kỳ tuần thai nào. Cả hai đều không công bố phải cọc bao nhiêu, nên đó là câu cần hỏi trước."]
+ ],
+ "lien_quan": ["goi-sinh-duoc-nam-may-dem", "goi-sinh-tron-goi-khong-bao-gom-gi", "bao-lanh-vien-phi-hoat-dong-the-nao"],
+},
+
 ]
