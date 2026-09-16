@@ -961,6 +961,9 @@ img{height:auto}
 .ns-t{font-size:.9rem;font-weight:700;color:var(--grey-600);margin:0 0 12px}
 .ns-row{display:flex;flex-direction:column;gap:10px}
 .ns-row .btn{width:100%;justify-content:center;text-align:center}
+/* v6.4 — nut CTA dai (co kem con so) phai xuong dong duoc,
+   .btn mac dinh co white-space:nowrap nen tren dien thoai se tran khung */
+.ns-row .btn{white-space:normal;line-height:1.35;padding-top:14px;padding-bottom:14px}
 [hidden]{display:none !important}
 
 /* v5.5 — nhap nhay nhe cho khach thay minh dang o dau khi quay lai */
