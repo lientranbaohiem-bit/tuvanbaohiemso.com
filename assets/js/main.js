@@ -49,7 +49,7 @@
 
   /* ---------- Helpers ---------- */
   function vnd(n) { return new Intl.NumberFormat('vi-VN').format(Math.round(n)) + 'đ'; }
-  function tr(n) { return (n / 1e6).toFixed(1).replace('.0', '') + ' triệu'; }
+  function tr(n) { return (n / 1e6).toFixed(1).replace('.0', '').replace('.', ',') + ' triệu'; }
 
   /* ---------- Máy tính chi phí sinh con ---------- */
   /* Khoang chi phi tham khao (dong).
@@ -175,6 +175,11 @@ var EXTRAS = { gayte: [1.2e6, 1.9e6], bacsi: [2e6, 5e6], 'sanglọc': [0.5e6, 3e
         'Không bệnh viện nào trong danh sách công bố giá phòng chăm sóc đặc biệt sơ sinh, nên đây là khoản không ai ước tính trước được, ' +
         'và cũng là khoản khiến ngân sách vỡ nhiều nhất. Muốn chúng tôi tính riêng cho trường hợp của bạn, bấm nút bên dưới.</p>';
       out.classList.add('hot');
+
+      // Nut CTA nhac lai dung con so khach vua thay o "phan gia dinh tu tra".
+      // Gioi han trong khoi may tinh nay vi trang /cong-cu/ co ca ba may tinh.
+      var ctaGap = document.querySelector('#tinh-chi-phi-sinh .js-cta-gap');
+      if (ctaGap) ctaGap.textContent = 'Tư vấn gói bảo hiểm trả thay cho ' + tr(gapLo) + ' này';
     }
     birthForm.addEventListener('input', calcBirth);
     birthForm.addEventListener('change', calcBirth);
