@@ -116,7 +116,7 @@ I = {
 }
 
 # ---------------------------------------------------------------- shell
-ASSET_V = "6.3"   # tang so nay moi khi sua style.css hoac main.js
+ASSET_V = "6.4"   # tang so nay moi khi sua style.css hoac main.js
 
 # ---------------------------------------------------------------- analytics
 # Dat ID that vao day. De rong thi script tu tat, khong loi trang.
@@ -1466,6 +1466,17 @@ NEXT2 = f"""
             </div>
           </div>"""
 
+# Bien the rieng cho may tinh chi phi sinh: nhac thang toi phan gia dinh tu tra.
+# Chu trong nut duoc main.js ghi de kem con so vua tinh (span.js-cta-gap).
+NEXT2_BIRTH = f"""
+          <div class="ns">
+            <p class="ns-t">Phần tự trả này có thể để bảo hiểm lo, với mức phí thấp hơn nhiều.</p>
+            <div class="ns-row">
+              <a class="btn btn-primary" href="{ZALO}" target="_blank" rel="noopener">{I['users']} <span class="js-cta-gap">Tư vấn gói bảo hiểm trả thay cho khoản này</span></a>
+              <a class="btn btn-ghost js-back" href="index.html" hidden><span>&larr; Quay lại <span class="js-back-name">trang vừa xem</span></span></a>
+            </div>
+          </div>"""
+
 CALC_BIRTH = f"""
       <div class="calc" id="tinh-chi-phi-sinh">
         <div class="calc-head"><h3>{I['calc']} Máy tính chi phí sinh con</h3><p>Ước tính theo bảng giá mới nhất mà mỗi bệnh viện công bố</p></div>
@@ -1524,7 +1535,7 @@ CALC_BIRTH = f"""
             </div>
           </form>
           <div class="calc-result" id="birthResult"></div>
-{NEXT2}
+{NEXT2_BIRTH}
         </div>
       </div>
 """
