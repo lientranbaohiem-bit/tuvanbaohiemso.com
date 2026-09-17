@@ -2186,4 +2186,161 @@ BAI_VIET = [
  "lien_quan": ["goi-sinh-duoc-nam-may-dem", "goi-sinh-tron-goi-khong-bao-gom-gi", "bao-lanh-vien-phi-hoat-dong-the-nao"],
 },
 
+{
+ "slug": "gia-mot-lan-sieu-am-thai",
+ "cum": "D",
+ "ngay_dang": "2026-09-17",
+ "tag": "Chi phí y tế",
+ "doc": "7 phút đọc",
+ "title": "Giá siêu âm thai 2026: năm bệnh viện công bố bằng số, và phần bảo hiểm y tế trả lại",
+ "h1": "Một lần siêu âm thai tốn bao nhiêu",
+ "desc": "Năm bệnh viện công bố giá siêu âm thai bằng con số, thấp nhất 150.000 đồng. Hai nơi đăng kèm cột bảo hiểm y tế, và cột đó cho thấy quỹ trả theo loại kỹ thuật chứ không theo loại máy.",
+ "tom_tat": "Chúng tôi rà biểu giá của 21 bệnh viện tính tới ngày 17/09/2026 và tìm được <b>mười sáu dòng</b> giá siêu âm thai, thuộc về năm bệnh viện. Siêu âm thai cơ bản chạy từ 150.000 đồng tới 212.000 đồng, chênh nhau 1,41 lần. Các mức chuyên sâu kéo lên tới 700.000 đồng, nhưng con số đó nằm trong bảng giá bản 03/06/2022 của Bệnh viện Phụ sản MêKông. Bốn bệnh viện khác gộp siêu âm vào gói thai sản và không tách giá, nên không có gì để so.",
+ "bang": [
+  {
+   "ten": "Siêu âm thai cơ bản ở bốn bệnh viện, xếp từ thấp lên cao",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Tổng hợp từ bốn trang bệnh viện trên site này, mỗi trang dẫn nguồn và ngày công bố riêng. Tên dịch vụ giữ nguyên văn theo cách bệnh viện đặt.",
+   "cot": ["Bệnh viện", "Tên dịch vụ, nguyên văn", "Giá", "Bảng giá công bố"],
+   "hang": [
+    ["Nhân dân Gia Định", "Siêu âm thai", "<b>150.000đ</b>/lần", "bảng giá dịch vụ theo yêu cầu 2025&ndash;2026"],
+    ["Đa khoa Xuyên Á, cơ sở Củ Chi", "Siêu âm thai (thai, nhau thai, nước ối)", "180.000đ", "bảng giá dịch vụ kỹ thuật 2025"],
+    ["Phụ sản Hà Nội", "Siêu âm 2D", "196.000đ", "bảng giá đăng 22/05/2026"],
+    ["ĐH Y Dược TP.HCM, Cơ sở 2", "Siêu âm thai", "<b>212.000đ</b>", "bảng giá cập nhật 15/01/2026"]
+   ]
+  },
+  {
+   "ten": "Mười hai dòng siêu âm chuyên sâu, xếp từ cao xuống thấp",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Tổng hợp từ năm trang bệnh viện trên site này. Ba dòng của Phụ sản MêKông thuộc bảng giá bản 03/06/2022, bệnh viện chưa công bố bản mới hơn tính tới ngày 17/09/2026.",
+   "cot": ["Bệnh viện", "Tên dịch vụ, nguyên văn", "Giá", "Bảng giá công bố"],
+   "hang": [
+    ["Phụ sản MêKông", "Siêu âm 4D hình thái thai nhi", "700.000đ", "<b>bản 03/06/2022</b>"],
+    ["ĐH Y Dược TP.HCM, Cơ sở 2", "Siêu âm Doppler thai nhi", "543.000đ", "cập nhật 15/01/2026"],
+    ["Phụ sản Hà Nội", "Siêu âm 3D/4D", "500.000đ (song thai 550.000đ)", "đăng 22/05/2026"],
+    ["Phụ sản MêKông", "Siêu âm sản khoa (Doppler)", "500.000đ", "<b>bản 03/06/2022</b>"],
+    ["Phụ sản MêKông", "Siêu âm đo độ mờ da gáy", "500.000đ", "<b>bản 03/06/2022</b>"],
+    ["Đa khoa Xuyên Á, cơ sở Củ Chi", "Siêu âm thai 3 tháng giữa (Doppler màu 4D)", "468.000đ", "bảng giá 2025"],
+    ["Nhân dân Gia Định", "Siêu âm tim thai qua thành bụng", "400.000đ/lần", "bảng giá theo yêu cầu 2025&ndash;2026"],
+    ["Đa khoa Xuyên Á, cơ sở Củ Chi", "Siêu âm Doppler thai nhi", "360.000đ", "bảng giá 2025"],
+    ["Đa khoa Xuyên Á, cơ sở Củ Chi", "Siêu âm thai 3 tháng đầu (đo độ mờ da gáy)", "300.000đ", "bảng giá 2025"],
+    ["Nhân dân Gia Định", "Siêu âm Doppler thai nhi", "300.000đ/lần", "bảng giá theo yêu cầu 2025&ndash;2026"],
+    ["Phụ sản Hà Nội", "Siêu âm đầu dò", "250.000đ (chuyên gia 280.000đ)", "đăng 22/05/2026"],
+    ["Phụ sản Hà Nội", "Siêu âm Doppler đơn thai", "250.000đ", "đăng 22/05/2026"]
+   ]
+  },
+  {
+   "ten": "Sáu dòng có cả giá bệnh viện lẫn mức bảo hiểm y tế",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Bảng giá Cơ sở 2 Bệnh viện ĐH Y Dược TP.HCM cập nhật 15/01/2026, và bảng giá dịch vụ kỹ thuật 2025 của Bệnh viện Đa khoa Xuyên Á cơ sở Củ Chi. Cột cuối do chúng tôi tính, bằng giá bệnh viện chia mức bảo hiểm y tế.",
+   "cot": ["Bệnh viện", "Dịch vụ, nguyên văn", "Giá bệnh viện", "Mức bảo hiểm y tế", "Gấp"],
+   "hang": [
+    ["Đa khoa Xuyên Á, Củ Chi", "Siêu âm thai 3 tháng giữa (Doppler màu 4D)", "468.000đ", "58.600đ", "<b>8,0 lần</b>"],
+    ["ĐH Y Dược TP.HCM, Cơ sở 2", "Siêu âm Doppler thai nhi", "543.000đ", "89.300đ", "6,1 lần"],
+    ["Đa khoa Xuyên Á, Củ Chi", "Siêu âm thai 3 tháng đầu (đo độ mờ da gáy)", "300.000đ", "58.600đ", "5,1 lần"],
+    ["Đa khoa Xuyên Á, Củ Chi", "Siêu âm Doppler thai nhi", "360.000đ", "89.300đ", "4,0 lần"],
+    ["ĐH Y Dược TP.HCM, Cơ sở 2", "Siêu âm thai", "212.000đ", "58.600đ", "3,6 lần"],
+    ["Đa khoa Xuyên Á, Củ Chi", "Siêu âm thai", "180.000đ", "58.600đ", "3,1 lần"]
+   ]
+  },
+  {
+   "ten": "Bốn bệnh viện gộp siêu âm vào gói và không tách giá",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Trích từ các trang bệnh viện trên site này. Đây là nội dung gói bệnh viện công bố, không phải mức tiền.",
+   "cot": ["Bệnh viện", "Bệnh viện ghi gì"],
+   "hang": [
+    ["Vinmec", "gói thai sản ghi có khám thai, xét nghiệm, siêu âm, nhưng bệnh viện không công bố giá dịch vụ nào"],
+    ["Hoàn Mỹ Sài Gòn", "nhóm cận lâm sàng của gói ghi siêu âm, điện tim và theo dõi tim thai; trang gói không có mức giá nào"],
+    ["An Sinh", "gói sanh ngã âm đạo có siêu âm và điện tim thường quy; gói sanh mổ có siêu âm thai ba tháng cuối và siêu âm kiểm tra trước xuất viện"],
+    ["Bảo Sơn", "gói tiêu chuẩn ghi khám và siêu âm thai theo mốc; gói VVIP và Luxury ghi không giới hạn. Cả ba đều không kèm giá"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Cột bảo hiểm y tế cho thấy quỹ trả theo loại kỹ thuật, không theo loại máy", "Bốn dòng siêu âm của Bệnh viện Đa khoa Xuyên Á cơ sở Củ Chi nằm trong cùng một bảng giá, và bốn dòng đó tự giải thích cách quỹ bảo hiểm y tế chi trả. Siêu âm thai thường 180.000 đồng được trả 58.600 đồng. Siêu âm thai ba tháng đầu để đo độ mờ da gáy 300.000 đồng cũng được trả đúng 58.600 đồng. Siêu âm thai ba tháng giữa bằng Doppler màu 4D, giá 468.000 đồng, vẫn là 58.600 đồng. Ba dịch vụ khác nhau về máy và về kỹ thuật, nhưng mức quỹ trả không đổi. Chỉ dòng Doppler thai nhi được xếp vào một mã khác, với mức 89.300 đồng. Như vậy phần chênh mà sản phụ tự trả tăng theo cấu hình máy, còn phần quỹ trả thì đứng yên. Ở dòng 4D, phần tự trả là 409.400 đồng trên tổng 468.000 đồng."],
+  ["Mức 58.600 đồng và 89.300 đồng lặp lại y hệt ở hai bệnh viện khác nhau", "Hai con số này xuất hiện ở cả Cơ sở 2 Bệnh viện Đại học Y Dược TP.HCM lẫn Bệnh viện Đa khoa Xuyên Á, dù hai nơi ở hai tỉnh và ban hành bảng giá theo hai văn bản khác nhau. Điều đó cho thấy mức quỹ chi trả là mức chung theo danh mục kỹ thuật, không phải do từng bệnh viện tự đặt. Phần bệnh viện tự đặt là cột giá dịch vụ: cùng dòng siêu âm thai, Xuyên Á ghi 180.000 đồng còn Đại học Y Dược ghi 212.000 đồng."],
+  ["Siêu âm cơ bản chênh nhau ít, siêu âm chuyên sâu chênh nhiều", "Bốn mức siêu âm thai cơ bản nằm trong khoảng 150.000 đồng tới 212.000 đồng, tức chênh 1,41 lần, lệch nhau 62.000 đồng. Nhưng nếu tính cả các dòng chuyên sâu thì khoảng cách kéo từ 150.000 đồng lên 700.000 đồng, gấp 4,67 lần. Mức 700.000 đồng là siêu âm 4D hình thái thai nhi trong bảng giá bản 03/06/2022 của Bệnh viện Phụ sản MêKông, nên không dùng để so với các bảng giá năm 2025 và 2026 được."],
+  ["Doppler đắt gấp đôi siêu âm thường ở ba trong bốn nơi có cả hai dòng", "Bốn bệnh viện đăng cả dòng siêu âm thường lẫn dòng Doppler. Ở Đại học Y Dược Cơ sở 2 là 543.000 đồng so với 212.000 đồng, gấp 2,56 lần. Ở Nhân dân Gia Định là 300.000 đồng so với 150.000 đồng, đúng gấp đôi. Ở Xuyên Á Củ Chi là 360.000 đồng so với 180.000 đồng, cũng đúng gấp đôi. Riêng Phụ sản Hà Nội thì khoảng cách hẹp hơn hẳn: Doppler đơn thai 250.000 đồng so với siêu âm 2D 196.000 đồng, chỉ gấp 1,28 lần."],
+  ["Bốn bệnh viện gộp siêu âm vào gói, nên không có con số để so", "Vinmec, Hoàn Mỹ Sài Gòn, An Sinh và Bảo Sơn đều liệt kê siêu âm như một quyền lợi của gói thai sản. Không nơi nào trong bốn nơi đó tách giá từng lần siêu âm. Với người đang so gói giữa các bệnh viện thì đây là khoảng trống thật: không biết gói đã tính bao nhiêu lần siêu âm, và mỗi lần vượt ra ngoài thì tính bao nhiêu. Bảo Sơn là nơi duy nhất trong bốn nơi nói tới giới hạn số lần, khi ghi gói tiêu chuẩn là theo mốc còn gói VVIP và Luxury là không giới hạn, nhưng cũng không kèm giá cho cả hai cách."],
+  ["Ba câu nên hỏi ở quầy trước khi làm siêu âm", "Thứ nhất, dịch vụ sắp làm nằm ở dòng nào trong bảng giá, vì tên gọi ngoài phòng khám và tên trong bảng giá không phải lúc nào cũng trùng. Thứ hai, dòng đó có mức bảo hiểm y tế không, và phần chênh phải tự trả là bao nhiêu. Thứ ba, nếu đã mua gói thai sản thì lần siêu âm này nằm trong gói hay tính riêng, và gói còn lại bao nhiêu lần."]
+ ],
+ "khong_ro": ["Không bệnh viện nào trong 21 nơi công bố số lần siêu âm tối đa mà một thai kỳ được tính trong gói, trừ cách ghi định tính của Bảo Sơn.", "Bảng giá của Bệnh viện Phụ sản MêKông vẫn là bản 03/06/2022. Chúng tôi mở lại trang bảng giá và trang gói sinh ngày 17/09/2026, không thấy bản nào mới hơn và trang gói sinh không có con số tiền nào.", "Mười sáu bệnh viện còn lại trong bộ 21 nơi không đăng dòng nào cho siêu âm thai kèm giá.", "Các mức bảo hiểm y tế trong bảng chỉ là mức quỹ chi trả cho dịch vụ đó, chưa tính tỷ lệ hưởng theo thẻ và theo tuyến của từng người."],
+ "faq": [
+  ["Siêu âm thai có được bảo hiểm y tế chi trả không?", "Có, ở những bệnh viện đăng bảng giá kèm cột bảo hiểm y tế. Hai nơi trong bộ dữ liệu của chúng tôi làm vậy: Cơ sở 2 Bệnh viện Đại học Y Dược TP.HCM và Bệnh viện Đa khoa Xuyên Á. Mức quỹ trả cho siêu âm thai là 58.600 đồng, cho Doppler thai nhi là 89.300 đồng. Phần còn lại bạn tự trả, và phần đó lớn hơn phần quỹ trả từ 3,1 tới 8,0 lần tuỳ dịch vụ."],
+  ["Vì sao siêu âm 4D giá cao mà bảo hiểm vẫn trả bằng siêu âm thường?", "Vì mức chi trả gắn với mã kỹ thuật trong danh mục, không gắn với cấu hình máy. Bảng giá Xuyên Á cơ sở Củ Chi cho thấy rõ: dòng siêu âm thai 180.000 đồng và dòng siêu âm ba tháng giữa bằng Doppler màu 4D 468.000 đồng đều được ghi mức 58.600 đồng."],
+  ["Một lần siêu âm thai rẻ nhất trong dữ liệu là bao nhiêu?", "150.000 đồng một lần, tại Bệnh viện Nhân dân Gia Định, theo bảng giá dịch vụ theo yêu cầu 2025&ndash;2026 đăng trên website bệnh viện."],
+  ["Đã mua gói thai sản trọn gói thì có phải trả tiền siêu âm nữa không?", "Tuỳ bệnh viện, và bốn nơi gộp siêu âm vào gói đều không công bố giới hạn số lần bằng con số. Nên câu này phải hỏi thẳng bệnh viện trước khi đóng tiền gói, và hỏi luôn mức tính cho lần vượt ra ngoài."]
+ ],
+ "lien_quan": ["bhyt-tra-bao-nhieu-tu-tra-bao-nhieu", "gia-mot-ngay-nam-hoi-suc", "goi-sinh-tron-goi-khong-bao-gom-gi"],
+},
+{
+ "slug": "bao-hiem-suc-khoe-kem-thai-san",
+ "cum": "D",
+ "ngay_dang": "2026-09-17",
+ "tag": "Quyền lợi sức khoẻ",
+ "doc": "8 phút đọc",
+ "title": "Bảo hiểm sức khoẻ kèm thai sản 2026: những khoản gói sinh bệnh viện không bao gồm",
+ "h1": "Quyền lợi thai sản phải gánh những khoản nào",
+ "desc": "Gói sinh trọn gói của bệnh viện luôn để lại một danh sách khoản không bao gồm. Bài này gom tám nhóm khoản đó từ 12 bệnh viện, kèm mức tiền ở những nơi có công bố.",
+ "tom_tat": "Khi bệnh viện bán gói sinh trọn gói, phần đáng chú ý không nằm ở giá gói mà ở danh mục gói không bao gồm. Chúng tôi rà 12 bệnh viện có bán gói: <b>tám</b> nơi đăng danh mục này, <b>bốn</b> nơi không. Chồng tám danh mục lên nhau thì ra tám nhóm khoản, và nhóm bị loại trừ ở nhiều nơi nhất lại đúng là nhóm không đoán trước được. Một phần trong đó đã có mức tiền công bố, phần còn lại thì chưa bệnh viện nào cho con số.",
+ "bang": [
+  {
+   "ten": "Tám nhóm khoản nằm ngoài gói, xếp theo số bệnh viện nêu",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Chồng danh mục gói không bao gồm của tám bệnh viện: Hoàn Mỹ Sài Gòn, Bảo Sơn, Tâm Anh, An Sinh, Việt Pháp Hà Nội, Quốc tế Hạnh Phúc, Hồng Ngọc, Quốc tế City. Mỗi trang bệnh viện trên site này dẫn nguồn và ngày công bố riêng.",
+   "cot": ["Nhóm khoản", "Số bệnh viện nêu", "Nêu ở đâu"],
+   "hang": [
+    ["Biến chứng, tai biến, bệnh lý kèm theo của mẹ hoặc bé", "<b>4</b>", "Hoàn Mỹ Sài Gòn, An Sinh, Quốc tế City, Việt Pháp Hà Nội"],
+    ["Giảm đau khi sinh bằng gây tê ngoài màng cứng", "<b>4</b>", "Hoàn Mỹ Sài Gòn, Bảo Sơn, Quốc tế Hạnh Phúc, Tâm Anh"],
+    ["Nằm viện vượt số ngày trong gói", "3", "An Sinh, Quốc tế Hạnh Phúc, Việt Pháp Hà Nội"],
+    ["Chọn bác sĩ hoặc chọn giờ sinh", "3", "An Sinh, Bảo Sơn, Việt Pháp Hà Nội"],
+    ["Truyền máu, thuốc và vật tư theo chỉ định", "3", "Hoàn Mỹ Sài Gòn, Việt Pháp Hà Nội, Quốc tế Hạnh Phúc"],
+    ["Song thai, đa thai và ngôi bất thường", "2", "Hoàn Mỹ Sài Gòn, Quốc tế City"],
+    ["Sàng lọc sơ sinh và tầm soát thêm", "2", "Hồng Ngọc, Bảo Sơn"],
+    ["Chăm sóc đặc biệt cho trẻ sơ sinh", "1", "Hoàn Mỹ Sài Gòn, nơi duy nhất trong tám danh mục nêu thẳng khoản này"]
+   ]
+  },
+  {
+   "ten": "Bốn khoản ngoài gói đã có mức tiền công bố",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Tổng hợp từ các bài và trang bệnh viện trên site này, mỗi nơi dẫn nguồn và ngày công bố riêng. Dòng cuối là tiền phải có sẵn lúc nhập viện, không phải chi phí của ca sinh.",
+   "cot": ["Khoản", "Khoảng đã công bố", "Bao nhiêu nơi cho con số"],
+   "hang": [
+    ["Một ngày giường hồi sức", "558.600đ đến <b>36.000.000đ</b>", "sáu mức, từ bốn bệnh viện"],
+    ["Phí chọn bác sĩ đỡ sinh hoặc mổ lấy thai", "5.000.000đ đến <b>13.000.000đ</b>", "Phụ sản Hà Nội và Phụ sản Trung ương"],
+    ["Gây tê ngoài màng cứng để giảm đau khi sinh", "960.000đ đến 3.660.000đ", "bảy bệnh viện"],
+    ["Tạm ứng lúc nhập viện", "5.000.000đ đến 30.000.000đ", "ba bệnh viện"]
+   ]
+  },
+  {
+   "ten": "Bốn bệnh viện bán gói nhưng không đăng danh mục loại trừ",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Trích từ các trang bệnh viện trên site này, ghi theo đúng tình trạng chúng tôi đọc được trên website chính thức.",
+   "cot": ["Bệnh viện", "Tình trạng"],
+   "hang": [
+    ["Thu Cúc", "không đăng danh mục ở bất kỳ trang nào chúng tôi mở được"],
+    ["Phụ sản MêKông", "không có ở bất kỳ trang nào, nên không biết gói đã gồm phòng chưa và gồm mấy đêm"],
+    ["FV", "trang gói mô tả khá kỹ phần bao gồm nhưng không có danh mục loại trừ riêng"],
+    ["Vinmec", "không công bố giá gói nên cũng không có danh mục kèm theo"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Nhóm bị loại trừ nhiều nhất đúng là nhóm không đoán trước được", "Hai nhóm đứng đầu bảng đều được bốn bệnh viện nêu. Nhóm thứ hai, gây tê ngoài màng cứng, thì còn tính toán trước được vì bảy bệnh viện đã công bố giá. Nhóm thứ nhất thì không: biến chứng, tai biến và bệnh lý kèm theo của mẹ hoặc bé là thứ không ai biết trước có xảy ra hay không, xảy ra tới mức nào, và tốn bao nhiêu. Bệnh viện An Sinh là nơi liệt kê cụ thể nhất, ghi thẳng các ví dụ băng huyết, nhiễm trùng, khối máu tụ và dị ứng kháng sinh trong danh mục gói không bao gồm."],
+  ["Khoản có thể đắt nhất lại là khoản không nơi nào cho giá", "Chăm sóc đặc biệt cho trẻ sơ sinh chỉ có một bệnh viện nêu thẳng trong danh mục loại trừ, nhưng đó không có nghĩa là những nơi khác bao. Chúng tôi đã rà riêng khoản này: trong 21 bệnh viện, <b>không nơi nào công bố giá hồi sức cho trẻ sơ sinh</b>. Vinmec và Hoàn Mỹ Sài Gòn xác nhận khoản này nằm ngoài gói nhưng không cho biết ngoài gói thì bao nhiêu. Để có một mốc tham chiếu thì phải mượn giá hồi sức người lớn, và giá đó chạy từ 558.600 đồng tới 36 triệu đồng một ngày."],
+  ["Hai khoản định giá trước được, và nên hỏi bằng con số", "Gây tê ngoài màng cứng và phí chọn bác sĩ là hai khoản có bảng giá. Khoản thứ nhất chạy từ 960.000 đồng tới 3.660.000 đồng tuỳ bệnh viện. Khoản thứ hai nặng hơn nhiều: Bệnh viện Phụ sản Hà Nội có hẳn một cột riêng trong bảng giá, cộng từ 5 triệu tới 13 triệu đồng tuỳ ca; Bệnh viện Phụ sản Trung ương tách thành dòng dịch vụ riêng, từ 5 triệu tới 7 triệu đồng. Ngược lại, Từ Dũ và Hùng Vương công bố rõ là không thu thêm phí chọn bác sĩ khi đã đăng ký sinh dịch vụ."],
+  ["Bốn bệnh viện không đăng danh mục loại trừ, và đó là khoảng trống thật", "Với một gói không kèm danh mục loại trừ thì không có cách nào biết trước phần nào sẽ phát sinh. Trường hợp Phụ sản MêKông là rõ nhất: không có danh mục ở bất kỳ trang nào, nên ngay cả câu hỏi cơ bản là gói đã gồm tiền phòng chưa và gồm mấy đêm cũng chưa trả lời được."],
+  ["Thời gian chờ thai sản có trần, và trần đó là 270 ngày", "Thông tư 67/2023/TT-BTC, Điều 12 khoản 2 điểm d, đặt mức tối đa 270 ngày cho quyền lợi thai sản. Đây là trần chứ không phải con số bắt buộc, và hợp đồng có quyền để ngắn hơn. Mốc bắt đầu tính là từ ngày bắt đầu thời hạn bảo hiểm, hoặc ngày khôi phục hiệu lực hợp đồng gần nhất. Chúng tôi tách riêng phần này ở bài về thời gian chờ của từng loại quyền lợi."],
+  ["Ba câu nên hỏi trước khi chốt gói sinh", "Thứ nhất, xin bản danh mục gói không bao gồm bằng văn bản, vì bốn trong 12 bệnh viện không đăng danh mục này lên website. Thứ hai, hỏi cách tính phần vượt số ngày nằm viện: Quốc tế Hạnh Phúc công bố tính 25% đến 75% giá phòng mỗi đêm tuỳ khung giờ ra viện, còn An Sinh và Việt Pháp Hà Nội chỉ ghi là có tính mà không nêu cách tính. Thứ ba, hỏi thẳng mức tiền cho chăm sóc đặc biệt sơ sinh, vì đây là khoản chưa nơi nào công bố."]
+ ],
+ "khong_ro": ["Chín bệnh viện trong bộ 21 nơi không công bố giá hồi sức cho trẻ sơ sinh, kể cả những nơi có khoa hồi sức tích cực sơ sinh.", "Bốn trong 12 bệnh viện bán gói không đăng danh mục gói không bao gồm, nên tám nhóm khoản trong bảng đầu chỉ phản ánh tám nơi có đăng.", "Không bệnh viện nào công bố mức tiền trung bình thực tế cho nhóm biến chứng và tai biến.", "Các mức trong bảng thứ hai lấy từ nhiều bệnh viện và nhiều mốc thời gian khác nhau, nên là khoảng tham chiếu chứ không phải giá của một nơi cụ thể."],
+ "faq": [
+  ["Gói sinh trọn gói của bệnh viện đã bao gồm hết chưa?", "Chưa. Tám bệnh viện có đăng danh mục gói không bao gồm, và danh mục ngắn nhất cũng có 3 mục, dài nhất 7 mục. Nhóm bị loại trừ ở nhiều nơi nhất là biến chứng và tai biến của mẹ hoặc bé, với bốn bệnh viện nêu."],
+  ["Khoản nào ngoài gói tốn nhiều tiền nhất?", "Theo các mức đã công bố thì giường hồi sức, chạy từ 558.600 đồng tới 36 triệu đồng một ngày. Nhưng riêng hồi sức cho trẻ sơ sinh thì không bệnh viện nào trong 21 nơi công bố giá, nên khoản đó chưa định lượng được."],
+  ["Đẻ không đau có nằm trong gói không?", "Tuỳ bệnh viện, và đây là khoản bị loại trừ ở bốn nơi. FV và Việt Pháp Hà Nội ghi rõ đã bao gồm trong mọi gói. Bảo Sơn thì gói tiêu chuẩn chỉ bao với ca sinh mổ. An Sinh tách hẳn thành hai mức giá gói song song, một mức có giảm đau và một mức không."],
+  ["Thời gian chờ thai sản bao lâu?", "Thông tư 67/2023/TT-BTC Điều 12 khoản 2 điểm d đặt mức tối đa là 270 ngày. Từng hợp đồng có thể quy định ngắn hơn, nhưng không được dài hơn trần này. Nếu hợp đồng đã khôi phục hiệu lực thì mốc tính lại từ ngày khôi phục gần nhất."]
+ ],
+ "lien_quan": ["thoi-gian-cho-tung-loai-quyen-loi", "goi-sinh-tron-goi-khong-bao-gom-gi", "gia-mot-ngay-nam-hoi-suc", "de-khong-dau-trong-goi-hay-tinh-rieng"],
+},
+
 ]

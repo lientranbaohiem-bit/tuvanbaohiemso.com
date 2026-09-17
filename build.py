@@ -2495,7 +2495,7 @@ page("san-pham.html", f"Danh mục sản phẩm bảo hiểm | {BRAND}",
      "Danh mục sản phẩm AIA Việt Nam và các gói bảo hiểm thai sản rời — mô tả bản chất từng nhóm, kèm cả ưu và nhược điểm.",
      sp_body + khoi_bai_lien_quan("C", "Trước khi ký, nên đọc mấy bài này",
        "Kê khai sức khoẻ, điều khoản loại trừ, thời gian chờ và lý do hồ sơ bị từ chối. "
-       "Đây là phần quyết định hợp đồng của bạn có giá trị hay không.", P=""),
+       "Đây là phần quyết định hợp đồng của bạn có giá trị hay không.", P="", gioi_han=None),
      active="sp", P="", canon="san-pham.html", body_attr=' data-jn="Sản phẩm &amp; nhu cầu"',
      extra=schema_head(faq_schema(SP_FAQ),
                        breadcrumb_schema([("Trang chủ","index.html"),("Sản phẩm & nhu cầu",None)])))
@@ -2513,7 +2513,7 @@ page("thai-san.html", f"Bảo hiểm thai sản rời — thời gian chờ 270 
 page("suc-khoe.html", f"Bảo hiểm sức khoẻ & viện phí cho gia đình | {BRAND}",
      "Khoảng trống giữa bảo hiểm y tế và viện phí thật, ba lớp quyền lợi nên ưu tiên, và cách chọn hạn mức nội trú cho đúng.",
      sk_body + khoi_bai_lien_quan("D", "Đọc thêm về chi phí điều trị",
-       "Con số thật của từng nhóm bệnh, lấy từ bảng giá bệnh viện công bố.", P=""),
+       "Con số thật của từng nhóm bệnh, lấy từ bảng giá bệnh viện công bố.", P="", gioi_han=None),
      active="sp", P="", canon="suc-khoe.html", body_attr=' data-jn="Bảo vệ sức khoẻ"',
      extra=schema_head(faq_schema(SK_FAQ),
                        breadcrumb_schema([("Trang chủ","index.html"),("Sức khoẻ & viện phí",None)])))
@@ -2521,7 +2521,7 @@ page("suc-khoe.html", f"Bảo hiểm sức khoẻ & viện phí cho gia đình |
 page("bao-ve-thu-nhap.html", f"Bảo vệ thu nhập gia đình — bài toán cho người trụ cột | {BRAND}",
      "Nếu thu nhập của bạn dừng lại sáu tháng, ai trả khoản vay và tiền học của con? Cách tính số tiền bảo vệ cần có và so sánh thẳng thắn giữa tiết kiệm, đầu tư và bảo hiểm.",
      bv_body + khoi_bai_lien_quan("E", "Đọc thêm về bảo vệ thu nhập",
-       "Cách tính số tiền gia đình thực sự cần, và những tình huống làm thu nhập dừng lại.", P=""),
+       "Cách tính số tiền gia đình thực sự cần, và những tình huống làm thu nhập dừng lại.", P="", gioi_han=None),
      active="sp", P="", canon="bao-ve-thu-nhap.html", body_attr=' data-jn="Bảo vệ thu nhập"',
      extra=schema_head(faq_schema(BV_FAQ),
                        breadcrumb_schema([("Trang chủ","index.html"),("Bảo vệ thu nhập",None)])))
@@ -2731,6 +2731,22 @@ def benh_vien_body(bv, P="../"):
     o.append('<h2>Câu hỏi thường gặp về chi phí sinh ở %s</h2>' % bv["ten"])
     o.append(faq(bv["faq"]))
     o.append('</div></section>')
+
+    # bai kien thuc lien quan -- them 17/09/2026.
+    # Ly do: trang benh vien la noi Google ghe thuong xuyen nhat (chiem gan het
+    # luot hien thi), nhung truoc ngay nay chung khong tro sang bai kien thuc nao.
+    # Hau qua: 20 trang nam o "Discovered - currently not indexed", chua tung
+    # duoc thu thap. Khoi nay bu duong dan do.
+    o.append('<section class="section bg-soft"><div class="wrap">')
+    o.append('<h2>Các khoản nằm ngoài bảng giá</h2>')
+    o.append('<p class="lead">Bảng giá ở trên là phần bệnh viện công bố. Những bài dưới đây '
+             'là các khoản thường nằm ngoài bảng giá đó, dựng từ dữ liệu của 21 bệnh viện '
+             'và từ văn bản pháp luật, mỗi con số đều dẫn nguồn và ngày công bố.</p>')
+    o.append('<div class="entry-grid">')
+    for b in bai_theo_cum("A") + bai_theo_cum("D"):
+        o.append('<a class="entry" href="%s%s"><b>%s</b><span>%s</span></a>'
+                 % (P, bai_url(b["slug"]), b.get("h1") or b["title"], b.get("tag", "")))
+    o.append('</div></div></section>')
 
     # lien ket noi bo
     o.append('<section class="section"><div class="wrap">')

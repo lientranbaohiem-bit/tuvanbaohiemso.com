@@ -320,8 +320,8 @@ BV_DATA = [
  "nguon_ngay": "31/08/2026",
  "nguon_nhan": "Chúng tôi truy cập website Vinmec ngày 31/08/2026 và <b>không tìm thấy bất kỳ con số giá nào</b>. Bệnh viện chỉ ghi &ldquo;áp dụng bảng giá mới từ 14/10/2025&rdquo; mà không đăng bảng.",
  "nguon_url": "https://www.vinmec.com/vie/di-sinh-tai-vinmec-dich-vu-thai-san-toan-dien/",
- "title": "Chi phí sinh con ở Vinmec: vì sao không tìm được bảng giá, và những gì kiểm chứng được",
- "desc": "Vinmec không công bố giá gói thai sản trên website. Trang này tách rõ phần bệnh viện xác nhận chính thức và phần chỉ là ước tính từ bên thứ ba, thay vì đưa một bảng giá không rõ nguồn.",
+ "title": "Chi phí đẻ ở Vinmec: vì sao không tìm được bảng giá, và những gì kiểm chứng được",
+ "desc": "Vinmec không công bố giá đẻ trọn gói trên website. Trang này tách rõ phần bệnh viện xác nhận chính thức và phần chỉ là ước tính từ bên thứ ba, thay vì đưa một bảng giá không rõ nguồn.",
  "tom_tat": "Nếu bạn đã tìm mỏi mắt mà không thấy bảng giá thai sản Vinmec, thì không phải bạn tìm kém. <b>Vinmec không công bố giá công khai.</b> Trang &ldquo;Bảng giá dịch vụ thai sản trọn gói tại Vinmec&rdquo; trên website chính thức có tiêu đề nhưng không có con số nào. Mọi bảng giá Vinmec bạn thấy trên internet đều là do bên thứ ba tổng hợp &mdash; và chúng <b>mâu thuẫn nhau tới hai, ba lần</b>.",
  "canh_bao": "Chúng tôi quyết định không đăng một bảng giá Vinmec như thể đó là số chắc chắn. Thay vào đó, trang này tách làm hai phần rõ ràng: phần Vinmec xác nhận chính thức, và phần chỉ là tham khảo. Bạn tự quyết định tin đến đâu.",
 
@@ -403,8 +403,8 @@ BV_DATA = [
  "nguon_ngay": "21/05/2026",
  "nguon_nhan": "FV là một trong số rất ít bệnh viện tư đăng trọn bộ bảng giá gói sinh lên website, chia theo từng hạng phòng. Bản đọc được cập nhật gần nhất <b>ngày 21/05/2026</b>. Bản tiếng Việt của trang này hiện lỗi 404, chỉ còn đọc được bản tiếng Anh.",
  "nguon_url": "https://www.fvhospital.com/en/fv-thomson-maternity/delivery-packages/",
- "title": "Chi phí sinh con ở Bệnh viện FV: bảng giá 22 mức theo hạng phòng và phần bảo hiểm trả",
- "desc": "FV công bố đủ 22 mức giá gói sinh từ 45 đến 168 triệu theo gói và hạng phòng. Bài này có bảng giá đầy đủ, phần BHYT và bảo hiểm tư chi trả theo chính FV công bố, và những khoản bệnh viện không công bố.",
+ "title": "Bảng giá đẻ ở Bệnh viện FV 2026: 22 mức gói sinh theo hạng phòng và phần bảo hiểm trả",
+ "desc": "FV công bố đủ 22 mức giá đẻ trọn gói từ 45 đến 168 triệu theo gói và hạng phòng, bảng giá bản 21/05/2026. Bài này có bảng giá đầy đủ, phần BHYT và bảo hiểm tư chi trả theo chính FV công bố, và những khoản bệnh viện không công bố.",
  "tom_tat": "Gói sinh thấp nhất của FV là <b>45 triệu</b>, áp dụng cho sinh thường, phòng tiêu chuẩn, 3 đêm nằm viện. Sinh mổ thấp nhất 55 triệu, 4 đêm. Cao nhất là gói Bạch Kim phòng Premium Suite: <b>168 triệu</b> cho một ca sinh mổ. Khác với phần lớn bệnh viện tư, FV đăng công khai cả 22 mức giá theo từng gói và hạng phòng, đồng thời tự công bố phần bảo hiểm chi trả.",
 
  "bang": [
@@ -642,8 +642,8 @@ BV_DATA = [
  "nguon_ngay": "12/08/2025",
  "nguon_nhan": "Bảng giá gói sinh trên trang chính thức có lần cập nhật <b>12/08/2025</b>; các trang chi tiết từng gói sửa đổi 31/12/2025; gói khám thai cập nhật <b>05&ndash;07/01/2026</b>. Bệnh viện chưa công bố bảng giá đề năm 2026 cho gói sinh.",
  "nguon_url": "https://www.hanhphuchospital.com/goi-kham/goi-sinh/",
- "title": "Chi phí sinh con ở Bệnh viện Quốc tế Hạnh Phúc: giá gói, giá phòng và hạn mức thuốc trong gói",
- "desc": "Gói sinh Hạnh Phúc từ 29,9 triệu, phòng 2,8 đến 6,8 triệu mỗi đêm. Bài này có cả chi tiết ít nơi nhắc: hạn mức thuốc và vật tư trong gói chỉ 3 triệu với sinh thường, 7,5 triệu với sinh mổ.",
+ "title": "Chi phí đẻ ở Bệnh viện Quốc tế Hạnh Phúc: bảng giá gói sinh, giá phòng và hạn mức thuốc trong gói",
+ "desc": "Giá đẻ trọn gói ở Hạnh Phúc từ 29,9 triệu, phòng 2,8 đến 6,8 triệu mỗi đêm. Bài này có cả chi tiết ít nơi nhắc: hạn mức thuốc và vật tư trong gói chỉ 3 triệu với sinh thường, 7,5 triệu với sinh mổ.",
  "tom_tat": "Gói sinh thấp nhất ở Hạnh Phúc là <b>29.900.000đ</b> (An Nhiên, sinh thường, 3 ngày, phòng đơn), sinh mổ từ <b>39.900.000đ</b>, 4 ngày. Tờ thông tin của bệnh viện còn một con số ít được nhắc tới: gói chỉ bao thuốc, dịch truyền và vật tư trong 3 triệu với sinh thường và 7,5 triệu với sinh mổ. Phần vượt hạn mức do gia đình tự trả.",
 
  "bang": [
@@ -989,7 +989,7 @@ BV_DATA = [
  "nguon_url": "https://benhvienphusanmekong.com/tin-tuc/bang-gia-cap-nhat-ngay-03-06-2022/",
  "canh_bao": "Bảng giá chính thức duy nhất của MêKông là bản <b>03/06/2022</b>, đã bốn năm. Chúng tôi rà toàn bộ sơ đồ trang web của bệnh viện và không tìm thấy bản nào mới hơn. Bài này đăng đúng số bệnh viện công bố kèm ngày công bố, không tự cập nhật theo lạm phát và không lấy số của trang khác thay vào.",
  "title": "Chi phí sinh con ở Bệnh viện Phụ sản MêKông: giá bệnh viện công bố năm 2022 và ba nguồn trên mạng nói ba kiểu",
- "desc": "Giá sanh thường, sanh mổ và tiền phòng ở MêKông theo đúng bảng giá bệnh viện công bố, kèm ngày công bố. Và vì sao con số gói trọn gói bạn thấy trên mạng không có nguồn từ bệnh viện.",
+ "desc": "Giá sanh thường, sanh mổ và tiền phòng ở MêKông theo đúng bảng giá bệnh viện công bố, kèm ngày công bố. Và vì sao con số gói trọn gói lan truyền trên mạng không có nguồn từ bệnh viện.",
  "tom_tat": "Bảng giá MêKông công bố: sanh thường <b>7.500.000đ</b>, mổ lấy thai lần 1 <b>10.000.000đ</b>, gây tê ngoài màng cứng <b>2.400.000đ</b>. Nhưng đây là giá <i>thủ thuật</i>, chưa có tiền phòng &mdash; phòng đôi từ 1,6 triệu một đêm, phòng đơn từ 2,5 triệu, VIP từ 3,2 triệu. Và toàn bộ bảng giá này là bản năm 2022.",
 
  "bang": [
@@ -1412,8 +1412,8 @@ BV_DATA = [
  "nguon_nhan": "Bài <i>Bảng giá sinh khu thường và khu dịch vụ</i> trên website bệnh viện, <b>đăng 20/08/2026</b>, dạng bảng chữ đọc được. Bảng khám và siêu âm lấy từ bài <i>Bảng giá dịch vụ khám sản, phụ khoa cơ bản</i> đăng 22/05/2026.",
  "nguon_url": "https://benhvienphusanhanoi.vn/gia-mot-so-dich-vu-co-ban/bang-gia-sinh-khu-thuong-va-khu-dich-vu-42094.html",
  "canh_bao": "Bảng giá này <b>không kèm số quyết định và không ghi ngày ban hành</b>. Bệnh viện chỉ đăng ngày đăng bài. Vì vậy giá có thể thay đổi bất cứ lúc nào mà không có mốc để đối chiếu. Ngoài ra, có một tên miền giả mạo bệnh viện đang đăng bảng giá riêng &mdash; xem phần lưu ý bên dưới.",
- "title": "Chi phí sinh con ở Bệnh viện Phụ sản Hà Nội: khu thường và khu dịch vụ chênh nhau bao nhiêu",
- "desc": "Giá đỡ đẻ và mổ lấy thai ở cả hai khu, phí chọn bác sĩ, gây tê ngoài màng cứng 2.402.000đ, giá từng loại phòng và mức tạm ứng. Số lấy nguyên văn từ bảng giá bệnh viện công bố.",
+ "title": "Giá đẻ ở Bệnh viện Phụ sản Hà Nội 2026: bảng giá viện phí khu thường và khu dịch vụ",
+ "desc": "Giá đẻ thường và đẻ mổ ở cả khu thường lẫn khu dịch vụ, phí chọn bác sĩ, gây tê ngoài màng cứng 2.402.000đ, giá phòng dịch vụ và mức tạm ứng. Bảng giá bệnh viện đăng 20/08/2026. Số lấy nguyên văn từ bảng giá bệnh viện công bố.",
  "tom_tat": "Cùng một ca đỡ đẻ thường, khu thường thu <b>786.700đ</b>, khu dịch vụ thu <b>4.366.000đ</b>. Mổ lấy thai lần 1: khu thường <b>2.604.800đ</b>, khu dịch vụ <b>6.766.000đ</b>. Muốn chọn bác sĩ thì cộng thêm 5 đến 9 triệu với ca thường, và tới 13 triệu với ca phức tạp. Nhưng khoản làm vỡ ngân sách không nằm ở đó, mà ở tiền phòng: từ 280.000đ đến 5.000.000đ một ngày, chênh gần 18 lần.",
 
  "diem_nhan": {
