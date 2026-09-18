@@ -2343,4 +2343,204 @@ BAI_VIET = [
  "lien_quan": ["thoi-gian-cho-tung-loai-quyen-loi", "goi-sinh-tron-goi-khong-bao-gom-gi", "gia-mot-ngay-nam-hoi-suc", "de-khong-dau-trong-goi-hay-tinh-rieng"],
 },
 
+{
+ "slug": "benh-vien-cong-bo-gia-toi-dau",
+ "cum": "A",
+ "ngay_dang": "2026-09-18",
+ "tag": "Chuẩn bị sinh con",
+ "doc": "9 phút đọc",
+ "title": "Bệnh viện công bố giá sinh tới đâu: 131 khoảng trống trong 21 bệnh viện",
+ "h1": "Bệnh viện công bố giá tới đâu",
+ "desc": "Rà 21 bệnh viện và ghi lại từng con số không tìm được. Kết quả: 131 khoảng trống. Khoản bị bỏ trống ở nhiều nơi nhất không phải giá gói, mà là giá phòng và số đêm nằm viện.",
+ "tom_tat": "Mỗi trang bệnh viện trên site này đều có một mục ghi thẳng những con số chúng tôi không tìm được. Gom cả 21 trang lại thì có <b>131</b> khoảng trống. Bài này xếp chúng thành mười một nhóm để thấy bệnh viện Việt Nam thường giấu chỗ nào. Khoản bị bỏ trống ở nhiều nơi nhất là giá phòng theo hạng, 15 trên 21 bệnh viện. Ngay sau đó là số đêm nằm viện trong gói, 12 nơi. Hai khoản này cộng lại chính là phần tiền dễ phát sinh nhất của một ca sinh.",
+ "bang": [
+  {
+   "ten": "Mười một nhóm con số bị bỏ trống, xếp theo số bệnh viện",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Tổng hợp trường &ldquo;những con số bệnh viện không công bố&rdquo; của cả 21 trang bệnh viện trên site này, tính tới ngày 17/09/2026. Mỗi trang ghi rõ chúng tôi đã mở trang nào và ngày nào.",
+   "cot": ["Nhóm con số", "Số bệnh viện bỏ trống"],
+   "hang": [
+    ["Giá phòng hoặc ngày giường theo hạng", "<b>15</b> / 21"],
+    ["Số ngày hoặc số đêm nằm viện trong gói", "<b>12</b> / 21"],
+    ["Giá gây tê ngoài màng cứng", "10 / 21"],
+    ["Giá hồi sức, chăm sóc đặc biệt cho trẻ sơ sinh", "10 / 21"],
+    ["Giá dịch vụ lẻ khi không mua gói", "10 / 21"],
+    ["Danh sách công ty bảo lãnh viện phí", "7 / 21"],
+    ["Phần bảo hiểm y tế chi trả cho ca sinh", "6 / 21"],
+    ["Số quyết định hoặc ngày ban hành bảng giá", "6 / 21"],
+    ["Mức tạm ứng khi nhập viện", "5 / 21"],
+    ["Danh mục khoản gói không bao gồm", "4 / 21"],
+    ["Phí chọn bác sĩ hoặc chọn kíp", "4 / 21"]
+   ]
+  },
+  {
+   "ten": "Tám bảng giá có tồn tại mà vẫn không đọc được",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Trích nguyên trạng từ các trang bệnh viện trên site này. Đây là tình trạng chúng tôi gặp khi mở website chính thức, không phải đánh giá về bệnh viện.",
+   "cot": ["Bệnh viện", "Tình trạng chúng tôi gặp"],
+   "hang": [
+    ["Hùng Vương", "bảng giá viện phí phát hành qua file Google Sheets, file đang khoá quyền truy cập với người ngoài"],
+    ["Từ Dũ", "bảng giá theo loại phòng đăng dưới dạng file ảnh, không tra cứu được bằng máy"],
+    ["Đa khoa Tâm Anh", "file PDF bảng giá trên website trả về lỗi 404"],
+    ["An Sinh", "trang <i>Bảng giá dịch vụ</i> là trang trống"],
+    ["Đa khoa Xuyên Á", "bảng giá gói thai sản đăng bằng 12 tấm ảnh JPG tải lên tháng 07/2024, không có bản chữ"],
+    ["Đa khoa Hồng Ngọc", "trang bảo lãnh viện phí trả về lỗi 404"],
+    ["Phụ sản Trung ương", "trang <i>Bảng giá danh mục dịch vụ kỹ thuật y tế</i> chỉ có một dòng dẫn Thông tư liên tịch 37/2015, văn bản đã hết hiệu lực"],
+    ["Phụ sản &ndash; Nhi Đà Nẵng", "mức bảo hiểm y tế nằm trong Nghị quyết 96/2026/NQ-HĐND, đăng dưới dạng file bảng tính đính kèm mà chúng tôi chưa mở được"]
+   ]
+  },
+  {
+   "ten": "Sáu bệnh viện có bảng giá nhưng không ghi số quyết định hay ngày ban hành",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Trích từ các trang bệnh viện trên site này.",
+   "cot": ["Bệnh viện", "Bệnh viện ghi gì"],
+   "hang": [
+    ["Phụ sản Hà Nội", "không có ở bất kỳ trang giá nào, cũng không có file PDF, Excel hay quyết định đính kèm"],
+    ["Phụ sản Trung ương", "file danh mục giá dài 31 trang, có nhắc kit xét nghiệm SARS-CoV-2 nên chắc chắn sau năm 2020, nhưng không ghi ngày"],
+    ["An Sinh", "chỉ suy ra được từ ba mốc: tiêu đề ghi 2026, ảnh tải lên tháng 8/2025, trang sửa lần cuối 03/03/2026"],
+    ["Nhân dân Gia Định", "file bảng giá theo yêu cầu không in số quyết định; chỉ bảng giá giường có căn cứ rõ là Thông báo 586 ngày 23/02/2026"],
+    ["ĐH Y Dược TP.HCM", "bảng giá Cơ sở 2 có ghi ngày cập nhật nhưng không có số văn bản"],
+    ["Quốc tế Mỹ (AIH)", "không trang giá nào ghi"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Khoản bị giấu nhiều nhất không phải giá gói, mà là giá phòng", "Giá một gói sinh là con số dễ tìm nhất, vì đó là thứ bệnh viện dùng để bán. Nhưng 15 trong 21 bệnh viện không cho biết một đêm phòng giá bao nhiêu theo từng hạng. Ghép với khoản đứng thứ hai, 12 nơi không nói gói gồm mấy đêm, thì ra một tình huống khó chịu: biết giá gói, không biết gói hết hạn sau bao nhiêu đêm, cũng không biết đêm thứ n cộng thêm bao nhiêu. Bệnh viện Quốc tế City là ví dụ rõ nhất, vì nơi này tính tiền phòng riêng theo ngày mà lại không nêu số ngày đi kèm gói."],
+  ["Chuyện giá gói phải tách làm hai, đừng gộp", "Trong 21 nơi, sáu bệnh viện công không bán gói sinh trọn gói: Hùng Vương, Đại học Y Dược TP.HCM, Nhân dân Gia Định, Phụ sản Hà Nội, Phụ sản Trung ương và Phụ sản &ndash; Nhi Đà Nẵng. Họ bán dịch vụ lẻ cộng tiền giường, nên không có giá gói để mà giấu. Phần còn lại mới là chuyện đáng nói: có bệnh viện bán gói, mô tả quyền lợi rất kỹ, nhưng bỏ trống hoàn toàn phần giá. Bảo Sơn có mười gói không kèm giá nào; Hồng Ngọc có tám gói không kèm giá nào; Vinmec yêu cầu gọi tổng đài."],
+  ["Khoản đắt nhất cũng là khoản tối nhất", "Mười bệnh viện không công bố giá chăm sóc đặc biệt cho trẻ sơ sinh. Trong đó có cả những nơi xác nhận mình có khoa hồi sức tích cực sơ sinh. Đây là khoản có thể lớn hơn cả gói sinh, xuất hiện đúng lúc gia đình không còn ở thế mặc cả, và không nơi nào trong 21 bệnh viện cho một con số."],
+  ["Có bảng giá mà không đọc được cũng như không có", "Tám bệnh viện rơi vào tình trạng này theo tám kiểu khác nhau: file Google Sheets khoá quyền, file ảnh không tra cứu được, PDF lỗi 404, trang trống, 12 tấm JPG, và một trang bảng giá chỉ dẫn tới thông tư đã hết hiệu lực. Không nơi nào trong số đó nói rằng mình giấu giá. Về mặt hình thức thì họ đã công bố."],
+  ["Sáu bảng giá không có ngày, nên không biết còn đúng không", "Từ 01/01/2025, theo Thông tư 21/2024/TT-BYT, bệnh viện tự định giá dịch vụ theo yêu cầu. Một bảng giá không ghi số quyết định và ngày ban hành thì người đọc không có cách nào biết nó thuộc đợt điều chỉnh nào. Bệnh viện Phụ sản Hà Nội là trường hợp rõ nhất: bảng giá đăng ngày 20/08/2026, nội dung chi tiết, nhưng không dẫn văn bản nào."],
+  ["Bốn câu nên hỏi bằng văn bản trước khi đóng tiền", "Thứ nhất, gói gồm mấy đêm, và đêm thứ n trở đi tính bao nhiêu một đêm. Thứ hai, xin danh mục gói không bao gồm bằng văn bản. Thứ ba, nếu bé phải nằm chăm sóc đặc biệt thì tính theo đơn giá nào. Thứ tư, bảng giá đang áp dụng ban hành theo văn bản số mấy, ngày nào. Bốn câu này nhắm đúng bốn nhóm bị bỏ trống nhiều nhất, và câu trả lời bằng miệng ở quầy thì không đối chiếu lại được."]
+ ],
+ "khong_ro": ["Con số 131 là số mục chúng tôi ghi nhận được, không phải toàn bộ những gì bệnh viện không công bố. Có thể còn trang giá mà chúng tôi chưa mở tới.", "Bài này không xếp hạng bệnh viện. Một nơi có nhiều mục bỏ trống có thể chỉ vì chúng tôi rà kỹ hơn, hoặc vì nơi đó bán nhiều loại dịch vụ hơn.", "Tình trạng trang web thay đổi theo thời gian. Các mục trong bài đều gắn với ngày chúng tôi mở trang, ghi trên từng trang bệnh viện.", "Chúng tôi không suy số của bệnh viện này sang bệnh viện khác để lấp chỗ trống, kể cả khi hai nơi cùng hệ thống."],
+ "faq": [
+  ["Vì sao khó tìm giá sinh con ở bệnh viện đến vậy?", "Vì phần lớn khoảng trống không nằm ở giá gói mà nằm ở các khoản đi kèm. Trong 21 bệnh viện chúng tôi rà, 15 nơi không công bố giá phòng theo hạng và 12 nơi không nói gói gồm mấy đêm. Biết giá gói mà không biết hai khoản đó thì vẫn không tính được tổng."],
+  ["Bệnh viện có bắt buộc phải công khai giá không?", "Từ 01/01/2025, Thông tư 21/2024/TT-BYT cho phép bệnh viện tự định giá dịch vụ theo yêu cầu. Việc công bố ra sao thì mỗi nơi làm một kiểu, và thực tế chúng tôi gặp là tám bệnh viện có bảng giá ở dạng không đọc được: file khoá quyền, file ảnh, PDF lỗi, hoặc trang trống."],
+  ["Khoản nào nên hỏi kỹ nhất trước khi sinh?", "Chăm sóc đặc biệt cho trẻ sơ sinh. Mười bệnh viện ghi thẳng đây là khoản họ không công bố giá, và không nơi nào trong 21 bệnh viện đưa ra một đơn giá theo ngày cho khoản này."],
+  ["Bảng giá không ghi ngày thì có dùng được không?", "Dùng được để tham khảo, nhưng phải hỏi lại. Sáu bệnh viện trong danh sách có bảng giá không kèm số quyết định hay ngày ban hành, nên không biết bản đang đọc có phải bản mới nhất hay không."]
+ ],
+ "lien_quan": ["goi-sinh-tron-goi-khong-bao-gom-gi", "goi-sinh-duoc-nam-may-dem", "tam-ung-khi-nhap-vien-sinh", "gia-mot-ngay-nam-hoi-suc"],
+},
+{
+ "slug": "muc-huong-bhyt-bao-nhieu-phan-tram",
+ "cum": "D",
+ "ngay_dang": "2026-09-18",
+ "tag": "Bảo hiểm y tế",
+ "doc": "8 phút đọc",
+ "title": "Mức hưởng bảo hiểm y tế 2026: 100%, 95% hay 80%, và ai được mức nào",
+ "h1": "Bảo hiểm y tế trả bao nhiêu phần trăm",
+ "desc": "Điều 22 Luật Bảo hiểm y tế, bản sửa bởi Luật 51/2024/QH15 hiệu lực 01/07/2025, đặt ba mức hưởng 100%, 95% và 80%. Trích nguyên văn sáu điểm của khoản 1, kèm ba tình huống được 100% không phụ thuộc nhóm đối tượng.",
+ "tom_tat": "Mức hưởng bảo hiểm y tế nằm ở Điều 22 Luật Bảo hiểm y tế, đã được sửa bởi <b>Luật số 51/2024/QH15</b> mà Quốc hội thông qua ngày 27/11/2024, hiệu lực từ <b>01/07/2025</b>. Khoản 1 của điều này có sáu điểm, chia thành ba mức: 100%, 95% và 80%. Nhưng mức hưởng còn phụ thuộc vào tình huống khám, chứ không riêng nhóm đối tượng. Có ba tình huống được 100% bất kể người đó thuộc nhóm nào, và cả ba đều nằm ngay trong luật.",
+ "bang": [
+  {
+   "ten": "Sáu điểm của khoản 1 Điều 22, trích nguyên văn",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật số 51/2024/QH15 sửa đổi, bổ sung một số điều của Luật Bảo hiểm y tế, Điều 22 khoản 1. Trích nguyên văn từ bản đăng trên Cổng Xây dựng chính sách, Chính phủ.",
+   "cot": ["Điểm", "Mức", "Nguyên văn phần xác định đối tượng hoặc tình huống"],
+   "hang": [
+    ["a", "<b>100%</b>", "đối với đối tượng quy định tại các điểm a, b, c, d, đ, e, h, i, o, r và s khoản 3 Điều 12 của Luật này"],
+    ["b", "<b>100%</b>", "đối với trường hợp chi phí cho một lần khám bệnh, chữa bệnh thấp hơn mức do Chính phủ quy định"],
+    ["c", "<b>100%</b>", "tại cơ sở khám bệnh, chữa bệnh thuộc cấp khám bệnh, chữa bệnh ban đầu&hellip; 100% chi phí khám bệnh, chữa bệnh ngoại trú tại phòng khám đa khoa khu vực"],
+    ["d", "<b>100%</b>", "khi người bệnh có thời gian tham gia bảo hiểm y tế 5 năm liên tục trở lên và có số tiền cùng chi trả&hellip; trong năm&hellip; lớn hơn 6 lần mức tham chiếu"],
+    ["đ", "<b>95%</b>", "đối với các đối tượng quy định tại điểm a khoản 2, điểm k khoản 3, điểm a và điểm g khoản 4 Điều 12 của Luật này"],
+    ["e", "<b>80%</b>", "đối với đối tượng khác"]
+   ]
+  },
+  {
+   "ten": "Ba tình huống được 100% không phụ thuộc nhóm đối tượng",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật số 51/2024/QH15, Điều 22 khoản 1 điểm b, điểm c và khoản 5. Trích nguyên văn.",
+   "cot": ["Tình huống", "Nằm ở đâu", "Nguyên văn"],
+   "hang": [
+    ["Cấp cứu, ở bất kỳ cơ sở nào", "khoản 5", "được hưởng 100% mức hưởng quy định tại khoản 1 Điều này khi khám bệnh, chữa bệnh tại bất kỳ cơ sở khám bệnh, chữa bệnh nào trong trường hợp cấp cứu"],
+    ["Khám ở cấp ban đầu", "khoản 1 điểm c", "trạm y tế; cơ sở khám bệnh, chữa bệnh y học gia đình; trạm y tế quân - dân y, phòng khám quân - dân y; trung tâm y tế cấp huyện có hoạt động khám bệnh, chữa bệnh được cấp giấy phép hoạt động theo hình thức tổ chức là phòng khám"],
+    ["Một lần khám có chi phí rất nhỏ", "khoản 1 điểm b", "trường hợp chi phí cho một lần khám bệnh, chữa bệnh thấp hơn mức do Chính phủ quy định"]
+   ]
+  },
+  {
+   "ten": "Hai quy tắc dễ bỏ sót trong cùng điều luật",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật số 51/2024/QH15, Điều 22 khoản 2 và khoản 6. Trích nguyên văn.",
+   "cot": ["Khoản", "Nguyên văn"],
+   "hang": [
+    ["2", "Người thuộc nhiều đối tượng tham gia bảo hiểm y tế thì được hưởng quyền lợi bảo hiểm y tế theo đối tượng có quyền lợi cao nhất."],
+    ["6", "Chính phủ&hellip; quy định mức hưởng đối với trường hợp người tham gia bảo hiểm y tế sử dụng dịch vụ khám bệnh, chữa bệnh theo yêu cầu và các trường hợp khác không thuộc quy định tại khoản 1 Điều này."]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Ba con số, nhưng tính trên khung giá bảo hiểm y tế chứ không phải hoá đơn", "Đây là chỗ hay hiểu nhầm nhất. Tỷ lệ 100%, 95% hay 80% tính trên phần chi phí nằm trong phạm vi được hưởng, theo khung giá của bảo hiểm y tế. Bệnh viện thì thu theo giá của bệnh viện. Hai khung đó lệch nhau rất nhiều: ở hai bệnh viện đăng bảng giá có đủ cả hai cột, khoảng cách chạy từ 1 lần tới 43,9 lần tuỳ dịch vụ. Nghĩa là được hưởng 80% không có nghĩa là chỉ phải trả 20% hoá đơn."],
+  ["Khoản 6 nói thẳng: dịch vụ theo yêu cầu là chuyện khác", "Điều 22 khoản 6 giao Chính phủ quy định riêng mức hưởng cho trường hợp dùng dịch vụ khám chữa bệnh theo yêu cầu. Đây chính là phần chênh giữa giường thường và phòng dịch vụ, giữa ca đỡ đẻ thường và ca có chọn bác sĩ. Ba tỷ lệ ở khoản 1 không áp thẳng cho phần đó."],
+  ["Điểm d là quyền lợi ít người biết nhất", "Người tham gia bảo hiểm y tế <b>5 năm liên tục trở lên</b>, mà số tiền cùng chi trả trong năm đã vượt <b>6 lần mức tham chiếu</b>, thì được hưởng 100%. Luật diễn đạt bằng bội số của mức tham chiếu chứ không bằng một số tiền cố định, nên con số cụ thể thay đổi theo quy định của Chính phủ. Muốn dùng quyền lợi này thì phải giữ lại chứng từ cùng chi trả của cả năm."],
+  ["Cấp cứu là ngoại lệ mạnh nhất", "Khoản 5 viết rất gọn: cấp cứu thì được 100% mức hưởng, ở bất kỳ cơ sở khám chữa bệnh nào. Không phân biệt nơi đăng ký ban đầu, không phân biệt cấp chuyên môn. Đây là khoản đáng nhớ nhất trong cả điều luật, vì nó áp đúng vào lúc người bệnh không kịp chọn nơi đến."],
+  ["Thuộc nhiều nhóm thì lấy nhóm cao nhất", "Khoản 2 giải quyết trường hợp một người vừa thuộc nhóm này vừa thuộc nhóm kia, chẳng hạn vừa là người lao động vừa thuộc hộ cận nghèo. Luật ghi rõ là hưởng theo đối tượng có quyền lợi cao nhất, không phải theo nhóm đăng ký gần nhất."],
+  ["Ba việc nên làm", "Thứ nhất, tra xem thẻ của mình thuộc điểm nào trong khoản 3 Điều 12, vì đó mới là thứ quyết định mức 100%, 95% hay 80%. Thứ hai, đếm lại thời gian tham gia liên tục; nếu đã qua 5 năm thì giữ chứng từ cùng chi trả. Thứ ba, khi nhận bảng kê viện phí, hỏi rõ phần nào là dịch vụ theo yêu cầu, vì phần đó không nằm trong ba tỷ lệ ở trên."]
+ ],
+ "khong_ro": ["Mức tham chiếu và mức chi phí một lần khám tối thiểu ở điểm b do Chính phủ quy định, không nằm trong luật. Chúng tôi không đăng con số cụ thể vì chưa đối chiếu được văn bản hiện hành.", "Danh sách các điểm của khoản 3 Điều 12 nằm ở điều khác và không được chép lại trong bài này.", "Lộ trình tăng mức hưởng và phạm vi hưởng đang có dự thảo nghị định. Bài này chỉ phản ánh phần đã thành luật.", "Bài này nói về mức hưởng khi đi đúng nơi đăng ký. Trường hợp tự đi khám không đúng nơi đăng ký có quy định riêng ở khoản 4 cùng điều."],
+ "faq": [
+  ["Bảo hiểm y tế trả 80% hay 100%?", "Tuỳ nhóm đối tượng. Điều 22 khoản 1 chia ba mức: 100% cho các nhóm liệt kê ở điểm a, 95% cho các nhóm ở điểm đ, và 80% cho đối tượng khác. Ngoài ra còn ba tình huống được 100% không phụ thuộc nhóm: cấp cứu, khám ở cấp ban đầu, và lần khám có chi phí thấp hơn mức Chính phủ quy định."],
+  ["Được hưởng 80% thì có phải chỉ trả 20% hoá đơn không?", "Không. Tỷ lệ đó tính trên phần chi phí trong phạm vi được hưởng theo khung giá bảo hiểm y tế, không phải trên hoá đơn bệnh viện. Phần dịch vụ theo yêu cầu và phần ngoài phạm vi hưởng nằm ngoài cách tính này."],
+  ["Đóng bảo hiểm y tế 5 năm liên tục thì được gì?", "Điều 22 khoản 1 điểm d cho hưởng 100% nếu đã tham gia 5 năm liên tục trở lên và số tiền cùng chi trả trong năm lớn hơn 6 lần mức tham chiếu. Luật viết bằng bội số của mức tham chiếu, không bằng số tiền cố định."],
+  ["Đi cấp cứu ở bệnh viện khác nơi đăng ký thì có được hưởng không?", "Có. Điều 22 khoản 5 ghi người tham gia được hưởng 100% mức hưởng khi khám chữa bệnh tại bất kỳ cơ sở nào trong trường hợp cấp cứu."],
+  ["Quy định này áp dụng từ khi nào?", "Luật số 51/2024/QH15 được Quốc hội thông qua ngày 27/11/2024 và có hiệu lực thi hành từ ngày 01/07/2025. Một số quy định về cấp chuyên môn kỹ thuật và chuyển người bệnh có hiệu lực sớm hơn, từ 01/01/2025."]
+ ],
+ "lien_quan": ["bhyt-khong-chi-tra-nhung-gi", "bhyt-tra-bao-nhieu-tu-tra-bao-nhieu", "gia-mot-lan-sieu-am-thai"],
+},
+{
+ "slug": "kham-khong-dung-noi-dang-ky-bhyt",
+ "cum": "D",
+ "ngay_dang": "2026-09-18",
+ "tag": "Bảo hiểm y tế",
+ "doc": "8 phút đọc",
+ "title": "Khám không đúng nơi đăng ký 2026: tám mức hưởng trong khoản 4 Điều 22",
+ "h1": "Đi khám không đúng nơi đăng ký thì được trả bao nhiêu",
+ "desc": "Khoản 4 Điều 22 Luật Bảo hiểm y tế, bản sửa bởi Luật 51/2024/QH15, chia tám trường hợp với mức hưởng từ 40% tới 100%. Trích nguyên văn cả tám điểm.",
+ "tom_tat": "Chữ &ldquo;trái tuyến&rdquo; không còn là một tỷ lệ duy nhất. <b>Luật số 51/2024/QH15</b>, hiệu lực từ 01/07/2025, viết lại khoản 4 Điều 22 thành <b>tám</b> trường hợp riêng, mức hưởng chạy từ <b>40%</b> tới <b>100%</b>. Điều đáng chú ý là phần lớn các điểm đều cho 100%. Mức thấp nhất, 40%, chỉ rơi vào đúng một tình huống: nằm viện tại cơ sở cấp chuyên sâu mà không thuộc các ngoại lệ.",
+ "bang": [
+  {
+   "ten": "Tám điểm của khoản 4 Điều 22, trích nguyên văn",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật số 51/2024/QH15 sửa đổi, bổ sung một số điều của Luật Bảo hiểm y tế, Điều 22 khoản 4. Trích nguyên văn từ bản đăng trên Cổng Xây dựng chính sách, Chính phủ. Tỷ lệ ở đây là phần trăm của mức hưởng tại khoản 1, không phải phần trăm hoá đơn.",
+   "cot": ["Điểm", "Mức hưởng", "Trường hợp, nguyên văn rút gọn"],
+   "hang": [
+    ["a", "<b>100%</b>", "tại cơ sở cấp cơ bản hoặc cấp chuyên sâu trong trường hợp chẩn đoán xác định, điều trị một số bệnh hiếm, bệnh hiểm nghèo, bệnh cần phẫu thuật hoặc sử dụng kỹ thuật cao do Bộ trưởng Bộ Y tế quy định"],
+    ["b", "<b>100%</b>", "người dân tộc thiểu số và người thuộc hộ nghèo đang sinh sống tại vùng có điều kiện kinh tế - xã hội khó khăn&hellip; khi khám bệnh, chữa bệnh nội trú tại cơ sở cấp chuyên sâu"],
+    ["c", "<b>100%</b>", "khi khám bệnh, chữa bệnh tại cơ sở khám bệnh, chữa bệnh cấp ban đầu"],
+    ["d", "<b>100%</b>", "khi khám bệnh, chữa bệnh nội trú tại cơ sở khám bệnh, chữa bệnh cấp cơ bản"],
+    ["đ", "<b>100%</b>", "tại cơ sở cấp cơ bản, cấp chuyên sâu mà trước ngày 01 tháng 01 năm 2025 đã được cơ quan có thẩm quyền xác định là tuyến huyện"],
+    ["e", "50% đến 100%", "khi khám bệnh, chữa bệnh ngoại trú tại cơ sở cấp cơ bản, căn cứ kết quả xếp cấp chuyên môn kỹ thuật theo lộ trình và tỷ lệ mức hưởng cụ thể do Chính phủ quy định"],
+    ["g", "<b>40%</b>", "khi khám bệnh, chữa bệnh nội trú tại cơ sở khám bệnh, chữa bệnh cấp chuyên sâu, trừ trường hợp quy định tại các điểm a, b, đ và h khoản này"],
+    ["h", "50% ngoại trú, 100% nội trú", "tại cơ sở cấp chuyên sâu mà trước ngày 01 tháng 01 năm 2025 đã được cơ quan có thẩm quyền xác định là tuyến tỉnh; phần ngoại trú theo lộ trình do Chính phủ quy định"]
+   ]
+  },
+  {
+   "ten": "Hai trường hợp nằm ngoài khoản 4",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật số 51/2024/QH15, Điều 22 khoản 3 và khoản 5. Trích nguyên văn rút gọn.",
+   "cot": ["Trường hợp", "Khoản", "Luật ghi gì"],
+   "hang": [
+    ["Cấp cứu", "5", "được hưởng 100% mức hưởng quy định tại khoản 1 khi khám chữa bệnh tại <b>bất kỳ</b> cơ sở nào"],
+    ["Đổi nơi tạm trú hoặc nơi lưu trú", "3", "được khám chữa bệnh tại cơ sở cấp cơ bản phù hợp với nơi tạm trú, lưu trú mới và được thanh toán <b>theo khoản 1</b>, tức như đi đúng nơi đăng ký"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Năm trong tám điểm cho 100%", "Đọc hết khoản 4 thì thấy cấu trúc ngược với cách nhiều người hình dung về trái tuyến. Các điểm a, b, c, d và đ đều cho 100% mức hưởng. Điểm h cho 100% với phần nội trú. Chỉ điểm g dừng ở 40%, và điểm e để ngỏ trong khoảng 50% đến 100%. Nói cách khác, mức thấp chỉ rơi vào một tình huống hẹp chứ không phải mặc định."],
+  ["Con số 40% áp vào đâu", "Điểm g: nằm viện tại cơ sở cấp chuyên sâu, và không thuộc các ngoại lệ ở điểm a, b, đ, h. Chính điều luật viết rõ phần loại trừ đó trong cùng câu. Nghĩa là trước khi kết luận mình chỉ được 40%, phải kiểm bốn điểm kia đã, nhất là điểm đ và điểm h, hai điểm gắn với việc cơ sở đó trước 01/01/2025 từng là tuyến huyện hay tuyến tỉnh."],
+  ["Hai mốc cũ vẫn còn sống trong luật mới", "Điểm đ và điểm h đều neo vào cách xếp tuyến <b>trước ngày 01/01/2025</b>. Luật đã chuyển sang cách gọi cấp ban đầu, cấp cơ bản và cấp chuyên sâu, nhưng vẫn giữ lại tuyến huyện và tuyến tỉnh cũ để xác định quyền lợi. Vì vậy câu hỏi đáng hỏi ở quầy tiếp nhận là: cơ sở này thuộc cấp nào, và trước 01/01/2025 nó là tuyến gì."],
+  ["Điểm e là phần chưa chốt", "Ngoại trú tại cơ sở cấp cơ bản được hưởng từ 50% đến 100%, và luật giao Chính phủ quy định lộ trình cùng tỷ lệ cụ thể. Đây là điểm duy nhất trong khoản 4 chưa có một con số cố định, nên khi tra quyền lợi cho tình huống này thì phải tìm văn bản của Chính phủ chứ không dừng ở luật."],
+  ["Đổi chỗ ở không bị coi là đi sai nơi đăng ký", "Khoản 3 tách riêng trường hợp thay đổi nơi tạm trú hoặc nơi lưu trú: người bệnh được khám tại cơ sở cấp cơ bản phù hợp với nơi ở mới và vẫn được thanh toán theo khoản 1. Đây là khoản đáng nhớ với người đi làm xa hoặc mới chuyển nhà, vì nó đưa tình huống đó ra khỏi cách tính của khoản 4."],
+  ["Bệnh viện có thể công bố cách tính riêng của họ, và có thể khác", "Bảng của một bệnh viện tư có hợp đồng bảo hiểm y tế mà chúng tôi đã đăng lại nêu ba mức nội trú là 60%, 57% và 48%, và ghi ngoại trú thì không áp dụng. Đó là chính sách nơi đó công bố cho chính họ, không phải quy định chung, và cách trình bày khác hẳn cấu trúc tám điểm ở trên. Gặp chênh lệch kiểu này thì hỏi thẳng bộ phận bảo hiểm y tế của bệnh viện xem họ đang áp theo điểm nào."]
+ ],
+ "khong_ro": ["Tỷ lệ cụ thể cho ngoại trú tại cơ sở cấp cơ bản ở điểm e do Chính phủ quy định theo lộ trình, chưa có trong luật.", "Danh mục bệnh hiếm, bệnh hiểm nghèo, bệnh cần phẫu thuật hoặc kỹ thuật cao ở điểm a do Bộ trưởng Bộ Y tế quy định bằng văn bản riêng, không nằm trong điều luật này.", "Việc một cơ sở cụ thể thuộc cấp nào, và trước 01/01/2025 từng là tuyến gì, phải tra theo quyết định xếp cấp của cơ quan có thẩm quyền.", "Bài này chỉ trích Điều 22. Điều 26 và Điều 27 quy định về đăng ký ban đầu và chuyển người bệnh, là hai điều được dẫn chiếu nhưng không chép lại ở đây."],
+ "faq": [
+  ["Khám trái tuyến được hưởng bao nhiêu phần trăm?", "Không còn một con số duy nhất. Khoản 4 Điều 22 chia tám trường hợp: năm điểm cho 100%, một điểm cho 50% đến 100%, một điểm cho 40%, và một điểm cho 50% ngoại trú kèm 100% nội trú. Phải xác định cơ sở thuộc cấp nào và thuộc điểm nào rồi mới biết mức."],
+  ["Khi nào chỉ được 40%?", "Điểm g: khi nằm viện tại cơ sở cấp chuyên sâu và không thuộc các trường hợp ở điểm a, b, đ và h của cùng khoản. Chính điều luật ghi rõ phần trừ này."],
+  ["Khám ngoại trú không đúng nơi đăng ký có được trả không?", "Có, tuỳ cấp cơ sở. Ở cấp ban đầu là 100% theo điểm c. Ở cấp cơ bản là từ 50% đến 100% theo điểm e, với tỷ lệ cụ thể do Chính phủ quy định. Ở cấp chuyên sâu từng là tuyến tỉnh trước 01/01/2025 thì là 50% theo lộ trình, theo điểm h."],
+  ["Chuyển chỗ ở tới nơi khác thì phải làm gì?", "Khoản 3 cho phép khám tại cơ sở cấp cơ bản phù hợp với nơi tạm trú hoặc lưu trú mới, và vẫn được thanh toán theo khoản 1 như đi đúng nơi đăng ký. Thủ tục do Bộ trưởng Bộ Y tế quy định."],
+  ["40% là 40% của hoá đơn à?", "Không. Luật ghi là thanh toán theo tỷ lệ phần trăm của <i>mức hưởng quy định tại khoản 1</i>. Mức hưởng đó lại tính trên phần chi phí trong phạm vi được hưởng theo khung giá bảo hiểm y tế, không phải trên hoá đơn bệnh viện."]
+ ],
+ "lien_quan": ["muc-huong-bhyt-bao-nhieu-phan-tram", "bhyt-tra-bao-nhieu-tu-tra-bao-nhieu", "bhyt-khong-chi-tra-nhung-gi"],
+},
+
 ]
