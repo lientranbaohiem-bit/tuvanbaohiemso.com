@@ -2344,84 +2344,6 @@ BAI_VIET = [
 },
 
 {
- "slug": "benh-vien-cong-bo-gia-toi-dau",
- "cum": "A",
- "ngay_dang": "2026-09-18",
- "tag": "Chuẩn bị sinh con",
- "doc": "9 phút đọc",
- "title": "Bệnh viện công bố giá sinh tới đâu: 131 khoảng trống trong 21 bệnh viện",
- "h1": "Bệnh viện công bố giá tới đâu",
- "desc": "Rà 21 bệnh viện và ghi lại từng con số không tìm được. Kết quả: 131 khoảng trống. Khoản bị bỏ trống ở nhiều nơi nhất không phải giá gói, mà là giá phòng và số đêm nằm viện.",
- "tom_tat": "Mỗi trang bệnh viện trên site này đều có một mục ghi thẳng những con số chúng tôi không tìm được. Gom cả 21 trang lại thì có <b>131</b> khoảng trống. Bài này xếp chúng thành mười một nhóm để thấy bệnh viện Việt Nam thường giấu chỗ nào. Khoản bị bỏ trống ở nhiều nơi nhất là giá phòng theo hạng, 15 trên 21 bệnh viện. Ngay sau đó là số đêm nằm viện trong gói, 12 nơi. Hai khoản này cộng lại chính là phần tiền dễ phát sinh nhất của một ca sinh.",
- "bang": [
-  {
-   "ten": "Mười một nhóm con số bị bỏ trống, xếp theo số bệnh viện",
-   "kiem_chung": "chinh-thuc",
-   "nguon": "Tổng hợp trường &ldquo;những con số bệnh viện không công bố&rdquo; của cả 21 trang bệnh viện trên site này, tính tới ngày 17/09/2026. Mỗi trang ghi rõ chúng tôi đã mở trang nào và ngày nào.",
-   "cot": ["Nhóm con số", "Số bệnh viện bỏ trống"],
-   "hang": [
-    ["Giá phòng hoặc ngày giường theo hạng", "<b>15</b> / 21"],
-    ["Số ngày hoặc số đêm nằm viện trong gói", "<b>12</b> / 21"],
-    ["Giá gây tê ngoài màng cứng", "10 / 21"],
-    ["Giá hồi sức, chăm sóc đặc biệt cho trẻ sơ sinh", "10 / 21"],
-    ["Giá dịch vụ lẻ khi không mua gói", "10 / 21"],
-    ["Danh sách công ty bảo lãnh viện phí", "7 / 21"],
-    ["Phần bảo hiểm y tế chi trả cho ca sinh", "6 / 21"],
-    ["Số quyết định hoặc ngày ban hành bảng giá", "6 / 21"],
-    ["Mức tạm ứng khi nhập viện", "5 / 21"],
-    ["Danh mục khoản gói không bao gồm", "4 / 21"],
-    ["Phí chọn bác sĩ hoặc chọn kíp", "4 / 21"]
-   ]
-  },
-  {
-   "ten": "Tám bảng giá có tồn tại mà vẫn không đọc được",
-   "kiem_chung": "chinh-thuc",
-   "nguon": "Trích nguyên trạng từ các trang bệnh viện trên site này. Đây là tình trạng chúng tôi gặp khi mở website chính thức, không phải đánh giá về bệnh viện.",
-   "cot": ["Bệnh viện", "Tình trạng chúng tôi gặp"],
-   "hang": [
-    ["Hùng Vương", "bảng giá viện phí phát hành qua file Google Sheets, file đang khoá quyền truy cập với người ngoài"],
-    ["Từ Dũ", "bảng giá theo loại phòng đăng dưới dạng file ảnh, không tra cứu được bằng máy"],
-    ["Đa khoa Tâm Anh", "file PDF bảng giá trên website trả về lỗi 404"],
-    ["An Sinh", "trang <i>Bảng giá dịch vụ</i> là trang trống"],
-    ["Đa khoa Xuyên Á", "bảng giá gói thai sản đăng bằng 12 tấm ảnh JPG tải lên tháng 07/2024, không có bản chữ"],
-    ["Đa khoa Hồng Ngọc", "trang bảo lãnh viện phí trả về lỗi 404"],
-    ["Phụ sản Trung ương", "trang <i>Bảng giá danh mục dịch vụ kỹ thuật y tế</i> chỉ có một dòng dẫn Thông tư liên tịch 37/2015, văn bản đã hết hiệu lực"],
-    ["Phụ sản &ndash; Nhi Đà Nẵng", "mức bảo hiểm y tế nằm trong Nghị quyết 96/2026/NQ-HĐND, đăng dưới dạng file bảng tính đính kèm mà chúng tôi chưa mở được"]
-   ]
-  },
-  {
-   "ten": "Sáu bệnh viện có bảng giá nhưng không ghi số quyết định hay ngày ban hành",
-   "kiem_chung": "chinh-thuc",
-   "nguon": "Trích từ các trang bệnh viện trên site này.",
-   "cot": ["Bệnh viện", "Bệnh viện ghi gì"],
-   "hang": [
-    ["Phụ sản Hà Nội", "không có ở bất kỳ trang giá nào, cũng không có file PDF, Excel hay quyết định đính kèm"],
-    ["Phụ sản Trung ương", "file danh mục giá dài 31 trang, có nhắc kit xét nghiệm SARS-CoV-2 nên chắc chắn sau năm 2020, nhưng không ghi ngày"],
-    ["An Sinh", "chỉ suy ra được từ ba mốc: tiêu đề ghi 2026, ảnh tải lên tháng 8/2025, trang sửa lần cuối 03/03/2026"],
-    ["Nhân dân Gia Định", "file bảng giá theo yêu cầu không in số quyết định; chỉ bảng giá giường có căn cứ rõ là Thông báo 586 ngày 23/02/2026"],
-    ["ĐH Y Dược TP.HCM", "bảng giá Cơ sở 2 có ghi ngày cập nhật nhưng không có số văn bản"],
-    ["Quốc tế Mỹ (AIH)", "không trang giá nào ghi"]
-   ]
-  }
- ],
- "y_chinh": [
-  ["Khoản bị giấu nhiều nhất không phải giá gói, mà là giá phòng", "Giá một gói sinh là con số dễ tìm nhất, vì đó là thứ bệnh viện dùng để bán. Nhưng 15 trong 21 bệnh viện không cho biết một đêm phòng giá bao nhiêu theo từng hạng. Ghép với khoản đứng thứ hai, 12 nơi không nói gói gồm mấy đêm, thì ra một tình huống khó chịu: biết giá gói, không biết gói hết hạn sau bao nhiêu đêm, cũng không biết đêm thứ n cộng thêm bao nhiêu. Bệnh viện Quốc tế City là ví dụ rõ nhất, vì nơi này tính tiền phòng riêng theo ngày mà lại không nêu số ngày đi kèm gói."],
-  ["Chuyện giá gói phải tách làm hai, đừng gộp", "Trong 21 nơi, sáu bệnh viện công không bán gói sinh trọn gói: Hùng Vương, Đại học Y Dược TP.HCM, Nhân dân Gia Định, Phụ sản Hà Nội, Phụ sản Trung ương và Phụ sản &ndash; Nhi Đà Nẵng. Họ bán dịch vụ lẻ cộng tiền giường, nên không có giá gói để mà giấu. Phần còn lại mới là chuyện đáng nói: có bệnh viện bán gói, mô tả quyền lợi rất kỹ, nhưng bỏ trống hoàn toàn phần giá. Bảo Sơn có mười gói không kèm giá nào; Hồng Ngọc có tám gói không kèm giá nào; Vinmec yêu cầu gọi tổng đài."],
-  ["Khoản đắt nhất cũng là khoản tối nhất", "Mười bệnh viện không công bố giá chăm sóc đặc biệt cho trẻ sơ sinh. Trong đó có cả những nơi xác nhận mình có khoa hồi sức tích cực sơ sinh. Đây là khoản có thể lớn hơn cả gói sinh, xuất hiện đúng lúc gia đình không còn ở thế mặc cả, và không nơi nào trong 21 bệnh viện cho một con số."],
-  ["Có bảng giá mà không đọc được cũng như không có", "Tám bệnh viện rơi vào tình trạng này theo tám kiểu khác nhau: file Google Sheets khoá quyền, file ảnh không tra cứu được, PDF lỗi 404, trang trống, 12 tấm JPG, và một trang bảng giá chỉ dẫn tới thông tư đã hết hiệu lực. Không nơi nào trong số đó nói rằng mình giấu giá. Về mặt hình thức thì họ đã công bố."],
-  ["Sáu bảng giá không có ngày, nên không biết còn đúng không", "Từ 01/01/2025, theo Thông tư 21/2024/TT-BYT, bệnh viện tự định giá dịch vụ theo yêu cầu. Một bảng giá không ghi số quyết định và ngày ban hành thì người đọc không có cách nào biết nó thuộc đợt điều chỉnh nào. Bệnh viện Phụ sản Hà Nội là trường hợp rõ nhất: bảng giá đăng ngày 20/08/2026, nội dung chi tiết, nhưng không dẫn văn bản nào."],
-  ["Bốn câu nên hỏi bằng văn bản trước khi đóng tiền", "Thứ nhất, gói gồm mấy đêm, và đêm thứ n trở đi tính bao nhiêu một đêm. Thứ hai, xin danh mục gói không bao gồm bằng văn bản. Thứ ba, nếu bé phải nằm chăm sóc đặc biệt thì tính theo đơn giá nào. Thứ tư, bảng giá đang áp dụng ban hành theo văn bản số mấy, ngày nào. Bốn câu này nhắm đúng bốn nhóm bị bỏ trống nhiều nhất, và câu trả lời bằng miệng ở quầy thì không đối chiếu lại được."]
- ],
- "khong_ro": ["Con số 131 là số mục chúng tôi ghi nhận được, không phải toàn bộ những gì bệnh viện không công bố. Có thể còn trang giá mà chúng tôi chưa mở tới.", "Bài này không xếp hạng bệnh viện. Một nơi có nhiều mục bỏ trống có thể chỉ vì chúng tôi rà kỹ hơn, hoặc vì nơi đó bán nhiều loại dịch vụ hơn.", "Tình trạng trang web thay đổi theo thời gian. Các mục trong bài đều gắn với ngày chúng tôi mở trang, ghi trên từng trang bệnh viện.", "Chúng tôi không suy số của bệnh viện này sang bệnh viện khác để lấp chỗ trống, kể cả khi hai nơi cùng hệ thống."],
- "faq": [
-  ["Vì sao khó tìm giá sinh con ở bệnh viện đến vậy?", "Vì phần lớn khoảng trống không nằm ở giá gói mà nằm ở các khoản đi kèm. Trong 21 bệnh viện chúng tôi rà, 15 nơi không công bố giá phòng theo hạng và 12 nơi không nói gói gồm mấy đêm. Biết giá gói mà không biết hai khoản đó thì vẫn không tính được tổng."],
-  ["Bệnh viện có bắt buộc phải công khai giá không?", "Từ 01/01/2025, Thông tư 21/2024/TT-BYT cho phép bệnh viện tự định giá dịch vụ theo yêu cầu. Việc công bố ra sao thì mỗi nơi làm một kiểu, và thực tế chúng tôi gặp là tám bệnh viện có bảng giá ở dạng không đọc được: file khoá quyền, file ảnh, PDF lỗi, hoặc trang trống."],
-  ["Khoản nào nên hỏi kỹ nhất trước khi sinh?", "Chăm sóc đặc biệt cho trẻ sơ sinh. Mười bệnh viện ghi thẳng đây là khoản họ không công bố giá, và không nơi nào trong 21 bệnh viện đưa ra một đơn giá theo ngày cho khoản này."],
-  ["Bảng giá không ghi ngày thì có dùng được không?", "Dùng được để tham khảo, nhưng phải hỏi lại. Sáu bệnh viện trong danh sách có bảng giá không kèm số quyết định hay ngày ban hành, nên không biết bản đang đọc có phải bản mới nhất hay không."]
- ],
- "lien_quan": ["goi-sinh-tron-goi-khong-bao-gom-gi", "goi-sinh-duoc-nam-may-dem", "tam-ung-khi-nhap-vien-sinh", "gia-mot-ngay-nam-hoi-suc"],
-},
-{
  "slug": "muc-huong-bhyt-bao-nhieu-phan-tram",
  "cum": "D",
  "ngay_dang": "2026-09-18",
@@ -2541,6 +2463,216 @@ BAI_VIET = [
   ["40% là 40% của hoá đơn à?", "Không. Luật ghi là thanh toán theo tỷ lệ phần trăm của <i>mức hưởng quy định tại khoản 1</i>. Mức hưởng đó lại tính trên phần chi phí trong phạm vi được hưởng theo khung giá bảo hiểm y tế, không phải trên hoá đơn bệnh viện."]
  ],
  "lien_quan": ["muc-huong-bhyt-bao-nhieu-phan-tram", "bhyt-tra-bao-nhieu-tu-tra-bao-nhieu", "bhyt-khong-chi-tra-nhung-gi"],
+},
+
+{
+ "slug": "sinh-mo-ton-bao-nhieu",
+ "cum": "A",
+ "ngay_dang": "2026-09-19",
+ "tag": "Chuẩn bị sinh con",
+ "doc": "9 phút đọc",
+ "title": "Sinh mổ tốn bao nhiêu 2026: bảng giá 12 bệnh viện, từ 2,6 triệu tới 68,8 triệu đồng",
+ "h1": "Đẻ mổ tốn bao nhiêu tiền",
+ "desc": "Giá mổ lấy thai ở 12 bệnh viện công bố bằng số. Thấp nhất 2.604.800 đồng, cao nhất 68.800.000 đồng. Hai con số đó không so được với nhau, và bài này giải thích vì sao.",
+ "tom_tat": "Chúng tôi rà biểu giá của 21 bệnh viện và tìm được <b>45 dòng</b> giá liên quan tới mổ lấy thai ở 12 nơi. Con số thấp nhất là <b>2.604.800 đồng</b>, cao nhất <b>68.800.000 đồng</b>, cách nhau 26 lần. Nhưng hai đầu đó đang đo hai thứ khác nhau: một bên là tiền công ca mổ ở bệnh viện công, một bên là trọn gói ở bệnh viện quốc tế. Bốn bệnh viện công bố đủ giá cho cả lần đầu lẫn lần sau, và cả bốn đều tính thêm cho lần sau.",
+ "bang": [
+  {
+   "ten": "Bảy mức công mổ lấy thai ở Bệnh viện Phụ sản Hà Nội",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Bảng giá đăng trên website Bệnh viện Phụ sản Hà Nội ngày 20/08/2026. Đây là tiền công ca mổ, chưa gồm tiền giường, thuốc, vật tư và phí chọn bác sĩ.",
+   "cot": ["Khu", "Loại ca mổ", "Công mổ"],
+   "hang": [
+    ["Khu thường", "Mổ lấy thai lần 1", "<b>2.604.800đ</b>"],
+    ["Khu thường", "Mổ lấy thai lần 2 trở lên", "3.376.200đ"],
+    ["Khu thường", "Mổ lấy thai có kỹ thuật cầm máu", "4.570.200đ"],
+    ["Khu thường", "Mổ lấy thai kèm cắt tử cung (rau cài răng lược)", "8.625.200đ"],
+    ["Khu dịch vụ", "Mổ lấy thai lần 1", "<b>6.766.000đ</b>"],
+    ["Khu dịch vụ", "Mổ lấy thai lần 2 trở lên", "7.672.000đ"],
+    ["Khu dịch vụ", "Mổ lấy thai kèm cắt tử cung (rau cài răng lược)", "12.299.000đ"]
+   ]
+  },
+  {
+   "ten": "Bảy mức gói sinh mổ trọn gói ở bệnh viện tư, xếp từ thấp lên cao",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Tổng hợp từ bốn trang bệnh viện trên site này, mỗi trang dẫn nguồn và ngày công bố riêng. Nội dung từng gói khác nhau, xem cột cuối.",
+   "cot": ["Bệnh viện", "Gói", "Giá", "Bảng giá công bố"],
+   "hang": [
+    ["Quốc tế City", "gói Yêu Thương, sinh mổ lần đầu", "<b>25.452.000đ</b>", "27/02/2026"],
+    ["An Sinh", "đơn thai, sanh mổ lần 1, tiêu chuẩn", "28.892.000đ", "bảng giá 2026"],
+    ["Quốc tế City", "gói đơn lẻ, sinh mổ đơn thai lần đầu", "36.180.000đ", "27/02/2026"],
+    ["Quốc tế Mỹ (AIH)", "sinh mổ đơn thai, bác sĩ AIH, 3 ngày", "47.500.000đ", "13/09/2026"],
+    ["Quốc tế Mỹ (AIH)", "sinh mổ đơn thai, bác sĩ cao cấp hoặc bác sĩ hợp tác", "50.800.000đ", "13/09/2026"],
+    ["Việt Pháp Hà Nội", "sinh mổ thai đơn, mốc đăng ký sớm nhất", "58.200.000đ", "19/12/2025"],
+    ["Việt Pháp Hà Nội", "sinh mổ thai đơn, mốc đăng ký muộn nhất", "<b>68.800.000đ</b>", "19/12/2025"]
+   ]
+  },
+  {
+   "ten": "Bảy cặp giá cho thấy mổ lần sau đắt hơn lần đầu",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Tổng hợp từ bốn trang bệnh viện trên site này. Hai cột cuối do chúng tôi tính, bằng hiệu và thương của hai con số bệnh viện công bố. Dòng Phụ sản MêKông thuộc bảng giá bản 03/06/2022.",
+   "cot": ["Bệnh viện", "Mốc so sánh", "Lần đầu", "Lần sau", "Chênh", "Gấp"],
+   "hang": [
+    ["Quốc tế City, gói đơn lẻ", "đơn thai lần 2, 3", "36.180.000đ", "46.360.000đ", "<b>+10.180.000đ</b>", "1,28 lần"],
+    ["An Sinh", "đơn thai sanh mổ lần 3", "28.892.000đ", "34.822.000đ", "+5.930.000đ", "1,21 lần"],
+    ["Quốc tế City, gói đơn lẻ", "có vết mổ cũ lần 1", "36.180.000đ", "41.040.000đ", "+4.860.000đ", "1,13 lần"],
+    ["An Sinh", "đơn thai sanh mổ lần 2", "28.892.000đ", "31.822.000đ", "+2.930.000đ", "1,10 lần"],
+    ["Phụ sản MêKông (bản 03/06/2022)", "mổ lấy thai lần 2", "10.000.000đ", "11.500.000đ", "+1.500.000đ", "1,15 lần"],
+    ["Phụ sản Hà Nội, khu dịch vụ", "mổ lần 2 trở lên", "6.766.000đ", "7.672.000đ", "+906.000đ", "1,13 lần"],
+    ["Phụ sản Hà Nội, khu thường", "mổ lần 2 trở lên", "2.604.800đ", "3.376.200đ", "+771.400đ", "<b>1,30 lần</b>"]
+   ]
+  },
+  {
+   "ten": "Hai bộ số đang lan truyền mà bệnh viện không xác nhận",
+   "kiem_chung": "chua-xac-minh",
+   "nguon": "Chúng tôi đăng lại để người đọc nhận ra khi gặp, KHÔNG dùng làm giá tham khảo. Cả hai bệnh viện đều không công bố các con số này trên tên miền chính thức.",
+   "cot": ["Bệnh viện", "Con số đang lan truyền", "Tình trạng"],
+   "hang": [
+    ["Vinmec", "sinh mổ lần 1 khoảng 52 đến 65 triệu; lần 2 khoảng 56 đến 68 triệu; lần 3 trở lên khoảng 60,5 đến 72 triệu", "số từ bên thứ ba. Vinmec yêu cầu gọi tổng đài để biết giá, không đăng bảng giá nào"],
+    ["ĐH Y Dược TP.HCM", "sinh mổ gây tê lần đầu 15.800.000đ; lần 2 có vết mổ cũ 16.200.000đ; gây mê lần đầu 16.600.000đ", "bảng đang lan truyền trên mạng. Bảng giá chính thức của bệnh viện không có dòng nào cho mổ lấy thai"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Con số 2,6 triệu và con số 68,8 triệu không so được với nhau", "Mức thấp nhất trong cả bộ dữ liệu là 2.604.800 đồng, công mổ lấy thai lần 1 ở khu thường Bệnh viện Phụ sản Hà Nội. Đó là tiền công ca mổ, chưa có tiền giường, thuốc, vật tư, và chưa có phí chọn bác sĩ. Mức cao nhất là 68.800.000 đồng, gói sinh mổ thai đơn của Bệnh viện Việt Pháp Hà Nội, đã gồm cả đợt nằm viện. Ai lấy hai con số này đặt cạnh nhau rồi kết luận nơi này đắt gấp 26 lần nơi kia là đang so tiền công với trọn gói."],
+  ["Mổ lần sau đắt hơn lần đầu, không trừ nơi nào", "Bốn bệnh viện công bố đủ giá cho cả lần đầu lẫn lần sau, và cả bốn đều tính thêm. Mức tăng chạy từ 771.400 đồng ở khu thường Phụ sản Hà Nội tới 10.180.000 đồng ở gói đơn lẻ của Quốc tế City. Tính theo tỷ lệ thì khoảng cách hẹp hơn nhiều, từ 1,10 lần tới 1,30 lần. Với người đang tính chuyện sinh con thứ hai, đây là khoản nên hỏi ngay từ đầu chứ đừng để tới lúc nhập viện."],
+  ["Có vết mổ cũ đã bị tính thêm, dù đó mới là lần mổ đầu tiên", "Quốc tế City tách riêng dòng <i>sinh mổ có vết mổ cũ lần 1</i>, giá 41.040.000 đồng so với 36.180.000 đồng của ca mổ đơn thai lần đầu. Nghĩa là sản phụ từng mổ ở lần sinh trước, nay mổ tiếp, đã nằm ở mức cao hơn ngay từ dòng đầu tiên chứ không cần tới lần mổ thứ hai tại chính bệnh viện đó."],
+  ["Cùng một ca mổ, khu dịch vụ đắt gấp 2,6 lần khu thường", "Vẫn ở Bệnh viện Phụ sản Hà Nội, cùng dòng mổ lấy thai lần 1: khu thường 2.604.800 đồng, khu dịch vụ 6.766.000 đồng. Đây là phần chênh của riêng công mổ, chưa tính giá giường và phí chọn bác sĩ vốn cũng khác nhau giữa hai khu. Bảng giá của bệnh viện còn có cột <i>chọn bác sĩ, cộng thêm</i> riêng, từ 5 triệu tới 13 triệu đồng tuỳ ca."],
+  ["Ở bệnh viện quốc tế, chênh lệch nằm ở người mổ và ở thời điểm đăng ký", "Bệnh viện Quốc tế Mỹ bán hai gói sinh mổ đơn thai giống nhau về nội dung, khác nhau đúng ở nhóm bác sĩ: 47.500.000 đồng với bác sĩ AIH và 50.800.000 đồng với bác sĩ cao cấp hoặc bác sĩ hợp tác, chênh <b>3.300.000 đồng</b>. Bệnh viện Việt Pháp Hà Nội thì tính theo mốc đăng ký: cùng một gói sinh mổ thai đơn, đăng ký sớm nhất 58.200.000 đồng, muộn nhất 68.800.000 đồng."],
+  ["Bốn khoản luôn nằm ngoài con số ở bảng", "Thứ nhất, tiền giường cho những đêm vượt số ngày trong gói. Thứ hai, chăm sóc đặc biệt cho trẻ sơ sinh, khoản mà không bệnh viện nào trong 21 nơi công bố giá. Thứ ba, biến chứng và tai biến, nhóm bị loại trừ ở nhiều danh mục nhất. Thứ tư, thuốc và vật tư vượt hạn mức, chẳng hạn Quốc tế Hạnh Phúc ghi rõ hạn mức 7.500.000 đồng cho ca sinh mổ và phần vượt thì tự trả."],
+  ["Ba câu nên hỏi trước khi chọn nơi mổ", "Thứ nhất, con số báo giá là công ca mổ hay trọn gói, và trọn gói gồm mấy đêm. Thứ hai, nếu đã từng mổ lấy thai thì ca này tính theo dòng nào trong bảng giá. Thứ ba, phí chọn bác sĩ có nằm trong giá không, vì ở bệnh viện công khoản này là một cột riêng còn ở bệnh viện quốc tế thì nằm trong tên gói."]
+ ],
+ "khong_ro": ["Chín bệnh viện trong bộ 21 nơi không công bố giá mổ lấy thai bằng con số nào.", "Bệnh viện Phụ sản Trung ương không công bố giá ca mổ lấy thai. Quyết định 2312 chỉ có phí dịch vụ bác sĩ phẫu thuật, tức một khoản trong ca mổ chứ không phải cả ca.", "Bệnh viện Nhân dân Gia Định và Bệnh viện Đại học Y Dược TP.HCM đều không có dòng mổ lấy thai trong bảng giá chính thức, dù cả hai đều thực hiện kỹ thuật này.", "Các gói của bệnh viện tư gồm những gì thì mỗi nơi ghi một kiểu, nên giá gói không phản ánh cùng một phạm vi dịch vụ.", "Bốn dòng của Phụ sản MêKông thuộc bảng giá bản 03/06/2022. Bệnh viện chưa công bố bản mới hơn tính tới ngày 19/09/2026."],
+ "faq": [
+  ["Đẻ mổ hết bao nhiêu tiền?", "Tuỳ nơi và tuỳ cách tính. Nếu tính tiền công ca mổ ở bệnh viện công thì thấp nhất trong dữ liệu của chúng tôi là 2.604.800 đồng, tại khu thường Bệnh viện Phụ sản Hà Nội theo bảng giá đăng 20/08/2026. Nếu tính gói trọn gói ở bệnh viện tư thì chạy từ 25.452.000 đồng tới 68.800.000 đồng."],
+  ["Mổ lần 2 có đắt hơn lần 1 không?", "Có, ở tất cả bốn bệnh viện công bố đủ cả hai mức. Mức tăng từ 771.400 đồng tới 10.180.000 đồng tuỳ nơi, tương đương 1,10 tới 1,30 lần."],
+  ["Sinh mổ ở bệnh viện công khác bệnh viện tư thế nào về tiền?", "Bệnh viện công bán theo dịch vụ lẻ: công mổ một khoản, tiền giường một khoản, phí chọn bác sĩ một khoản. Bệnh viện tư bán theo gói, gộp sẵn ca sinh và một số ngày nằm viện. Vì vậy con số của hai bên không đặt cạnh nhau được nếu không quy về cùng phạm vi."],
+  ["Giá sinh mổ ở Vinmec là bao nhiêu?", "Vinmec không công bố giá gói thai sản trên website và yêu cầu gọi tổng đài. Các con số 52 đến 72 triệu đang lan truyền đều đến từ bên thứ ba, không phải bệnh viện công bố, nên chúng tôi không dùng làm giá tham khảo."],
+  ["Bảo hiểm y tế trả được bao nhiêu cho ca mổ lấy thai?", "Phần bảo hiểm y tế tính trên khung giá của quỹ chứ không trên giá bệnh viện thu, và hai khung đó lệch nhau rất nhiều. Sáu bệnh viện trong bộ dữ liệu ghi thẳng là họ không công bố phần bảo hiểm y tế chi trả cho ca sinh."]
+ ],
+ "lien_quan": ["phi-chon-bac-si-do-sinh", "goi-sinh-duoc-nam-may-dem", "tam-ung-khi-nhap-vien-sinh", "goi-sinh-tron-goi-khong-bao-gom-gi"],
+},
+{
+ "slug": "bhyt-du-5-nam-lien-tuc-duoc-gi",
+ "cum": "D",
+ "ngay_dang": "2026-09-19",
+ "tag": "Bảo hiểm y tế",
+ "doc": "7 phút đọc",
+ "title": "Bảo hiểm y tế 5 năm liên tục 2026: ngưỡng 15.180.000 đồng và thủ tục đã bỏ",
+ "h1": "Đóng bảo hiểm y tế đủ 5 năm liên tục được gì",
+ "desc": "Điều 22 Luật Bảo hiểm y tế cho hưởng 100% khi đủ 5 năm liên tục và tiền cùng chi trả trong năm vượt 6 lần mức tham chiếu. Từ 01/07/2025 người bệnh không phải làm hồ sơ nữa.",
+ "tom_tat": "Quyền lợi này nằm ở <b>Điều 22 khoản 1 điểm d</b> Luật Bảo hiểm y tế, bản sửa bởi Luật 51/2024/QH15. Hai điều kiện phải có cùng lúc: tham gia đủ <b>5 năm liên tục</b>, và số tiền cùng chi trả trong năm lớn hơn <b>6 lần mức tham chiếu</b>. Theo hướng dẫn của Bảo hiểm xã hội Việt Nam áp dụng từ 01/07/2026, sáu tháng lương cơ sở là <b>15.180.000 đồng</b>. Thay đổi đáng chú ý nhất: từ 01/07/2025, người bệnh không còn phải mang chứng từ đi làm thủ tục.",
+ "bang": [
+  {
+   "ten": "Nguyên văn điểm d khoản 1 Điều 22",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Luật số 51/2024/QH15 sửa đổi, bổ sung một số điều của Luật Bảo hiểm y tế, Quốc hội thông qua 27/11/2024, hiệu lực 01/07/2025. Trích nguyên văn từ bản đăng trên Cổng Xây dựng chính sách, Chính phủ.",
+   "cot": ["Phần", "Nguyên văn"],
+   "hang": [
+    ["Mức hưởng", "100% chi phí khám bệnh, chữa bệnh"],
+    ["Điều kiện thứ nhất", "khi người bệnh có thời gian tham gia bảo hiểm y tế 5 năm liên tục trở lên"],
+    ["Điều kiện thứ hai", "và có số tiền cùng chi trả chi phí khám bệnh, chữa bệnh trong năm của những lần đi khám bệnh, chữa bệnh theo quy định tại khoản 3, các điểm a, b, c, đ và e khoản 4, khoản 5 Điều này, Điều 26 và Điều 27 của Luật này <b>lớn hơn 6 lần mức tham chiếu</b>"]
+   ]
+  },
+  {
+   "ten": "Ngưỡng tiền tính theo mức lương cơ sở từ 01/07/2026",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Nghị định số 161/2026/NĐ-CP ngày 15/5/2026 quy định mức lương cơ sở; Công văn số 2275/BHXH-CSYT ngày 30/6/2026 của Bảo hiểm xã hội Việt Nam. Trích theo bài hướng dẫn đăng trên Cổng Xây dựng chính sách ngày 22/07/2026.",
+   "cot": ["Khoản", "Số tiền"],
+   "hang": [
+    ["Mức lương cơ sở áp dụng từ 01/07/2026", "<b>2.530.000đ</b>"],
+    ["Sáu tháng lương cơ sở", "<b>15.180.000đ</b>"],
+    ["Một lần khám chữa bệnh được thanh toán 100% nếu chi phí thấp hơn", "379.500đ, bằng 15% mức lương cơ sở"]
+   ]
+  },
+  {
+   "ten": "Thủ tục trước và sau ngày 01/07/2025",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Bài hướng dẫn đăng trên Cổng Xây dựng chính sách ngày 12/10/2025, dẫn khoản 4 Điều 70 Nghị định 188/2025/NĐ-CP.",
+   "cot": ["Mốc", "Người bệnh phải làm gì"],
+   "hang": [
+    ["Trước 01/07/2025", "mang chứng từ đến cơ quan bảo hiểm xã hội nơi cấp thẻ bảo hiểm y tế để thanh toán, khi số tiền cùng chi trả vượt quá 6 tháng lương cơ sở"],
+    ["Từ 01/07/2025", "<b>không phải thực hiện thủ tục thanh toán trực tiếp</b>. Cơ quan bảo hiểm xã hội tổng hợp và cập nhật thường xuyên thông tin; cơ sở khám chữa bệnh xác định thời điểm người bệnh đủ điều kiện để được hưởng miễn cùng chi trả"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Phải có đủ hai điều kiện, không phải một", "Nhiều người hiểu rằng cứ đóng đủ 5 năm liên tục là được hưởng 100%. Điều luật không viết vậy. Điểm d ghép hai điều kiện bằng chữ <i>và</i>: đủ 5 năm liên tục, <b>và</b> số tiền cùng chi trả trong năm đã vượt ngưỡng. Người đóng mười năm mà cả năm chỉ đi khám vài lần với chi phí nhỏ thì chưa chạm điều kiện thứ hai."],
+  ["Ngưỡng tính trên tiền CÙNG CHI TRẢ, không phải tổng viện phí", "Đây là chỗ dễ nhầm nhất. Tiền cùng chi trả là phần người bệnh phải trả trong phạm vi được hưởng, tức phần 5% hoặc 20% còn lại sau khi quỹ đã trả. Nó không bao gồm phần dịch vụ theo yêu cầu, cũng không bao gồm phần nằm ngoài phạm vi được hưởng. Vì vậy hoá đơn vài chục triệu đồng chưa chắc đã sinh ra đủ 15.180.000 đồng tiền cùng chi trả."],
+  ["Thủ tục đã bỏ từ 01/07/2025, đây là thay đổi lớn nhất", "Trước đó, người bệnh phải giữ chứng từ cả năm rồi mang tới cơ quan bảo hiểm xã hội nơi cấp thẻ để xin thanh toán lại. Khoản 4 Điều 70 Nghị định 188/2025/NĐ-CP chấm dứt quy định đó. Nay cơ quan bảo hiểm xã hội tự tổng hợp, và cơ sở khám chữa bệnh xác định thời điểm người bệnh đủ điều kiện. Nghĩa là quyền lợi được áp thẳng tại chỗ khám thay vì hoàn tiền sau."],
+  ["Luật viết 6 lần mức tham chiếu, hướng dẫn viết 6 tháng lương cơ sở", "Điều 22 dùng cụm <i>mức tham chiếu</i>, còn hướng dẫn của Bảo hiểm xã hội Việt Nam theo lương cơ sở mới thì ghi <i>6 tháng lương cơ sở là 15.180.000 đồng</i>. Chúng tôi chép lại đúng từng cách gọi của từng văn bản và không tự quy đổi giữa hai khái niệm. Khi cần con số chính xác cho trường hợp cụ thể thì hỏi thẳng cơ quan bảo hiểm xã hội."],
+  ["Chữ liên tục có quy tắc riêng", "Luật ghi <i>5 năm liên tục trở lên</i>. Thẻ bảo hiểm y tế in thời điểm đủ 5 năm liên tục ở mặt trước, nên đây là thứ tra được ngay trên thẻ chứ không phải tự cộng. Nếu từng gián đoạn thì mốc đó bị đẩy lùi, và thẻ sẽ phản ánh mốc mới."],
+  ["Ba việc nên làm", "Thứ nhất, xem mặt thẻ bảo hiểm y tế để biết mình đã đạt mốc 5 năm liên tục chưa. Thứ hai, giữ lại biên lai cùng chi trả trong năm, vì tuy không còn phải nộp hồ sơ nhưng vẫn cần để đối chiếu khi số liệu trên hệ thống chưa khớp. Thứ ba, khi làm thủ tục ở bệnh viện thì hỏi thẳng bộ phận bảo hiểm y tế xem hệ thống đã ghi nhận mình đủ điều kiện miễn cùng chi trả chưa."]
+ ],
+ "khong_ro": ["Mức tham chiếu do Chính phủ quy định và không nằm trong Luật Bảo hiểm y tế. Chúng tôi không tự quy đổi mức tham chiếu thành số tiền.", "Bài này không liệt kê các trường hợp được thanh toán trực tiếp khác. Danh sách đó nằm ở Điều 54 Nghị định 188/2025/NĐ-CP, chúng tôi chưa đọc được bản đầy đủ.", "Cách hệ thống xác định thời điểm đủ điều kiện, và xử lý ra sao khi dữ liệu chưa cập nhật kịp, không được nêu trong bài hướng dẫn chúng tôi đọc.", "Chúng tôi chưa đối chiếu được văn bản gốc của Công văn 2275/BHXH-CSYT; các con số ở bảng thứ hai lấy theo bài hướng dẫn đăng trên Cổng Xây dựng chính sách ngày 22/07/2026."],
+ "faq": [
+  ["Đóng bảo hiểm y tế 5 năm liên tục được hưởng gì?", "Được hưởng 100% chi phí khám chữa bệnh, nhưng phải kèm điều kiện thứ hai: số tiền cùng chi trả trong năm lớn hơn 6 lần mức tham chiếu. Chỉ đủ 5 năm mà chưa vượt ngưỡng tiền thì chưa áp dụng."],
+  ["6 lần mức tham chiếu là bao nhiêu tiền?", "Luật viết bằng bội số chứ không bằng số tiền. Theo hướng dẫn của Bảo hiểm xã hội Việt Nam áp dụng từ 01/07/2026, với mức lương cơ sở 2.530.000 đồng thì sáu tháng lương cơ sở là 15.180.000 đồng."],
+  ["Có phải làm hồ sơ để được hưởng không?", "Không, kể từ 01/07/2025. Khoản 4 Điều 70 Nghị định 188/2025/NĐ-CP đã bỏ quy định người bệnh mang chứng từ đi thanh toán. Cơ quan bảo hiểm xã hội tự tổng hợp và cơ sở khám chữa bệnh xác định thời điểm đủ điều kiện."],
+  ["Tiền cùng chi trả là gì?", "Là phần người bệnh trả trong phạm vi được hưởng, tức phần còn lại sau khi quỹ bảo hiểm y tế đã thanh toán theo tỷ lệ 100%, 95% hoặc 80%. Phần dịch vụ theo yêu cầu và phần ngoài phạm vi được hưởng không tính vào đây."],
+  ["Làm sao biết mình đã đủ 5 năm liên tục?", "Thời điểm đủ 5 năm liên tục được in trên thẻ bảo hiểm y tế. Nếu quá trình tham gia từng gián đoạn thì mốc này bị đẩy lùi tương ứng."]
+ ],
+ "lien_quan": ["muc-huong-bhyt-bao-nhieu-phan-tram", "kham-khong-dung-noi-dang-ky-bhyt", "bhyt-khong-chi-tra-nhung-gi"],
+},
+{
+ "slug": "luong-co-so-moi-doi-gi-trong-bhyt",
+ "cum": "D",
+ "ngay_dang": "2026-09-19",
+ "tag": "Bảo hiểm y tế",
+ "doc": "6 phút đọc",
+ "title": "Lương cơ sở 2.530.000 đồng từ 01/07/2026: bốn con số trong quyền lợi bảo hiểm y tế đổi theo",
+ "h1": "Lương cơ sở mới đổi những gì trong quyền lợi bảo hiểm y tế",
+ "desc": "Nghị định 161/2026/NĐ-CP nâng mức lương cơ sở lên 2.530.000 đồng từ 01/07/2026. Bốn ngưỡng tiền của bảo hiểm y tế được tính theo mức này, từ 379.500 đồng tới 15.180.000 đồng.",
+ "tom_tat": "Nhiều quyền lợi bảo hiểm y tế không ghi bằng số tiền cố định mà ghi bằng bội số của mức lương cơ sở. Vì vậy mỗi lần mức đó đổi thì cả loạt ngưỡng đổi theo. <b>Nghị định số 161/2026/NĐ-CP ngày 15/5/2026</b> nâng mức lương cơ sở lên <b>2.530.000 đồng</b>, áp dụng từ <b>01/07/2026</b>. Bài này liệt kê các ngưỡng tính lại theo mức mới, theo đúng hướng dẫn của Bảo hiểm xã hội Việt Nam.",
+ "bang": [
+  {
+   "ten": "Bốn mức thanh toán trực tiếp tính theo mức lương cơ sở mới",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Công văn số 2275/BHXH-CSYT ngày 30/6/2026 của Bảo hiểm xã hội Việt Nam, dẫn Điều 57 Nghị định số 188/2025/NĐ-CP. Trích theo bài hướng dẫn đăng trên Cổng Xây dựng chính sách ngày 22/07/2026.",
+   "cot": ["Bội số của mức lương cơ sở", "Quy định tại", "Số tiền"],
+   "hang": [
+    ["0,15 lần", "điểm a khoản 1 và điểm a khoản 4", "<b>379.500đ</b>"],
+    ["0,5 lần", "điểm b khoản 1 và điểm b khoản 4", "1.265.000đ"],
+    ["01 lần", "khoản 2", "2.530.000đ"],
+    ["2,5 lần", "khoản 3", "<b>6.325.000đ</b>"]
+   ]
+  },
+  {
+   "ten": "Hai ngưỡng khác cũng tính theo mức lương cơ sở",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Bài hướng dẫn đăng trên Cổng Xây dựng chính sách ngày 22/07/2026, dẫn Công văn số 2275/BHXH-CSYT ngày 30/6/2026.",
+   "cot": ["Ngưỡng", "Cách tính", "Số tiền"],
+   "hang": [
+    ["Một lần khám chữa bệnh có chi phí thấp hơn mức này thì được thanh toán 100%", "15% mức lương cơ sở", "<b>379.500đ</b>"],
+    ["Sáu tháng lương cơ sở, mốc liên quan tới quyền lợi 5 năm liên tục", "6 × mức lương cơ sở", "<b>15.180.000đ</b>"]
+   ]
+  },
+  {
+   "ten": "Ba văn bản cần nhớ",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Tổng hợp số hiệu văn bản từ các bài trên Cổng Xây dựng chính sách, Chính phủ.",
+   "cot": ["Văn bản", "Nội dung liên quan"],
+   "hang": [
+    ["Nghị định số 161/2026/NĐ-CP ngày 15/5/2026", "quy định mức lương cơ sở 2.530.000 đồng, áp dụng từ 01/07/2026"],
+    ["Nghị định số 188/2025/NĐ-CP", "quy định chi tiết và hướng dẫn thi hành một số điều của Luật Bảo hiểm y tế; Điều 57 quy định mức thanh toán trực tiếp"],
+    ["Công văn số 2275/BHXH-CSYT ngày 30/6/2026", "Bảo hiểm xã hội Việt Nam hướng dẫn thực hiện theo mức lương cơ sở mới"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Vì sao quyền lợi lại ghi bằng bội số chứ không bằng tiền", "Cách viết này giúp văn bản không phải sửa mỗi lần điều chỉnh lương. Đổi lại, người đọc phải tự tra mức lương cơ sở đang áp dụng rồi nhân lên. Đây là lý do một con số đọc được trên mạng có thể đúng ở thời điểm bài đó viết mà sai ở thời điểm đọc."],
+  ["Ngưỡng 379.500 đồng là ngưỡng dễ chạm nhất", "Điều 22 khoản 1 điểm b cho hưởng 100% khi chi phí một lần khám chữa bệnh thấp hơn mức Chính phủ quy định, và mức đó là 15% lương cơ sở. Với lương cơ sở mới, ngưỡng thành <b>379.500 đồng</b>. Một lần khám thông thường ở tuyến dưới hoàn toàn có thể nằm dưới mốc này."],
+  ["Mốc 15.180.000 đồng gắn với quyền lợi 5 năm liên tục", "Đây là con số sáu tháng lương cơ sở theo mức mới. Nó liên quan tới điều kiện thứ hai của quyền lợi hưởng 100% dành cho người tham gia đủ 5 năm liên tục. Chúng tôi tách riêng phần đó thành một bài."],
+  ["Bốn mức thanh toán trực tiếp nằm ở Điều 57, không phải Điều 22", "Thanh toán trực tiếp là việc cơ quan bảo hiểm xã hội trả tiền cho người bệnh, khác với việc quỹ thanh toán thẳng cho cơ sở khám chữa bệnh. Bốn mức 379.500, 1.265.000, 2.530.000 và 6.325.000 đồng là trần cho từng nhóm trường hợp, quy định tại Điều 57 Nghị định 188/2025/NĐ-CP."],
+  ["Con số trên mạng hay bị lỡ nhịp", "Mức lương cơ sở đổi ngày 01/07/2026, nghĩa là các bài viết trước mốc đó đang dùng nền cũ. Khi tra quyền lợi bảo hiểm y tế bằng số tiền, việc đầu tiên nên làm là xem bài đó viết ngày nào và dựa trên mức lương cơ sở bao nhiêu."]
+ ],
+ "khong_ro": ["Điều 57 Nghị định 188/2025/NĐ-CP quy định mỗi mức áp cho nhóm trường hợp nào, nhưng bài hướng dẫn chúng tôi đọc chỉ nêu bội số và số tiền, không nêu điều kiện kèm theo. Chúng tôi không suy đoán phần này.", "Chúng tôi chưa đối chiếu được văn bản gốc của Công văn 2275/BHXH-CSYT và của Nghị định 161/2026/NĐ-CP, mới đọc qua bài hướng dẫn trên Cổng Xây dựng chính sách.", "Quan hệ giữa mức tham chiếu trong Luật Bảo hiểm y tế và mức lương cơ sở trong các nghị định không được nêu rõ trong tài liệu chúng tôi đọc.", "Đang có dự thảo nghị định về lộ trình tăng mức hưởng và phạm vi hưởng bảo hiểm y tế. Bài này chỉ phản ánh phần đã có hiệu lực."],
+ "faq": [
+  ["Mức lương cơ sở hiện nay là bao nhiêu?", "2.530.000 đồng, áp dụng từ 01/07/2026 theo Nghị định số 161/2026/NĐ-CP ngày 15/5/2026."],
+  ["Khám bệnh hết bao nhiêu thì được bảo hiểm y tế trả 100%?", "Nếu chi phí một lần khám chữa bệnh thấp hơn 15% mức lương cơ sở, tức thấp hơn 379.500 đồng theo mức mới, thì được quỹ thanh toán 100% theo Điều 22 khoản 1 điểm b."],
+  ["Thanh toán trực tiếp bảo hiểm y tế tối đa bao nhiêu?", "Có bốn mức trần theo Điều 57 Nghị định 188/2025/NĐ-CP: 379.500 đồng, 1.265.000 đồng, 2.530.000 đồng và 6.325.000 đồng, tuỳ nhóm trường hợp."],
+  ["Lương cơ sở tăng thì quyền lợi bảo hiểm y tế có tăng không?", "Các ngưỡng tính bằng bội số của lương cơ sở đều tăng theo. Tỷ lệ hưởng 100%, 95% hay 80% thì không đổi vì đó là tỷ lệ, không phải số tiền."]
+ ],
+ "lien_quan": ["bhyt-du-5-nam-lien-tuc-duoc-gi", "muc-huong-bhyt-bao-nhieu-phan-tram", "kham-khong-dung-noi-dang-ky-bhyt"],
 },
 
 ]
