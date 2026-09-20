@@ -2675,4 +2675,166 @@ BAI_VIET = [
  "lien_quan": ["bhyt-du-5-nam-lien-tuc-duoc-gi", "muc-huong-bhyt-bao-nhieu-phan-tram", "kham-khong-dung-noi-dang-ky-bhyt"],
 },
 
+{
+ "slug": "chi-phi-lam-ivf-bao-nhieu",
+ "cum": "A",
+ "ngay_dang": "2026-09-20",
+ "tag": "Hiếm muộn",
+ "doc": "8 phút đọc",
+ "title": "Chi phí làm IVF hết bao nhiêu tiền: ba bệnh viện công bố, cùng một kỹ thuật chênh 2,7 lần",
+ "h1": "Chi phí làm IVF hết bao nhiêu tiền",
+ "desc": "Bệnh viện Từ Dũ công bố bảng giá hiếm muộn có bốn cột; riêng kỹ thuật ICSI ghi 6.253.000 đồng ở cột không bảo hiểm y tế và 17.000.000 đồng ở cột dịch vụ theo yêu cầu. Hùng Vương công bố 55 tới 65 triệu đồng một chu kỳ, Tâm Anh công bố 100 tới 150 triệu đồng.",
+ "tom_tat": "Ba bệnh viện có công bố con số cho thụ tinh trong ống nghiệm, nhưng công bố theo ba cách khác nhau nên không đặt cạnh nhau để so được. Từ Dũ đăng bảng giá từng kỹ thuật với bốn cột. Hùng Vương tách một chu kỳ thành phần cố định và phần thuốc. Tâm Anh chỉ nêu một khoảng. Điểm đáng chú ý nhất nằm trong bảng của Từ Dũ: cùng kỹ thuật tiêm tinh trùng vào bào tương của noãn, cột không bảo hiểm y tế ghi <b>6.253.000 đồng</b> còn cột dịch vụ theo yêu cầu ghi <b>17.000.000 đồng</b>.",
+ "bang": [
+  {
+   "ten": "Mười hai dòng giá nhóm thụ tinh trong ống nghiệm của Bệnh viện Từ Dũ",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Bảng giá dịch vụ Hiếm muộn do Bệnh viện Từ Dũ đăng tại mục Hướng dẫn dịch vụ, dưới dạng hai ảnh. Cuối bảng ghi \u201cTP.HCM, ngày 01 tháng 10 năm 2024\u201d. Chúng tôi đọc ngày 20/09/2026. Tên bốn cột giữ nguyên theo cách bệnh viện ghi.",
+   "cot": ["Dịch vụ", "Không BHYT (theo TT21)", "Có BHYT (theo TT22)", "Theo yêu cầu", "Theo yêu cầu hẹn giờ"],
+   "hang": [
+    ["Bơm tinh trùng vào buồng tử cung (IUI)", "1.028.000đ", "", "1.028.000đ", "1.028.000đ"],
+    ["Tinh dịch đồ dịch vụ", "324.000đ", "", "324.000đ", "324.000đ"],
+    ["Tiêm tinh trùng vào bào tương của noãn (ICSI)", "<b>6.253.000đ</b>", "", "<b>17.000.000đ</b>", "17.000.000đ"],
+    ["Tiêm tinh trùng vào bào tương của noãn (ICSI) - NNN", "", "", "20.400.000đ", "20.400.000đ"],
+    ["Phí dịch vụ TTON-ICSI ngoài giờ theo yêu cầu (phụ thu thêm)", "", "", "3.400.000đ", "3.400.000đ"],
+    ["Lọc rửa tinh trùng", "950.000đ", "", "", ""],
+    ["Chọc hút noãn", "7.142.000đ", "", "", ""],
+    ["Chọc hút tinh hoàn, mào tinh hoàn lấy tinh trùng hoặc sinh thiết tinh hoàn, mào tinh hoàn", "2.577.000đ", "", "", ""],
+    ["Giảm thiểu phôi (giảm thiểu thai)", "2.208.000đ", "", "", ""],
+    ["Rã đông phôi, noãn", "3.623.000đ", "", "", ""],
+    ["Rã đông tinh trùng", "212.000đ", "", "", ""],
+    ["Sinh thiết phôi chẩn đoán (sinh thiết phôi báo cho chẩn đoán di truyền tiền làm tổ, Biopsy-PGS) cho 1 người bệnh", "8.868.000đ", "", "", ""]
+   ]
+  },
+  {
+   "ten": "Chín dòng khám và siêu âm trước khi vào chu kỳ, cũng của Từ Dũ",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Cùng bảng giá dịch vụ Hiếm muộn của Bệnh viện Từ Dũ, phần Khám bệnh và phần Siêu âm, X-quang. Ghi ngày 01/10/2024, đọc ngày 20/09/2026.",
+   "cot": ["Dịch vụ", "Không BHYT (theo TT21)", "Có BHYT (theo TT22)", "Theo yêu cầu", "Theo yêu cầu hẹn giờ"],
+   "hang": [
+    ["Khám", "42.100đ", "", "", ""],
+    ["Khám hiếm muộn theo yêu cầu", "", "", "180.000đ", ""],
+    ["Khám hiếm muộn theo yêu cầu hẹn giờ", "", "", "", "350.000đ"],
+    ["Khám hội chẩn liên viện", "200.000đ", "", "350.000đ", ""],
+    ["Siêu âm tử cung buồng trứng qua đường bụng", "49.300đ", "", "49.300đ", "120.000đ"],
+    ["Siêu âm đầu dò âm đạo, trực tràng", "186.000đ", "", "186.000đ", "186.000đ"],
+    ["Siêu âm noãn IUI, cả chu kỳ", "", "", "500.000đ", "900.000đ"],
+    ["Siêu âm noãn thụ tinh trong ống nghiệm, cả chu kỳ", "", "", "700.000đ", "1.200.000đ"],
+    ["Chụp HSG", "", "", "300.000đ", "500.000đ"]
+   ]
+  },
+  {
+   "ten": "Năm dòng chi phí cả chu kỳ do hai bệnh viện khác công bố",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Bệnh viện Hùng Vương, trang \u201cChi phí cho thực hiện thụ tinh trong ống nghiệm\u201d trên bvhungvuong.vn, trang không ghi ngày, chúng tôi đọc ngày 20/09/2026. Bệnh viện Đa khoa Tâm Anh, bài \u201cChi phí thụ tinh ống nghiệm bao nhiêu tiền\u201d trên tamanhhospital.vn, bài ghi cập nhật ngày 31/03/2026.",
+   "cot": ["Bệnh viện", "Khoản", "Con số bệnh viện ghi"],
+   "hang": [
+    ["Hùng Vương", "Phần cố định trả cho bệnh viện, gồm môi trường nuôi cấy, vật tư tiêu hao, kim chọc hút trứng, catheter chuyển phôi và khấu hao máy móc", "20 triệu đồng"],
+    ["Hùng Vương", "Thuốc kích thích, tuỳ đáp ứng của người bệnh", "35 tới 45 triệu đồng"],
+    ["Hùng Vương", "Tổng một chu kỳ đầu tiên", "<b>55 tới 65 triệu đồng</b>"],
+    ["Hùng Vương", "Một chu kỳ chuyển phôi trữ đông về sau", "8 tới 10 triệu đồng"],
+    ["Tâm Anh", "Một chu kỳ thụ tinh ống nghiệm", "<b>100 tới 150 triệu đồng</b>"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Cùng một kỹ thuật, cùng một bệnh viện, hai mức giá cách nhau 2,7 lần", "Dòng tiêm tinh trùng vào bào tương của noãn trong bảng giá Từ Dũ có hai con số. Cột không bảo hiểm y tế ghi 6.253.000 đồng, cột dịch vụ theo yêu cầu ghi 17.000.000 đồng. Tỷ lệ giữa hai con số là 2,72 lần. Khoảng cách này không phải là khác biệt về kỹ thuật mà là khác biệt về loại giá: một bên là giá theo thông tư của Bộ Y tế, một bên là giá dịch vụ do bệnh viện tự quyết theo khung riêng. Người đi làm hồ sơ nên hỏi thẳng mình đang được xếp vào cột nào."],
+  ["Cột bảo hiểm y tế để trống ở toàn bộ nhóm hiếm muộn", "Bảng giá của Từ Dũ có một cột tên \u201cCó BHYT\u201d. Trong hai ảnh bảng giá chúng tôi đọc được, cột này không có dòng nào ghi số, kể cả ở phần khám, phần siêu âm và phần thụ tinh trong ống nghiệm. Điều đó khớp với khoản 5 Điều 23 Luật Bảo hiểm y tế, quy định việc sử dụng kỹ thuật hỗ trợ sinh sản không thuộc phạm vi hưởng. Chúng tôi tách phần luật thành một bài riêng."],
+  ["Mười hai dòng ấy không cộng lại thành một chu kỳ", "Trong danh mục thụ tinh trong ống nghiệm mà Từ Dũ công bố không có dòng nuôi cấy phôi, không có dòng chuyển phôi tươi và không có dòng trữ phôi. Có dòng rã đông phôi và noãn là 3.623.000 đồng, tức phần sau của quy trình, nhưng thiếu phần trước. Vì vậy bảng này trả lời được câu hỏi một kỹ thuật giá bao nhiêu, chứ chưa trả lời được câu hỏi cả chu kỳ hết bao nhiêu."],
+  ["Hùng Vương nói thẳng phần đắt hơn là thuốc", "Trang của Hùng Vương tách một chu kỳ thành hai phần và cho biết phần trả cho bệnh viện là 20 triệu đồng, còn thuốc kích thích là 35 tới 45 triệu đồng tuỳ đáp ứng của từng người. Như vậy phần bệnh viện định trước được chỉ chiếm khoảng một phần ba tổng chi. Đây là lý do một bệnh viện có thể công bố giá kỹ thuật rất rõ mà vẫn không thể báo tổng chi phí trước khi điều trị."],
+  ["Chuyển phôi trữ đông là lần rẻ hơn hẳn", "Hùng Vương ghi một chu kỳ chuyển phôi trữ đông về sau khoảng 8 tới 10 triệu đồng, so với 55 tới 65 triệu đồng của chu kỳ đầu. Bảng của Từ Dũ cũng cho thấy hướng tương tự khi dòng rã đông phôi và noãn chỉ 3.623.000 đồng. Chênh lệch nằm ở chỗ chu kỳ sau không phải kích thích buồng trứng và không phải chọc hút noãn lại."],
+  ["Hai con số 55 tới 65 triệu và 100 tới 150 triệu không so với nhau được", "Hùng Vương ghi rõ khoảng ấy gồm phần cố định của bệnh viện cộng thuốc kích thích. Tâm Anh chỉ ghi một khoảng cho một chu kỳ và ghi kèm câu \u201cbảng giá dịch vụ trên đây là bảng giá tham khảo tại thời điểm cập nhật bài viết\u201d, không liệt kê từng khoản. Khi hai nơi không nói rõ phạm vi giống nhau thì đặt hai khoảng cạnh nhau rồi kết luận nơi nào rẻ hơn là sai phương pháp."],
+  ["Con số nào cũng phải hỏi lại mốc thời gian", "Bảng giá hiếm muộn của Từ Dũ ghi ngày 01/10/2024. Trang của Hùng Vương không ghi ngày. Bài của Tâm Anh ghi cập nhật ngày 31/03/2026. Ba mốc khác nhau tới gần một năm rưỡi, trong khi giá thuốc và giá vật tư đều đã thay đổi trong khoảng đó."]
+ ],
+ "khong_ro": [
+  "Bảng giá hiếm muộn của Từ Dũ được đăng dưới dạng hai ảnh, không phải văn bản, nên không tra cứu được bằng công cụ tìm kiếm và không rõ có bản mới hơn ngày 01/10/2024 hay không.",
+  "Hai cột đầu của bảng ghi tắt là \u201ctheo TT21\u201d và \u201ctheo TT22\u201d. Bệnh viện không ghi đầy đủ số hiệu và năm ban hành của hai thông tư này, nên chúng tôi chép lại đúng cách bệnh viện viết, không tự quy đổi.",
+  "Danh mục Từ Dũ công bố không có dòng nuôi cấy phôi, chuyển phôi tươi và trữ phôi, nên không cộng được thành chi phí một chu kỳ.",
+  "Trang của Bệnh viện Hùng Vương không ghi ngày cập nhật và không nêu số quyết định giá.",
+  "Bệnh viện Phụ sản Trung ương là nơi được tìm kiếm nhiều về chi phí làm thụ tinh trong ống nghiệm, nhưng chúng tôi chưa tìm được bảng giá hiếm muộn do chính bệnh viện này công bố. Phần đó để trống thay vì lấy số từ nơi khác gán vào.",
+  "Các con số lan truyền trên mạng về chi phí trọn gói ở từng trung tâm hỗ trợ sinh sản không được chúng tôi đưa vào bài, vì không đối chiếu được với văn bản do bệnh viện công bố."
+ ],
+ "faq": [
+  ["Làm IVF hết bao nhiêu tiền?", "Tuỳ nơi và tuỳ cách bệnh viện công bố. Hùng Vương ghi 55 tới 65 triệu đồng cho chu kỳ đầu, đã gồm thuốc kích thích. Tâm Anh ghi 100 tới 150 triệu đồng một chu kỳ. Từ Dũ không công bố tổng chu kỳ mà công bố giá từng kỹ thuật, trong đó tiêm tinh trùng vào bào tương của noãn là 6.253.000 đồng hoặc 17.000.000 đồng tuỳ cột giá."],
+  ["Vì sao cùng một kỹ thuật ở Từ Dũ lại có hai giá?", "Bảng giá có bốn cột. Cột không bảo hiểm y tế áp giá theo thông tư, cột dịch vụ theo yêu cầu áp giá dịch vụ. Cùng kỹ thuật ICSI, hai cột ghi 6.253.000 đồng và 17.000.000 đồng."],
+  ["Bảo hiểm y tế có trả tiền làm thụ tinh trong ống nghiệm không?", "Không. Khoản 5 Điều 23 Luật Bảo hiểm y tế xếp việc sử dụng kỹ thuật hỗ trợ sinh sản vào nhóm không được hưởng. Trong bảng giá hiếm muộn của Từ Dũ, cột Có BHYT cũng không có dòng nào ghi số."],
+  ["Chuyển phôi trữ đông lần sau có rẻ hơn không?", "Theo con số Hùng Vương công bố thì rẻ hơn nhiều: 8 tới 10 triệu đồng cho một chu kỳ chuyển phôi trữ đông, so với 55 tới 65 triệu đồng cho chu kỳ đầu."],
+  ["Chi phí thuốc chiếm bao nhiêu phần?", "Hùng Vương ghi phần trả cho bệnh viện là 20 triệu đồng và thuốc kích thích là 35 tới 45 triệu đồng, tức thuốc chiếm phần lớn hơn và là phần bệnh viện không định trước được."]
+ ],
+ "lien_quan": ["bhyt-co-tra-cho-ho-tro-sinh-san", "gia-mot-lan-sieu-am-thai", "bhyt-tra-bao-nhieu-tu-tra-bao-nhieu"],
+},
+{
+ "slug": "bhyt-co-tra-cho-ho-tro-sinh-san",
+ "cum": "D",
+ "ngay_dang": "2026-09-20",
+ "tag": "Bảo hiểm y tế",
+ "doc": "6 phút đọc",
+ "title": "Bảo hiểm y tế có trả tiền làm IVF không: khoản 5 Điều 23 nói không, trừ một trường hợp",
+ "h1": "Bảo hiểm y tế có trả cho hỗ trợ sinh sản không",
+ "desc": "Khoản 5 Điều 23 Luật Bảo hiểm y tế xếp kỹ thuật hỗ trợ sinh sản vào nhóm không được hưởng, trừ trường hợp phải đình chỉ thai nghén do nguyên nhân bệnh lý. Luật 51/2024/QH15 chỉ sửa khoản 7 và khoản 8 của điều này.",
+ "tom_tat": "Câu trả lời nằm ở một dòng trong Điều 23 Luật Bảo hiểm y tế, và dòng đó chưa bị sửa. Luật số 51/2024/QH15, có hiệu lực từ 01/07/2025, sửa Điều 23 nhưng chỉ sửa khoản 7 và khoản 8. Khoản 5, khoản chứa cụm <b>kỹ thuật hỗ trợ sinh sản</b>, giữ nguyên. Bảng giá hiếm muộn của Bệnh viện Từ Dũ cho thấy điều đó bằng thực tế: cột dành cho người có thẻ bảo hiểm y tế không có dòng nào ghi số.",
+ "bang": [
+  {
+   "ten": "Hai khoản của Điều 23 liên quan tới sinh sản, chép nguyên văn",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Điều 23 Luật Bảo hiểm y tế, bản hợp nhất công bố trên Công báo số 151 và 152 ngày 02/02/2016. Đã đối chiếu với Luật số 51/2024/QH15 để xác định hai khoản này chưa bị sửa.",
+   "cot": ["Khoản", "Nguyên văn"],
+   "hang": [
+    ["Khoản 4", "Xét nghiệm, chẩn đoán thai không nhằm mục đích điều trị."],
+    ["Khoản 5", "Sử dụng kỹ thuật hỗ trợ sinh sản, dịch vụ kế hoạch hóa gia đình, nạo hút thai, phá thai, trừ trường hợp phải đình chỉ thai nghén do nguyên nhân bệnh lý của thai nhi hay của sản phụ."]
+   ]
+  },
+  {
+   "ten": "Năm khoản của Điều 23 đã bị sửa hoặc bãi bỏ, và vị trí của khoản 5",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Đối chiếu bản hợp nhất Điều 23 với khoản 18 Điều 1 Luật số 51/2024/QH15, toàn văn đăng trên Cổng Xây dựng chính sách, Chính phủ.",
+   "cot": ["Khoản", "Tình trạng"],
+   "hang": [
+    ["Khoản 5", "<b>Giữ nguyên</b>, không nằm trong phạm vi sửa đổi của Luật số 51/2024/QH15"],
+    ["Khoản 7", "Sửa đổi, bổ sung bởi khoản 18 Điều 1 Luật số 51/2024/QH15"],
+    ["Khoản 8", "Sửa đổi, bổ sung bởi khoản 18 Điều 1 Luật số 51/2024/QH15"],
+    ["Khoản 10", "Đã bãi bỏ ở bản hợp nhất năm 2016"],
+    ["Khoản 12", "Đã bãi bỏ ở bản hợp nhất năm 2016"]
+   ]
+  },
+  {
+   "ten": "Sáu dòng trong bảng giá hiếm muộn Từ Dũ, cột Có BHYT để trống",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Bảng giá dịch vụ Hiếm muộn do Bệnh viện Từ Dũ đăng dưới dạng hai ảnh, cuối bảng ghi ngày 01/10/2024. Chúng tôi đọc ngày 20/09/2026 và chép lại đúng ô nào có số, ô nào trống.",
+   "cot": ["Dịch vụ", "Không BHYT", "Có BHYT", "Theo yêu cầu"],
+   "hang": [
+    ["Khám hiếm muộn theo yêu cầu", "", "trống", "180.000đ"],
+    ["Siêu âm noãn thụ tinh trong ống nghiệm, cả chu kỳ", "", "trống", "700.000đ"],
+    ["Bơm tinh trùng vào buồng tử cung (IUI)", "1.028.000đ", "trống", "1.028.000đ"],
+    ["Tiêm tinh trùng vào bào tương của noãn (ICSI)", "6.253.000đ", "trống", "17.000.000đ"],
+    ["Chọc hút noãn", "7.142.000đ", "trống", ""],
+    ["Rã đông phôi, noãn", "3.623.000đ", "trống", ""]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Điều 23 là danh sách loại trừ của bảo hiểm y tế", "Luật Bảo hiểm y tế liệt kê ở Điều 23 những trường hợp không được hưởng. Khoản 5 nêu bốn nhóm cùng lúc: kỹ thuật hỗ trợ sinh sản, dịch vụ kế hoạch hoá gia đình, nạo hút thai và phá thai. Thụ tinh trong ống nghiệm và bơm tinh trùng vào buồng tử cung đều nằm trong nhóm thứ nhất."],
+  ["Ngoại lệ duy nhất trong khoản 5 là đình chỉ thai nghén vì bệnh lý", "Câu cuối của khoản 5 ghi \u201ctrừ trường hợp phải đình chỉ thai nghén do nguyên nhân bệnh lý của thai nhi hay của sản phụ\u201d. Ngoại lệ này áp cho việc đình chỉ thai nghén, không mở rộng sang kỹ thuật hỗ trợ sinh sản. Nói cách khác, không có đường nào trong khoản 5 dẫn tới việc quỹ trả cho một chu kỳ thụ tinh trong ống nghiệm."],
+  ["Luật sửa năm 2024 không đụng tới khoản này", "Luật số 51/2024/QH15 sửa đổi, bổ sung nhiều điều của Luật Bảo hiểm y tế và có hiệu lực từ 01/07/2025. Khoản 18 Điều 1 của luật này sửa Điều 23, nhưng chỉ sửa khoản 7 về điều trị lác và tật khúc xạ, và khoản 8 về thiết bị y tế thay thế. Khoản 5 không nằm trong phạm vi sửa."],
+  ["Khoản 4 giải thích vì sao nhiều lần siêu âm thai cũng phải tự trả", "Khoản 4 loại trừ việc xét nghiệm và chẩn đoán thai không nhằm mục đích điều trị. Đây là căn cứ thường được viện dẫn khi một lần siêu âm thai định kỳ không được quỹ thanh toán, trong khi cùng kỹ thuật ấy lại được thanh toán nếu thực hiện để điều trị một bệnh lý cụ thể. Chúng tôi đã đối chiếu chuyện này trong bài về giá siêu âm thai."],
+  ["Bảng giá của bệnh viện cho thấy đúng như vậy", "Bệnh viện Từ Dũ công bố bảng giá hiếm muộn có bốn cột, trong đó một cột dành cho người có thẻ bảo hiểm y tế. Trong hai ảnh bảng giá chúng tôi đọc được, cột đó không có dòng nào ghi số, ở cả phần khám, phần siêu âm lẫn phần thụ tinh trong ống nghiệm. Người bệnh trả theo cột không bảo hiểm y tế hoặc cột dịch vụ theo yêu cầu."],
+  ["Phần điều trị bệnh lý sinh sản vẫn là chuyện khác", "Điều 23 loại trừ kỹ thuật hỗ trợ sinh sản, không loại trừ việc khám và điều trị các bệnh lý phụ khoa hay nội tiết. Một ca mổ u xơ tử cung hay một đợt điều trị viêm nhiễm vẫn thuộc phạm vi hưởng theo quy định chung. Ranh giới nằm ở chỗ dịch vụ đó được xếp vào nhóm điều trị bệnh hay nhóm kỹ thuật hỗ trợ sinh sản, và bệnh viện là nơi xếp."],
+  ["Phần này rơi vào bảo hiểm thương mại thế nào", "Vì quỹ bảo hiểm y tế không chi trả, toàn bộ chi phí hỗ trợ sinh sản là tiền tự trả. Các hợp đồng bảo hiểm sức khoẻ thương mại cũng thường xếp hỗ trợ sinh sản vào điều khoản loại trừ. Người quan tâm nên đọc thẳng danh mục loại trừ trong bộ quy tắc điều khoản trước khi ký, thay vì hỏi miệng."]
+ ],
+ "khong_ro": [
+  "Bản Điều 23 chúng tôi chép nguyên văn là bản hợp nhất công bố năm 2016. Chúng tôi đã đối chiếu với Luật số 51/2024/QH15 để xác định khoản 4 và khoản 5 chưa bị sửa, nhưng chưa đối chiếu được với một bản hợp nhất chính thức phát hành sau ngày 01/07/2025.",
+  "Luật Bảo hiểm y tế không định nghĩa cụm kỹ thuật hỗ trợ sinh sản ngay trong Điều 23. Danh mục kỹ thuật cụ thể nào bị xếp vào nhóm này nằm ở văn bản chuyên ngành khác mà chúng tôi chưa đọc được.",
+  "Cột Có BHYT trong bảng giá Từ Dũ để trống ở mọi dòng trong hai ảnh chúng tôi đọc được. Chúng tôi không khẳng định gì về những phần bảng giá nằm ngoài hai ảnh đó.",
+  "Việc một dịch vụ cụ thể được xếp vào nhóm điều trị bệnh hay nhóm hỗ trợ sinh sản do cơ sở khám chữa bệnh quyết định trong từng hồ sơ. Chúng tôi không có dữ liệu về cách xếp thực tế ở từng bệnh viện."
+ ],
+ "faq": [
+  ["Bảo hiểm y tế có chi trả làm IVF không?", "Không. Khoản 5 Điều 23 Luật Bảo hiểm y tế xếp việc sử dụng kỹ thuật hỗ trợ sinh sản vào nhóm không được hưởng bảo hiểm y tế."],
+  ["Luật sửa đổi năm 2024 có thay đổi điều này không?", "Không. Luật số 51/2024/QH15 sửa Điều 23 ở khoản 7 và khoản 8, tức phần về điều trị lác, tật khúc xạ và thiết bị y tế thay thế. Khoản 5 giữ nguyên."],
+  ["Có trường hợp nào trong khoản 5 vẫn được hưởng không?", "Có một ngoại lệ, và ngoại lệ đó dành cho việc đình chỉ thai nghén do nguyên nhân bệnh lý của thai nhi hay của sản phụ. Ngoại lệ này không áp cho kỹ thuật hỗ trợ sinh sản."],
+  ["Siêu âm thai định kỳ có được bảo hiểm y tế trả không?", "Khoản 4 Điều 23 loại trừ việc xét nghiệm và chẩn đoán thai không nhằm mục đích điều trị. Trường hợp thực hiện để điều trị một bệnh lý cụ thể thì thuộc phạm vi hưởng theo quy định chung."],
+  ["Bảo hiểm sức khoẻ thương mại có trả cho hỗ trợ sinh sản không?", "Phần lớn hợp đồng xếp hỗ trợ sinh sản vào điều khoản loại trừ. Cách kiểm chắc chắn là đọc danh mục loại trừ trong bộ quy tắc điều khoản của chính sản phẩm đó."]
+ ],
+ "lien_quan": ["chi-phi-lam-ivf-bao-nhieu", "bhyt-khong-chi-tra-nhung-gi", "dieu-khoan-loai-tru"],
+},
+
 ]

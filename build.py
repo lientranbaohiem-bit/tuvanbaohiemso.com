@@ -2816,13 +2816,17 @@ page(BV_HUB,
 
 # --- file chuyen huong tai duong dan cu, de link da phat tan khong chet ---
 for _old, _new in BV_OLD:
+    # Sua 20/09/2026: canonical va dich chuyen huong phai dung dang KHONG duoi .html,
+    # giong het canonical cua trang that. Truoc do lech duoi nen Search Console bao
+    # "Alternate page with proper canonical tag".
+    _new_clean = clean_url(_new)
     _write(_old, """<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8">
 <title>\u0110ang chuy\u1ec3n h\u01b0\u1edbng\u2026</title>
-<link rel="canonical" href="{site}/{new}">
-<meta http-equiv="refresh" content="0; url=/{new}"><meta name="robots" content="noindex">
-<script>location.replace("/{new}"+location.hash);</script></head>
-<body><p>Trang \u0111\u00e3 chuy\u1ec3n sang <a href="/{new}">/{new}</a></p></body></html>""".format(
-        site=SITE, new=_new))
+<link rel="canonical" href="{site}{new}">
+<meta http-equiv="refresh" content="0; url={new}"><meta name="robots" content="noindex">
+<script>location.replace("{new}"+location.hash);</script></head>
+<body><p>Trang \u0111\u00e3 chuy\u1ec3n sang <a href="{new}">{new}</a></p></body></html>""".format(
+        site=SITE, new=_new_clean))
 
 
 # ================================================================ BAI VIET CUM C / D / E
