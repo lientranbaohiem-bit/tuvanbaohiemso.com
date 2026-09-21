@@ -24,8 +24,8 @@ BV_DATA = [
  "nguon_ngay": "16/09/2025",
  "nguon_nhan": "Bản hướng dẫn chi phí bệnh viện công bố gần nhất mà chúng tôi truy cập được là <b>ngày 16/09/2025</b>; một số dòng giá chi tiết là bản 2022&ndash;2023 và được ghi rõ trong từng bảng. Từ Dũ chưa công bố bảng giá 2026.",
  "nguon_url": "https://www.tudu.com.vn/vn/huong-dan-dich-vu/dich-vu-sanh-mo/huong-dan-di-sanh-tai-benh-vien-tu-du/",
- "title": "Chi phí sinh con ở Bệnh viện Từ Dũ: bảng giá bệnh viện công bố và phần BHYT không trả",
- "desc": "Sinh thường và sinh mổ ở Từ Dũ hết bao nhiêu, tiền phòng dịch vụ mỗi ngày, giá gây tê ngoài màng cứng, và ba khoản BHYT không chi trả. Số liệu dẫn nguồn từ bệnh viện, ghi rõ ngày công bố.",
+ "title": "Chi phí sanh ở Bệnh viện Từ Dũ: bảng giá sanh thường, sanh mổ và tiền phòng dịch vụ",
+ "desc": "Sanh thường và sanh mổ ở Từ Dũ hết bao nhiêu, tiền phòng dịch vụ mỗi ngày, giá gây tê ngoài màng cứng, và ba khoản bảo hiểm y tế không chi trả. Số liệu dẫn nguồn từ bệnh viện, ghi rõ ngày công bố.",
  "tom_tat": "Sinh thường không dịch vụ ở Từ Dũ khoảng <b>3&ndash;5 triệu</b>, có dịch vụ <b>10&ndash;15 triệu</b>. Sinh mổ không dịch vụ <b>7&ndash;10 triệu</b>, có dịch vụ <b>18&ndash;20 triệu</b>. Đó là tổng hoá đơn trước khi trừ bảo hiểm y tế. Phần khiến ngân sách vỡ không nằm ở đây &mdash; mà ở tiền phòng dịch vụ, khoản BHYT không trả một đồng nào.",
 
  "bang": [
@@ -1090,7 +1090,7 @@ BV_DATA = [
  "nguon_nhan": "Bảng giá dịch vụ kỹ thuật của Cơ sở 1, ban hành theo <b>Quyết định 1364/QĐ-ĐHYD ngày 16/07/2020</b>, đăng trên website bệnh viện ngày 20/12/2020. Bảng giá khám và siêu âm thai của Cơ sở 2 ghi <b>cập nhật 15/01/2026</b>.",
  "nguon_url": "https://www.bvdaihoc.com.vn/Home/ViewDetail/2785",
  "canh_bao": "Bệnh viện Đại học Y Dược có mổ lấy thai ở cả hai cơ sở, nhưng <b>không công bố giá mổ lấy thai</b> ở bất kỳ đâu. Bảng giá sản khoa duy nhất là bản 2020, đã sáu năm. Bài này đăng đúng phần bệnh viện có công bố, và nói rõ phần không có.",
- "title": "Chi phí sinh con ở Bệnh viện Đại học Y Dược TP.HCM: giá đỡ đẻ có, giá mổ lấy thai không",
+ "title": "Chi phí sanh ở Bệnh viện Đại học Y Dược TP.HCM: giá đỡ đẻ có, giá mổ lấy thai không có",
  "desc": "Bệnh viện công bố giá đỡ đẻ thường 5.900.000đ theo quyết định 2020, nhưng không công bố giá mổ lấy thai. Bảng giá nào có thật, bảng giá nào đang lan truyền mà không có nguồn.",
  "tom_tat": "Con số chính thức: đỡ đẻ thường ngôi chỏm <b>5.900.000đ</b> tự trả, BHYT trả <b>706.000đ</b>; gây tê ngoài màng cứng <b>1.500.000đ</b>. Cả ba lấy từ quyết định ban hành năm 2020. Còn giá mổ lấy thai thì bệnh viện không công bố, dù có mổ. Bảng giá sinh mổ chi tiết bạn thấy khắp nơi trên mạng không tìm được bản gốc nào trên website bệnh viện.",
 
@@ -1264,8 +1264,8 @@ BV_DATA = [
  "nguon_ngay": "15/05/2025",
  "nguon_nhan": "Trang <i>Danh mục kỹ thuật và giá</i> của bệnh viện ghi <b>cập nhật 15/05/2025</b>, dẫn tới bảng giá riêng của từng cơ sở. Mỗi bảng có căn cứ riêng và mốc thời gian riêng: Tây Ninh theo Công văn 206/CV-BVXATN/2025 ngày <b>22/05/2025</b> và Nghị quyết 205/NQ-HĐND ngày 06/12/2024; Vĩnh Long theo Quyết định 346/QĐ-BVXAVL ngày 20/09/2022. Ngày trên trang mục lục sớm hơn ngày văn bản Tây Ninh bảy ngày &mdash; bệnh viện không giải thích, chúng tôi ghi lại nguyên trạng.",
  "nguon_url": "https://bvxuyena.com.vn/thong-tin/danh-muc-gia",
- "title": "Chi phí sinh con ở Bệnh viện Xuyên Á: bảng giá từng khoản bệnh viện công bố, và chênh lệch giữa các cơ sở",
- "desc": "Giá đỡ đẻ, mổ lấy thai từng lần, giường khoa Sản và siêu âm thai tại Xuyên Á, lấy từ bảng giá bệnh viện công bố kèm cả cột BHYT. Có một khoản chênh giữa cơ sở Củ Chi và Tây Ninh mà ít ai biết.",
+ "title": "Chi phí sanh ở Bệnh viện Xuyên Á Củ Chi: bảng giá đỡ đẻ, mổ lấy thai và ngày giường",
+ "desc": "Giá đỡ đẻ, mổ lấy thai từng lần, ngày giường khoa Sản và siêu âm thai ở Xuyên Á Củ Chi, chép từ bảng giá bệnh viện công bố, có đủ cột tự trả và cột bảo hiểm y tế. Có một khoản chênh giữa cơ sở Củ Chi và Tây Ninh mà ít ai biết.",
  "tom_tat": "Ở cơ sở Củ Chi, đỡ đẻ thường <b>2.180.000đ</b>, mổ lấy thai lần 1 <b>4.360.000đ</b>, giường khoa Sản phòng 2 giường <b>550.000đ</b> mỗi ngày. Có BHYT thì phần bảo hiểm trả lần lượt 786.700đ và 2.604.800đ. Nhưng cùng một ca mổ lấy thai lần đầu, cơ sở Tây Ninh thu <b>6.540.000đ</b>, cao hơn Củ Chi 2,18 triệu.",
 
  "diem_nhan": {
@@ -1885,8 +1885,8 @@ BV_DATA = [
  "nguon_ngay": "04/05/2024",
  "nguon_nhan": "Trang <i>Thai sản trọn gói</i> trên website bệnh viện (không ghi ngày cập nhật) và bài ưu đãi đăng ngày 04/05/2024. Chúng tôi đọc trực tiếp hai trang này trên tên miền chính thức; có thể còn trang khác chưa mở tới.",
  "nguon_url": "https://baosonhospital.com/thai-san-tron-goi-1",
- "title": "Chi phí sinh con ở Bệnh viện Bảo Sơn: mười gói, sáu mức giảm, và không một giá gốc nào",
- "desc": "Bảo Sơn công bố 8 gói thai sản theo mốc tuần cùng các mức giảm tới 19 triệu, nhưng không đăng giá gốc của gói nào. Đây là những gì bệnh viện thật sự công bố, và khoản nào nằm ngoài gói.",
+ "title": "Chi phí đẻ ở Bệnh viện Bảo Sơn: mười gói thai sản, sáu mức giảm, không một giá gốc",
+ "desc": "Bảo Sơn công bố tám gói thai sản theo mốc tuần cùng hai gói nâng cấp và các mức giảm tới 19 triệu, nhưng không đăng giá gốc của gói nào. Đây là những gì bệnh viện thật sự công bố, và khoản nào nằm ngoài gói.",
  "tom_tat": "Bảo Sơn chia gói thai sản theo mốc tuần, <b>8 gói tiêu chuẩn</b> từ tuần 12 đến gói chuyển dạ, thêm hai gói nâng cấp VVIP và Luxury. Phần quyền lợi thì bệnh viện ghi khá kỹ: gói gồm gì, khoản nào phải trả thêm. Riêng giá thì không gói nào có. Con số duy nhất trên hai trang chúng tôi đọc được là các mức giảm trong một bài ưu đãi đăng 04/05/2024, mà giảm trên nền giá nào thì không nói.",
 
  "bang": [

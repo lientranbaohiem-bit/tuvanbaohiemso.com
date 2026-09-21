@@ -2837,4 +2837,94 @@ BAI_VIET = [
  "lien_quan": ["chi-phi-lam-ivf-bao-nhieu", "bhyt-khong-chi-tra-nhung-gi", "dieu-khoan-loai-tru"],
 },
 
+{
+ "slug": "gia-xet-nghiem-o-benh-vien-cong",
+ "cum": "D",
+ "ngay_dang": "2026-09-21",
+ "tag": "Chi phí y tế",
+ "doc": "7 phút đọc",
+ "title": "Giá xét nghiệm máu, Rubella, CMV, AMH ở Bệnh viện Từ Dũ: 28 dòng và khoản phụ thu hẹn giờ",
+ "h1": "Giá xét nghiệm ở Bệnh viện Từ Dũ",
+ "desc": "Bệnh viện Từ Dũ công bố 28 dòng giá xét nghiệm với nhiều cột song song. Giá không bảo hiểm y tế và giá dịch vụ theo yêu cầu bằng nhau ở mọi dòng có đủ hai giá; chỉ cột đặt hẹn giờ mới đắt hơn, nhiều nhất là 2,3 lần ở xét nghiệm máu.",
+ "tom_tat": "Bảng giá bệnh viện công thường chỉ được đọc để tra một con số. Đặt cả bảng cạnh nhau thì thấy một quy luật khác: ở <b>28 dòng</b> xét nghiệm Bệnh viện Từ Dũ công bố, cột không bảo hiểm y tế và cột dịch vụ theo yêu cầu ghi <b>cùng một số tiền ở mọi dòng có đủ hai giá</b>. Khoản thật sự làm giá đổi là cột thứ ba, dịch vụ theo yêu cầu hẹn giờ. Chênh nhiều nhất ở xét nghiệm tổng phân tích tế bào máu, từ 47.500 đồng lên 109.000 đồng.",
+ "bang": [
+  {
+   "ten": "Hai mươi dòng có chênh lệch giữa giá thường và giá đặt hẹn giờ",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Bảng giá dịch vụ Hiếm muộn do Bệnh viện Từ Dũ đăng tại mục Hướng dẫn dịch vụ, dưới dạng hai ảnh. Cuối bảng ghi \u201cTP.HCM, ngày 01 tháng 10 năm 2024\u201d. Chúng tôi đọc ngày 21/09/2026. Tên cột giữ nguyên theo cách bệnh viện ghi.",
+   "cot": ["Xét nghiệm", "Không BHYT", "Theo yêu cầu", "Theo yêu cầu hẹn giờ", "Lần"],
+   "hang": [
+    ["Tổng phân tích tế bào máu ngoại vi bằng máy đếm Lazer", "47.500đ", "47.500đ", "<b>109.000đ</b>", "2,3"],
+    ["TSH", "60.100đ", "60.100đ", "100.000đ", "1,7"],
+    ["Prolactin", "76.500đ", "76.500đ", "120.000đ", "1,6"],
+    ["FT3/FT4", "65.600đ", "65.600đ", "100.000đ", "1,5"],
+    ["Progesteron", "82.000đ", "82.000đ", "120.000đ", "1,5"],
+    ["Estradiol", "82.000đ", "82.000đ", "120.000đ", "1,5"],
+    ["LH", "82.000đ", "82.000đ", "120.000đ", "1,5"],
+    ["FSH", "82.000đ", "82.000đ", "120.000đ", "1,5"],
+    ["Beta-HCG", "87.500đ", "87.500đ", "120.000đ", "1,4"],
+    ["CMV IGG miễn dịch tự động", "116.000đ", "116.000đ", "150.000đ", "1,3"],
+    ["HBSAG miễn dịch tự động", "77.300đ", "77.300đ", "100.000đ", "1,3"],
+    ["Testosteron", "95.100đ", "95.100đ", "120.000đ", "1,3"],
+    ["Rubella IGG miễn dịch tự động", "123.000đ", "123.000đ", "150.000đ", "1,2"],
+    ["Toxoplasma IGG miễn dịch tự động", "123.000đ", "123.000đ", "150.000đ", "1,2"],
+    ["Toxoplasma IGM miễn dịch tự động", "123.000đ", "123.000đ", "150.000đ", "1,2"],
+    ["AST/ALT", "21.800đ", "21.800đ", "25.000đ", "1,1"],
+    ["CMV IGM miễn dịch tự động", "135.000đ", "135.000đ", "150.000đ", "1,1"],
+    ["Định nhóm máu ABO GS+RH", "89.000đ", "89.000đ", "96.000đ", "1,1"],
+    ["Rubella IGM miễn dịch tự động", "148.000đ", "148.000đ", "150.000đ", "1,0"],
+    ["HBEAG", "98.700đ", "98.700đ", "100.000đ", "1,0"]
+   ]
+  },
+  {
+   "ten": "Năm dòng có giá bằng nhau ở cả ba cột",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Cùng bảng giá dịch vụ Hiếm muộn của Bệnh viện Từ Dũ, ghi ngày 01/10/2024, đọc ngày 21/09/2026.",
+   "cot": ["Xét nghiệm", "Cả ba cột đều ghi"],
+   "hang": [
+    ["Tế bào học bằng phương pháp nhuộm Papanicolaou", "374.000đ"],
+    ["SYPHYLIX, kháng thể giang mai elisa", "306.000đ"],
+    ["LA", "251.000đ"],
+    ["HIV AG/AB miễn dịch tự động", "135.000đ"],
+    ["Điện tâm đồ", "35.400đ"]
+   ]
+  },
+  {
+   "ten": "Ba dòng chỉ có giá ở cột dịch vụ, không có giá ở cột không bảo hiểm y tế",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Cùng bảng giá dịch vụ Hiếm muộn của Bệnh viện Từ Dũ, ghi ngày 01/10/2024, đọc ngày 21/09/2026.",
+   "cot": ["Xét nghiệm", "Không BHYT", "Theo yêu cầu", "Theo yêu cầu hẹn giờ"],
+   "hang": [
+    ["AMH", "không ghi", "<b>800.000đ</b>", "800.000đ"],
+    ["Pap's thin-prep", "không ghi", "635.000đ", "635.000đ"],
+    ["Pap's liquit-prep", "không ghi", "500.000đ", "500.000đ"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Giá dịch vụ theo yêu cầu không đắt hơn giá thường, ở nhóm xét nghiệm", "Đây là phần trái với suy đoán thông thường. Trong 25 dòng có ghi giá ở cột không bảo hiểm y tế, cả 25 dòng đều ghi đúng con số đó ở cột dịch vụ theo yêu cầu. Nói cách khác, chọn dịch vụ theo yêu cầu cho một xét nghiệm không làm giá xét nghiệm đổi."],
+  ["Khoản làm giá đổi là đặt hẹn giờ", "Cột thứ ba của bảng tên là dịch vụ theo yêu cầu hẹn giờ. Trong 28 dòng của bảng này, đó là cột duy nhất ghi số khác với hai cột còn lại. Hai mươi trong 28 dòng có chênh, mức chênh từ 1,3% tới 129%. Khoản phụ thu này không được bệnh viện tách thành một dòng riêng mà gộp thẳng vào giá từng xét nghiệm, nên chỉ thấy được khi xếp hai cột cạnh nhau."],
+  ["Xét nghiệm càng rẻ thì tỷ lệ đội giá càng lớn", "Tổng phân tích tế bào máu ngoại vi từ 47.500 đồng lên 109.000 đồng, gấp 2,3 lần. AST/ALT từ 21.800 đồng lên 25.000 đồng, chỉ hơn 14%. Nhìn theo số tiền tuyệt đối thì các khoản chênh đều nằm trong khoảng 1.300 đồng tới 61.500 đồng, tức cột hẹn giờ giống như một mức giá sàn được làm tròn lên 100.000 đồng, 120.000 đồng hoặc 150.000 đồng."],
+  ["Nhóm nội tiết bị làm tròn về cùng một mức", "Progesteron, Estradiol, LH và FSH đều ghi 82.000 đồng ở cột thường và đều ghi 120.000 đồng ở cột hẹn giờ. Prolactin và Testosteron cũng về đúng 120.000 đồng dù giá thường khác nhau. TSH và FT3/FT4 cùng về 100.000 đồng. Bộ xét nghiệm nội tiết vì vậy có giá dễ ước hơn người ta tưởng."],
+  ["Bộ Rubella, CMV, Toxoplasma có giá gần nhau", "Sáu dòng của bộ này nằm trong khoảng 116.000 đồng tới 148.000 đồng ở cột thường, và cả sáu về đúng 150.000 đồng ở cột hẹn giờ. Đây là bộ xét nghiệm nhiều thai phụ được chỉ định, nên con số này trả lời được một câu hỏi hay gặp."],
+  ["Cột bảo hiểm y tế để trống ở toàn bộ bảng", "Bảng có một cột tên Có BHYT. Trong hai ảnh chúng tôi đọc được, cột này không có dòng nào ghi số. Bảng nằm trong mục hiếm muộn, và khoản 5 Điều 23 Luật Bảo hiểm y tế xếp việc sử dụng kỹ thuật hỗ trợ sinh sản vào nhóm không được hưởng. Chúng tôi tách phần luật thành một bài riêng."],
+  ["Vì sao một bảng giá của một bệnh viện vẫn đáng đọc", "Từ Dũ là bệnh viện công tuyến cuối về sản phụ khoa phía Nam, và giá ở cột không bảo hiểm y tế được xây theo thông tư của Bộ Y tế. Con số ở đó vì vậy là một mốc để đối chiếu khi một nơi khác báo giá cao gấp nhiều lần cho cùng tên xét nghiệm."]
+ ],
+ "khong_ro": [
+  "Bảng giá được đăng dưới dạng hai ảnh, không phải văn bản, nên không rõ có bản mới hơn ngày 01/10/2024 hay không.",
+  "Hai cột đầu của bảng ghi tắt là \u201ctheo TT21\u201d và \u201ctheo TT22\u201d. Bệnh viện không ghi đầy đủ số hiệu và năm ban hành của hai thông tư này, nên chúng tôi chép lại đúng cách bệnh viện viết, không tự quy đổi.",
+  "Bảng này nằm trong danh mục dịch vụ hiếm muộn. Chúng tôi không khẳng định các khoa khác của cùng bệnh viện áp đúng những mức giá này.",
+  "Bệnh viện không giải thích dịch vụ theo yêu cầu hẹn giờ khác dịch vụ theo yêu cầu ở điểm gì ngoài giá. Chúng tôi không suy đoán.",
+  "Chúng tôi chưa tìm được bảng giá xét nghiệm dạng nhiều cột do bệnh viện công khác công bố, nên chưa so sánh được giữa các nơi."
+ ],
+ "faq": [
+  ["Xét nghiệm AMH bao nhiêu tiền?", "Bệnh viện Từ Dũ ghi 800.000 đồng ở cả cột dịch vụ theo yêu cầu và cột hẹn giờ, theo bảng giá ghi ngày 01/10/2024. Cột không bảo hiểm y tế không có số cho dòng này."],
+  ["Xét nghiệm Rubella hết bao nhiêu?", "Rubella IGG 123.000 đồng và Rubella IGM 148.000 đồng ở cột thường. Nếu đặt hẹn giờ thì cả hai đều 150.000 đồng."],
+  ["Xét nghiệm máu tổng quát giá bao nhiêu?", "Dòng tổng phân tích tế bào máu ngoại vi bằng máy đếm Lazer ghi 47.500 đồng ở cột thường và 109.000 đồng ở cột đặt hẹn giờ."],
+  ["Đặt hẹn giờ có làm xét nghiệm đắt hơn không?", "Có, ở 20 trong 28 dòng. Mức chênh từ 1.300 đồng tới 61.500 đồng tuỳ xét nghiệm."],
+  ["Bảo hiểm y tế có trả cho những xét nghiệm này không?", "Trong bảng giá hiếm muộn này, cột Có BHYT không có dòng nào ghi số. Khoản 5 Điều 23 Luật Bảo hiểm y tế loại trừ việc sử dụng kỹ thuật hỗ trợ sinh sản khỏi phạm vi hưởng."]
+ ],
+ "lien_quan": ["bhyt-co-tra-cho-ho-tro-sinh-san", "chi-phi-lam-ivf-bao-nhieu", "bhyt-tra-bao-nhieu-tu-tra-bao-nhieu"],
+},
+
 ]
