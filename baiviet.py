@@ -2927,4 +2927,77 @@ BAI_VIET = [
  "lien_quan": ["bhyt-co-tra-cho-ho-tro-sinh-san", "chi-phi-lam-ivf-bao-nhieu", "bhyt-tra-bao-nhieu-tu-tra-bao-nhieu"],
 },
 
+{
+ "slug": "kham-chua-benh-theo-yeu-cau-bhyt-tra-gi",
+ "cum": "D",
+ "ngay_dang": "2026-09-22",
+ "tag": "Bảo hiểm y tế",
+ "doc": "6 phút đọc",
+ "title": "Khám chữa bệnh theo yêu cầu: bảo hiểm y tế trả phần nào, và vì sao luật không ghi con số",
+ "h1": "Khám chữa bệnh theo yêu cầu, bảo hiểm y tế trả phần nào",
+ "desc": "Khoản 6 Điều 22 Luật Bảo hiểm y tế không đặt mức hưởng cho dịch vụ khám chữa bệnh theo yêu cầu mà giao Chính phủ quy định. Bảng giá bệnh viện cho thấy khoảng cách thật giữa hai loại giá, có dòng chênh 2,72 lần và có dòng bằng nhau.",
+ "tom_tat": "Chọn khám theo yêu cầu thì bảo hiểm y tế còn trả gì không, là câu hỏi luật trả lời bằng cách giao lại cho Chính phủ. <b>Khoản 6 Điều 22</b>, khoản cuối cùng của điều này sau khi sửa, viết rằng Chính phủ quy định mức hưởng cho trường hợp người tham gia bảo hiểm y tế sử dụng dịch vụ khám bệnh, chữa bệnh theo yêu cầu. Trong lúc chờ đọc được văn bản hướng dẫn, phần đo được là giá: ở Bệnh viện Từ Dũ, cùng một kỹ thuật có thể chênh <b>2,72 lần</b> giữa hai cột, nhưng cũng có nhóm dịch vụ hai cột ghi đúng một con số.",
+ "bang": [
+  {
+   "ten": "Ba dòng cần nhớ về khoản 6 Điều 22",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Toàn văn Luật số 51/2024/QH15 đăng trên Cổng Xây dựng chính sách, Chính phủ. Chúng tôi đọc ngày 22/09/2026 và đã hỏi riêng một lượt để đếm số khoản của Điều 22 sau khi sửa.",
+   "cot": ["Mục", "Nội dung"],
+   "hang": [
+    ["Nguyên văn khoản 6 Điều 22", "Chính phủ quy định chi tiết mức hưởng đối với đối tượng quy định tại các điểm a, b, c, d và đ khoản 3 Điều 12 của Luật này; quy định mức hưởng đối với trường hợp người tham gia bảo hiểm y tế sử dụng dịch vụ khám bệnh, chữa bệnh theo yêu cầu và các trường hợp khác không thuộc quy định tại khoản 1 Điều này."],
+    ["Vị trí trong điều luật", "Điều 22 sau khi sửa có <b>sáu khoản</b>, khoản 6 là khoản cuối cùng"],
+    ["Sửa bởi văn bản nào", "Khoản 17 Điều 1 Luật số 51/2024/QH15, hiệu lực từ 01/07/2025"]
+   ]
+  },
+  {
+   "ten": "Năm dòng so giá thường với giá theo yêu cầu ở Bệnh viện Từ Dũ",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Bảng giá dịch vụ Hiếm muộn do Bệnh viện Từ Dũ đăng dưới dạng hai ảnh, cuối bảng ghi ngày 01/10/2024. Chúng tôi đọc ngày 21/09/2026. Tên cột giữ nguyên theo cách bệnh viện ghi.",
+   "cot": ["Dịch vụ", "Không BHYT", "Theo yêu cầu", "Lần"],
+   "hang": [
+    ["Tiêm tinh trùng vào bào tương của noãn (ICSI)", "6.253.000đ", "<b>17.000.000đ</b>", "2,72"],
+    ["Bơm tinh trùng vào buồng tử cung (IUI)", "1.028.000đ", "1.028.000đ", "1,00"],
+    ["Tinh dịch đồ dịch vụ", "324.000đ", "324.000đ", "1,00"],
+    ["Prolactin", "76.500đ", "76.500đ", "1,00"],
+    ["Rubella IGG miễn dịch tự động", "123.000đ", "123.000đ", "1,00"]
+   ]
+  },
+  {
+   "ten": "Ba dòng cho thấy cột đặt hẹn giờ mới là cột đắt hơn",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Cùng bảng giá dịch vụ Hiếm muộn của Bệnh viện Từ Dũ, ghi ngày 01/10/2024, đọc ngày 21/09/2026.",
+   "cot": ["Xét nghiệm", "Không BHYT", "Theo yêu cầu hẹn giờ", "Lần"],
+   "hang": [
+    ["Tổng phân tích tế bào máu ngoại vi bằng máy đếm Lazer", "47.500đ", "109.000đ", "2,3"],
+    ["TSH", "60.100đ", "100.000đ", "1,7"],
+    ["Beta-HCG", "87.500đ", "120.000đ", "1,4"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Luật cố ý không ghi con số cho dịch vụ theo yêu cầu", "Năm khoản đầu của Điều 22 ghi rõ các mức 100%, 95% và 80% cùng điều kiện đi kèm. Khoản 6 thì khác hẳn về cách viết: nó không ghi tỷ lệ nào mà giao Chính phủ quy định mức hưởng cho trường hợp người tham gia bảo hiểm y tế sử dụng dịch vụ khám bệnh, chữa bệnh theo yêu cầu. Nói cách khác, đọc riêng Luật Bảo hiểm y tế thì không tra ra được con số cho phần này."],
+  ["Cụm và các trường hợp khác không thuộc quy định tại khoản 1 là cụm rộng", "Khoản 6 gom vào cùng một câu hai nhóm: dịch vụ theo yêu cầu, và các trường hợp khác không thuộc khoản 1 Điều 22. Khoản 1 là khoản liệt kê các mức hưởng thông thường. Vì vậy phạm vi của khoản 6 rộng hơn chuyện chọn phòng hay chọn bác sĩ, nhưng đúng ranh giới ở đâu thì phải đọc văn bản của Chính phủ."],
+  ["Phần đo được ngay là giá bệnh viện công bố", "Trong lúc chưa đối chiếu được văn bản hướng dẫn, điều tra được là bệnh viện bán dịch vụ theo yêu cầu với giá nào. Bệnh viện Từ Dũ công bố bảng giá hiếm muộn có cột riêng cho dịch vụ theo yêu cầu, nên so trực tiếp được với cột giá thường."],
+  ["Cùng một bảng giá, hai nhóm dịch vụ cho hai kết quả ngược nhau", "Ở nhóm kỹ thuật, dòng tiêm tinh trùng vào bào tương của noãn ghi 6.253.000 đồng ở cột không bảo hiểm y tế và 17.000.000 đồng ở cột theo yêu cầu, chênh 2,72 lần. Ở nhóm xét nghiệm và nhóm thủ thuật đơn giản, hai cột ghi đúng một con số. Vì vậy câu hỏi dịch vụ theo yêu cầu đắt hơn bao nhiêu không có một đáp số chung, phải hỏi theo từng dòng dịch vụ."],
+  ["Khoản làm giá đổi nhiều khi là đặt hẹn giờ, không phải theo yêu cầu", "Bảng của Từ Dũ có cột thứ tư là dịch vụ theo yêu cầu hẹn giờ. Ở nhóm xét nghiệm, đây là cột duy nhất trong bốn cột ghi số khác, với mức chênh cao nhất là xét nghiệm tổng phân tích tế bào máu, từ 47.500 đồng lên 109.000 đồng. Người muốn tiết kiệm nên hỏi rõ mình đang đăng ký loại nào."],
+  ["Cột bảo hiểm y tế để trống trong bảng hiếm muộn", "Bảng giá này có một cột tên Có BHYT và trong hai ảnh chúng tôi đọc được, cột đó không có dòng nào ghi số. Điều này khớp với khoản 5 Điều 23, khoản loại trừ kỹ thuật hỗ trợ sinh sản khỏi phạm vi hưởng. Nó không nói gì về các khoa khác, nơi bảo hiểm y tế vẫn chi trả phần thuộc phạm vi."],
+  ["Việc nên làm trước khi ký giấy chọn dịch vụ theo yêu cầu", "Hỏi bệnh viện ba câu: khoản nào trong hoá đơn thuộc phần bảo hiểm y tế chi trả, khoản nào là phần chênh do chọn dịch vụ theo yêu cầu, và khoản nào là phụ thu do đặt hẹn giờ. Ba khoản này nằm ở ba cột khác nhau trong bảng giá, nên bệnh viện tách ra được."]
+ ],
+ "khong_ro": [
+  "Khoản 6 Điều 22 giao Chính phủ quy định mức hưởng cho dịch vụ theo yêu cầu. Chúng tôi chưa đọc được văn bản của Chính phủ quy định cụ thể mức đó, nên không nêu một tỷ lệ nào.",
+  "Ranh giới giữa phần thuộc phạm vi hưởng và phần chênh do chọn dịch vụ theo yêu cầu do cơ sở khám chữa bệnh xác định trong từng hoá đơn. Chúng tôi không có dữ liệu về cách tách khoản thực tế ở từng bệnh viện.",
+  "Số liệu so sánh hai cột trong bài lấy từ bảng giá hiếm muộn của một bệnh viện. Chúng tôi chưa tìm được bảng giá dạng nhiều cột do bệnh viện công khác công bố để đối chiếu.",
+  "Bệnh viện không giải thích dịch vụ theo yêu cầu hẹn giờ khác dịch vụ theo yêu cầu ở điểm gì ngoài giá.",
+  "Hai cột đầu của bảng ghi tắt là theo TT21 và theo TT22 mà không ghi đủ số hiệu và năm ban hành, nên chúng tôi chép đúng cách bệnh viện viết, không tự quy đổi."
+ ],
+ "faq": [
+  ["Khám theo yêu cầu có được bảo hiểm y tế thanh toán không?", "Khoản 6 Điều 22 Luật Bảo hiểm y tế giao Chính phủ quy định mức hưởng cho trường hợp người tham gia bảo hiểm y tế sử dụng dịch vụ khám bệnh, chữa bệnh theo yêu cầu. Bản thân Luật không ghi tỷ lệ nào cho trường hợp này."],
+  ["Dịch vụ theo yêu cầu đắt hơn bao nhiêu?", "Tuỳ từng dịch vụ. Ở bảng giá hiếm muộn của Bệnh viện Từ Dũ, dòng ICSI chênh 2,72 lần giữa hai cột, trong khi dòng IUI, tinh dịch đồ, Prolactin và Rubella IGG thì hai cột ghi đúng một con số."],
+  ["Đặt hẹn giờ có tính thêm tiền không?", "Ở bảng giá nói trên thì có. Xét nghiệm tổng phân tích tế bào máu từ 47.500 đồng lên 109.000 đồng, TSH từ 60.100 đồng lên 100.000 đồng."],
+  ["Điều 22 Luật Bảo hiểm y tế có mấy khoản?", "Sáu khoản, sau khi được sửa đổi bởi khoản 17 Điều 1 Luật số 51/2024/QH15, hiệu lực từ 01/07/2025."],
+  ["Nên hỏi bệnh viện điều gì để không bị bất ngờ hoá đơn?", "Hỏi tách riêng ba phần: phần bảo hiểm y tế chi trả, phần chênh do chọn dịch vụ theo yêu cầu, và phần phụ thu do đặt hẹn giờ."]
+ ],
+ "lien_quan": ["gia-xet-nghiem-o-benh-vien-cong", "muc-huong-bhyt-bao-nhieu-phan-tram", "bhyt-tra-bao-nhieu-tu-tra-bao-nhieu"],
+},
+
 ]
