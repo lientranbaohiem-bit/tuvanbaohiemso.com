@@ -3000,4 +3000,79 @@ BAI_VIET = [
  "lien_quan": ["gia-xet-nghiem-o-benh-vien-cong", "muc-huong-bhyt-bao-nhieu-phan-tram", "bhyt-tra-bao-nhieu-tu-tra-bao-nhieu"],
 },
 
+{
+ "slug": "chi-phi-cho-em-be-sau-khi-sinh",
+ "cum": "A",
+ "ngay_dang": "2026-09-22",
+ "tag": "Thai sản",
+ "doc": "6 phút đọc",
+ "title": "Chi phí cho em bé sau khi sinh: sàng lọc sơ sinh, chiếu đèn vàng da, và khoản chênh 200.000 đồng giữa bé trai với bé gái",
+ "h1": "Chi phí cho em bé sau khi sinh",
+ "desc": "Bảy trong 21 bệnh viện công bố giá các khoản dành riêng cho em bé sau sinh. Bệnh viện Phụ sản Hà Nội ghi gói sàng lọc sơ sinh cho bé trai đắt hơn bé gái 200.000 đồng ở cả hai mức gói.",
+ "tom_tat": "Bảng giá ca sinh thường được đọc theo phần của mẹ. Phần của em bé thì ít nơi công bố: chúng tôi rà 21 bệnh viện và chỉ <b>bảy nơi</b> ghi giá cho các khoản dành riêng cho bé. Trong số đó có một chi tiết ít ai để ý. Bệnh viện Phụ sản Hà Nội ghi gói sàng lọc sơ sinh cơ bản <b>2.350.000 đồng cho bé gái và 2.550.000 đồng cho bé trai</b>, gói nâng cao 4.800.000 đồng cho bé gái và 5.000.000 đồng cho bé trai. Chênh đúng 200.000 đồng ở cả hai mức.",
+ "bang": [
+  {
+   "ten": "Bốn gói và dịch vụ sàng lọc sơ sinh có giá công bố",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Bệnh viện Phụ sản Hà Nội, bảng giá sinh khu thường và khu dịch vụ đăng trên benhvienphusanhanoi.vn ngày 20/08/2026. Bệnh viện Phụ sản Trung ương, Quyết định 2312/QĐ-PSTW ngày 30/07/2026, mục chăm sóc sau sinh cơ sở 2.",
+   "cot": ["Bệnh viện", "Khoản", "Giá bệnh viện ghi"],
+   "hang": [
+    ["Phụ sản Hà Nội", "Gói sàng lọc sơ sinh cơ bản", "<b>2.350.000đ bé gái / 2.550.000đ bé trai</b>"],
+    ["Phụ sản Hà Nội", "Gói sàng lọc sơ sinh nâng cao", "<b>4.800.000đ bé gái / 5.000.000đ bé trai</b>"],
+    ["Phụ sản Trung ương", "Gói khám tổng quát sơ sinh trước khi ra viện", "980.000đ"],
+    ["Phụ sản Trung ương", "Sàng lọc sơ sinh dị tật tim bẩm sinh", "260.000đ"]
+   ]
+  },
+  {
+   "ten": "Bốn khoản chăm sóc em bé có giá công bố ở ba bệnh viện khác",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Bệnh viện Quốc tế Hạnh Phúc, tờ thông tin gói sinh chính thức, file không ghi ngày hiệu lực, truy cập ngày 01/09/2026. Bệnh viện Đa khoa Xuyên Á, Bảng giá dịch vụ kỹ thuật 2025 trên bvxuyena.com.vn, mục ngày giường. Bệnh viện Hùng Vương, bảng giá dịch vụ tự chọn.",
+   "cot": ["Bệnh viện", "Khoản", "Giá"],
+   "hang": [
+    ["Hạnh Phúc", "Chiếu đèn vàng da 24 giờ", "1.200.000đ giá niêm yết, 960.000đ giá ưu đãi"],
+    ["Xuyên Á Củ Chi", "Phòng nhi sơ sinh, mỗi ngày", "300.000đ"],
+    ["Xuyên Á Củ Chi", "Giường sưởi ấm sơ sinh, mỗi ngày", "275.000đ"],
+    ["Hùng Vương", "Tắm sơ sinh, dịch vụ tự chọn", "30.000đ"]
+   ]
+  },
+  {
+   "ten": "Bốn khoản ba bệnh viện có nhắc nhưng không kèm giá",
+   "kiem_chung": "chinh-thuc",
+   "nguon": "Trích từ chính tài liệu gói sinh của Bệnh viện Hoàn Mỹ Sài Gòn và Bệnh viện Đa khoa Bảo Sơn, phần liệt kê nội dung gói và phần loại trừ.",
+   "cot": ["Bệnh viện", "Khoản", "Bệnh viện ghi gì"],
+   "hang": [
+    ["Hoàn Mỹ Sài Gòn", "Sàng lọc sơ sinh", "liệt kê nội dung gồm G6PD, TSH, Free T4, Bilirubin, thính lực, tim bẩm sinh, không kèm giá"],
+    ["Hoàn Mỹ Sài Gòn", "Tiêm chủng sơ sinh, tắm và vệ sinh bé", "ghi là đã nằm trong gói"],
+    ["Hoàn Mỹ Sài Gòn", "Chăm sóc đặc biệt cho trẻ sơ sinh (NICU)", "bệnh viện ghi là khoản đắt nhất và khó đoán nhất trong mọi ca sinh, không nêu giá"],
+    ["Bảo Sơn", "Sàng lọc sơ sinh", "không công bố giá"]
+   ]
+  }
+ ],
+ "y_chinh": [
+  ["Bé trai đắt hơn bé gái 200.000 đồng, ở cả hai mức gói", "Bệnh viện Phụ sản Hà Nội ghi rõ hai mức cho mỗi gói sàng lọc sơ sinh. Gói cơ bản là 2.350.000 đồng cho bé gái và 2.550.000 đồng cho bé trai. Gói nâng cao là 4.800.000 đồng cho bé gái và 5.000.000 đồng cho bé trai. Khoảng cách giống hệt nhau ở hai gói, đúng 200.000 đồng. Bệnh viện không giải thích khoản chênh này gồm gì."],
+  ["Chỉ bảy trong 21 bệnh viện nói gì đó về phần của em bé", "Chúng tôi rà toàn bộ 21 bảng giá đã đọc và chỉ tìm được mười hai dòng liên quan tới em bé, nằm ở bảy bệnh viện. Mười bốn nơi còn lại không có dòng nào. Nghĩa là khi hỏi một ca sinh hết bao nhiêu, phần lớn bảng giá đang trả lời cho một người chứ không phải hai."],
+  ["Khoản đắt nhất lại là khoản không nơi nào công bố", "Bệnh viện Hoàn Mỹ Sài Gòn ghi thẳng trong tài liệu gói sinh rằng chăm sóc đặc biệt cho trẻ sơ sinh là khoản đắt nhất và khó đoán nhất trong mọi ca sinh, nhưng không nêu giá. Không bệnh viện nào trong nhóm 21 nơi công bố giá một ngày nằm đơn vị chăm sóc đặc biệt cho trẻ sơ sinh. Đây là khoảng trống lớn nhất trong bộ dữ liệu."],
+  ["Vàng da là khoản phát sinh phổ biến, và đã có một con số", "Chiếu đèn điều trị vàng da là việc thường gặp ở trẻ mới sinh. Bệnh viện Quốc tế Hạnh Phúc ghi 1.200.000 đồng cho 24 giờ chiếu đèn theo giá niêm yết và 960.000 đồng theo giá ưu đãi. Đây là con số duy nhất cho khoản này mà chúng tôi tìm được trong bộ 21 bệnh viện."],
+  ["Bé nằm riêng thì tính tiền giường riêng", "Bệnh viện Đa khoa Xuyên Á cơ sở Củ Chi có hai dòng giường dành cho bé: phòng nhi sơ sinh 300.000 đồng và giường sưởi ấm sơ sinh 275.000 đồng, tính theo ngày. Hai dòng này nằm cùng bảng giá ngày giường khoa Sản, nghĩa là chúng cộng thêm vào tiền giường của mẹ chứ không thay thế."],
+  ["Sàng lọc sơ sinh ở bệnh viện công tách thành từng dịch vụ", "Phụ sản Trung ương không bán gói mà ghi từng dịch vụ: khám tổng quát sơ sinh trước khi ra viện 980.000 đồng, sàng lọc dị tật tim bẩm sinh 260.000 đồng. Cách công bố này khác hẳn cách bán gói của Phụ sản Hà Nội, nên hai bên không so trực tiếp được nếu không biết gói gồm đúng những xét nghiệm nào."],
+  ["Câu nên hỏi trước khi nhập viện", "Hỏi bệnh viện bốn khoản của em bé có nằm trong gói sinh không: sàng lọc sơ sinh, tiêm chủng, chiếu đèn vàng da nếu cần, và giường nằm riêng cho bé. Bốn khoản này ở bảy bệnh viện nói trên đều được tính riêng, nên rất có thể nơi khác cũng vậy."]
+ ],
+ "khong_ro": [
+  "Bệnh viện Phụ sản Hà Nội không giải thích vì sao gói sàng lọc sơ sinh cho bé trai đắt hơn bé gái 200.000 đồng. Chúng tôi chép lại đúng con số bệnh viện công bố và không suy đoán nguyên nhân.",
+  "Không bệnh viện nào trong 21 nơi chúng tôi đã đọc công bố giá một ngày nằm đơn vị chăm sóc đặc biệt cho trẻ sơ sinh.",
+  "Mười bốn trong 21 bệnh viện không có dòng nào về phần của em bé trong bảng giá đã công bố. Chúng tôi không kết luận gì về mức giá ở những nơi đó.",
+  "Tờ thông tin gói sinh của Bệnh viện Quốc tế Hạnh Phúc không ghi ngày hiệu lực. Chúng tôi truy cập ngày 01/09/2026.",
+  "Bệnh viện Hoàn Mỹ Sài Gòn liệt kê nội dung gói sàng lọc sơ sinh nhưng không kèm giá, nên không so được với gói của hai bệnh viện phụ sản ở Hà Nội.",
+  "Phần bảo hiểm y tế chi trả cho các khoản của trẻ sơ sinh không nằm trong phạm vi bài này. Các bảng giá chúng tôi trích đều là cột tự trả."
+ ],
+ "faq": [
+  ["Sàng lọc sơ sinh hết bao nhiêu tiền?", "Bệnh viện Phụ sản Hà Nội ghi gói cơ bản 2.350.000 đồng cho bé gái và 2.550.000 đồng cho bé trai, gói nâng cao 4.800.000 đồng cho bé gái và 5.000.000 đồng cho bé trai. Bệnh viện Phụ sản Trung ương tách riêng từng dịch vụ, trong đó sàng lọc dị tật tim bẩm sinh là 260.000 đồng."],
+  ["Vì sao gói sàng lọc cho bé trai đắt hơn bé gái?", "Bảng giá của Bệnh viện Phụ sản Hà Nội ghi hai mức khác nhau, chênh 200.000 đồng ở cả hai gói, nhưng không giải thích khoản chênh gồm gì."],
+  ["Chiếu đèn vàng da cho trẻ sơ sinh giá bao nhiêu?", "Bệnh viện Quốc tế Hạnh Phúc ghi 1.200.000 đồng cho 24 giờ theo giá niêm yết và 960.000 đồng theo giá ưu đãi. Đây là con số duy nhất cho khoản này trong 21 bảng giá chúng tôi đã đọc."],
+  ["Bé nằm cùng mẹ có tính thêm tiền giường không?", "Tuỳ bệnh viện. Xuyên Á Củ Chi có dòng riêng cho phòng nhi sơ sinh 300.000 đồng mỗi ngày và giường sưởi ấm sơ sinh 275.000 đồng mỗi ngày, tính cộng thêm."],
+  ["Nằm chăm sóc đặc biệt sơ sinh hết bao nhiêu?", "Không bệnh viện nào trong 21 nơi chúng tôi rà công bố giá khoản này, dù có nơi ghi rõ đây là khoản đắt nhất và khó đoán nhất trong một ca sinh."]
+ ],
+ "lien_quan": ["goi-sinh-tron-goi-khong-bao-gom-gi", "tam-ung-khi-nhap-vien-sinh", "gia-mot-lan-sieu-am-thai"],
+},
+
 ]
