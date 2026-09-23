@@ -2748,6 +2748,20 @@ def benh_vien_body(bv, P="../"):
                  % (P, bai_url(b["slug"]), b.get("h1") or b["title"], b.get("tag", "")))
     o.append('</div></div></section>')
 
+    # Them 23/09/2026: cum C (hop dong & boi thuong) va cum E (bao ve thu nhap)
+    # truoc ngay nay khong co duong dan nao tu trang benh vien. Khoi A+D o tren
+    # da keo so trang duoc lap chi muc tu 25 len 43; lam tiep cho C va E.
+    o.append('<section class="section"><div class="wrap">')
+    o.append('<h2>Khi dùng bảo hiểm để trả phần này</h2>')
+    o.append('<p class="lead">Phần viện phí không được quỹ bảo hiểm y tế trả thường rơi vào '
+             'hợp đồng bảo hiểm thương mại. Những bài dưới đây đọc điều luật và điều khoản '
+             'hợp đồng, trích nguyên văn số điều và số văn bản.</p>')
+    o.append('<div class="entry-grid">')
+    for b in bai_theo_cum("C") + bai_theo_cum("E"):
+        o.append('<a class="entry" href="%s%s"><b>%s</b><span>%s</span></a>'
+                 % (P, bai_url(b["slug"]), b.get("h1") or b["title"], b.get("tag", "")))
+    o.append('</div></div></section>')
+
     # lien ket noi bo
     o.append('<section class="section"><div class="wrap">')
     o.append('<h2>Đọc tiếp</h2><div class="entry-grid">')
