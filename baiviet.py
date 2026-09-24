@@ -3423,7 +3423,7 @@ BAI_VIET = [
 {
  "slug": "hoa-hong-dai-ly-bao-hiem-bao-nhieu-phan-tram",
  "cum": "C",
- "ngay_dang": "2026-09-25",
+ "ngay_dang": "2026-09-24",
  "tag": "Hợp đồng",
  "doc": "9 phút đọc",
  "title": "Hoa hồng đại lý bảo hiểm tối đa bao nhiêu phần trăm: bảng trần của Bộ Tài chính áp dụng từ 01/01/2027",
@@ -3516,7 +3516,7 @@ BAI_VIET = [
 {
  "slug": "tam-ung-tu-gia-tri-hoan-lai",
  "cum": "C",
- "ngay_dang": "2026-09-25",
+ "ngay_dang": "2026-09-24",
  "tag": "Hợp đồng",
  "doc": "7 phút đọc",
  "title": "Tạm ứng từ giá trị hoàn lại tính lãi thế nào: trần là lãi suất tích luỹ cộng 2%, và hai nhóm sản phẩm bị loại",
