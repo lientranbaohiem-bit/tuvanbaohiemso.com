@@ -1264,8 +1264,8 @@ BV_DATA = [
  "nguon_ngay": "15/05/2025",
  "nguon_nhan": "Trang <i>Danh mục kỹ thuật và giá</i> của bệnh viện ghi <b>cập nhật 15/05/2025</b>, dẫn tới bảng giá riêng của từng cơ sở. Mỗi bảng có căn cứ riêng và mốc thời gian riêng: Tây Ninh theo Công văn 206/CV-BVXATN/2025 ngày <b>22/05/2025</b> và Nghị quyết 205/NQ-HĐND ngày 06/12/2024; Vĩnh Long theo Quyết định 346/QĐ-BVXAVL ngày 20/09/2022. Ngày trên trang mục lục sớm hơn ngày văn bản Tây Ninh bảy ngày &mdash; bệnh viện không giải thích, chúng tôi ghi lại nguyên trạng.",
  "nguon_url": "https://bvxuyena.com.vn/thong-tin/danh-muc-gia",
- "title": "Chi phí sanh ở Bệnh viện Xuyên Á Củ Chi: bảng giá đỡ đẻ, mổ lấy thai và ngày giường",
- "desc": "Giá đỡ đẻ, mổ lấy thai từng lần, ngày giường khoa Sản và siêu âm thai ở Xuyên Á Củ Chi, chép từ bảng giá bệnh viện công bố, có đủ cột tự trả và cột bảo hiểm y tế. Có một khoản chênh giữa cơ sở Củ Chi và Tây Ninh mà ít ai biết.",
+ "title": "Bảng giá sanh Bệnh viện Xuyên Á: sanh thường 2,18 triệu, mổ lấy thai từ 4,36 triệu, BHYT trả bao nhiêu",
+ "desc": "Xuyên Á Củ Chi công bố đỡ đẻ thường 2.180.000 đồng, bảo hiểm y tế trả 786.700 đồng; mổ lấy thai lần đầu 4.360.000 đồng, bảo hiểm y tế trả 2.604.800 đồng. Có đủ giá mổ lần hai, sinh đôi, ngày giường khoa Sản và siêu âm thai.",
  "tom_tat": "Ở cơ sở Củ Chi, đỡ đẻ thường <b>2.180.000đ</b>, mổ lấy thai lần 1 <b>4.360.000đ</b>, giường khoa Sản phòng 2 giường <b>550.000đ</b> mỗi ngày. Có BHYT thì phần bảo hiểm trả lần lượt 786.700đ và 2.604.800đ. Nhưng cùng một ca mổ lấy thai lần đầu, cơ sở Tây Ninh thu <b>6.540.000đ</b>, cao hơn Củ Chi 2,18 triệu.",
 
  "diem_nhan": {
