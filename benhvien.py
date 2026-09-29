@@ -761,8 +761,8 @@ BV_DATA = [
  "nguon_nhan": "Trang gói sinh &ldquo;Hạnh phúc Hoàn Mỹ&rdquo; của Hoàn Mỹ Sài Gòn cập nhật <b>11/12/2025</b>; thông báo bảo lãnh viện phí quốc tế đăng <b>02/03/2026</b>. Cả hai trang đều không có mức giá nào.",
  "nguon_url": "https://hoanmy.com/saigon/thai-san/homepage/",
  "canh_bao": "Trang này không có bảng giá, vì Bệnh viện Hoàn Mỹ Sài Gòn không công bố giá gói sinh trên website. Bảng giá duy nhất có cấu trúc đầy đủ tìm được trên internet là bản đăng năm <b>2018</b>, đã tám năm, không dẫn nguồn, không ghi ngày áp dụng. Con số đó không được đăng lại ở đây. Phần đăng trong bài là những gì bệnh viện có công bố chính thức, trong đó có danh sách nguyên văn các khoản gói không bao gồm.",
- "title": "Chi phí sinh con ở Bệnh viện Hoàn Mỹ Sài Gòn: bệnh viện không công bố giá, nhưng công bố danh sách loại trừ",
- "desc": "Hoàn Mỹ Sài Gòn không đăng giá gói sinh. Nhưng bệnh viện công bố nguyên văn gói bao gồm gì và loại trừ gì, trong đó có NICU, sinh không đau, song thai và biến chứng sau mổ. Đây là danh sách cần đọc trước khi lập ngân sách.",
+ "title": "Gói sinh Hạnh phúc Hoàn Mỹ Sài Gòn gồm gì, không gồm gì: giảm 10% khi đặt cọc online, xe đón miễn phí dưới 5 km",
+ "desc": "Hoàn Mỹ Sài Gòn không đăng giá gói sinh, nhưng công bố gói Hạnh phúc gồm sàng lọc sơ sinh 6 mục, tiêm chủng và xe cấp cứu đón dưới 5 km; loại trừ NICU, sinh không đau, song thai, biến chứng sau mổ. Có danh sách đối tác bảo lãnh viện phí.",
  "tom_tat": "Bệnh viện Hoàn Mỹ Sài Gòn <b>không công bố giá</b> gói sinh, chỉ công bố mức ưu đãi <b>giảm 10%</b> khi đăng ký online kèm đặt cọc trước. Bù lại, bệnh viện liệt kê nguyên văn những khoản gói không bao gồm: chăm sóc đặc biệt cho trẻ sơ sinh, sinh không đau, song thai và điều trị biến chứng sau phẫu thuật. Với người đang lập ngân sách, danh sách loại trừ này có giá trị hơn một con số tổng.",
 
  "bang": [
