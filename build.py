@@ -40,6 +40,19 @@ def bai_url(slug):
     return BV_DIR + slug + ".html"
 
 
+KHOI_AD_CO_DINH = ["sinh-thuong-ton-bao-nhieu", "sinh-mo-ton-bao-nhieu",
+                   "goi-sinh-tron-goi-khong-bao-gom-gi", "tam-ung-khi-nhap-vien-sinh",
+                   "bhyt-tra-bao-nhieu-tu-tra-bao-nhieu", "chi-phi-cho-em-be-sau-khi-sinh"]
+KHOI_CE_CO_DINH = ["mua-bao-hiem-thai-san-khi-da-mang-thai", "thoi-gian-cho-tung-loai-quyen-loi",
+                   "bao-lanh-vien-phi-hoat-dong-the-nao", "ly-do-ho-so-bi-tu-choi-boi-thuong",
+                   "sinh-con-duoc-tro-cap-mot-lan-bao-nhieu", "nghi-thai-san-duoc-bao-lau-huong-bao-nhieu"]
+
+
+def bai_chon(slugs):
+    d = {b["slug"]: b for b in BAI_VIET}
+    return [d[x] for x in slugs if x in d]
+
+
 def bai_theo_cum(cum):
     return [b for b in BAI_VIET if b.get("cum") == cum]
 
@@ -564,7 +577,7 @@ POSTS = [
          date="20/08/2026", read="8 phút đọc", thumb="thumb-1.svg", tag="Chi phí thật"),
     dict(slug="thoi-gian-cho-thai-san.html",
          title="Thời gian chờ bảo hiểm thai sản: vì sao que thử hai vạch là đã trễ",
-         desc="270 hay 365 ngày, tính từ lúc nào, và cách xác định hạn chót của riêng bạn bằng một phép tính ngược đơn giản.",
+         desc="Thông tư 67/2023/TT-BTC đặt thời gian chờ thai sản tối đa 270 ngày. Tính từ lúc nào, và cách xác định hạn chót của riêng bạn bằng một phép tính ngược đơn giản.",
          date="20/08/2026", read="6 phút đọc", thumb="thumb-2.svg", tag="Đồng hồ đang chạy"),
     dict(slug="ke-khai-suc-khoe.html",
          title="Phần lớn vụ từ chối bồi thường đến từ đúng một ô trong tờ khai",
@@ -679,8 +692,8 @@ TS_BA_CACH = [
      "Có, kèm <b>bảo lãnh viện phí</b> tại nhiều bệnh viện trong mạng lưới"],
     ["Thời gian chờ thai sản",
      "Không có, nhưng phải đóng đủ thời gian theo quy định",
-     "Thường 270&ndash;365 ngày tuỳ sản phẩm",
-     "<b>Từ 270 ngày</b>, tuỳ đơn vị"],
+     "Tối đa 270 ngày theo Thông tư 67/2023/TT-BTC",
+     "Tối đa 270 ngày theo Thông tư 67/2023/TT-BTC"],
     ["Điểm phải cân nhắc",
      "Chỉ đủ cho ca sinh cơ bản tại bệnh viện công",
      "Cam kết dài và phí cao &mdash; dừng sớm thì mất phần lớn giá trị đã đóng",
@@ -702,8 +715,8 @@ TS_COMPARE = [
      "Ngắn hạn, tái tục theo kỳ",
      "Dài hạn, thường 15&ndash;20 năm"],
     ["Thời gian chờ thai sản",
-     "Từ 270 ngày, tuỳ đơn vị",
-     "Thường 270&ndash;365 ngày tuỳ sản phẩm"],
+     "Tối đa 270 ngày theo Thông tư 67/2023/TT-BTC",
+     "Tối đa 270 ngày theo Thông tư 67/2023/TT-BTC"],
     ["Chính sách tái tục nếu năm đó chưa sinh kịp",
      "<b>Điểm cần lưu ý.</b> Là sản phẩm tái tục theo năm nên phí, quyền lợi và cả việc có được tái tục hay không đều có thể thay đổi ở kỳ sau &mdash; không có gì bảo đảm giữ nguyên như năm đầu",
      "Thẻ thai sản được tái tục theo hợp đồng nhân thọ chính. Chừng nào hợp đồng chính còn hiệu lực thì thẻ vẫn được duy trì"],
@@ -776,7 +789,7 @@ ART1_TBL = [
 
 ART2_TBL = [
     ["Thời gian chờ thai sản là bao nhiêu ngày?",
-     "Quyết định bạn còn kịp hay không. Chênh lệch giữa 270 và 365 ngày là ba tháng cửa sổ chuẩn bị."],
+     "Quyết định bạn còn kịp hay không. Thông tư 67/2023/TT-BTC cho mức tối đa 270 ngày; hợp đồng có thể đặt ngắn hơn."],
     ["Thời gian chờ tính từ ngày nào?",
      "Tính từ ngày hợp đồng có hiệu lực, không phải ngày nộp hồ sơ. Khoảng cách giữa hai mốc có thể là vài tuần."],
     ["Các nhóm quyền lợi khác có thời gian chờ riêng không?",
@@ -2243,7 +2256,7 @@ ART1 = f"""
 <ol>
   <li><b>Lớp 1 &mdash; Bảo hiểm y tế đúng tuyến.</b> Rẻ nhất và nên có. Đừng bỏ qua chỉ vì mức chi trả không lớn.</li>
   <li><b>Lớp 2 &mdash; Tiền mặt dự phòng bằng chi phí một ca sinh mổ dịch vụ.</b> Lấy con số cao nhất trong kịch bản bạn chọn, đó là khoản bạn nên có sẵn.</li>
-  <li><b>Lớp 3 &mdash; Bảo hiểm cho phần đuôi.</b> Quyền lợi thai sản và nội trú, để xử lý những kịch bản vượt quá khả năng tự lo. Lớp này có <b>ràng buộc thời gian</b>: thời gian chờ 270&ndash;365 ngày, nghĩa là phải chuẩn bị trước khi mang thai.</li>
+  <li><b>Lớp 3 &mdash; Bảo hiểm cho phần đuôi.</b> Quyền lợi thai sản và nội trú, để xử lý những kịch bản vượt quá khả năng tự lo. Lớp này có <b>ràng buộc thời gian</b>: thời gian chờ thai sản tối đa 270 ngày theo Thông tư 67/2023/TT-BTC, nghĩa là phải chuẩn bị trước khi mang thai.</li>
 </ol>
 <p>Bạn có thể tự tính con số của mình bằng <a href="{{P}}cong-cu/chi-phi-sinh-con.html#tinh-chi-phi-sinh">công cụ tính chi phí sinh con</a> trên trang này, và kiểm tra mình còn kịp mua bảo hiểm không bằng <a href="{{P}}cong-cu/thoi-gian-cho-thai-san.html#tinh-thoi-gian-cho">công cụ đếm ngược thời gian chờ</a>.</p>
 """
@@ -2251,27 +2264,27 @@ ART1 = f"""
 ART2 = f"""
 <h2 id="la-gi">Thời gian chờ là gì</h2>
 <p>Thời gian chờ là khoảng thời gian tính từ ngày hợp đồng bảo hiểm có hiệu lực đến ngày quyền lợi bắt đầu được chi trả. Trong khoảng đó, bạn vẫn đóng phí bình thường nhưng nếu sự kiện bảo hiểm xảy ra thì <b>không được chi trả</b>.</p>
-<p>Với quyền lợi thai sản, thời gian chờ phổ biến trên thị trường Việt Nam là <b>270 đến 365 ngày</b> &mdash; tức 9 đến 12 tháng. Một số sản phẩm áp dụng 280 ngày.</p>
+<p>Với quyền lợi thai sản, Thông tư 67/2023/TT-BTC của Bộ Tài chính (Điều 12 khoản 2 điểm d) đặt thời gian chờ <b>tối đa 270 ngày</b>, khoảng 9 tháng. Hợp đồng cụ thể có thể đặt ngắn hơn, nhưng không được dài hơn mức này.</p>
 <p>Vì sao lại có quy định này? Vì nếu không, người ta sẽ chỉ mua bảo hiểm khi đã biết mình mang thai. Khi đó rủi ro không còn là rủi ro nữa mà là một khoản chi chắc chắn, và sản phẩm không thể tồn tại. Thời gian chờ là cơ chế giữ cho bảo hiểm là bảo hiểm.</p>
 
 <div class="callout">
 <h4>Hệ quả trực tiếp mà ít người nhận ra</h4>
-<p class="mb0">Thai kỳ kéo dài khoảng 280 ngày. Thời gian chờ thai sản là 270&ndash;365 ngày. Hai con số này gần bằng nhau &mdash; và đó chính là lý do <b>thời điểm que thử hiện hai vạch là thời điểm đã trễ</b>. Không phải trễ vài tuần, mà trễ gần đúng một chu kỳ mang thai.</p>
+<p class="mb0">Thai kỳ kéo dài khoảng 280 ngày. Thời gian chờ thai sản tối đa 270 ngày. Hai con số này gần bằng nhau &mdash; và đó chính là lý do <b>thời điểm que thử hiện hai vạch là thời điểm đã trễ</b>. Không phải trễ vài tuần, mà trễ gần đúng một chu kỳ mang thai.</p>
 </div>
 
 <h2 id="tinh-nguoc">Cách tự tính hạn chót của bạn</h2>
 <p>Phép tính rất đơn giản, chỉ ba bước:</p>
 <ol>
   <li>Xác định thời điểm bạn <b>muốn sinh</b> (không phải thời điểm muốn có bầu).</li>
-  <li>Trừ ngược lại số ngày chờ của sản phẩm (270 hoặc 365).</li>
+  <li>Trừ ngược lại số ngày chờ ghi trong hợp đồng (tối đa 270 ngày).</li>
   <li>Trừ tiếp <b>khoảng một tháng</b> cho quá trình thẩm định hồ sơ.</li>
 </ol>
 <p>Ví dụ cụ thể: bạn muốn sinh vào tháng 8/2027. Đếm ngược <b>300 ngày</b> &mdash; 270 ngày chờ cộng 30 ngày đệm trước khi thả bầu &mdash; hợp đồng cần có hiệu lực từ khoảng <b>tháng 10/2026</b>. Mà muốn sinh tháng 8/2027 thì bạn cần có bầu khoảng tháng 11/2026. Nghĩa là <b>phải chốt mua xong trước khi thả bầu</b>, chứ không phải mua cùng lúc.</p>
 <p>Đó là lý do chúng tôi làm hẳn một <a href="{{P}}cong-cu/thoi-gian-cho-thai-san.html#tinh-thoi-gian-cho">công cụ đếm ngược</a> trên trang này: bạn nhập mốc dự sinh, công cụ trả về hạn chót và số ngày còn lại.</p>
 
-<h2 id="270-vs-365">270 ngày và 365 ngày &mdash; chênh lệch này đáng giá bao nhiêu</h2>
-<p>Nghe thì chỉ là 95 ngày. Nhưng với người đang lên kế hoạch sinh con, 95 ngày là ba tháng cửa sổ. Nó có thể là khác biệt giữa &ldquo;kịp cho lần sinh này&rdquo; và &ldquo;phải hoãn kế hoạch có con lại một năm&rdquo;.</p>
-<p>Vì vậy khi so sánh các sản phẩm thai sản, thời gian chờ là một trong những tiêu chí đầu tiên nên hỏi &mdash; trước cả câu hỏi về hạn mức quyền lợi. Một gói có quyền lợi cao hơn 20% nhưng thời gian chờ dài hơn 3 tháng có thể hoàn toàn vô dụng với bạn.</p>
+<h2 id="270-vs-365">Vì sao vẫn nghe nói thời gian chờ 365 ngày</h2>
+<p>Nhiều nguồn, kể cả bản trước của chính bài này, từng ghi thời gian chờ thai sản 270 đến 365 ngày. Thông tư 67/2023/TT-BTC đặt trần 270 ngày và buộc doanh nghiệp rà soát, chỉnh sửa sản phẩm đã bán để đáp ứng từ ngày 01/7/2025. Vì vậy con số 365 ngày bạn nghe kể có thể đến từ sản phẩm cũ.</p>
+<p>Khi xem một sản phẩm thai sản, thời gian chờ là một trong những câu nên hỏi đầu tiên, trước cả hạn mức quyền lợi. Hãy hỏi đúng con số ghi trong quy tắc, điều khoản và mốc bắt đầu tính.</p>
 {tbl(["Câu hỏi nên hỏi","Vì sao quan trọng"], ART2_TBL)}
 
 <h2 id="truong-hop">Nếu đã mang thai rồi thì sao</h2>
@@ -2338,7 +2351,7 @@ TOC1 = [("tong-quan","Con số ngắn gọn"),("boc-tach","Bóc tách từng kho
         ("khoan-quen","Ba khoản hầu như không ai tính"),("benh-vien","Chênh lệch giữa các nhóm bệnh viện"),
         ("chuan-bi","Vậy nên chuẩn bị thế nào")]
 TOC2 = [("la-gi","Thời gian chờ là gì"),("tinh-nguoc","Cách tự tính hạn chót của bạn"),
-        ("270-vs-365","270 ngày và 365 ngày"),("truong-hop","Nếu đã mang thai rồi thì sao"),
+        ("270-vs-365","Vì sao vẫn nghe nói 365 ngày"),("truong-hop","Nếu đã mang thai rồi thì sao"),
         ("sai-lam","Ba sai lầm phổ biến")]
 TOC3 = [("thuc-te","Sự thật ít được nói ra"),("hay-bo-sot","Những gì hay bị bỏ sót nhất"),
         ("ai-chiu","Nếu tư vấn viên khai hộ thì ai chịu trách nhiệm"),
@@ -2426,7 +2439,7 @@ TOOL2_BODY = f"""
 <p>Bạn chọn khoảng thời gian dự định sinh. Công cụ lấy mốc đó trừ ngược lại <b>300 ngày</b> (270 ngày chờ + 30 ngày đệm trước khi thả bầu) và trả về <b>hạn chót mà hợp đồng phải có hiệu lực</b>, kèm số ngày bạn còn lại. Đa số người dùng công cụ này đều bất ngờ theo cùng một hướng: họ có ít thời gian hơn mình tưởng.</p>
 
 <h2 id="la-gi">Thời gian chờ là gì và vì sao nó tồn tại</h2>
-<p>Thời gian chờ là khoảng thời gian từ khi hợp đồng có hiệu lực đến khi một nhóm quyền lợi bắt đầu được chi trả. Với quyền lợi thai sản, mức phổ biến trên thị trường là 270 ngày hoặc 365 ngày. Các gói chúng tôi đang tư vấn áp dụng mức <b>270 ngày</b>.</p>
+<p>Thời gian chờ là khoảng thời gian từ khi hợp đồng có hiệu lực đến khi một nhóm quyền lợi bắt đầu được chi trả. Với quyền lợi thai sản, Thông tư 67/2023/TT-BTC đặt mức tối đa 270 ngày. Các gói chúng tôi đang tư vấn áp dụng mức <b>270 ngày</b>.</p>
 <p>Nó tồn tại vì một lý do đơn giản: nếu không có thời gian chờ, người ta chỉ mua bảo hiểm khi đã biết mình mang thai, và sản phẩm sẽ không thể tồn tại về mặt tài chính. Đây là điều khoản chuẩn của ngành, không phải mẹo của riêng công ty nào.</p>
 <p>Hai điểm hay bị hiểu sai. Thứ nhất, thời gian chờ tính từ <b>ngày hợp đồng có hiệu lực</b>, không phải ngày bạn nộp hồ sơ &mdash; khoảng cách giữa hai mốc có thể là vài tuần. Thứ hai, mỗi nhóm quyền lợi có thời gian chờ riêng: tai nạn thường không có thời gian chờ, bệnh thông thường ngắn hơn, bệnh đặc biệt và thai sản dài nhất.</p>
 
@@ -2743,7 +2756,11 @@ def benh_vien_body(bv, P="../"):
              'là các khoản thường nằm ngoài bảng giá đó, dựng từ dữ liệu của 21 bệnh viện '
              'và từ văn bản pháp luật, mỗi con số đều dẫn nguồn và ngày công bố.</p>')
     o.append('<div class="entry-grid">')
-    for b in bai_theo_cum("A") + bai_theo_cum("D"):
+    # Sua 01/10/2026: truoc day khoi nay liet ke TAT CA bai cum A+D (33 bai ngay
+    # 30/09) va dai them moi lan dang bai, lam 21 trang benh vien doi noi dung
+    # moi ngay va bi loang giua hon 100 duong link. Nay co dinh 6 bai lien quan
+    # nhat. Traffic roi tu 27/09 (xem claude/chan-doan-traffic-30-09.md).
+    for b in bai_chon(KHOI_AD_CO_DINH):
         o.append('<a class="entry" href="%s%s"><b>%s</b><span>%s</span></a>'
                  % (P, bai_url(b["slug"]), b.get("h1") or b["title"], b.get("tag", "")))
     o.append('</div></div></section>')
@@ -2757,7 +2774,7 @@ def benh_vien_body(bv, P="../"):
              'hợp đồng bảo hiểm thương mại. Những bài dưới đây đọc điều luật và điều khoản '
              'hợp đồng, trích nguyên văn số điều và số văn bản.</p>')
     o.append('<div class="entry-grid">')
-    for b in bai_theo_cum("C") + bai_theo_cum("E"):
+    for b in bai_chon(KHOI_CE_CO_DINH):  # co dinh 6 bai, sua 01/10/2026
         o.append('<a class="entry" href="%s%s"><b>%s</b><span>%s</span></a>'
                  % (P, bai_url(b["slug"]), b.get("h1") or b["title"], b.get("tag", "")))
     o.append('</div></div></section>')
@@ -2765,12 +2782,19 @@ def benh_vien_body(bv, P="../"):
     # lien ket noi bo
     o.append('<section class="section"><div class="wrap">')
     o.append('<h2>Đọc tiếp</h2><div class="entry-grid">')
-    for other in BV_DATA:
-        if other["slug"] == bv["slug"]:
-            continue
+    # Sua 01/10/2026: truoc day tro sang ca 20 benh vien con lai. Nay chi cac
+    # benh vien cung tinh, toi da 6, de trang khong bi loang link.
+    def _vung(t):
+        return "hcm" if ("Hồ Chí Minh" in t or "TP.HCM" in t) else ("hn" if "Hà Nội" in t else "khac")
+    cung_tinh = [x for x in BV_DATA if x["slug"] != bv["slug"] and _vung(x["tinh"]) == _vung(bv["tinh"])][:6]
+    if not cung_tinh:
+        cung_tinh = [x for x in BV_DATA if x["slug"] != bv["slug"]][:6]
+    for other in cung_tinh:
         o.append('<a class="entry" href="%s%s"><b>Chi phí sinh ở %s</b>'
                  '<span>%s &middot; %s</span></a>' % (P, bv_url(other["slug"]), other["ten"],
                                                       other["tinh"], other["loai"]))
+    o.append('<a class="entry" href="' + P + 'kien-thuc/chi-phi-sinh-con-theo-benh-vien.html"><b>Chi phí sinh ở 21 bệnh viện</b>'
+             '<span>Danh sách đầy đủ, theo tỉnh thành</span></a>')
     o.append('<a class="entry" href="' + P + 'thai-san.html"><b>Bảo hiểm thai sản rời</b>'
              '<span>Thời gian chờ 270 ngày &mdash; kiểm tra bạn còn kịp không</span></a>')
     o.append('<a class="entry" href="' + P + 'cong-cu/thoi-gian-cho-thai-san.html">'
