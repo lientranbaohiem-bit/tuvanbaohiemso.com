@@ -234,7 +234,8 @@ def article_schema(canon, title, desc, date_pub, date_mod=None, section=""):
         "mainEntityOfPage": {"@type": "WebPage", "@id": SITE + clean_url(canon)},
         "headline": title[:110], "description": desc,
         "inLanguage": "vi-VN",
-        "author": {"@type": "Organization", "name": BRAND, "url": SITE + "/ve-chung-toi"},
+        "author": {"@type": "Person", "name": "Lien Tran", "jobTitle": "Đại lý AIA",
+                   "url": SITE + "/ve-chung-toi", "worksFor": {"@id": SITE + "/#org"}},
         "publisher": {"@id": SITE + "/#org"},
         "datePublished": date_pub,
         "dateModified": date_mod or date_pub,
@@ -264,7 +265,7 @@ def head(title, desc, path_prefix="", canon="", extra="", body_attr=""):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<meta name="author" content="{BRAND}">
+<meta name="author" content="Lien Tran - Đại lý AIA">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
@@ -1747,6 +1748,7 @@ vt_body += f"""
         <span class="eyebrow">Chúng tôi là ai</span>
         <h2>Một dịch vụ tư vấn, không phải một quầy bán hàng</h2>
         <p>{DOMAIN} là dịch vụ tư vấn bảo hiểm hoạt động với tư cách đại lý được uỷ quyền của doanh nghiệp bảo hiểm.</p>
+        <p>Các bài viết trên trang do <b>Lien Tran</b> &mdash; Đại lý AIA viết và rà soát.</p>
         <p>Chúng tôi lập ra trang này vì một quan sát đơn giản: phần lớn người Việt không thiếu nhu cầu bảo hiểm và cũng không thiếu nhận thức &mdash; họ thiếu một chỗ để hiểu vấn đề bằng con số trước khi phải nói chuyện với người bán hàng.</p>
         <p>Nên toàn bộ công cụ tính trên trang này đều <b>miễn phí và không yêu cầu để lại thông tin</b>. Bạn có thể dùng, tự rút ra kết luận, và không bao giờ liên hệ với chúng tôi. Điều đó hoàn toàn ổn.</p>
       </div>
@@ -2666,9 +2668,10 @@ def benh_vien_body(bv, P="../"):
              % bv["tom_tat"])
     # Khoi "Cach chung toi xu ly trang nay" da bo ngay 06/09/2026 theo yeu cau.
     # Truong canh_bao van giu trong benhvien.py nhung khong render.
-    o.append('<p class="footnote">Trang này rà soát lần gần nhất ngày %s. %s '
+    o.append('<p class="footnote">Người viết: <a href="%sve-chung-toi.html"><b>Lien Tran</b></a> - Đại lý AIA. '
+             'Trang này rà soát lần gần nhất ngày %s. %s '
              '<a href="%s" target="_blank" rel="noopener nofollow">Xem nguồn gốc</a>.</p>'
-             % (CAP_NHAT, bv["nguon_nhan"], bv["nguon_url"]))
+             % (P, CAP_NHAT, bv["nguon_nhan"], bv["nguon_url"]))
     o.append('</div></section>')
 
     # bang gia
@@ -2879,7 +2882,8 @@ def bai_body(b, P="../"):
     o.append('<div class="callout info"><h4>Tóm tắt</h4><p>%s</p></div>' % b["tom_tat"])
     # Khoi "Cach chung toi xu ly bai nay" da bo ngay 06/09/2026 theo yeu cau.
     # Truong canh_bao van giu trong baiviet.py nhung khong render.
-    o.append('<p class="footnote">Bài rà soát lần gần nhất ngày %s.</p>' % CAP_NHAT)
+    o.append('<p class="footnote">Người viết: <a href="%sve-chung-toi.html"><b>Lien Tran</b></a> - Đại lý AIA. '
+             'Bài rà soát lần gần nhất ngày %s.</p>' % (P, CAP_NHAT))
     o.append('</div></section>')
 
     if b.get("bang"):
