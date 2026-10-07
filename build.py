@@ -2677,8 +2677,6 @@ def benh_vien_body(bv, P="../"):
     # bang gia
     o.append('<section class="section bg-soft"><div class="wrap">')
     o.append('<h2>Bảng giá và nguồn của từng con số</h2>')
-    o.append('<p class="lead">Mỗi bảng dưới đây gắn nhãn mức độ kiểm chứng. Số bệnh viện công bố '
-             'và số nghe lại không nằm chung một bảng.</p>')
     for b in bv["bang"]:
         o.append(bv_bang(b))
     o.append('</div></section>')
@@ -2720,17 +2718,13 @@ def benh_vien_body(bv, P="../"):
         lis = "".join("<li>%s</li>" % x for x in bv["khong_bao_gom"])
         o.append('<section class="section"><div class="wrap">')
         o.append('<h2>Gói không bao gồm những gì</h2>')
-        o.append('<p class="lead">Đây là nhóm khoản ít được liệt kê, và cũng là nhóm làm ngân sách '
-                 'đội lên nhiều nhất.</p><ul class="tick">%s</ul>' % lis)
+        o.append('<ul class="tick">%s</ul>' % lis)
         o.append('</div></section>')
 
     # khong cong bo -- diem khac biet cua site
     lis = "".join("<li>%s</li>" % x for x in bv["khong_cong_bo"])
     o.append('<section class="section bg-soft"><div class="wrap">')
     o.append('<h2>Những con số bệnh viện không công bố</h2>')
-    o.append('<p class="lead">Phần lớn bài viết về chi phí sinh con điền hết mọi ô trong bảng, '
-             'kể cả ô không có dữ liệu. Trang này để trống và ghi rõ trống ở đâu, vì con số '
-             'đoán ra sẽ đi thẳng vào ngân sách của một ca sinh thật.</p>')
     o.append('<ul class="tick">%s</ul>' % lis)
     o.append('</div></section>')
 
@@ -2755,9 +2749,6 @@ def benh_vien_body(bv, P="../"):
     # duoc thu thap. Khoi nay bu duong dan do.
     o.append('<section class="section bg-soft"><div class="wrap">')
     o.append('<h2>Các khoản nằm ngoài bảng giá</h2>')
-    o.append('<p class="lead">Bảng giá ở trên là phần bệnh viện công bố. Những bài dưới đây '
-             'là các khoản thường nằm ngoài bảng giá đó, dựng từ dữ liệu của 21 bệnh viện '
-             'và từ văn bản pháp luật, mỗi con số đều dẫn nguồn và ngày công bố.</p>')
     o.append('<div class="entry-grid">')
     # Sua 01/10/2026: truoc day khoi nay liet ke TAT CA bai cum A+D (33 bai ngay
     # 30/09) va dai them moi lan dang bai, lam 21 trang benh vien doi noi dung
@@ -2773,9 +2764,6 @@ def benh_vien_body(bv, P="../"):
     # da keo so trang duoc lap chi muc tu 25 len 43; lam tiep cho C va E.
     o.append('<section class="section"><div class="wrap">')
     o.append('<h2>Khi dùng bảo hiểm để trả phần này</h2>')
-    o.append('<p class="lead">Phần viện phí không được quỹ bảo hiểm y tế trả thường rơi vào '
-             'hợp đồng bảo hiểm thương mại. Những bài dưới đây đọc điều luật và điều khoản '
-             'hợp đồng, trích nguyên văn số điều và số văn bản.</p>')
     o.append('<div class="entry-grid">')
     for b in bai_chon(KHOI_CE_CO_DINH):  # co dinh 6 bai, sua 01/10/2026
         o.append('<a class="entry" href="%s%s"><b>%s</b><span>%s</span></a>'
@@ -2827,8 +2815,12 @@ def bv_hub_body(P="../"):
     return "".join(o)
 
 
+# 06/10/2026: chi Lien dong y tam an khoi Google cac trang benh vien khong cong bo gia
+# (trang mong). Van de tren web cho nguoi doc. Mo lai khi co gia that.
+BV_NOINDEX = {"vinmec", "hong-ngoc", "bao-son"}
 for _bv in BV_DATA:
     _canon = bv_url(_bv["slug"])
+    _robots = '<meta name="robots" content="noindex,follow">\n' if _bv["slug"] in BV_NOINDEX else ""
     page(_canon, _bv["title"] + " | " + BRAND, _bv["desc"],
          benh_vien_body(_bv, "../")
          + cta("../", "Muốn bảng dự toán riêng cho ca sinh của bạn?",
@@ -2836,7 +2828,7 @@ for _bv in BV_DATA:
                "Chúng tôi đối chiếu bảng giá mới nhất rồi gửi lại bảng tính riêng trong ngày."),
          active="kt", P="../", canon=_canon,
          body_attr=' data-jn="Chuẩn bị sinh con"',
-         extra=schema_head(
+         extra=_robots + schema_head(
              faq_schema(_bv["faq"]),
              breadcrumb_schema([("Trang chủ", "index.html"),
                                 ("Kiến thức", "kien-thuc/index.html"),
@@ -2904,8 +2896,6 @@ def bai_body(b, P="../"):
         lis = "".join("<li>%s</li>" % x for x in b["khong_ro"])
         o.append('<section class="section bg-soft"><div class="wrap">')
         o.append('<h2>Những chỗ chúng tôi chưa có số chắc chắn</h2>')
-        o.append('<p class="lead">Phần này để trống có chủ đích. Chúng tôi ghi rõ chỗ nào '
-                 'chưa kiểm chứng được, thay vì điền cho đủ bài.</p>')
         o.append('<ul class="tick">%s</ul>' % lis)
         o.append('</div></section>')
 
@@ -2955,7 +2945,7 @@ urls = ["", "san-pham", "thai-san", "suc-khoe", "bao-ve-thu-nhap",
         "cong-cu/", "cong-cu/chi-phi-sinh-con", "cong-cu/thoi-gian-cho-thai-san",
         "cong-cu/ngan-sach-bao-ve", "ve-chung-toi", "lien-he", "kien-thuc/"] + \
        ["kien-thuc/" + p["slug"][:-5] for p in POSTS] + \
-       [BV_HUB[:-5]] + [bv_url(b["slug"])[:-5] for b in BV_DATA] + \
+       [BV_HUB[:-5]] + [bv_url(b["slug"])[:-5] for b in BV_DATA if b["slug"] not in BV_NOINDEX] + \
        [bai_url(b["slug"])[:-5] for b in BAI_VIET]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 for u in urls:
