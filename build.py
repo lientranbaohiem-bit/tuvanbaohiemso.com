@@ -228,7 +228,7 @@ def breadcrumb_schema(trail):
             "itemListElement": items}
 
 
-def article_schema(canon, title, desc, date_pub, date_mod=None, section=""):
+def article_schema(canon, title, desc, date_pub, date_mod=None, section="", image=None):
     d = {
         "@context": "https://schema.org", "@type": "Article",
         "mainEntityOfPage": {"@type": "WebPage", "@id": SITE + clean_url(canon)},
@@ -242,6 +242,8 @@ def article_schema(canon, title, desc, date_pub, date_mod=None, section=""):
     }
     if section:
         d["articleSection"] = section
+    if image:
+        d["image"] = {"@type": "ImageObject", "url": image, "width": 1200, "height": 630}
     return d
 
 
@@ -2871,6 +2873,11 @@ def bai_body(b, P="../"):
                        b.get("h1") or b["title"].split(":")[0], b["desc"], P))
 
     o.append('<section class="section"><div class="wrap">')
+    # Tu 07/10/2026: bai moi co anh dai dien (truong "anh"); bai cu khong co, khong doi.
+    if b.get("anh"):
+        o.append('<figure style="margin:0 0 24px"><img src="%s%s" alt="%s" width="1200" height="630" '
+                 'style="width:100%%;height:auto;border-radius:12px" loading="eager"></figure>'
+                 % (P, b["anh"], (b.get("h1") or b["title"]).replace('"', "&quot;")))
     o.append('<div class="callout info"><h4>Tóm tắt</h4><p>%s</p></div>' % b["tom_tat"])
     # Khoi "Cach chung toi xu ly bai nay" da bo ngay 06/09/2026 theo yeu cau.
     # Truong canh_bao van giu trong baiviet.py nhung khong render.
@@ -2878,32 +2885,40 @@ def bai_body(b, P="../"):
              'Bài rà soát lần gần nhất ngày %s.</p>' % (P, CAP_NHAT))
     o.append('</div></section>')
 
+    khoi = {}
     if b.get("bang"):
-        o.append('<section class="section bg-soft"><div class="wrap">')
-        o.append('<h2>Số liệu &mdash; và mỗi con số lấy từ đâu</h2>')
+        k = ['<section class="section bg-soft"><div class="wrap">',
+             '<h2>%s</h2>' % b.get("h_bang", "Số liệu &mdash; và mỗi con số lấy từ đâu")]
         for t in b["bang"]:
-            o.append(bv_bang(t))
-        o.append('</div></section>')
+            k.append(bv_bang(t))
+        k.append('</div></section>')
+        khoi["bang"] = "".join(k)
 
     if b.get("y_chinh"):
-        o.append('<section class="section"><div class="wrap">')
+        k = ['<section class="section"><div class="wrap">']
+        if b.get("h_y_chinh"):
+            k.append('<h2>%s</h2>' % b["h_y_chinh"])
         for tieu_de, noi_dung in b["y_chinh"]:
-            o.append('<div class="feat"><span class="feat-ico">%s</span><div><h4>%s</h4><p>%s</p></div></div>'
+            k.append('<div class="feat"><span class="feat-ico">%s</span><div><h4>%s</h4><p>%s</p></div></div>'
                      % (I['doc'], tieu_de, noi_dung))
-        o.append('</div></section>')
+        k.append('</div></section>')
+        khoi["y_chinh"] = "".join(k)
 
     if b.get("khong_ro"):
         lis = "".join("<li>%s</li>" % x for x in b["khong_ro"])
-        o.append('<section class="section bg-soft"><div class="wrap">')
-        o.append('<h2>Những chỗ chúng tôi chưa có số chắc chắn</h2>')
-        o.append('<ul class="tick">%s</ul>' % lis)
-        o.append('</div></section>')
+        khoi["khong_ro"] = ('<section class="section bg-soft"><div class="wrap">'
+                            '<h2>%s</h2>' % b.get("h_khong_ro", "Những chỗ chúng tôi chưa có số chắc chắn")
+                            + '<ul class="tick">%s</ul>' % lis + '</div></section>')
 
     if b.get("faq"):
-        o.append('<section class="section bg-grey"><div class="wrap">')
-        o.append('<h2>Câu hỏi thường gặp</h2>')
-        o.append(faq(b["faq"]))
-        o.append('</div></section>')
+        khoi["faq"] = ('<section class="section bg-grey"><div class="wrap">'
+                       '<h2>%s</h2>' % b.get("h_faq", "Câu hỏi thường gặp") + faq(b["faq"])
+                       + '</div></section>')
+
+    # Tu 07/10/2026: bai moi co the doi thu tu khoi bang truong "thu_tu".
+    for ten in b.get("thu_tu", ["bang", "y_chinh", "khong_ro", "faq"]):
+        if ten in khoi:
+            o.append(khoi[ten])
 
     # doc tiep: bai cung cum + tru cot
     khac = [x for x in bai_theo_cum(b.get("cum")) if x["slug"] != b["slug"]][:3]
@@ -2928,7 +2943,8 @@ for _b in BAI_VIET:
                                ("Kiến thức", "kien-thuc/index.html"),
                                (_b.get("h1") or _b["title"], None)]),
             article_schema(_canon, _b["title"], _b["desc"],
-                           _b.get("ngay_dang", "2026-09-04"), section=_ten)]
+                           _b.get("ngay_dang", "2026-09-04"), section=_ten,
+                           image=(SITE + "/" + _b["anh"]) if _b.get("anh") else None)]
     if _b.get("faq"):
         _sch.append(faq_schema(_b["faq"]))
     page(_canon, _b["title"] + " | " + BRAND, _b["desc"],
@@ -2938,7 +2954,11 @@ for _b in BAI_VIET:
                "rồi trả lời thẳng, không chào bán trong buổi đầu."),
          active="kt", P="../", canon=_canon,
          body_attr=' data-jn="bài bạn đang đọc"',
-         extra=schema_head(*_sch))
+         extra=(('<meta property="og:image" content="%s/%s">\n'
+                 '<meta property="og:image:width" content="1200">\n'
+                 '<meta property="og:image:height" content="630">\n'
+                 '<meta name="twitter:card" content="summary_large_image">\n'
+                 % (SITE, _b["anh"])) if _b.get("anh") else "") + schema_head(*_sch))
 
 
 urls = ["", "san-pham", "thai-san", "suc-khoe", "bao-ve-thu-nhap",
