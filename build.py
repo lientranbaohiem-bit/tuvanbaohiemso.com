@@ -2910,13 +2910,32 @@ def bai_body(b, P="../"):
                             '<h2>%s</h2>' % b.get("h_khong_ro", "Những chỗ chúng tôi chưa có số chắc chắn")
                             + '<ul class="tick">%s</ul>' % lis + '</div></section>')
 
+    # Tu 09/10/2026: bai dai kieu bao (truong "muc"): moi muc co h2, nhieu doan van, bang tuy chon.
+    if b.get("muc"):
+        k = ['<section class="section"><div class="wrap" style="max-width:760px">']
+        k.append('<nav class="callout" style="margin-bottom:24px"><h4>Nội dung bài</h4><ol style="margin:0;padding-left:20px">')
+        for _i, _m in enumerate(b["muc"], 1):
+            k.append('<li><a href="#muc-%d">%s</a></li>' % (_i, _m["h2"]))
+        k.append('</ol></nav>')
+        for _i, _m in enumerate(b["muc"], 1):
+            k.append('<h2 id="muc-%d" style="margin-top:32px">%s</h2>' % (_i, _m["h2"]))
+            for _d in _m.get("doan", []):
+                if _d.startswith("<"):
+                    k.append(_d)
+                else:
+                    k.append('<p>%s</p>' % _d)
+            for _t in _m.get("bang", []):
+                k.append(bv_bang(_t))
+        k.append('</div></section>')
+        khoi["muc"] = "".join(k)
+
     if b.get("faq"):
         khoi["faq"] = ('<section class="section bg-grey"><div class="wrap">'
                        '<h2>%s</h2>' % b.get("h_faq", "Câu hỏi thường gặp") + faq(b["faq"])
                        + '</div></section>')
 
     # Tu 07/10/2026: bai moi co the doi thu tu khoi bang truong "thu_tu".
-    for ten in b.get("thu_tu", ["bang", "y_chinh", "khong_ro", "faq"]):
+    for ten in b.get("thu_tu", ["muc", "bang", "y_chinh", "khong_ro", "faq"]):
         if ten in khoi:
             o.append(khoi[ten])
 
