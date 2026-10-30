@@ -92,7 +92,7 @@
                  thuong: [9e6, 17e6],   mo: [17e6, 32e6],  bhyt_thuong: [2.5e6, 4e6], bhyt_mo: [5e6, 9e6] },
     hongngoc:  { name: 'BV Hồng Ngọc / BV tư Hà Nội', nguon: 'Ước tính theo mặt bằng bệnh viện tư', chinhthuc: 0,
                  thuong: [35e6, 65e6],  mo: [55e6, 95e6],  bhyt_thuong: [1e6, 3e6],   bhyt_mo: [2e6, 4e6] },
-    ansinh:    { name: 'BV An Sinh (TP.HCM)', nguon: 'An Sinh công bố — bảng giá gói sinh 2026, giá ưu đãi trọn gói, đã gồm phòng 2 giường (3 ngày với sinh thường, 4 ngày với sinh mổ). Khoảng sinh mổ ở đây là ĐƠN THAI; song thai cao hơn 2 triệu mỗi mức, tới 36 triệu ở lần mổ thứ 3', chinhthuc: 1,
+    ansinh:    { name: 'BV An Sinh (TP.HCM)', nguon: 'An Sinh công bố — bảng giá gói sinh 2026 (bản 03/03/2026; trang gói đã gỡ, kiểm 30/10/2026 — nên gọi xác nhận), giá ưu đãi trọn gói, đã gồm phòng 2 giường (3 ngày với sinh thường, 4 ngày với sinh mổ). Khoảng sinh mổ ở đây là ĐƠN THAI; song thai cao hơn 2 triệu mỗi mức, tới 36 triệu ở lần mổ thứ 3', chinhthuc: 1,
                  gayte_ghi_chu: 'An Sinh bán <b>hai gói sinh thường riêng</b>: 17.600.000đ không giảm đau và 20.000.000đ có giảm đau. Khoảng giá ở trên đã bao gồm cả hai, nên khoản gây tê không được cộng thêm lần nữa. Chênh lệch giữa hai gói là <b>2.400.000đ</b>.',
                  thuong: [17.6e6, 20e6], mo: [28e6, 34e6], bhyt_thuong: [1e6, 3e6], bhyt_mo: [2e6, 4e6] },
     mekong:    { name: 'BV Phụ sản MêKông (TP.HCM)', nguon: 'MêKông công bố 03/06/2022 — đây là GIÁ THỦ THUẬT, chưa gồm tiền phòng. Bệnh viện chưa cập nhật bảng giá từ 2022', chinhthuc: 1,
