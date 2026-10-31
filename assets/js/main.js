@@ -62,7 +62,7 @@
                  thuong: [10e6, 18e6],  mo: [12e6, 22e6],  bhyt_thuong: [3e6, 5e6],   bhyt_mo: [5e6, 8e6] },
     tamanh:    { name: 'BV Tâm Anh (TP.HCM / Hà Nội)', nguon: 'Tâm Anh công bố — gói trọn gói tiêu chuẩn', chinhthuc: 1, ngoai_goi: [5e6, 15e6],
                  thuong: [31.4e6, 43.1e6], mo: [36.9e6, 58.7e6], bhyt_thuong: [1e6, 3e6], bhyt_mo: [2e6, 4e6] },
-    fv:        { name: 'BV FV (TP.HCM)', nguon: 'FV công bố, bản cập nhật 21/05/2026 — gói Bạc đến Kim Cương, phòng tiêu chuẩn. Gói Bạch Kim và các hạng phòng cao hơn lên tới 168 triệu', chinhthuc: 1, da_gom_gayte: 1,
+    fv:        { name: 'BV FV (TP.HCM)', nguon: 'FV công bố, bản cập nhật 12/10/2026 — gói Bạc đến Kim Cương, phòng tiêu chuẩn. Gói Bạch Kim và các hạng phòng cao hơn lên tới 168 triệu', chinhthuc: 1, da_gom_gayte: 1,
                  thuong: [45e6, 75e6],  mo: [55e6, 85e6],  bhyt_thuong: [2e6, 8e6],   bhyt_mo: [2e6, 8e6] },
     cih:       { name: 'BV Quốc tế City (TP.HCM)', nguon: 'Quốc tế City công bố, trang gói cập nhật 12/10/2026 — bốn gói sinh Như Ý, Hoa Khai Phú Quý, Khởi Nguyên Hưng Thịnh, Cát Tường', chinhthuc: 1,
                  ngoai_goi: [4.95e6, 8.25e6],
