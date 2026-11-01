@@ -2786,7 +2786,7 @@ def benh_vien_body(bv, P="../"):
         o.append('<a class="entry" href="%s%s"><b>Chi phí sinh ở %s</b>'
                  '<span>%s &middot; %s</span></a>' % (P, bv_url(other["slug"]), other["ten"],
                                                       other["tinh"], other["loai"]))
-    o.append('<a class="entry" href="' + P + 'kien-thuc/chi-phi-sinh-con-theo-benh-vien.html"><b>Chi phí sinh ở 21 bệnh viện</b>'
+    o.append('<a class="entry" href="' + P + 'kien-thuc/chi-phi-sinh-con-theo-benh-vien.html"><b>Chi phí sinh ở ' + str(len(BV_DATA)) + ' bệnh viện</b>'
              '<span>Danh sách đầy đủ, theo tỉnh thành</span></a>')
     o.append('<a class="entry" href="' + P + 'thai-san.html"><b>Bảo hiểm thai sản rời</b>'
              '<span>Thời gian chờ 270 ngày &mdash; kiểm tra bạn còn kịp không</span></a>')
