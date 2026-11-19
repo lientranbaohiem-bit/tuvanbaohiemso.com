@@ -20,6 +20,17 @@ SITE       = "https://tuvanbaohiemso.com"
 LEAD_ENDPOINT = "https://script.google.com/macros/s/AKfycbzLoi7UxQJF6MpyLgY6xem9MGgtGym_eENJW4dacYJVJXTOS9oWZO_h06LsA4EgfaQxfA/exec"
 LEAD_ENDPOINT_JS = json.dumps(LEAD_ENDPOINT)
 
+# Dia chi lien he cho schema: doc tu file rieng lien_he_rieng.txt (khong dua len repo,
+# chu web tu tao file nay). Khong co file thi schema bo truong email, trang van build binh thuong.
+def _doc_lien_he():
+    p = os.path.join(ROOT, "lien_he_rieng.txt")
+    if os.path.exists(p):
+        with open(p, encoding="utf-8") as f:
+            return f.read().strip()
+    print("  ! Chua co lien_he_rieng.txt: schema se khong co truong email")
+    return ""
+LIEN_HE_EMAIL = _doc_lien_he()
+
 # ---------------------------------------------------------------- vi tri bai viet
 # Tat ca bai SEO moi (ke ca cum "chi phi sinh con theo benh vien") deu nam trong
 # muc Kien thuc: /kien-thuc/... — de mot cho, de vao check.
@@ -173,7 +184,7 @@ ORG_SCHEMA = {
     "image": SITE + "/assets/img/logo.png",
     "description": "Dich vu tu van bao hiem doc lap: nhan tho, suc khoe va thai san roi. Tu van bang bang tinh cu the, noi ro ca uu va nhuoc diem truoc khi ky.",
     "telephone": PHONE_TEL,
-    "email": "lientran.baohiem@gmail.com",
+    **({"email": LIEN_HE_EMAIL} if LIEN_HE_EMAIL else {}),
     "areaServed": {"@type": "Country", "name": "Viet Nam"},
     "address": {"@type": "PostalAddress", "addressLocality": "TP. Ho Chi Minh",
                 "addressCountry": "VN"},
